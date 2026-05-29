@@ -40,15 +40,19 @@
       ctx.fill();
     }
     update() {
-      // Sweeping orbital movement like Astaria
-      this.x += Math.cos(this.density) * 0.2 + this.vX;
-      this.y += Math.sin(this.density) * 0.2 + this.vY;
+      // Upward drift
+      this.y -= (0.2 + Math.abs(this.vY));
+      
+      // Horizontal sine-wave sway
+      this.x += Math.sin(this.density) * 0.3;
+      this.density += 0.01;
       
       // Wrap around edges smoothly
       if (this.x < 0) this.x = canvas.width;
       if (this.x > canvas.width) this.x = 0;
-      if (this.y < 0) this.y = canvas.height;
-      if (this.y > canvas.height) this.y = 0;
+      
+      // Respawn at bottom if floats past top
+      if (this.y < -10) this.y = canvas.height + 10;
 
       // Mouse parallax / interaction (subtle repulse)
       if (mouse.x != null) {
@@ -134,7 +138,6 @@
 
   window.addEventListener('scroll', () => {
     navbar.classList.toggle('scrolled', window.scrollY > 20);
-    updateActive();
   }, { passive: true });
 
   hamburger.addEventListener('click', () => {
@@ -148,14 +151,18 @@
 
   /* ── ACTIVE NAV ───────────────────────────── */
   const sections = document.querySelectorAll('section[id]');
-  function updateActive() {
-    let cur = '';
-    sections.forEach(s => { if (window.scrollY >= s.offsetTop - 130) cur = s.id; });
-    links.forEach(l => {
-      l.classList.toggle('active', l.getAttribute('href') === `#${cur}`);
+  
+  const navObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        links.forEach(l => {
+          l.classList.toggle('active', l.getAttribute('href') === `#${entry.target.id}`);
+        });
+      }
     });
-  }
+  }, { threshold: 0.2, rootMargin: "-10% 0px -50% 0px" });
 
+  sections.forEach(s => navObserver.observe(s));
   /* ── SCROLL REVEAL ────────────────────────── */
   const revealSels = [
     '.service-card', '.sol-card', '.up-card',
