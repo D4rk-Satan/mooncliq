@@ -65,23 +65,27 @@ input, textarea, select, button { font-family: inherit; font-size: inherit; }
 }
 .fluid-blob {
   position: absolute; border-radius: 50%;
-  filter: blur(120px); opacity: 0.35; mix-blend-mode: screen;
+  opacity: 1; transform: translateZ(0);
   will-change: transform;
 }
 .fluid-1 {
-  width: 1000px; height: 1000px; background: rgba(91, 110, 245, 0.2);
+  width: 1000px; height: 1000px;
+  background: radial-gradient(circle, rgba(91, 110, 245, 0.15) 0%, transparent 70%);
   top: -20%; left: -10%; animation: fluidSpin 25s ease-in-out infinite alternate;
 }
 .fluid-2 {
-  width: 900px; height: 900px; background: rgba(34, 211, 238, 0.15);
+  width: 900px; height: 900px;
+  background: radial-gradient(circle, rgba(34, 211, 238, 0.1) 0%, transparent 70%);
   bottom: 0%; right: -10%; animation: fluidSpin 30s ease-in-out infinite alternate-reverse;
 }
 .fluid-3 {
-  width: 600px; height: 600px; background: rgba(212, 104, 22, 0.3);
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(212, 104, 22, 0.2) 0%, transparent 70%);
   top: 80%; left: 40%; animation: fluidDrift 20s ease-in-out infinite alternate;
 }
 .fluid-4 {
-  width: 700px; height: 700px; background: rgba(147, 51, 234, 0.15);
+  width: 700px; height: 700px;
+  background: radial-gradient(circle, rgba(147, 51, 234, 0.1) 0%, transparent 70%);
   top: 10%; left: 30%; animation: fluidDrift 28s ease-in-out infinite alternate-reverse;
 }
 @keyframes fluidSpin {
@@ -153,13 +157,11 @@ input, textarea, select, button { font-family: inherit; font-size: inherit; }
   line-height: 1.8; margin-bottom: 18px;
 }
 
-/* ── GLASSMORPHISM CARD ───────────────────────────────── */
+/* ── GLASSMORPHISM CARD (Faked for Performance) ────────── */
 .glass-card {
-  background: var(--surface);
+  background: rgba(10, 12, 25, 0.85);
   border: 1px solid var(--border);
   border-radius: var(--r3);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   position: relative;
   overflow: hidden;
@@ -396,18 +398,20 @@ input, textarea, select, button { font-family: inherit; font-size: inherit; }
 .hero-logo-img {
   width: 160px; height: 160px; object-fit: contain; border-radius: 50%;
   filter: drop-shadow(0 0 32px rgba(91,110,245,0.5));
+  transform: translateZ(0);
   animation: zeroGravity 9s ease-in-out infinite;
 }
 
 /* Floating tags */
 .float-tag {
   position: absolute;
-  background: rgba(255,255,255,0.06);
-  backdrop-filter: blur(12px);
+  background: rgba(10, 12, 25, 0.85);
   border: 1px solid rgba(91,110,245,0.25);
   color: var(--txt2); font-size: 0.78rem; font-weight: 600;
   padding: 6px 14px; border-radius: 100px;
   white-space: nowrap;
+  transform: translateZ(0);
+  will-change: transform;
 }
 .tag-1 { top: 12%;  left: -8%;  animation: zeroGravity 8s 0s   ease-in-out infinite; }
 .tag-2 { top: 20%;  right: -4%; animation: zeroGravity 9s 1.5s ease-in-out infinite; }
@@ -415,8 +419,8 @@ input, textarea, select, button { font-family: inherit; font-size: inherit; }
 .tag-4 { bottom: 15%; right: -2%;animation: zeroGravity 9.5s 4.5s ease-in-out infinite; }
 
 @keyframes zeroGravity {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-25px); }
+  0%, 100% { transform: translateY(0) translateZ(0); }
+  50% { transform: translateY(-25px) translateZ(0); }
 }
 
 /* Scroll hint */
@@ -846,17 +850,11 @@ a.citem-value:hover { color: var(--p2); }
 @media (max-width: 768px) {
   /* Drastically reduce GPU load on low-end mobile devices */
   .fluid-blob {
-    filter: blur(60px);
-    mix-blend-mode: normal;
-    opacity: 0.2;
+    opacity: 0.7;
     animation-duration: 40s; 
   }
   .fluid-noise {
     opacity: 0.03;
-  }
-  .glass-card {
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
   }
 }
 

@@ -76,10 +76,10 @@
     resize();
     particles = [];
     
-    // Performance optimization: fewer stars on mobile
+    // Performance optimization: fewer stars for 60fps locked rendering
     const isMobile = window.innerWidth < 768;
-    const density = isMobile ? 8000 : 4000;
-    const maxStars = isMobile ? 150 : 500;
+    const density = isMobile ? 12000 : 8000;
+    const maxStars = isMobile ? 60 : 200;
     
     const n = Math.min(Math.floor((canvas.width * canvas.height) / density), maxStars);
     
