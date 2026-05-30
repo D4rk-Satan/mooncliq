@@ -393,15 +393,14 @@ input, textarea, select, button { font-family: inherit; font-size: inherit; }
   position: absolute;
   top: -14px;
   left: 50%;
-  transform: translateX(-50%);
   display: flex;
   align-items: center;
   gap: 6px;
-  background: rgba(5, 6, 16, 0.9);
+  background: rgba(5, 6, 16, 0.95);
   border: 1px solid var(--border);
-  padding: 4px 10px;
+  padding: 5px 12px;
   border-radius: 100px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
   pointer-events: none;
   white-space: nowrap;
   transform-style: preserve-3d;
@@ -411,9 +410,8 @@ input, textarea, select, button { font-family: inherit; font-size: inherit; }
   height: 14px;
   display: block;
 }
-.orbit-1 .rocket-svg { transform: rotate(90deg); }
+.orbit-1 .rocket-svg, .orbit-3 .rocket-svg { transform: rotate(90deg); }
 .orbit-2 .rocket-svg { transform: rotate(-90deg); }
-.orbit-3 .rocket-svg { transform: rotate(90deg); }
 .rocket-text {
   font-size: 0.68rem;
   font-weight: 700;
@@ -424,6 +422,35 @@ input, textarea, select, button { font-family: inherit; font-size: inherit; }
 .rocket-blue   { border-color: rgba(91,110,245,0.4);   color: var(--p2);   box-shadow: 0 0 16px rgba(91,110,245,0.35); }
 .rocket-purple { border-color: rgba(167,139,250,0.4);  color: var(--acc2); box-shadow: 0 0 16px rgba(167,139,250,0.35); }
 .rocket-cyan   { border-color: rgba(34,211,238,0.4);   color: var(--cyan);   box-shadow: 0 0 16px rgba(34,211,238,0.35); }
+
+/* Orbit animations for billboarding (counter-rotation to stay upright and face screen) */
+.orbit-1 .orbit-rocket-wrap {
+  animation: billboardClockwise 25s linear infinite;
+}
+.orbit-2 .orbit-rocket-wrap {
+  animation: billboardCounterClockwise 18s linear infinite;
+}
+.orbit-3 .orbit-rocket-wrap {
+  animation: billboardClockwise 12s linear infinite;
+}
+
+@keyframes billboardClockwise {
+  0% {
+    transform: translateX(-50%) rotateZ(360deg) rotateX(-60deg) rotateY(10deg);
+  }
+  100% {
+    transform: translateX(-50%) rotateZ(0deg) rotateX(-60deg) rotateY(10deg);
+  }
+}
+
+@keyframes billboardCounterClockwise {
+  0% {
+    transform: translateX(-50%) rotateZ(0deg) rotateX(-60deg) rotateY(10deg);
+  }
+  100% {
+    transform: translateX(-50%) rotateZ(360deg) rotateX(-60deg) rotateY(10deg);
+  }
+}
 
 .logo-center {
   position: relative; z-index: 2;
