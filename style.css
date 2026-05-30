@@ -1035,6 +1035,29 @@ a.citem-value:hover { color: var(--p2); }
   .fluid-noise {
     opacity: 0.03;
   }
+  /* Disable expensive real-time filter blurs on active elements */
+  .orbit-rocket-wrap, .float-tag {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    background: rgba(12, 14, 28, 0.95) !important;
+  }
+  /* Static-fy visual glows to stop repaint calculations */
+  .hero-visual-bg {
+    animation: none !important;
+    filter: blur(15px) !important;
+  }
+  .logo-center::after {
+    animation: none !important;
+    filter: blur(8px) !important;
+  }
+  /* Optimize trails size and animation on mobile */
+  .orbit-1 .orbit-rocket-wrap::before,
+  .orbit-2 .orbit-rocket-wrap::before,
+  .orbit-3 .orbit-rocket-wrap::before {
+    animation: none !important;
+    width: 35px !important;
+    height: 8px !important;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
