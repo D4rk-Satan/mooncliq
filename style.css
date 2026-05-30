@@ -24,7 +24,7 @@
   --grad2: linear-gradient(135deg,#22d3ee,#5b6ef5);
 
   --r1: 8px; --r2: 14px; --r3: 20px; --r4: 28px;
-  --nav: 68px;
+  --nav: 80px;
   --t: all 0.3s cubic-bezier(.4,0,.2,1);
 
   --font-h: 'Outfit', system-ui, sans-serif;
@@ -239,15 +239,15 @@ input, textarea, select, button { font-family: inherit; font-size: inherit; }
   display: flex; align-items: center; gap: 12px; flex-shrink: 0;
 }
 .logo-glow-ring {
-  width: 52px; height: 52px; border-radius: 50%;
+  width: 64px; height: 64px; border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
   position: relative;
   transition: var(--t);
 }
-.logo-glow-ring.small { width: 42px; height: 42px; }
+.logo-glow-ring.small { width: 50px; height: 50px; }
 .logo-img { width: 100%; height: 100%; object-fit: contain; }
 .logo-text {
-  font-family: var(--font-h); font-size: 1.85rem;
+  font-family: var(--font-h); font-size: 2.1rem;
   font-weight: 800; letter-spacing: -0.02em; color: var(--txt);
   transition: var(--t);
 }
@@ -986,7 +986,7 @@ a.citem-value:hover { color: var(--p2); }
 }
 
 @media(max-width:768px){
-  :root{ --nav:62px; }
+  :root{ --nav:72px; }
   .section{ padding:72px 0; }
   .hamburger{ display:flex; }
   .nav-links{
