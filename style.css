@@ -391,14 +391,14 @@ input, textarea, select, button { font-family: inherit; font-size: inherit; }
 .orbit-3 { width: 48%; height: 48%; animation-duration: 12s; border-color: rgba(34,211,238,0.15); }
 .orbit-rocket-wrap {
   position: absolute;
-  top: -14px;
+  top: -20px;
   left: 50%;
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
   background: rgba(5, 6, 16, 0.95);
   border: 1px solid var(--border);
-  padding: 5px 12px;
+  padding: 6px 14px;
   border-radius: 100px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
   pointer-events: none;
@@ -406,12 +406,12 @@ input, textarea, select, button { font-family: inherit; font-size: inherit; }
   transform-style: preserve-3d;
 }
 .rocket-svg {
-  width: 14px;
-  height: 14px;
+  width: 20px;
+  height: 20px;
   display: block;
 }
-.orbit-1 .rocket-svg, .orbit-3 .rocket-svg { transform: rotate(90deg); }
-.orbit-2 .rocket-svg { transform: rotate(-90deg); }
+.orbit-1 .rocket-svg, .orbit-3 .rocket-svg { transform: rotate(45deg); }
+.orbit-2 .rocket-svg { transform: rotate(-135deg); }
 .rocket-text {
   font-size: 0.68rem;
   font-weight: 700;
