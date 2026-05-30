@@ -974,8 +974,8 @@ a.citem-value:hover { color: var(--p2); }
   .hero-actions { justify-content:center; }
   .hero-stats   { justify-content:center; }
   .hero-visual  { order:-1; }
-  .orbit-system { width: 360px; height: 360px; }
-  .hero-logo-img{ width: 130px; height: 130px; }
+  .orbit-system { width: 400px; height: 400px; }
+  .hero-logo-img{ width: 180px; height: 180px; }
   .float-tag    { display:none; }
 
   .about-grid   { grid-template-columns:1fr; gap:48px; }
@@ -1015,8 +1015,8 @@ a.citem-value:hover { color: var(--p2); }
   .hero-scroll  { display:none; }
 
   .hero-title{ font-size:clamp(2.2rem,8vw,3.5rem); }
-  .orbit-system{ width:280px; height:280px; }
-  .hero-logo-img{ width:100px; height:100px; }
+  .orbit-system{ width:330px; height:330px; }
+  .hero-logo-img{ width:140px; height:140px; }
   .rocket-svg { width: 16px !important; height: 16px !important; }
   .rocket-text { font-size: 0.62rem !important; }
   .orbit-rocket-wrap { padding: 4px 10px !important; }
@@ -1027,8 +1027,8 @@ a.citem-value:hover { color: var(--p2); }
   .hero{ padding:0 16px; padding-top:var(--nav); }
   .hero-stats{ flex-direction:column; gap:16px; }
   .stat-sep{ width:40px; height:1px; }
-  .orbit-system{ width:240px; height:240px; }
-  .hero-logo-img{ width:80px; height:80px; }
+  .orbit-system{ width:280px; height:280px; }
+  .hero-logo-img{ width:110px; height:110px; }
 }
 
 /* ── PERFORMANCE OPTIMIZATIONS ────────────────────────── */
