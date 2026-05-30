@@ -2,8 +2,10 @@
   <defs>
     <!-- Outer glow radial gradient -->
     <radialGradient id="outerGlow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%"   stop-color="#7080e8" stop-opacity="0.55"/>
-      <stop offset="45%"  stop-color="#5060c8" stop-opacity="0.25"/>
+      <stop offset="0%"   stop-color="#8090f0" stop-opacity="0.85"/>
+      <stop offset="30%"  stop-color="#7080e8" stop-opacity="0.6"/>
+      <stop offset="55%"  stop-color="#5868d8" stop-opacity="0.35"/>
+      <stop offset="80%"  stop-color="#4050b8" stop-opacity="0.15"/>
       <stop offset="100%" stop-color="#3040a0" stop-opacity="0"/>
     </radialGradient>
     <!-- Moon body gradient -->
