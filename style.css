@@ -399,8 +399,8 @@ input, textarea, select, button { font-family: inherit; font-size: inherit; }
 .orbit-3 { width: 64%; height: 64%; animation-duration: 12s; }
 .orbit-rocket-wrap {
   position: absolute;
-  top: -18px;
   left: 50%;
+  top: 50%;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -415,7 +415,7 @@ input, textarea, select, button { font-family: inherit; font-size: inherit; }
   cursor: pointer;
   white-space: nowrap;
   transform-style: preserve-3d;
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.3s ease;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
   will-change: transform;
   backface-visibility: hidden;
 }
@@ -472,32 +472,41 @@ input, textarea, select, button { font-family: inherit; font-size: inherit; }
 .rocket-purple { border-color: rgba(167,139,250,0.5);  color: var(--acc2); box-shadow: 0 0 20px rgba(167,139,250,0.45); }
 .rocket-cyan   { border-color: rgba(34,211,238,0.5);   color: var(--cyan);   box-shadow: 0 0 20px rgba(34,211,238,0.45); }
 
-/* Orbit animations for billboarding (counter-rotation to stay upright and face screen) */
+/* Orbit animations for billboarding (single-layer flat translation) */
 .orbit-1 .orbit-rocket-wrap {
-  animation: billboardClockwise 25s linear infinite;
+  animation: orbitMove1 25s linear infinite;
 }
 .orbit-2 .orbit-rocket-wrap {
-  animation: billboardCounterClockwise 18s linear infinite;
+  animation: orbitMove2 18s linear infinite;
 }
 .orbit-3 .orbit-rocket-wrap {
-  animation: billboardClockwise 12s linear infinite;
+  animation: orbitMove3 12s linear infinite;
 }
 
-@keyframes billboardClockwise {
+@keyframes orbitMove1 {
   0% {
-    transform: translateX(-50%) rotateZ(360deg) rotateX(-35deg) rotateY(5deg);
+    transform: translate(-50%, -50%) rotate(360deg) translate(240px) rotate(-360deg);
   }
   100% {
-    transform: translateX(-50%) rotateZ(0deg) rotateX(-35deg) rotateY(5deg);
+    transform: translate(-50%, -50%) rotate(0deg) translate(240px) rotate(0deg);
   }
 }
 
-@keyframes billboardCounterClockwise {
+@keyframes orbitMove2 {
   0% {
-    transform: translateX(-50%) rotateZ(0deg) rotateX(-35deg) rotateY(5deg);
+    transform: translate(-50%, -50%) rotate(0deg) translate(195px) rotate(0deg);
   }
   100% {
-    transform: translateX(-50%) rotateZ(360deg) rotateX(-35deg) rotateY(5deg);
+    transform: translate(-50%, -50%) rotate(360deg) translate(195px) rotate(-360deg);
+  }
+}
+
+@keyframes orbitMove3 {
+  0% {
+    transform: translate(-50%, -50%) rotate(360deg) translate(150px) rotate(-360deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(0deg) translate(150px) rotate(0deg);
   }
 }
 
