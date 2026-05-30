@@ -374,6 +374,7 @@ input, textarea, select, button { font-family: inherit; font-size: inherit; }
   border-radius: 50%; pointer-events: none;
   filter: blur(24px);
   animation: nebulaGlow 10s ease-in-out infinite alternate;
+  will-change: transform;
 }
 .orbit-system {
   position: relative; width: 480px; height: 480px;
@@ -1028,14 +1029,11 @@ a.citem-value:hover { color: var(--p2); }
 }
 
 /* ── PERFORMANCE OPTIMIZATIONS ────────────────────────── */
-@media (max-width: 768px) {
-  /* Drastically reduce GPU load on low-end mobile devices */
+@media (max-width: 1024px) {
+  /* Drastically reduce GPU load on tablet and mobile devices */
   .fluid-blob {
     opacity: 0.7;
     animation-duration: 40s; 
-  }
-  .fluid-noise {
-    opacity: 0.03;
   }
   /* Disable expensive real-time filter blurs on active elements */
   .orbit-rocket-wrap, .float-tag {
@@ -1043,10 +1041,10 @@ a.citem-value:hover { color: var(--p2); }
     -webkit-backdrop-filter: none !important;
     background: rgba(12, 14, 28, 0.95) !important;
   }
-  /* Static-fy visual glows to stop repaint calculations */
+  /* Static-fy visual glows and reduce blur radius to 8px to stop repaint overhead */
   .hero-visual-bg {
     animation: none !important;
-    filter: blur(15px) !important;
+    filter: blur(8px) !important;
   }
   .logo-center::after {
     animation: none !important;
@@ -1059,6 +1057,13 @@ a.citem-value:hover { color: var(--p2); }
     animation: none !important;
     width: 35px !important;
     height: 8px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Completely hide the SVG noise shader to prevent fill-rate limitations */
+  .fluid-noise {
+    display: none !important;
   }
 }
 

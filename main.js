@@ -113,7 +113,11 @@
     raf = requestAnimationFrame(animateParticles);
   }
 
+  let lastWidth = window.innerWidth;
   window.addEventListener('resize', () => {
+    const currentWidth = window.innerWidth;
+    if (currentWidth === lastWidth) return;
+    lastWidth = currentWidth;
     clearTimeout(window._rt);
     window._rt = setTimeout(() => {
       initParticles();
@@ -147,8 +151,15 @@
   const navLinks  = document.getElementById('navLinks');
   const links     = document.querySelectorAll('.nav-link');
 
+  let scrollScheduled = false;
   window.addEventListener('scroll', () => {
-    navbar.classList.toggle('scrolled', window.scrollY > 20);
+    if (!scrollScheduled) {
+      scrollScheduled = true;
+      window.requestAnimationFrame(() => {
+        navbar.classList.toggle('scrolled', window.scrollY > 20);
+        scrollScheduled = false;
+      });
+    }
   }, { passive: true });
 
   hamburger.addEventListener('click', () => {
