@@ -239,7 +239,7 @@ input, textarea, select, button { font-family: inherit; font-size: inherit; }
   display: flex; align-items: center; gap: 12px; flex-shrink: 0;
 }
 .logo-glow-ring {
-  width: 44px; height: 44px; border-radius: 50%;
+  width: 52px; height: 52px; border-radius: 50%;
   background: rgba(91,110,245,0.12);
   border: 1px solid rgba(91,110,245,0.3);
   display: flex; align-items: center; justify-content: center;
@@ -247,10 +247,10 @@ input, textarea, select, button { font-family: inherit; font-size: inherit; }
   box-shadow: 0 0 16px rgba(91,110,245,0.25);
   transition: var(--t);
 }
-.logo-glow-ring.small { width: 36px; height: 36px; }
-.logo-img { width: 28px; height: 28px; object-fit: contain; border-radius: 50%; }
+.logo-glow-ring.small { width: 42px; height: 42px; }
+.logo-img { width: 36px; height: 36px; object-fit: contain; border-radius: 50%; }
 .logo-text {
-  font-family: var(--font-h); font-size: 1.6rem;
+  font-family: var(--font-h); font-size: 1.85rem;
   font-weight: 800; letter-spacing: -0.02em; color: var(--txt);
   transition: var(--t);
 }
@@ -909,7 +909,7 @@ a.citem-value:hover { color: var(--p2); }
 .footer-logo {
   display: flex; align-items: center; gap: 10px; margin-bottom: 16px;
 }
-.footer-logo-img { width: 28px; height: 28px; object-fit: contain; border-radius: 50%; }
+.footer-logo-img { width: 36px; height: 36px; object-fit: contain; border-radius: 50%; }
 .footer-tagline { color: var(--txt3); font-size: 0.87rem; line-height: 1.75; max-width: 280px; margin-bottom: 18px; }
 .footer-partner-pill {
   display: inline-flex; align-items: center; gap: 7px;
