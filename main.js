@@ -95,6 +95,16 @@
   }
 
   function animateParticles() {
+    const isMobile = window.innerWidth < 768;
+    if (isMobile) {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      for (let i = 0; i < particles.length; i++) {
+        particles[i].draw();
+      }
+      if (raf) cancelAnimationFrame(raf);
+      return;
+    }
+
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     for (let i = 0; i < particles.length; i++) {
       particles[i].update();
@@ -107,6 +117,7 @@
     clearTimeout(window._rt);
     window._rt = setTimeout(() => {
       initParticles();
+      animateParticles();
     }, 200);
   });
   initParticles();
