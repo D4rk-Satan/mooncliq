@@ -386,21 +386,24 @@ input, textarea, select, button { font-family: inherit; font-size: inherit; }
   display: none;
 }
 .orbit {
-  position: absolute; border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
   border: none;
   box-shadow: none;
-  animation: orbitSpin linear infinite;
   transform-style: preserve-3d;
   will-change: transform;
   backface-visibility: hidden;
 }
-.orbit-1 { width: 100%; height: 100%; animation-duration: 25s; }
-.orbit-2 { width: 82%; height: 82%; animation-duration: 18s; animation-direction: reverse; }
-.orbit-3 { width: 64%; height: 64%; animation-duration: 12s; }
+.orbit-1 { width: 100%; height: 100%; animation: orbitSpin 25s linear infinite; }
+.orbit-2 { width: 82%; height: 82%; animation: orbitSpin 18s linear infinite reverse; }
+.orbit-3 { width: 64%; height: 64%; animation: orbitSpin 12s linear infinite; }
 .orbit-rocket-wrap {
   position: absolute;
+  top: -18px;
   left: 50%;
-  top: 50%;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -472,41 +475,23 @@ input, textarea, select, button { font-family: inherit; font-size: inherit; }
 .rocket-purple { border-color: rgba(167,139,250,0.5);  color: var(--acc2); box-shadow: 0 0 20px rgba(167,139,250,0.45); }
 .rocket-cyan   { border-color: rgba(34,211,238,0.5);   color: var(--cyan);   box-shadow: 0 0 20px rgba(34,211,238,0.45); }
 
-/* Orbit animations for billboarding (single-layer flat translation) */
+/* Orbit animations for billboarding */
 .orbit-1 .orbit-rocket-wrap {
-  animation: orbitMove1 25s linear infinite;
+  animation: orbitCounterSpin 25s linear infinite;
 }
 .orbit-2 .orbit-rocket-wrap {
-  animation: orbitMove2 18s linear infinite;
+  animation: orbitCounterSpin 18s linear infinite reverse;
 }
 .orbit-3 .orbit-rocket-wrap {
-  animation: orbitMove3 12s linear infinite;
+  animation: orbitCounterSpin 12s linear infinite;
 }
 
-@keyframes orbitMove1 {
-  0% {
-    transform: translate(-50%, -50%) rotate(360deg) translate(240px) rotate(-360deg);
+@keyframes orbitCounterSpin {
+  from {
+    transform: translateX(-50%) rotate(360deg);
   }
-  100% {
-    transform: translate(-50%, -50%) rotate(0deg) translate(240px) rotate(0deg);
-  }
-}
-
-@keyframes orbitMove2 {
-  0% {
-    transform: translate(-50%, -50%) rotate(0deg) translate(195px) rotate(0deg);
-  }
-  100% {
-    transform: translate(-50%, -50%) rotate(360deg) translate(195px) rotate(-360deg);
-  }
-}
-
-@keyframes orbitMove3 {
-  0% {
-    transform: translate(-50%, -50%) rotate(360deg) translate(150px) rotate(-360deg);
-  }
-  100% {
-    transform: translate(-50%, -50%) rotate(0deg) translate(150px) rotate(0deg);
+  to {
+    transform: translateX(-50%) rotate(0deg);
   }
 }
 
@@ -952,7 +937,10 @@ a.citem-value:hover { color: var(--p2); }
 /* ── ANIMATIONS ───────────────────────────────────────── */
 @keyframes fadeUp   { from{opacity:0;transform:translateY(22px)} to{opacity:1;transform:translateY(0)} }
 @keyframes fadeIn   { from{opacity:0} to{opacity:1} }
-@keyframes orbitSpin{ from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
+@keyframes orbitSpin {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
 @keyframes floatY   { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-18px)} }
 @keyframes floatTag { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
 @keyframes scrollDown{ 0%{opacity:1;transform:translateY(0)} 100%{opacity:0;transform:translateY(10px)} }
