@@ -1,13 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
-  <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#F4511E"/>
-      <stop offset="100%" stop-color="#D84315"/>
-    </linearGradient>
-  </defs>
-  <rect width="64" height="64" rx="14" fill="url(#bg)"/>
-  <text x="32" y="31" font-family="Arial Black,Arial,sans-serif" font-size="30" font-weight="900"
-        fill="white" text-anchor="middle" dominant-baseline="middle">Z</text>
-  <text x="32" y="53" font-family="Arial,sans-serif" font-size="9" font-weight="700"
-        fill="white" text-anchor="middle" opacity="0.9">Mail</text>
+  <rect x="8" y="16" width="48" height="32" rx="5" fill="#1E88E5"/>
+  <!-- Back flap -->
+  <path fill="#1565C0" d="M8 16 L32 32 L56 16 Z"/>
+  <!-- Front lines -->
+  <path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" d="M10 46 L28 32 M54 46 L36 32"/>
 </svg>

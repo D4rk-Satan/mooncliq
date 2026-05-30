@@ -1,13 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
-  <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#00897B"/>
-      <stop offset="100%" stop-color="#00695C"/>
-    </linearGradient>
-  </defs>
-  <rect width="64" height="64" rx="14" fill="url(#bg)"/>
-  <text x="32" y="31" font-family="Arial Black,Arial,sans-serif" font-size="30" font-weight="900"
-        fill="white" text-anchor="middle" dominant-baseline="middle">Z</text>
-  <text x="32" y="53" font-family="Arial,sans-serif" font-size="9" font-weight="700"
-        fill="white" text-anchor="middle" opacity="0.9">POS</text>
+  <rect x="18" y="10" width="28" height="44" rx="4" fill="#37474F"/>
+  <!-- Screen -->
+  <rect x="22" y="14" width="20" height="14" rx="2" fill="#00E676" fill-opacity="0.2" stroke="#00E676" stroke-width="1.5"/>
+  <!-- Buttons -->
+  <circle cx="26" cy="36" r="2" fill="#CFD8DC"/>
+  <circle cx="32" cy="36" r="2" fill="#CFD8DC"/>
+  <circle cx="38" cy="36" r="2" fill="#CFD8DC"/>
+  <circle cx="26" cy="42" r="2" fill="#CFD8DC"/>
+  <circle cx="32" cy="42" r="2" fill="#CFD8DC"/>
+  <circle cx="38" cy="42" r="2" fill="#CFD8DC"/>
+  <circle cx="26" cy="48" r="2" fill="#FF1744"/>
+  <circle cx="32" cy="48" r="2" fill="#00E676"/>
+  <circle cx="38" cy="48" r="2" fill="#FFD600"/>
+  <!-- Card slot -->
+  <line x1="18" y1="24" x2="18" y2="48" stroke="#1c2529" stroke-width="3"/>
 </svg>

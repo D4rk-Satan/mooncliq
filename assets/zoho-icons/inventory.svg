@@ -1,13 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
-  <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#E67E22"/>
-      <stop offset="100%" stop-color="#D35400"/>
-    </linearGradient>
-  </defs>
-  <rect width="64" height="64" rx="14" fill="url(#bg)"/>
-  <text x="32" y="31" font-family="Arial Black,Arial,sans-serif" font-size="30" font-weight="900"
-        fill="white" text-anchor="middle" dominant-baseline="middle">Z</text>
-  <text x="32" y="53" font-family="Arial,sans-serif" font-size="9" font-weight="700"
-        fill="white" text-anchor="middle" opacity="0.9">Inventory</text>
+  <!-- Left face -->
+  <path fill="#D35400" d="M32 54 L12 43 V21 L32 32 Z"/>
+  <!-- Right face -->
+  <path fill="#E67E22" d="M32 54 L52 43 V21 L32 32 Z"/>
+  <!-- Left open flap -->
+  <path fill="#E58E35" d="M32 32 L12 21 L18 10 L38 21 Z"/>
+  <!-- Right open flap -->
+  <path fill="#F39C12" d="M32 32 L52 21 L46 10 L26 21 Z"/>
+  <!-- Package detail/inner box -->
+  <path fill="#F1C40F" d="M32 26 L22 21 V16 L32 21 Z" opacity="0.9"/>
+  <path fill="#F39C12" d="M32 26 L42 21 V16 L32 21 Z" opacity="0.9"/>
 </svg>

@@ -1,13 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
-  <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#8E44AD"/>
-      <stop offset="100%" stop-color="#6C3483"/>
-    </linearGradient>
-  </defs>
-  <rect width="64" height="64" rx="14" fill="url(#bg)"/>
-  <text x="32" y="31" font-family="Arial Black,Arial,sans-serif" font-size="30" font-weight="900"
-        fill="white" text-anchor="middle" dominant-baseline="middle">Z</text>
-  <text x="32" y="53" font-family="Arial,sans-serif" font-size="9" font-weight="700"
-        fill="white" text-anchor="middle" opacity="0.9">Analytics</text>
+  <!-- Outer purple ring/base -->
+  <circle cx="32" cy="32" r="26" fill="#8E44AD"/>
+  <!-- White lines / circle segments for database analytics -->
+  <circle cx="32" cy="32" r="18" fill="none" stroke="#FFFFFF" stroke-width="3.5" stroke-dasharray="80 30"/>
+  <circle cx="32" cy="32" r="11" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-dasharray="40 20"/>
+  <!-- Center node dot -->
+  <circle cx="32" cy="32" r="4" fill="#FFFFFF"/>
+  <!-- Connected data points -->
+  <line x1="32" y1="32" x2="44" y2="20" stroke="#FFFFFF" stroke-width="2.5"/>
+  <circle cx="44" cy="20" r="4.5" fill="#22D3EE"/>
 </svg>

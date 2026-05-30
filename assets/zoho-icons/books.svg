@@ -1,13 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
-  <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#1A73E8"/>
-      <stop offset="100%" stop-color="#0D5DBE"/>
-    </linearGradient>
-  </defs>
-  <rect width="64" height="64" rx="14" fill="url(#bg)"/>
-  <text x="32" y="31" font-family="Arial Black,Arial,sans-serif" font-size="30" font-weight="900"
-        fill="white" text-anchor="middle" dominant-baseline="middle">Z</text>
-  <text x="32" y="53" font-family="Arial,sans-serif" font-size="9" font-weight="700"
-        fill="white" text-anchor="middle" opacity="0.9">Books</text>
+  <!-- Cyan background fold -->
+  <path fill="#22D3EE" d="M12 18a4 4 0 0 1 4-4h28a4 4 0 0 1 4 4v28a4 4 0 0 1-4 4H16a4 4 0 0 1-4-4V18z" opacity="0.65"/>
+  <!-- Dark Blue main card -->
+  <path fill="#1A73E8" d="M18 22a4 4 0 0 1 4-4h28a4 4 0 0 1 4 4v28a4 4 0 0 1-4 4H22a4 4 0 0 1-4-4V22z"/>
+  <!-- Ledger Graph lines inside -->
+  <rect x="26" y="38" width="6" height="10" rx="1" fill="#FFFFFF" opacity="0.8"/>
+  <rect x="34" y="30" width="6" height="18" rx="1" fill="#FFFFFF"/>
+  <rect x="42" y="24" width="6" height="24" rx="1" fill="#FFFFFF" opacity="0.9"/>
 </svg>
