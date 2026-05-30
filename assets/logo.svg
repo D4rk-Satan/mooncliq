@@ -26,32 +26,54 @@
       <feGaussianBlur stdDeviation="1" result="blur"/>
       <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
+    <style>
+      @keyframes rotateStars {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+      @keyframes twinkle {
+        0%, 100% { opacity: 0.35; }
+        50% { opacity: 1; }
+      }
+      .moving-stars {
+        transform-origin: 250px 250px;
+        animation: rotateStars 80s linear infinite;
+      }
+      .star-t1 { animation: twinkle 3s infinite ease-in-out; }
+      .star-t2 { animation: twinkle 4s infinite ease-in-out 1s; }
+      .star-t3 { animation: twinkle 5s infinite ease-in-out 2.5s; }
+    </style>
   </defs>
 
   <!-- Outer glow circle -->
   <circle cx="250" cy="250" r="230" fill="url(#outerGlow)"/>
 
   <!-- Stars scattered in the glow area -->
-  <g filter="url(#starGlow)" opacity="0.9">
-    <circle cx="95"  cy="145" r="1.2" fill="white" opacity="0.8"/>
-    <circle cx="120" cy="310" r="1"   fill="white" opacity="0.7"/>
-    <circle cx="80"  cy="260" r="1.5" fill="white" opacity="0.9"/>
-    <circle cx="410" cy="130" r="1.2" fill="white" opacity="0.8"/>
-    <circle cx="395" cy="340" r="1"   fill="white" opacity="0.7"/>
-    <circle cx="420" cy="280" r="1.5" fill="white" opacity="0.85"/>
-    <circle cx="150" cy="95"  r="1"   fill="white" opacity="0.75"/>
-    <circle cx="360" cy="90"  r="1.2" fill="white" opacity="0.8"/>
-    <circle cx="130" cy="390" r="1"   fill="white" opacity="0.7"/>
-    <circle cx="370" cy="400" r="1.2" fill="white" opacity="0.75"/>
-    <circle cx="70"  cy="200" r="0.8" fill="white" opacity="0.6"/>
-    <circle cx="440" cy="200" r="0.8" fill="white" opacity="0.6"/>
-    <circle cx="200" cy="72"  r="0.9" fill="white" opacity="0.7"/>
-    <circle cx="305" cy="68"  r="0.9" fill="white" opacity="0.65"/>
-    <circle cx="200" cy="430" r="0.9" fill="white" opacity="0.7"/>
-    <circle cx="300" cy="435" r="0.9" fill="white" opacity="0.65"/>
+  <g class="moving-stars" filter="url(#starGlow)" opacity="0.9">
+    <circle cx="95"  cy="145" r="1.2" fill="white" opacity="0.8" class="star-t1"/>
+    <circle cx="120" cy="310" r="1"   fill="white" opacity="0.7" class="star-t2"/>
+    <circle cx="80"  cy="260" r="1.5" fill="white" opacity="0.9" class="star-t3"/>
+    <circle cx="410" cy="130" r="1.2" fill="white" opacity="0.8" class="star-t2"/>
+    <circle cx="395" cy="340" r="1"   fill="white" opacity="0.7" class="star-t1"/>
+    <circle cx="420" cy="280" r="1.5" fill="white" opacity="0.85" class="star-t3"/>
+    <circle cx="150" cy="95"  r="1"   fill="white" opacity="0.75" class="star-t1"/>
+    <circle cx="360" cy="90"  r="1.2" fill="white" opacity="0.8" class="star-t3"/>
+    <circle cx="130" cy="390" r="1"   fill="white" opacity="0.7" class="star-t2"/>
+    <circle cx="370" cy="400" r="1.2" fill="white" opacity="0.75" class="star-t1"/>
+    <circle cx="70"  cy="200" r="0.8" fill="white" opacity="0.6" class="star-t3"/>
+    <circle cx="440" cy="200" r="0.8" fill="white" opacity="0.6" class="star-t2"/>
+    <circle cx="200" cy="72"  r="0.9" fill="white" opacity="0.7" class="star-t1"/>
+    <circle cx="305" cy="68"  r="0.9" fill="white" opacity="0.65" class="star-t2"/>
+    <circle cx="200" cy="430" r="0.9" fill="white" opacity="0.7" class="star-t3"/>
+    <circle cx="300" cy="435" r="0.9" fill="white" opacity="0.65" class="star-t1"/>
   </g>
 
 
+
+  <!-- Ring outline outer -->
+  <circle cx="250" cy="250" r="168" fill="none" stroke="#5060cc" stroke-width="3.5" opacity="0.9"/>
+  <!-- Ring outline inner (thin white) -->
+  <circle cx="250" cy="250" r="160" fill="none" stroke="white" stroke-width="1.2" opacity="0.6"/>
 
   <!-- Moon body -->
   <circle cx="250" cy="250" r="155" fill="url(#moonGrad)"/>
