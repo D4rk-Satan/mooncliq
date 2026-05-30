@@ -240,11 +240,8 @@ input, textarea, select, button { font-family: inherit; font-size: inherit; }
 }
 .logo-glow-ring {
   width: 52px; height: 52px; border-radius: 50%;
-  background: rgba(91,110,245,0.12);
-  border: 1px solid rgba(91,110,245,0.3);
   display: flex; align-items: center; justify-content: center;
   position: relative;
-  box-shadow: 0 0 16px rgba(91,110,245,0.25);
   transition: var(--t);
 }
 .logo-glow-ring.small { width: 42px; height: 42px; }

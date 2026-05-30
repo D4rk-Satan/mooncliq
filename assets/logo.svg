@@ -51,10 +51,7 @@
     <circle cx="300" cy="435" r="0.9" fill="white" opacity="0.65"/>
   </g>
 
-  <!-- Ring outline outer -->
-  <circle cx="250" cy="250" r="168" fill="none" stroke="#5060cc" stroke-width="3.5" opacity="0.9"/>
-  <!-- Ring outline inner (thin white) -->
-  <circle cx="250" cy="250" r="160" fill="none" stroke="white" stroke-width="1.2" opacity="0.6"/>
+
 
   <!-- Moon body -->
   <circle cx="250" cy="250" r="155" fill="url(#moonGrad)"/>
