@@ -412,13 +412,13 @@ input, textarea, select, button { font-family: inherit; font-size: inherit; }
 .orbit {
   position: absolute;
   top: 50%; left: 50%;
-  border: 1px solid rgba(255,255,255,0); /* Hidden orbit path */
+  border: 1px solid rgba(255,255,255,0.08); /* Faint visible orbit path */
   border-radius: 50%;
   transform: translate(-50%, -50%);
   animation: spinOrbit linear infinite;
 }
-.orbit-1 { width: 850px; height: 850px; animation-duration: 35s; }
-.orbit-2 { width: 1000px; height: 1000px; animation-duration: 45s; animation-direction: reverse; }
+.orbit-1 { width: 520px; height: 520px; animation-duration: 35s; }
+.orbit-2 { width: 680px; height: 680px; animation-duration: 45s; animation-direction: reverse; }
 
 .orbit-icon {
   position: absolute;
