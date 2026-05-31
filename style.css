@@ -24,7 +24,7 @@
   --grad2: linear-gradient(135deg,#22d3ee,#5b6ef5);
 
   --r1: 8px; --r2: 14px; --r3: 20px; --r4: 28px;
-  --nav: 80px;
+  --nav: 100px;
   --t: all 0.3s cubic-bezier(.4,0,.2,1);
 
   --font-h: 'Outfit', system-ui, sans-serif;
@@ -239,7 +239,7 @@ input, textarea, select, button { font-family: inherit; font-size: inherit; }
   display: flex; align-items: center; gap: 12px; flex-shrink: 0;
 }
 .logo-glow-ring {
-  width: 70px; height: 70px; border-radius: 50%;
+  width: 90px; height: 90px; border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
   position: relative;
   transition: var(--t);
@@ -395,7 +395,7 @@ input, textarea, select, button { font-family: inherit; font-size: inherit; }
   display: flex; align-items: center; justify-content: center;
 }
 .hero-logo-img {
-  width: 400px; height: 400px; object-fit: contain; border-radius: 50%;
+  width: 500px; height: 500px; object-fit: contain; border-radius: 50%;
   transform: translateZ(0);
   animation: zeroGravity 9s ease-in-out infinite;
 }
@@ -669,13 +669,13 @@ a.citem-value:hover { color: var(--p2); }
   border: 1px solid rgba(91,110,245,0.22);
 }
 .seal-ring {
-  width: 48px; height: 48px; border-radius: 50%;
+  width: 64px; height: 64px; border-radius: 50%;
   border: 2px solid rgba(91,110,245,0.35);
   background: rgba(91,110,245,0.1);
   display: flex; align-items: center; justify-content: center;
   box-shadow: 0 0 20px rgba(91,110,245,0.25);
 }
-.seal-logo { width: 30px; height: 30px; object-fit: contain; border-radius: 50%; }
+.seal-logo { width: 44px; height: 44px; object-fit: contain; border-radius: 50%; }
 .seal-text strong { display: block; font-weight: 700; font-size: 0.9rem; }
 .seal-text span { font-size: 0.75rem; color: var(--txt3); }
 
