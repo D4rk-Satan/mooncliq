@@ -6,21 +6,6 @@
       <stop offset="45%"  stop-color="#5060c8" stop-opacity="0.25"/>
       <stop offset="100%" stop-color="#3040a0" stop-opacity="0"/>
     </radialGradient>
-    <!-- Moon body gradient -->
-    <radialGradient id="moonGrad" cx="42%" cy="40%" r="55%">
-      <stop offset="0%"   stop-color="#f0f2ff"/>
-      <stop offset="60%"  stop-color="#dde0f8"/>
-      <stop offset="100%" stop-color="#c8ccf0"/>
-    </radialGradient>
-    <!-- Crater gradients -->
-    <radialGradient id="crater1" cx="50%" cy="50%" r="50%">
-      <stop offset="0%"  stop-color="#c0c4e8"/>
-      <stop offset="100%" stop-color="#b0b4d8"/>
-    </radialGradient>
-    <radialGradient id="crater2" cx="50%" cy="50%" r="50%">
-      <stop offset="0%"  stop-color="#b8bce4"/>
-      <stop offset="100%" stop-color="#a8acd4"/>
-    </radialGradient>
     <!-- Stars in glow -->
     <filter id="starGlow">
       <feGaussianBlur stdDeviation="1" result="blur"/>
@@ -51,37 +36,6 @@
     <circle cx="300" cy="435" r="0.9" fill="white" opacity="0.65"/>
   </g>
 
-  <!-- Ring outline outer -->
-  <circle cx="250" cy="250" r="168" fill="none" stroke="#5060cc" stroke-width="3.5" opacity="0.9"/>
-  <!-- Ring outline inner (thin white) -->
-  <circle cx="250" cy="250" r="160" fill="none" stroke="white" stroke-width="1.2" opacity="0.6"/>
-
-  <!-- Moon body -->
-  <circle cx="250" cy="250" r="155" fill="url(#moonGrad)"/>
-
-  <!-- Moon craters / surface markings -->
-  <!-- Large upper-left crater cluster -->
-  <ellipse cx="185" cy="185" rx="38" ry="28" fill="url(#crater1)" opacity="0.55" transform="rotate(-20,185,185)"/>
-  <ellipse cx="160" cy="205" rx="22" ry="16" fill="url(#crater2)" opacity="0.45" transform="rotate(-15,160,205)"/>
-
-  <!-- Mid-right crater -->
-  <ellipse cx="310" cy="200" rx="28" ry="20" fill="url(#crater1)" opacity="0.45" transform="rotate(10,310,200)"/>
-
-  <!-- Lower cluster -->
-  <ellipse cx="220" cy="310" rx="32" ry="22" fill="url(#crater2)" opacity="0.4" transform="rotate(-5,220,310)"/>
-  <ellipse cx="285" cy="330" rx="20" ry="14" fill="url(#crater1)" opacity="0.35" transform="rotate(8,285,330)"/>
-
-  <!-- Small pockets -->
-  <circle cx="240" cy="165" r="10" fill="#c8ccec" opacity="0.4"/>
-  <circle cx="195" cy="255" r="7"  fill="#c0c4e8" opacity="0.35"/>
-  <circle cx="315" cy="280" r="9"  fill="#c8ccec" opacity="0.38"/>
-
-  <!-- Brand text -->
-  <text x="250" y="262"
-        font-family="'Outfit', 'Trebuchet MS', sans-serif"
-        font-size="48"
-        font-weight="400"
-        letter-spacing="-0.5"
-        text-anchor="middle"
-        fill="#1a3a4a">moon Cliq</text>
+  <!-- Embed the PNG logo inside the glowing starfield -->
+  <image href="logo.png" x="78" y="78" width="344" height="344" />
 </svg>
