@@ -239,7 +239,7 @@ input, textarea, select, button { font-family: inherit; font-size: inherit; }
   display: flex; align-items: center; gap: 12px; flex-shrink: 0;
 }
 .logo-glow-ring {
-  width: 64px; height: 64px; border-radius: 50%;
+  width: 70px; height: 70px; border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
   position: relative;
   transition: var(--t);
