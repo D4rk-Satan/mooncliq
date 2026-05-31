@@ -831,13 +831,20 @@ a.citem-value:hover { color: var(--p2); }
 
 /* ── RESPONSIVE ───────────────────────────────────────── */
 @media(max-width:1024px){
-  .hero-inner { grid-template-columns:1fr; gap:56px; text-align:center; }
+  .hero-inner { display: flex; flex-direction: column; gap:56px; text-align:center; }
+  .hero-content { margin: 0 auto; padding-top: 0; }
   .hero-subtitle { margin:0 auto 40px; }
   .hero-actions { justify-content:center; }
   .hero-stats   { justify-content:center; }
-  .hero-visual  { order:-1; }
-  .orbit-system { width: 400px; height: 400px; }
-  .hero-logo-img{ width: 180px; height: 180px; }
+  
+  .hero-visual { 
+    position: relative; top: auto; right: auto; order: -1;
+    width: 500px; height: 500px; margin: 0 auto;
+  }
+  .hero-logo-img { width: 400px; height: 400px; }
+  .orbit-1 { width: 420px; height: 420px; }
+  .orbit-2 { width: 500px; height: 500px; }
+  .orbit-icon { width: 36px; height: 36px; top: -18px; padding: 6px; }
   .float-tag    { display:none; }
 
   .about-grid   { grid-template-columns:1fr; gap:48px; }
@@ -877,7 +884,11 @@ a.citem-value:hover { color: var(--p2); }
   .hero-scroll  { display:none; }
 
   .hero-title{ font-size:clamp(2.2rem,8vw,3.5rem); }
-  .hero-logo-img{ width:300px; height:300px; }
+  .hero-visual { width: 340px; height: 340px; }
+  .hero-logo-img { width: 280px; height: 280px; }
+  .orbit-1 { width: 300px; height: 300px; }
+  .orbit-2 { width: 340px; height: 340px; }
+  .orbit-icon { width: 28px; height: 28px; top: -14px; padding: 4px; }
 }
 
 @media(max-width:480px){
@@ -885,7 +896,10 @@ a.citem-value:hover { color: var(--p2); }
   .hero{ padding:0 16px; padding-top:var(--nav); }
   .hero-stats{ flex-direction:column; gap:16px; }
   .stat-sep{ width:40px; height:1px; }
-  .hero-logo-img{ width:240px; height:240px; }
+  .hero-visual { width: 280px; height: 280px; margin-top: 40px; }
+  .hero-logo-img { width: 220px; height: 220px; }
+  .orbit-1 { width: 240px; height: 240px; }
+  .orbit-2 { width: 280px; height: 280px; }
 }
 
 /* ── PERFORMANCE OPTIMIZATIONS ────────────────────────── */
