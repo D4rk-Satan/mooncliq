@@ -225,7 +225,7 @@ button {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 240px;
+  padding: 0 14px;
   position: relative;
   z-index: 1;
 }
@@ -573,7 +573,7 @@ button {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0 28px;
+  padding: 0 14px;
   padding-top: var(--nav);
   position: relative;
   z-index: 1;
