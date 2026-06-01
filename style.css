@@ -1536,17 +1536,12 @@ a.citem-value:hover {
   background: linear-gradient(135deg, rgba(91, 110, 245, 0.1), rgba(167, 139, 250, 0.06));
   border: 1px solid rgba(91, 110, 245, 0.22);
 }
-
 .seal-ring {
   width: 120px;
   height: 120px;
-  border-radius: 50%;
-  border: 2px solid rgba(91, 110, 245, 0.35);
-  background: rgba(91, 110, 245, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 0 20px rgba(91, 110, 245, 0.25);
 }
 
 .seal-logo {
