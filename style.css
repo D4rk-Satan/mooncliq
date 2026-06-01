@@ -2047,7 +2047,7 @@ a.citem-value:hover {
 
 @media(max-width:768px) {
   :root {
-    --nav: 72px;
+    --nav: 180px; /* Increased to fit the massive stacked mobile header logo */
   }
 
   .section {
@@ -2175,19 +2175,21 @@ a.citem-value:hover {
     padding: 4px;
   }
 
-  /* Shrink logos on mobile to prevent layout breakage */
-  .nav-logo .logo-glow-ring {
-    width: 70px;
-    height: 70px;
+  /* Stack logos vertically on mobile to accommodate large sizes */
+  .nav-logo {
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .footer-logo {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
   }
 
   .nav-logo .logo-text {
     font-size: 1.4rem;
-  }
-
-  .footer-logo .logo-glow-ring {
-    width: 175px;
-    height: 175px;
   }
 }
 
