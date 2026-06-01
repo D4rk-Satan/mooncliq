@@ -223,9 +223,9 @@ button {
 
 /* ── LAYOUT ───────────────────────────────────────────── */
 .container {
-  max-width: 1200px;
+  max-width: 1440px;
   margin: 0 auto;
-  padding: 0 7px;
+  padding: 0 32px;
   position: relative;
   z-index: 1;
 }
@@ -425,9 +425,9 @@ button {
 }
 
 .nav-container {
-  max-width: 1200px;
+  max-width: 1440px;
   margin: 0 auto;
-  padding: 0 200px;
+  padding: 0 32px;
   height: 100%;
   display: flex;
   align-items: center;
@@ -573,7 +573,7 @@ button {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0 7px;
+  padding: 0 32px;
   padding-top: var(--nav);
   position: relative;
   z-index: 1;
@@ -581,7 +581,7 @@ button {
 }
 
 .hero-inner {
-  max-width: 1200px;
+  max-width: 1440px;
   width: 100%;
   display: block;
   /* Removed grid to allow absolute visual */
