@@ -427,7 +427,7 @@ button {
 .nav-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 7px;
+  padding: 0 2px;
   height: 100%;
   display: flex;
   align-items: center;
