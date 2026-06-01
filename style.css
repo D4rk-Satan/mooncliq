@@ -225,7 +225,7 @@ button {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 14px;
+  padding: 0 240px;
   position: relative;
   z-index: 1;
 }
@@ -241,7 +241,7 @@ button {
 }
 
 .section-header {
-  margin-bottom: 264px;
+  margin-bottom: 64px;
 }
 
 .section-header.text-center .section-subtitle {
