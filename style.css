@@ -442,6 +442,12 @@ button {
   flex-shrink: 0;
 }
 
+/* Header logo sizing */
+.nav-logo .logo-glow-ring {
+  width: 120px;
+  height: 120px;
+}
+
 .logo-glow-ring {
   width: 90px;
   height: 90px;
@@ -482,8 +488,8 @@ button {
 }
 
 .logo-img {
-  width: 200%;
-  height: 200%;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
   border-radius: 50%;
 }
@@ -1673,6 +1679,12 @@ a.citem-value:hover {
   align-items: center;
   gap: 10px;
   margin-bottom: 16px;
+}
+
+/* Footer logo sizing (Double the header logo) */
+.footer-logo .logo-glow-ring {
+  width: 240px;
+  height: 240px;
 }
 
 .footer-logo-img {
