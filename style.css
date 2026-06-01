@@ -1673,7 +1673,7 @@ a.citem-value:hover {
 .footer-logo {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 1px;
   margin-bottom: 16px;
 }
 
