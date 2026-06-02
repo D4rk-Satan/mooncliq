@@ -2142,6 +2142,10 @@ a.citem-value:hover {
     display: none;
   }
 
+  .hero-content {
+    margin-top: 100px;
+  }
+
   .hero-title {
     font-size: clamp(2.2rem, 8vw, 3.5rem);
   }
