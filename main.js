@@ -216,8 +216,23 @@
   const nok = document.getElementById('notifySuccess');
   nf && nf.addEventListener('submit', e => {
     e.preventDefault();
-    nf.style.display = 'none';
-    nok.classList.add('show');
+    const btn = nf.querySelector('button');
+    const originalText = btn.textContent;
+    btn.textContent = 'Wait…'; btn.disabled = true;
+
+    fetch("https://formsubmit.co/ajax/hello@mooncliq.com", {
+      method: "POST",
+      headers: { 'Accept': 'application/json' },
+      body: new FormData(nf)
+    })
+    .then(res => res.json())
+    .then(() => {
+      nf.style.display = 'none';
+      nok.classList.add('show');
+    })
+    .catch(() => {
+      btn.textContent = originalText; btn.disabled = false;
+    });
   });
 
   /* ── CONTACT FORM ─────────────────────────── */
@@ -226,12 +241,24 @@
   const sb  = document.getElementById('submitBtn');
   cf && cf.addEventListener('submit', e => {
     e.preventDefault();
-    sb.textContent = 'Sending…'; sb.disabled = true;
-    setTimeout(() => {
+    const originalHTML = sb.innerHTML;
+    sb.innerHTML = 'Sending…'; sb.disabled = true;
+
+    fetch("https://formsubmit.co/ajax/hello@mooncliq.com", {
+      method: "POST",
+      headers: { 'Accept': 'application/json' },
+      body: new FormData(cf)
+    })
+    .then(res => res.json())
+    .then(() => {
       sb.style.display = 'none';
       cok.classList.add('show');
       cf.reset();
-    }, 900);
+    })
+    .catch(() => {
+      sb.innerHTML = 'Error! Try Again'; 
+      sb.disabled = false;
+    });
   });
 
   /* ── SMOOTH SCROLL ────────────────────────── */
