@@ -803,6 +803,13 @@ button {
   animation-duration: 75s;
 }
 
+.orbit-6 {
+  width: 1320px;
+  height: 1320px;
+  animation-duration: 85s;
+  animation-direction: reverse;
+}
+
 .orbit-icon {
   position: absolute;
   top: -24px;
@@ -846,6 +853,11 @@ button {
 
 .orbit-5 .orbit-icon {
   animation-duration: 75s;
+}
+
+.orbit-6 .orbit-icon {
+  animation-duration: 85s;
+  animation-direction: reverse;
 }
 
 @keyframes spinOrbit {
