@@ -1673,12 +1673,14 @@ a.citem-value:hover {
 .footer-logo {
   display: flex;
   align-items: center;
-  gap: 0; /* Removed gap */
+  gap: 0;
+  /* Removed gap */
   margin-bottom: 16px;
 }
 
 .footer-logo .logo-text {
-  margin-left: -15px; /* Pull text closer to the massive ring on desktop */
+  margin-left: -15px;
+  /* Pull text closer to the massive ring on desktop */
 }
 
 /* Footer logo sizing (Double the header logo) */
@@ -2129,7 +2131,7 @@ a.citem-value:hover {
   }
 
   .hero-eyebrow {
-    padding: 4px 12px;
+    padding: 8px 12px;
   }
 
   .footer-brand {
@@ -2204,8 +2206,10 @@ a.citem-value:hover {
   }
 
   .footer-logo .logo-text {
-    margin-left: 0; /* Reset desktop margin */
-    margin-top: -30px; /* Pull text up into the ring on mobile */
+    margin-left: 0;
+    /* Reset desktop margin */
+    margin-top: -30px;
+    /* Pull text up into the ring on mobile */
   }
 }
 
