@@ -2128,6 +2128,10 @@ a.citem-value:hover {
     gap: 28px;
   }
 
+  .hero-eyebrow {
+    padding: 4px 12px;
+  }
+
   .footer-brand {
     grid-column: auto;
   }
