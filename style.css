@@ -2429,3 +2429,29 @@ body.day-mode .theme-toggle:hover {
 .moon-icon { display: none; }
 body.day-mode .moon-icon { display: block; }
 body.day-mode .sun-icon { display: none; }
+
+/* Better visibility for tags in day mode */
+body.day-mode .hero-eyebrow,
+body.day-mode .section-tag {
+  color: #1e3a8a;
+  background: rgba(30, 58, 138, 0.1);
+  border-color: rgba(30, 58, 138, 0.2);
+}
+
+body.day-mode .sol-badge-dev,
+body.day-mode .up-status-bar {
+  color: #4c1d95;
+  background: rgba(76, 29, 149, 0.1);
+  border-color: rgba(76, 29, 149, 0.2);
+}
+
+body.day-mode .eyebrow-dot,
+body.day-mode .section-tag::before {
+  background: #1e3a8a;
+  box-shadow: 0 0 10px rgba(30, 58, 138, 0.5);
+}
+
+body.day-mode .sol-badge-dev::before,
+body.day-mode .pulse-dot {
+  background: #4c1d95;
+}
