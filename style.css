@@ -2470,3 +2470,14 @@ body.day-mode .pulse-dot {
     background: rgba(255, 255, 255, 0.97);
   }
 }
+
+/* Fix dark gradients in sections for day mode */
+body.day-mode .about {
+  background: linear-gradient(180deg, transparent 0%, rgba(255, 255, 255, 0.4) 50%, transparent 100%);
+}
+body.day-mode .solutions {
+  background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.5) 50%, transparent);
+}
+body.day-mode .contact {
+  background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.4) 100%);
+}
