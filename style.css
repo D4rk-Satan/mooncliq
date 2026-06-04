@@ -2367,6 +2367,15 @@ body.day-mode {
   --txt: #0f172a;
   --txt2: #334155;
   --txt3: #64748b;
+
+  --p: #2563eb;
+  --p2: #1d4ed8;
+  --acc: #6d28d9;
+  --acc2: #5b21b6;
+  --cyan: #0891b2;
+
+  --grad: linear-gradient(135deg, #2563eb, #6d28d9);
+  --grad2: linear-gradient(135deg, #0891b2, #2563eb);
 }
 
 body.day-mode .fluid-bg {
