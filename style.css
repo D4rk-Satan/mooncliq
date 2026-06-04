@@ -2464,3 +2464,9 @@ body.day-mode .sol-badge-dev::before,
 body.day-mode .pulse-dot {
   background: #4c1d95;
 }
+
+@media(max-width:768px) {
+  body.day-mode .nav-links {
+    background: rgba(255, 255, 255, 0.97);
+  }
+}
