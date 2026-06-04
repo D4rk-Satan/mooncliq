@@ -2354,3 +2354,78 @@ a.citem-value:hover {
   font-size: 0.88rem;
   line-height: 1.6;
 }
+
+/* ── DAY/NIGHT THEME ───────────────────────────────────── */
+body.day-mode {
+  --bg: #f8fafc;
+  --bg2: #f1f5f9;
+  --surface: rgba(255, 255, 255, 0.6);
+  --surface2: rgba(255, 255, 255, 0.8);
+  --border: rgba(91, 110, 245, 0.2);
+  --border2: rgba(91, 110, 245, 0.4);
+
+  --txt: #0f172a;
+  --txt2: #334155;
+  --txt3: #64748b;
+}
+
+body.day-mode .fluid-bg {
+  background: linear-gradient(to bottom, #4da4ff 0%, #87c3ff 40%, #e2c1a8 70%, #ffdfba 100%);
+}
+
+body.day-mode .glass-card {
+  background: rgba(255, 255, 255, 0.65);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+}
+
+body.day-mode .navbar.scrolled {
+  background: rgba(255, 255, 255, 0.88);
+}
+
+body.day-mode #starCanvas {
+  opacity: 0;
+}
+
+/* Ensure Moon logo is visible against light sky */
+body.day-mode .hero-logo-img {
+  filter: drop-shadow(0 0 30px rgba(0, 0, 0, 0.2));
+}
+
+body.day-mode .star-aura::before {
+  background-image: none; /* Hide stars behind moon */
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.5) 0%, transparent 60%);
+}
+
+body.day-mode .btn-outline {
+  background: rgba(255, 255, 255, 0.5);
+  color: var(--txt);
+  border-color: rgba(91, 110, 245, 0.4);
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--txt);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border-radius: 50%;
+  transition: var(--t);
+  margin-left: 10px;
+}
+.theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+.theme-toggle svg {
+  width: 20px;
+  height: 20px;
+}
+body.day-mode .theme-toggle:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+.moon-icon { display: none; }
+body.day-mode .moon-icon { display: block; }
+body.day-mode .sun-icon { display: none; }
