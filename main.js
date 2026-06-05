@@ -280,25 +280,16 @@
     }
   }
 
-  // 1. Check local storage first
-  const storedTheme = localStorage.getItem('mooncliq-theme');
-  
-  if (storedTheme) {
-    applyTheme(storedTheme === 'day');
-  } else {
-    // 2. Fall back to time-based theme (6 AM to 6 PM is Day)
-    const hour = new Date().getHours();
-    const isDayTime = hour >= 6 && hour < 18;
-    applyTheme(isDayTime);
-  }
+  // Set time-based theme (6 AM to 6 PM is Day)
+  const hour = new Date().getHours();
+  const isDayTime = hour >= 6 && hour < 18;
+  applyTheme(isDayTime);
 
   // Toggle handler
   if (themeToggle) {
     themeToggle.addEventListener('click', () => {
       const isCurrentlyDay = document.body.classList.contains('day-mode');
-      const newIsDay = !isCurrentlyDay;
-      applyTheme(newIsDay);
-      localStorage.setItem('mooncliq-theme', newIsDay ? 'day' : 'night');
+      applyTheme(!isCurrentlyDay);
     });
   }
 
