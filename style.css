@@ -2713,3 +2713,25 @@ body.day-mode .modal-container::-webkit-scrollbar-thumb {
     right: 16px;
   }
 }
+
+/* ── UPCOMING CARD CTA BUTTON ────────────────────────────── */
+.up-card-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--p2);
+  margin-top: 24px;
+  cursor: pointer;
+  transition: gap 0.2s, color 0.2s;
+  border: none;
+  background: none;
+  padding: 0;
+  font-family: var(--font-b);
+}
+
+.up-card-cta:hover {
+  color: var(--txt);
+  gap: 10px;
+}
