@@ -293,4 +293,43 @@
     });
   }
 
+  /* ── CRM FEATURE MODAL INTERACTION ──────────────────────── */
+  const crmCard = document.getElementById('up-crm');
+  const crmModal = document.getElementById('crmModal');
+  const closeCrmModal = document.getElementById('closeCrmModal');
+
+  if (crmCard && crmModal) {
+    crmCard.style.cursor = 'pointer';
+    crmCard.addEventListener('click', () => {
+      crmModal.classList.add('open');
+      crmModal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    });
+  }
+
+  if (closeCrmModal && crmModal) {
+    closeCrmModal.addEventListener('click', (e) => {
+      e.stopPropagation();
+      crmModal.classList.remove('open');
+      crmModal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    });
+
+    crmModal.addEventListener('click', (e) => {
+      if (e.target === crmModal) {
+        crmModal.classList.remove('open');
+        crmModal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+    });
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && crmModal.classList.contains('open')) {
+        crmModal.classList.remove('open');
+        crmModal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+    });
+  }
+
 })();
