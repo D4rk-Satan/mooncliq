@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy & Data Processing Notice | MoonCliq</title>
+  <meta name="description"
+    content="Official Privacy Policy and Data Processing Framework for MoonCliq and Mooncliq Orbit CRM, compliant with Indian DPDP Act 2023 and Meta Developer Policies." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style-v2.css" />
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+  <style>
+    /* Privacy Document Dedicated Layout (Matches MoonCliq Glassmorphic Dark Architecture) */
+    .policy-wrapper {
+      position: relative;
+      z-index: 2;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 130px 24px 80px 24px;
+    }
+
+    .policy-card {
+      background: rgba(10, 13, 28, 0.78);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid var(--border);
+      border-radius: var(--r3);
+      padding: 56px 48px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+    }
+
+    @media (max-width: 768px) {
+      .policy-card {
+        padding: 32px 20px;
+      }
+      .policy-wrapper {
+        padding-top: 100px;
+      }
+    }
+
+    .policy-header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 28px;
+      margin-bottom: 36px;
+    }
+
+    .policy-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: rgba(91, 110, 245, 0.12);
+      border: 1px solid var(--border);
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--acc);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 16px;
+    }
+
+    .policy-title {
+      font-family: var(--font-h);
+      font-size: clamp(2rem, 3.8vw, 2.75rem);
+      font-weight: 800;
+      line-height: 1.2;
+      color: var(--txt);
+      margin-bottom: 14px;
+    }
+
+    .policy-meta-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 0.85rem;
+      color: var(--txt2);
+    }
+
+    .policy-meta-strip span strong {
+      color: var(--txt);
+    }
+
+    /* Content Typography */
+    .policy-body h2 {
+      font-family: var(--font-h);
+      font-size: 1.55rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-top: 40px;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .policy-body h2::before {
+      content: '';
+      display: inline-block;
+      width: 4px;
+      height: 24px;
+      background: var(--grad);
+      border-radius: 4px;
+    }
+
+    .policy-body h3 {
+      font-family: var(--font-h);
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: #e2e8f0;
+      margin-top: 24px;
+      margin-bottom: 10px;
+    }
+
+    .policy-body p {
+      color: var(--txt2);
+      font-size: 0.95rem;
+      line-height: 1.8;
+      margin-bottom: 16px;
+    }
+
+    .policy-body ul {
+      padding-left: 20px;
+      margin-bottom: 20px;
+      list-style-type: disc;
+    }
+
+    .policy-body li {
+      color: var(--txt2);
+      font-size: 0.95rem;
+      line-height: 1.75;
+      margin-bottom: 10px;
+    }
+
+    .policy-body strong {
+      color: #f1f5f9;
+      font-weight: 600;
+    }
+
+    /* Notice & Officer Callouts */
+    .info-callout {
+      background: linear-gradient(135deg, rgba(91, 110, 245, 0.1) 0%, rgba(34, 211, 238, 0.06) 100%);
+      border: 1px solid var(--border2);
+      border-radius: var(--r2);
+      padding: 20px 24px;
+      margin: 24px 0;
+      color: #e0f2fe;
+      font-size: 0.92rem;
+      line-height: 1.7;
+    }
+
+    .officer-box {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border);
+      border-radius: var(--r2);
+      padding: 24px 28px;
+      margin: 24px 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .officer-item {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .officer-item .label {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--txt3);
+      font-weight: 600;
+    }
+
+    .officer-item .val {
+      font-size: 0.95rem;
+      color: var(--txt);
+      font-weight: 600;
+    }
+
+    .officer-item a {
+      color: var(--cyan);
+      transition: color 0.2s;
+    }
+
+    .officer-item a:hover {
+      color: var(--p2);
+      text-decoration: underline;
+    }
+
+    /* Back Home Breadcrumb */
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--txt2);
+      font-size: 0.88rem;
+      font-weight: 500;
+      margin-bottom: 24px;
+      transition: color 0.2s;
+    }
+
+    .back-btn:hover {
+      color: var(--cyan);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- STAR CANVAS -->
+  <canvas id="starCanvas"></canvas>
+
+  <!-- FLUID AURORA BACKGROUND -->
+  <div class="fluid-bg">
+    <div class="fluid-blob fluid-1"></div>
+    <div class="fluid-blob fluid-2"></div>
+    <div class="fluid-blob fluid-3"></div>
+    <div class="fluid-blob fluid-4"></div>
+    <div class="fluid-noise"></div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-glow-ring">
+          <img src="assets/logo.png" alt="MoonCliq Logo" class="logo-img" />
+        </div>
+        <span class="logo-text">moon<span class="logo-accent">Cliq</span></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html#home" class="nav-link">Home</a></li>
+        <li><a href="index.html#services" class="nav-link">Services</a></li>
+        <li><a href="index.html#solutions" class="nav-link">Solutions</a></li>
+        <li><a href="index.html#contact" class="nav-link nav-cta">Get in Touch</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- MAIN PRIVACY CONTENT -->
+  <main class="policy-wrapper">
+    <a href="index.html" class="back-btn">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      Back to MoonCliq Home
+    </a>
+
+    <article class="policy-card">
+      <header class="policy-header">
+        <div class="policy-badge">Legal &amp; Regulatory Framework</div>
+        <h1 class="policy-title">Privacy Policy &amp; Data Processing Notice</h1>
+        <div class="policy-meta-strip">
+          <span><strong>Effective Date:</strong> October 28, 2026</span>
+          <span><strong>Last Updated:</strong> October 28, 2026</span>
+          <span><strong>Operated by:</strong> Kshiv (“Company”, “we”, “our”, or “us”)</span>
+          <span><strong>Domain:</strong> <a href="https://mooncliq.com" style="color: var(--cyan);">https://mooncliq.com</a></span>
+        </div>
+      </header>
+
+      <div class="policy-body">
+        <div class="info-callout">
+          <strong>Regulatory Framework (DPDP Act 2023 &amp; Meta Developer Policy):</strong><br />
+          In compliance with the <strong>Digital Personal Data Protection (DPDP) Act, 2023 (India)</strong>, the <strong>Information Technology Act, 2000</strong>, and <strong>Meta Platforms, Inc. Developer Policies</strong>, this document establishes a two-part operational standard distinguishing personal data collected from direct subscribers (Part I) from enterprise CRM customer records processed on behalf of clients (Part II).
+        </div>
+
+        <h2>PART I — Data Collected and Controlled by Kshiv (Data Fiduciary)</h2>
+        <p>This section governs personal information collected directly from individuals and authorized representatives who register, access, or subscribe to MoonCliq services and software products.</p>
+
+        <h3>1. Information Provided Directly by Subscribers</h3>
+        <ul>
+          <li><strong>Identity &amp; Business Profile:</strong> Authorized representative’s full name, corporate email address, telephone contact, entity name, physical office address, and Tax/GSTIN credentials.</li>
+          <li><strong>Billing &amp; Transaction Details:</strong> Subscription payments and WhatsApp Cloud messaging wallet recharges executed via certified third-party payment aggregators (e.g., Razorpay, Stripe). Kshiv does not store or access full debit/credit card numbers or net-banking credentials on its servers.</li>
+          <li><strong>Communications &amp; Technical Support:</strong> Diagnostic logs, customer support tickets, email communications, and correspondence submitted through our service channels.</li>
+        </ul>
+
+        <h3>2. Purpose and Legal Basis for Processing</h3>
+        <ul>
+          <li>To provision, authenticate, and maintain secure multi-tenant CRM workspace environments.</li>
+          <li>To process billing transactions, maintain statutory accounting registers, and manage subscription lifecycles.</li>
+          <li>To transmit mandatory transactional alerts, critical security notices, and platform maintenance advisories.</li>
+          <li>To identify, prevent, and remediate technical irregularities, security incidents, or policy infractions.</li>
+        </ul>
+
+        <div class="info-callout">
+          <strong>Zero Commercial Monetization Commitment:</strong> Kshiv does <strong>never</strong> sell, monetize, rent, or trade subscriber contact details, enterprise profiles, or organizational records to advertising exchanges, data aggregators, or external brokers.
+        </div>
+
+        <h2>PART II — Information Processed on Client Behalf (Data Processor Role)</h2>
+        <p>This section governs all proprietary business records, lead prospects, customer communication logs, and pipeline transactions uploaded, synced, or managed within Mooncliq Orbit CRM by our subscribers.</p>
+
+        <h3>3. Customer Data Sovereignty &amp; Ownership</h3>
+        <ul>
+          <li><strong>Client as the Data Fiduciary (Controller):</strong> The subscriber retains full and exclusive ownership of all pipeline records, deal financials, customer profiles, and communication logs hosted within their tenant workspace. The subscriber determines the lawful basis and categories of data ingested.</li>
+          <li><strong>Kshiv as the Data Processor:</strong> Kshiv processes CRM data exclusively in accordance with explicit subscriber configurations, automated workflows, and the active master subscription agreement. Kshiv does not inspect, modify, or disclose tenant data except as strictly necessary to deliver computing services or as mandated by court order or applicable law.</li>
+        </ul>
+
+        <h3>4. Meta WhatsApp Business Cloud API Obligations</h3>
+        <p>As a verified Technology Solution Provider deploying Meta’s official WhatsApp Cloud API architecture:</p>
+        <ul>
+          <li><strong>Prior Express Opt-In Consent:</strong> The subscriber is exclusively responsible for securing valid, verifiable opt-in consent from end-recipients before initiating outbound WhatsApp messages via Mooncliq Orbit.</li>
+          <li><strong>Confined Message Routing:</strong> Phone numbers, template variables, and message payloads are transmitted securely to Meta’s API endpoints solely to execute client-directed messaging campaigns or automated notifications.</li>
+          <li><strong>Spam &amp; Content Compliance:</strong> Subscribers must adhere strictly to Meta’s WhatsApp Business Messaging Policy. Kshiv reserves the contractual right to terminate or suspend API connectivity for any tenant engaging in verified spamming, unsolicited messaging, or policy violations.</li>
+        </ul>
+
+        <h3>5. Data Portability, Retention &amp; Permanent Erasure</h3>
+        <ul>
+          <li><strong>Portability Rights:</strong> Subscribers may export their complete structured datasets (Leads, Deals, Accounts, Custom Modules) at any point during active tenure in standard formats (CSV, JSON, Excel).</li>
+          <li><strong>Permanent Deletion:</strong> Upon subscription termination or written request, all tenant data stored in active production databases and rotating backup systems is permanently wiped in strict accordance with statutory retention timelines.</li>
+        </ul>
+
+        <h2>PART III — Enterprise Security, Compliance &amp; Governance</h2>
+
+        <h3>6. Security Architecture &amp; Data Isolation</h3>
+        <p>Kshiv implements defense-in-depth infrastructure safeguards to protect tenant assets: all data in transit is protected using <strong>TLS 1.3</strong> encryption, and stored data is safeguarded with <strong>AES-256</strong> cryptographic standards hosted on enterprise AWS cloud architecture. Strict tenant database separation and granular Role-Based Access Controls (RBAC) ensure total workspace isolation.</p>
+
+        <h3>7. Statutory Grievance Redressal Officer</h3>
+        <p>In accordance with Section 5 of the Digital Personal Data Protection Act, 2023, and Rule 5(9) of the Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021, the designated Grievance &amp; Data Protection Officer is:</p>
+
+        <div class="officer-box">
+          <div class="officer-item">
+            <span class="label">Legal Entity</span>
+            <span class="val">Kshiv</span>
+          </div>
+          <div class="officer-item">
+            <span class="label">Product / Platform</span>
+            <span class="val">MoonCliq &amp; Mooncliq Orbit</span>
+          </div>
+          <div class="officer-item">
+            <span class="label">Jurisdiction &amp; City</span>
+            <span class="val">Surat, Gujarat, India</span>
+          </div>
+          <div class="officer-item">
+            <span class="label">Official Support Desk</span>
+            <span class="val"><a href="mailto:support@mooncliq.com">support@mooncliq.com</a></span>
+          </div>
+        </div>
+        <p style="font-size: 0.88rem; color: var(--txt3);">All regulatory notices and user grievances submitted to the Grievance Desk are acknowledged within 24–48 business hours and resolved within statutory periods prescribed under Indian law.</p>
+
+        <h3>8. Governing Law &amp; Jurisdiction</h3>
+        <p>This Privacy Policy and any related contractual obligations or disputes shall be governed by, interpreted, and enforced strictly in accordance with the laws of the <strong>Republic of India</strong>. The parties submit to the exclusive territorial jurisdiction of the competent courts in <strong>Surat, Gujarat, India</strong>.</p>
+      </div>
+    </article>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom" style="border-top: 1px solid var(--border); padding-top: 2rem; margin-top: 2rem;">
+        <span>© 2026 MoonCliq (Kshiv). All rights reserved.</span>
+        <span class="footer-right">
+          <a href="privacy-policy.html" style="color: var(--cyan); margin-right: 1.5rem;">Privacy Policy</a>
+          <a href="index.html#contact" style="color: var(--txt2);">Contact Us</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
