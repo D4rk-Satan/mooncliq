@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service &amp; Usage Policy | MoonCliq</title>
+  <meta name="description"
+    content="Official Terms of Service for MoonCliq and Mooncliq Orbit CRM, governing platform usage, enterprise SLAs, and Meta WhatsApp Business API compliance." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style-v2.css" />
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+  <style>
+    /* Privacy & Legal Document Dedicated Layout (Matches MoonCliq Glassmorphic Dark Architecture) */
+    .policy-wrapper {
+      position: relative;
+      z-index: 2;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 130px 24px 80px 24px;
+    }
+
+    .policy-card {
+      background: rgba(10, 13, 28, 0.78);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid var(--border);
+      border-radius: var(--r3);
+      padding: 56px 48px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+    }
+
+    @media (max-width: 768px) {
+      .policy-card {
+        padding: 32px 20px;
+      }
+
+      .policy-wrapper {
+        padding-top: 100px;
+      }
+    }
+
+    .policy-header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 28px;
+      margin-bottom: 36px;
+    }
+
+    .policy-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: rgba(91, 110, 245, 0.12);
+      border: 1px solid var(--border);
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--acc);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 16px;
+    }
+
+    .policy-title {
+      font-family: var(--font-h);
+      font-size: clamp(2rem, 3.8vw, 2.75rem);
+      font-weight: 800;
+      line-height: 1.2;
+      color: var(--txt);
+      margin-bottom: 14px;
+    }
+
+    .policy-meta-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 0.85rem;
+      color: var(--txt2);
+    }
+
+    .policy-meta-strip span strong {
+      color: var(--txt);
+    }
+
+    /* Content Typography */
+    .policy-body h2 {
+      font-family: var(--font-h);
+      font-size: 1.55rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-top: 40px;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .policy-body h2::before {
+      content: '';
+      display: inline-block;
+      width: 4px;
+      height: 24px;
+      background: var(--grad);
+      border-radius: 4px;
+    }
+
+    .policy-body h3 {
+      font-family: var(--font-h);
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: #e2e8f0;
+      margin-top: 24px;
+      margin-bottom: 10px;
+    }
+
+    .policy-body p {
+      color: var(--txt2);
+      font-size: 0.95rem;
+      line-height: 1.8;
+      margin-bottom: 16px;
+    }
+
+    .policy-body ul {
+      padding-left: 20px;
+      margin-bottom: 20px;
+      list-style-type: disc;
+    }
+
+    .policy-body li {
+      color: var(--txt2);
+      font-size: 0.95rem;
+      line-height: 1.75;
+      margin-bottom: 10px;
+    }
+
+    .policy-body strong {
+      color: #f1f5f9;
+      font-weight: 600;
+    }
+
+    /* Notice & Officer Callouts */
+    .info-callout {
+      background: linear-gradient(135deg, rgba(91, 110, 245, 0.1) 0%, rgba(34, 211, 238, 0.06) 100%);
+      border: 1px solid var(--border2);
+      border-radius: var(--r2);
+      padding: 20px 24px;
+      margin: 24px 0;
+      color: #e0f2fe;
+      font-size: 0.92rem;
+      line-height: 1.7;
+    }
+
+    .officer-box {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border);
+      border-radius: var(--r2);
+      padding: 24px 28px;
+      margin: 24px 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .officer-item {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .officer-item .label {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--txt3);
+      font-weight: 600;
+    }
+
+    .officer-item .val {
+      font-size: 0.95rem;
+      color: var(--txt);
+      font-weight: 600;
+    }
+
+    .officer-item a {
+      color: var(--cyan);
+      transition: color 0.2s;
+    }
+
+    .officer-item a:hover {
+      color: var(--p2);
+      text-decoration: underline;
+    }
+
+    /* Back Home Breadcrumb */
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--txt2);
+      font-size: 0.88rem;
+      font-weight: 500;
+      margin-bottom: 24px;
+      transition: color 0.2s;
+    }
+
+    .back-btn:hover {
+      color: var(--cyan);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- STAR CANVAS -->
+  <canvas id="starCanvas"></canvas>
+
+  <!-- FLUID AURORA BACKGROUND -->
+  <div class="fluid-bg">
+    <div class="fluid-blob fluid-1"></div>
+    <div class="fluid-blob fluid-2"></div>
+    <div class="fluid-blob fluid-3"></div>
+    <div class="fluid-blob fluid-4"></div>
+    <div class="fluid-noise"></div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-glow-ring">
+          <img src="assets/logo.png" alt="MoonCliq Logo" class="logo-img" />
+        </div>
+        <span class="logo-text">moon<span class="logo-accent">Cliq</span></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html#home" class="nav-link">Home</a></li>
+        <li><a href="index.html#services" class="nav-link">Services</a></li>
+        <li><a href="index.html#solutions" class="nav-link">Solutions</a></li>
+        <li><a href="privacy-policy.html" class="nav-link">Privacy Policy</a></li>
+        <li><a href="terms-of-service.html" class="nav-link" style="color: var(--cyan);">Terms</a></li>
+        <li><a href="data-deletion.html" class="nav-link">Data Deletion</a></li>
+        <li><a href="index.html#contact" class="nav-link nav-cta">Get in Touch</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- MAIN TERMS CONTENT -->
+  <main class="policy-wrapper">
+    <a href="index.html" class="back-btn">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M19 12H5M12 19l-7-7 7-7" />
+      </svg>
+      Back to MoonCliq Home
+    </a>
+
+    <article class="policy-card">
+      <header class="policy-header">
+        <div class="policy-badge">Legal Documentation &amp; Terms</div>
+        <h1 class="policy-title">Terms of Service</h1>
+        <div class="policy-meta-strip">
+          <span><strong>Legal Entity:</strong> Kshiv</span>
+          <span><strong>Effective Date:</strong> October 2026</span>
+          <span><strong>Governing Law:</strong> Republic of India (Surat, Gujarat)</span>
+          <span><strong>Platform:</strong> MoonCliq &amp; Mooncliq Orbit CRM</span>
+        </div>
+      </header>
+
+      <div class="policy-body">
+        <div class="info-callout">
+          <strong>Binding Agreement:</strong> By accessing or using the MoonCliq marketing website, Mooncliq Orbit CRM, or integrating your WhatsApp Business Account through our Meta-approved features, you acknowledge that you have read, understood, and agreed to be legally bound by these Terms of Service.
+        </div>
+
+        <h2>1. Commercial Platform &amp; Scope of Services</h2>
+        <p>MoonCliq (legally owned and operated by <strong>Kshiv</strong>, Surat, Gujarat, India) provides business-to-business (B2B) CRM software, intelligent sales workflows, lead pipeline management, and omnichannel messaging integrations ("Mooncliq Orbit CRM").</p>
+
+        <h2>2. Meta WhatsApp Business API &amp; Messaging Policies</h2>
+        <p>Our platform integrates directly with Meta Platforms, Inc. APIs to facilitate enterprise WhatsApp messaging and automated notifications. When utilizing these features, you contractually agree to:</p>
+        <ul>
+          <li>Strictly adhere to the <strong>WhatsApp Business Messaging Policy</strong>, <strong>WhatsApp Commerce Policy</strong>, and <strong>Meta Developer Terms</strong>.</li>
+          <li>Ensure that all messaging recipients have provided <strong>verifiable opt-in consent</strong> before receiving automated business communications or transactional alerts.</li>
+          <li>Refrain from dispatching unauthorized spam, bulk unsolicited marketing, deceptive content, or prohibited goods/services.</li>
+          <li>Acknowledge that Meta Platforms, Inc. governs messaging throughput, phone number tier quality ratings, and template approvals, which are subject to their independent operational standards.</li>
+        </ul>
+
+        <h2>3. Tenant Account Security &amp; Credentials</h2>
+        <p>Users must provide accurate, current, and verified enterprise credentials during registration. You are solely responsible for maintaining the confidentiality of your login passwords, API tokens, and session keys. Any activities conducted through your authenticated organization workspace remain your legal responsibility.</p>
+
+        <h2>4. Data Privacy &amp; Statutory Compliance</h2>
+        <p>Our collection, processing, and protection of enterprise data and customer contact records are strictly governed by our <a href="privacy-policy.html" style="color: var(--cyan);">Privacy Policy</a>, conforming to the <strong>Digital Personal Data Protection (DPDP) Act, 2023</strong> of India and Meta Developer Data Handling Guidelines. User data deletion and token revocation procedures are detailed at <a href="data-deletion.html" style="color: var(--cyan);">User Data Deletion Instructions</a>.</p>
+
+        <h2>5. Acceptable Use &amp; Prohibited Conduct</h2>
+        <p>Tenants and authenticated users shall not:</p>
+        <ul>
+          <li>Attempt unauthorized access, penetration testing, reverse-engineering, or decompilation of platform source code or cloud infrastructure.</li>
+          <li>Inject malicious code, exploit payload scripts, or disrupt the operation of Mooncliq Orbit servers or connected third-party APIs.</li>
+          <li>Use platform features to harvest personal data unlawfully or harass individuals in violation of Indian IT laws.</li>
+        </ul>
+
+        <h2>6. Service Availability &amp; Infrastructure SLAs</h2>
+        <p>Kshiv strives to maintain 99.9% uptime for cloud-hosted CRM services. However, services are delivered on an "as is" and "as available" basis. Kshiv shall not be liable for transient interruptions arising from scheduled maintenance, network carrier disruptions, or Meta WhatsApp Cloud API outages.</p>
+
+        <h2>7. Limitation of Liability</h2>
+        <p>To the maximum extent permitted under applicable law in the Republic of India, Kshiv and its officers shall not be liable for any indirect, incidental, punitive, or consequential damages resulting from your use of the platform, loss of data, or third-party service disconnections.</p>
+
+        <h2>8. Legal Entity, Grievances &amp; Jurisdiction</h2>
+        <p>These terms and all related contractual obligations are governed by and construed under the laws of the <strong>Republic of India</strong>.</p>
+
+        <div class="officer-box">
+          <div class="officer-item">
+            <span class="label">Legal Entity</span>
+            <span class="val">Kshiv</span>
+          </div>
+          <div class="officer-item">
+            <span class="label">Product / Platform</span>
+            <span class="val">MoonCliq &amp; Mooncliq Orbit</span>
+          </div>
+          <div class="officer-item">
+            <span class="label">Jurisdiction &amp; City</span>
+            <span class="val">Surat, Gujarat, India</span>
+          </div>
+          <div class="officer-item">
+            <span class="label">Official Support Desk</span>
+            <span class="val"><a href="mailto:support@mooncliq.com">support@mooncliq.com</a></span>
+          </div>
+        </div>
+
+        <p style="font-size: 0.88rem; color: var(--txt3);">The parties irrevocably submit to the exclusive territorial jurisdiction of the competent courts in <strong>Surat, Gujarat, India</strong> for the resolution of any dispute or claim arising hereunder.</p>
+      </div>
+    </article>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom" style="border-top: 1px solid var(--border); padding-top: 2rem; margin-top: 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+        <span>© 2026 MoonCliq (Kshiv). All rights reserved.</span>
+        <span class="footer-right">
+          <a href="privacy-policy.html" style="color: var(--txt2); margin-right: 1.5rem;">Privacy Policy</a>
+          <a href="terms-of-service.html" style="color: var(--cyan); margin-right: 1.5rem;">Terms of Service</a>
+          <a href="data-deletion.html" style="color: var(--txt2); margin-right: 1.5rem;">Data Deletion</a>
+          <a href="index.html#contact" style="color: var(--txt2);">Contact Us</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+
+</html>

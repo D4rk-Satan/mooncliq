@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Data Deletion Instructions | MoonCliq</title>
+  <meta name="description"
+    content="Official User Data Deletion Instructions for MoonCliq and Mooncliq Orbit CRM, explaining how to request permanent data deletion and revoke Meta WhatsApp permissions." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style-v2.css" />
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+  <style>
+    /* Privacy & Legal Document Dedicated Layout (Matches MoonCliq Glassmorphic Dark Architecture) */
+    .policy-wrapper {
+      position: relative;
+      z-index: 2;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 130px 24px 80px 24px;
+    }
+
+    .policy-card {
+      background: rgba(10, 13, 28, 0.78);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid var(--border);
+      border-radius: var(--r3);
+      padding: 56px 48px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+    }
+
+    @media (max-width: 768px) {
+      .policy-card {
+        padding: 32px 20px;
+      }
+
+      .policy-wrapper {
+        padding-top: 100px;
+      }
+    }
+
+    .policy-header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 28px;
+      margin-bottom: 36px;
+    }
+
+    .policy-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: rgba(91, 110, 245, 0.12);
+      border: 1px solid var(--border);
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--acc);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 16px;
+    }
+
+    .policy-title {
+      font-family: var(--font-h);
+      font-size: clamp(2rem, 3.8vw, 2.75rem);
+      font-weight: 800;
+      line-height: 1.2;
+      color: var(--txt);
+      margin-bottom: 14px;
+    }
+
+    .policy-meta-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 0.85rem;
+      color: var(--txt2);
+    }
+
+    .policy-meta-strip span strong {
+      color: var(--txt);
+    }
+
+    /* Content Typography */
+    .policy-body h2 {
+      font-family: var(--font-h);
+      font-size: 1.55rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-top: 40px;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .policy-body h2::before {
+      content: '';
+      display: inline-block;
+      width: 4px;
+      height: 24px;
+      background: var(--grad);
+      border-radius: 4px;
+    }
+
+    .policy-body h3 {
+      font-family: var(--font-h);
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: #e2e8f0;
+      margin-top: 24px;
+      margin-bottom: 10px;
+    }
+
+    .policy-body p {
+      color: var(--txt2);
+      font-size: 0.95rem;
+      line-height: 1.8;
+      margin-bottom: 16px;
+    }
+
+    .policy-body ul,
+    .policy-body ol {
+      padding-left: 20px;
+      margin-bottom: 20px;
+    }
+
+    .policy-body ol {
+      list-style-type: decimal;
+    }
+
+    .policy-body ul {
+      list-style-type: disc;
+    }
+
+    .policy-body li {
+      color: var(--txt2);
+      font-size: 0.95rem;
+      line-height: 1.75;
+      margin-bottom: 10px;
+    }
+
+    .policy-body strong {
+      color: #f1f5f9;
+      font-weight: 600;
+    }
+
+    /* Notice & Officer Callouts */
+    .info-callout {
+      background: linear-gradient(135deg, rgba(91, 110, 245, 0.1) 0%, rgba(34, 211, 238, 0.06) 100%);
+      border: 1px solid var(--border2);
+      border-radius: var(--r2);
+      padding: 20px 24px;
+      margin: 24px 0;
+      color: #e0f2fe;
+      font-size: 0.92rem;
+      line-height: 1.7;
+    }
+
+    .step-card {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--border);
+      border-radius: var(--r2);
+      padding: 24px 28px;
+      margin: 20px 0;
+    }
+
+    .step-badge {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--cyan);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 10px;
+    }
+
+    .officer-box {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border);
+      border-radius: var(--r2);
+      padding: 24px 28px;
+      margin: 24px 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .officer-item {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .officer-item .label {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--txt3);
+      font-weight: 600;
+    }
+
+    .officer-item .val {
+      font-size: 0.95rem;
+      color: var(--txt);
+      font-weight: 600;
+    }
+
+    .officer-item a {
+      color: var(--cyan);
+      transition: color 0.2s;
+    }
+
+    .officer-item a:hover {
+      color: var(--p2);
+      text-decoration: underline;
+    }
+
+    /* Back Home Breadcrumb */
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--txt2);
+      font-size: 0.88rem;
+      font-weight: 500;
+      margin-bottom: 24px;
+      transition: color 0.2s;
+    }
+
+    .back-btn:hover {
+      color: var(--cyan);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- STAR CANVAS -->
+  <canvas id="starCanvas"></canvas>
+
+  <!-- FLUID AURORA BACKGROUND -->
+  <div class="fluid-bg">
+    <div class="fluid-blob fluid-1"></div>
+    <div class="fluid-blob fluid-2"></div>
+    <div class="fluid-blob fluid-3"></div>
+    <div class="fluid-blob fluid-4"></div>
+    <div class="fluid-noise"></div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-glow-ring">
+          <img src="assets/logo.png" alt="MoonCliq Logo" class="logo-img" />
+        </div>
+        <span class="logo-text">moon<span class="logo-accent">Cliq</span></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html#home" class="nav-link">Home</a></li>
+        <li><a href="index.html#services" class="nav-link">Services</a></li>
+        <li><a href="index.html#solutions" class="nav-link">Solutions</a></li>
+        <li><a href="privacy-policy.html" class="nav-link">Privacy Policy</a></li>
+        <li><a href="terms-of-service.html" class="nav-link">Terms</a></li>
+        <li><a href="data-deletion.html" class="nav-link" style="color: var(--cyan);">Data Deletion</a></li>
+        <li><a href="index.html#contact" class="nav-link nav-cta">Get in Touch</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- MAIN DELETION INSTRUCTIONS CONTENT -->
+  <main class="policy-wrapper">
+    <a href="index.html" class="back-btn">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M19 12H5M12 19l-7-7 7-7" />
+      </svg>
+      Back to MoonCliq Home
+    </a>
+
+    <article class="policy-card">
+      <header class="policy-header">
+        <div class="policy-badge">Compliance &amp; Data Rights</div>
+        <h1 class="policy-title">User Data Deletion Instructions</h1>
+        <div class="policy-meta-strip">
+          <span><strong>Legal Entity:</strong> Kshiv</span>
+          <span><strong>Framework:</strong> Meta Platform Policy &amp; DPDP Act 2023</span>
+          <span><strong>Response Time:</strong> 24–48 Business Hours</span>
+          <span><strong>Platform:</strong> MoonCliq &amp; Mooncliq Orbit CRM</span>
+        </div>
+      </header>
+
+      <div class="policy-body">
+        <div class="info-callout">
+          <strong>User Right to Erasure:</strong> In strict compliance with the Meta Platform Developer Policies and the Digital Personal Data Protection (DPDP) Act, 2023 of India, MoonCliq ensures that users and enterprise clients retain full authority over their personal information and third-party account authorizations.
+        </div>
+
+        <p>Mooncliq Orbit CRM does not retain any Platform Data beyond what is strictly necessary to provide CRM functionality and WhatsApp communication workflows. You can request deletion of your account records or revoke Meta authorizations through the following channels:</p>
+
+        <h2>Method 1 — Revoking App Permissions on Facebook (Instant Self-Service)</h2>
+        <p>If you authenticated your WhatsApp Business Account (WABA) or Facebook Login via Mooncliq Embedded Signup, you can revoke access and remove platform data directly via your Facebook account:</p>
+
+        <div class="step-card">
+          <span class="step-badge">Facebook Self-Service Steps</span>
+          <ol>
+            <li>Log into your Facebook account and navigate to <strong>Settings &amp; Privacy &gt; Settings</strong>.</li>
+            <li>In the left sidebar menu, select <strong>Apps and Websites</strong> (or visit <a href="https://www.facebook.com/settings?tab=applications" target="_blank" rel="noopener" style="color: var(--cyan);">facebook.com/settings?tab=applications</a>).</li>
+            <li>Locate <strong>mooncliqcrm</strong> in your connected applications list.</li>
+            <li>Click the <strong>Remove</strong> button adjacent to the app name.</li>
+            <li>Optionally select the checkbox to delete all posts, videos, or events that mooncliqcrm published on your behalf.</li>
+            <li>Click <strong>Remove</strong> to confirm. Facebook will automatically dispatch a revocation webhook to our cloud infrastructure to invalidate all tokens.</li>
+          </ol>
+        </div>
+
+        <h2>Method 2 — Requesting Complete Workspace Deletion via Support Desk</h2>
+        <p>To request permanent deletion of your Mooncliq Orbit CRM organization data, leads, contacts, and WhatsApp message logs from our AWS servers, email our Grievance Desk:</p>
+
+        <div class="step-card">
+          <span class="step-badge">Email Deletion Request</span>
+          <p><strong>Email:</strong> <a href="mailto:support@mooncliq.com" style="color: var(--cyan);">support@mooncliq.com</a></p>
+          <p><strong>Subject Line:</strong> <code>Data Deletion Request - [Your Registered Email or Domain]</code></p>
+          <p><strong>Details to Include:</strong> Your organization name, registered administrator email address, and confirmation that you wish to execute a full tenant data purge.</p>
+        </div>
+
+        <h2>Data Deletion SLA &amp; Retention Protocols</h2>
+        <ul>
+          <li><strong>Acknowledgment:</strong> Our privacy compliance team will acknowledge receipt of your written request within <strong>24 to 48 business hours</strong> with a unique deletion tracking ticket.</li>
+          <li><strong>Access Invalidation:</strong> Active Meta Graph API tokens, phone number IDs, and WABA webhook subscriptions are immediately detached from your organization.</li>
+          <li><strong>Data Purge:</strong> Tenant database partitions, contact repositories, and cached media files stored on AWS servers are permanently purged within <strong>30 calendar days</strong>.</li>
+          <li><strong>Statutory Archival:</strong> Minimal transactional records (such as tax invoices or statutory audit logs) are retained solely to the extent mandated by applicable Indian tax and corporate laws.</li>
+        </ul>
+
+        <h2>Compliance &amp; Grievance Office</h2>
+        <div class="officer-box">
+          <div class="officer-item">
+            <span class="label">Legal Entity</span>
+            <span class="val">Kshiv</span>
+          </div>
+          <div class="officer-item">
+            <span class="label">Product / Platform</span>
+            <span class="val">MoonCliq &amp; Mooncliq Orbit</span>
+          </div>
+          <div class="officer-item">
+            <span class="label">Jurisdiction &amp; City</span>
+            <span class="val">Surat, Gujarat, India</span>
+          </div>
+          <div class="officer-item">
+            <span class="label">Official Support Desk</span>
+            <span class="val"><a href="mailto:support@mooncliq.com">support@mooncliq.com</a></span>
+          </div>
+        </div>
+
+        <p style="font-size: 0.88rem; color: var(--txt3);">For additional information regarding our cloud storage architecture, encryption safeguards, and data minimization protocols, please review our full <a href="privacy-policy.html" style="color: var(--cyan);">Privacy Policy</a>.</p>
+      </div>
+    </article>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom" style="border-top: 1px solid var(--border); padding-top: 2rem; margin-top: 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+        <span>© 2026 MoonCliq (Kshiv). All rights reserved.</span>
+        <span class="footer-right">
+          <a href="privacy-policy.html" style="color: var(--txt2); margin-right: 1.5rem;">Privacy Policy</a>
+          <a href="terms-of-service.html" style="color: var(--txt2); margin-right: 1.5rem;">Terms of Service</a>
+          <a href="data-deletion.html" style="color: var(--cyan); margin-right: 1.5rem;">Data Deletion</a>
+          <a href="index.html#contact" style="color: var(--txt2);">Contact Us</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
