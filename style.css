@@ -42,6 +42,20 @@
   padding: 0;
 }
 
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -92,6 +106,7 @@ button {
   z-index: 0;
   overflow: hidden;
   pointer-events: none;
+  transform: translateZ(0);
   background: linear-gradient(to bottom, #030513 40%, #0d122b 70%, #683017 90%, #d46816 100%);
 }
 
@@ -111,6 +126,7 @@ button {
   opacity: 1;
   transform: translateZ(0);
   will-change: transform;
+  contain: layout style paint;
 }
 
 .fluid-1 {
@@ -314,6 +330,8 @@ button {
   overflow: hidden;
   transition: transform 0.4s ease-out, border-color 0.4s ease-out, box-shadow 0.4s ease-out;
   transform-style: preserve-3d;
+  will-change: transform;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease, box-shadow 0.25s ease !important;
 }
 
 .glass-card::before {
@@ -2401,7 +2419,8 @@ body.day-mode .hero-logo-img {
 }
 
 body.day-mode .star-aura::before {
-  background-image: none; /* Hide stars behind moon */
+  background-image: none;
+  /* Hide stars behind moon */
   background: radial-gradient(circle at center, rgba(255, 255, 255, 0.5) 0%, transparent 60%);
 }
 
@@ -2425,19 +2444,31 @@ body.day-mode .btn-outline {
   transition: var(--t);
   margin-left: 10px;
 }
+
 .theme-toggle:hover {
   background: rgba(255, 255, 255, 0.1);
 }
+
 .theme-toggle svg {
   width: 20px;
   height: 20px;
 }
+
 body.day-mode .theme-toggle:hover {
   background: rgba(0, 0, 0, 0.05);
 }
-.moon-icon { display: none; }
-body.day-mode .moon-icon { display: block; }
-body.day-mode .sun-icon { display: none; }
+
+.moon-icon {
+  display: none;
+}
+
+body.day-mode .moon-icon {
+  display: block;
+}
+
+body.day-mode .sun-icon {
+  display: none;
+}
 
 /* Better visibility for tags in day mode */
 body.day-mode .hero-eyebrow,
@@ -2475,9 +2506,11 @@ body.day-mode .pulse-dot {
 body.day-mode .about {
   background: linear-gradient(180deg, transparent 0%, rgba(255, 255, 255, 0.4) 50%, transparent 100%);
 }
+
 body.day-mode .solutions {
   background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.5) 50%, transparent);
 }
+
 body.day-mode .contact {
   background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.4) 100%);
 }
@@ -2699,19 +2732,24 @@ body.day-mode .modal-container::-webkit-scrollbar-thumb {
     padding: 24px;
     max-height: 95vh;
   }
+
   .modal-header h2 {
     font-size: 1.5rem;
   }
+
   .modal-features-grid {
     grid-template-columns: 1fr;
   }
+
   .tech-stack-grid {
     grid-template-columns: 1fr;
   }
+
   .modal-close {
     top: 16px;
     right: 16px;
   }
+
   .up-card-cta {
     top: 24px;
     right: 24px;

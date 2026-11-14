@@ -4,9 +4,32 @@
 (function () {
   'use strict';
 
+  /* ── BUTTERY SMOOTH LENIS SCROLL ── */
+  if (typeof Lenis !== 'undefined') {
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Exponential smooth deceleration
+      orientation: 'vertical',
+      smoothWheel: true,
+      wheelMultiplier: 1.05,
+      touchMultiplier: 1.5,
+    });
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+  }
+
+
+
+
+
+
   /* ── ADVANCED PARTICLE NETWORK ──────────────────────── */
   const canvas = document.getElementById('starCanvas');
-  const ctx    = canvas.getContext('2d');
+  const ctx = canvas.getContext('2d');
   let particles = [], raf;
   let mouse = { x: null, y: null, radius: 150 };
 
@@ -42,15 +65,15 @@
     update() {
       // Upward drift
       this.y -= (0.2 + Math.abs(this.vY));
-      
+
       // Horizontal sine-wave sway
       this.x += Math.sin(this.density) * 0.3;
       this.density += 0.01;
-      
+
       // Wrap around edges smoothly
       if (this.x < 0) this.x = canvas.width;
       if (this.x > canvas.width) this.x = 0;
-      
+
       // Respawn at bottom if floats past top
       if (this.y < -10) this.y = canvas.height + 10;
 
@@ -75,14 +98,14 @@
   function initParticles() {
     resize();
     particles = [];
-    
+
     // Performance optimization: fewer stars for 60fps locked rendering
     const isMobile = window.innerWidth < 768;
     const density = isMobile ? 12000 : 8000;
     const maxStars = isMobile ? 60 : 200;
-    
+
     const n = Math.min(Math.floor((canvas.width * canvas.height) / density), maxStars);
-    
+
     for (let i = 0; i < n; i++) {
       let p = new Particle();
       p.size = Math.random() * 1.2 + 0.3;
@@ -128,28 +151,33 @@
   animateParticles();
 
   /* ── 3D TILT EFFECT ───────────────────────── */
+
   const cards = document.querySelectorAll('.glass-card, .sol-card, .up-card, .about-card-primary');
   cards.forEach(card => {
+    let isHovered = false;
+    card.addEventListener('mouseenter', () => { isHovered = true; });
     card.addEventListener('mousemove', (e) => {
-      const rect = card.getBoundingClientRect();
-      const x = e.clientX - rect.left; // x pos within the element
-      const y = e.clientY - rect.top;  // y pos within the element
-      const centerX = rect.width / 2;
-      const centerY = rect.height / 2;
-      const rotateX = ((y - centerY) / centerY) * -5;
-      const rotateY = ((x - centerX) / centerX) * 5;
-      card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+      if (!isHovered) return;
+      window.requestAnimationFrame(() => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+        const rotateX = (y / (rect.height / 2)) * -4;
+        const rotateY = (x / (rect.width / 2)) * 4;
+        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
+      });
     });
     card.addEventListener('mouseleave', () => {
-      card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
+      isHovered = false;
+      card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px)`;
     });
   });
 
   /* ── NAVBAR ───────────────────────────────── */
-  const navbar    = document.getElementById('navbar');
+  const navbar = document.getElementById('navbar');
   const hamburger = document.getElementById('hamburger');
-  const navLinks  = document.getElementById('navLinks');
-  const links     = document.querySelectorAll('.nav-link');
+  const navLinks = document.getElementById('navLinks');
+  const links = document.querySelectorAll('.nav-link');
 
   let scrollScheduled = false;
   window.addEventListener('scroll', () => {
@@ -173,7 +201,7 @@
 
   /* ── ACTIVE NAV ───────────────────────────── */
   const sections = document.querySelectorAll('section[id]');
-  
+
   const navObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -212,7 +240,7 @@
   });
 
   /* ── NOTIFY FORM ──────────────────────────── */
-  const nf  = document.getElementById('notifyForm');
+  const nf = document.getElementById('notifyForm');
   const nok = document.getElementById('notifySuccess');
   nf && nf.addEventListener('submit', e => {
     e.preventDefault();
@@ -225,20 +253,20 @@
       headers: { 'Accept': 'application/json' },
       body: new FormData(nf)
     })
-    .then(res => res.json())
-    .then(() => {
-      nf.style.display = 'none';
-      nok.classList.add('show');
-    })
-    .catch(() => {
-      btn.textContent = originalText; btn.disabled = false;
-    });
+      .then(res => res.json())
+      .then(() => {
+        nf.style.display = 'none';
+        nok.classList.add('show');
+      })
+      .catch(() => {
+        btn.textContent = originalText; btn.disabled = false;
+      });
   });
 
   /* ── CONTACT FORM ─────────────────────────── */
-  const cf  = document.getElementById('contactForm');
+  const cf = document.getElementById('contactForm');
   const cok = document.getElementById('formSuccess');
-  const sb  = document.getElementById('submitBtn');
+  const sb = document.getElementById('submitBtn');
   cf && cf.addEventListener('submit', e => {
     e.preventDefault();
     const originalHTML = sb.innerHTML;
@@ -249,16 +277,16 @@
       headers: { 'Accept': 'application/json' },
       body: new FormData(cf)
     })
-    .then(res => res.json())
-    .then(() => {
-      sb.style.display = 'none';
-      cok.classList.add('show');
-      cf.reset();
-    })
-    .catch(() => {
-      sb.innerHTML = 'Error! Try Again'; 
-      sb.disabled = false;
-    });
+      .then(res => res.json())
+      .then(() => {
+        sb.style.display = 'none';
+        cok.classList.add('show');
+        cf.reset();
+      })
+      .catch(() => {
+        sb.innerHTML = 'Error! Try Again';
+        sb.disabled = false;
+      });
   });
 
   /* ── SMOOTH SCROLL ────────────────────────── */
@@ -271,7 +299,7 @@
 
   /* ── DAY/NIGHT THEME LOGIC ────────────────── */
   const themeToggle = document.getElementById('themeToggle');
-  
+
   function applyTheme(isDay) {
     if (isDay) {
       document.body.classList.add('day-mode');
