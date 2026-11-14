@@ -42,8 +42,21 @@
   padding: 0;
 }
 
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto !important;
 }
 
 body {
@@ -83,6 +96,9 @@ button {
   z-index: 1;
   pointer-events: none;
   opacity: 0.9;
+  transform: translateZ(0);
+  will-change: opacity;
+  contain: strict;
 }
 
 /* ── FLUID AURORA BACKGROUND ─────────────────────────── */
@@ -93,6 +109,8 @@ button {
   overflow: hidden;
   pointer-events: none;
   background: linear-gradient(to bottom, #030513 40%, #0d122b 70%, #683017 90%, #d46816 100%);
+  transform: translateZ(0);
+  contain: strict;
 }
 
 .fluid-noise {

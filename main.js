@@ -18,6 +18,8 @@
       infinite: false,
     });
 
+    lenisInstance.on('scroll', handleScrollPause);
+
     function raf(time) {
       lenisInstance.raf(time);
       requestAnimationFrame(raf);
@@ -120,6 +122,21 @@
     }
   }
 
+  let isScrolling = false;
+  let scrollTimeout = null;
+
+  function handleScrollPause() {
+    isScrolling = true;
+    clearTimeout(scrollTimeout);
+    scrollTimeout = setTimeout(() => {
+      isScrolling = false;
+      if (!raf && window.innerWidth >= 768) {
+        raf = requestAnimationFrame(animateParticles);
+      }
+    }, 100);
+  }
+  window.addEventListener('scroll', handleScrollPause, { passive: true });
+
   function animateParticles() {
     const isMobile = window.innerWidth < 768;
     if (isMobile) {
@@ -128,6 +145,12 @@
         particles[i].draw();
       }
       if (raf) cancelAnimationFrame(raf);
+      return;
+    }
+
+    // When scrolling fast, pause calculations to keep 60fps buttery smooth scroll
+    if (isScrolling) {
+      raf = null;
       return;
     }
 
