@@ -2,9 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <script>
+    (function() {
+      try {
+        var saved = localStorage.getItem('mooncliq_theme');
+        if (saved === 'day' || (!saved && (new Date().getHours() >= 6 && new Date().getHours() < 18))) {
+          document.documentElement.classList.add('day-mode');
+          document.addEventListener('DOMContentLoaded', function() {
+            document.body.classList.add('day-mode');
+          });
+        }
+      } catch(e) {}
+    })();
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• ADVANCED SEO & META METRICS â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  <!-- ================ ADVANCED SEO & META METRICS ================ -->
   <title>AWS Cloud Architecture, Serverless & DevOps Consulting | MoonCliq</title>
   <meta name="description" content="Scale infrastructure with certified AWS cloud architects. Serverless microservices, auto-scaling ECS containers, PostgreSQL RDS databases, CI/CD, and 99.99% uptime." />
   <meta name="keywords" content="AWS Cloud Consulting, AWS Partner, Serverless Architecture, AWS DevOps CI/CD, Cloud Migration, MoonCliq" />
@@ -19,7 +32,7 @@
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Zoho CRM Implementation Partner â€” MoonCliq" />
+  <meta name="twitter:title" content="Zoho CRM Implementation Partner — MoonCliq" />
   <meta name="twitter:description" content="Custom Deluge scripts, workflow Blueprints, and seamless data migration to Zoho CRM." />
 
   <!-- JSON-LD STRUCTURED DATA (ProfessionalService & FAQPage for Google Rich Snippets) -->
@@ -118,9 +131,9 @@
   <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
 
   <style>
-    /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+    /* =======================================================
        EXACT MOONCLIQ DESIGN SYSTEM VARIABLES
-       â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+       ======================================================= */
     :root {
       --bg: #03040b;
       --bg2: #060814;
@@ -188,7 +201,7 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    /* â”€â”€ STAR CANVAS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    /* -- STAR CANVAS --------------------------------------- */
     #starCanvas {
       position: fixed;
       inset: 0;
@@ -199,7 +212,7 @@
     }
     body.day-mode #starCanvas { opacity: 0; }
 
-    /* â”€â”€ FLUID AURORA BACKGROUND â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    /* -- FLUID AURORA BACKGROUND --------------------------- */
     .fluid-bg {
       position: fixed;
       inset: 0;
@@ -241,7 +254,7 @@
       100% { transform: translate3d(-40px, 50px, 0) scale(0.9); }
     }
 
-    /* â”€â”€ EXACT HEADER / NAVBAR â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    /* -- EXACT HEADER / NAVBAR ----------------------------- */
     .navbar {
       position: sticky;
       top: 0;
@@ -364,7 +377,7 @@
       border-radius: 2px;
     }
 
-    /* â”€â”€ CONTAINER â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    /* -- CONTAINER ---------------------------------------- */
     .container {
       max-width: 1240px;
       margin: 0 auto;
@@ -373,7 +386,7 @@
       z-index: 2;
     }
 
-    /* â”€â”€ BREADCRUMB â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    /* -- BREADCRUMB --------------------------------------- */
     .breadcrumb-row {
       padding: 26px 0 10px;
       display: flex;
@@ -393,7 +406,7 @@
       font-weight: 700;
     }
 
-    /* â”€â”€ HERO SECTION â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    /* -- HERO SECTION ------------------------------------- */
     .service-hero {
       padding: 40px 0 70px;
       display: grid;
@@ -521,7 +534,7 @@
     }
     .stat-val { font-weight: 800; color: var(--cyan); }
 
-    /* â”€â”€ SECTION COMMONS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    /* -- SECTION COMMONS ----------------------------------- */
     .section-wrap { padding: 70px 0; }
     .section-head { text-align: center; margin-bottom: 50px; }
     .section-tag {
@@ -547,7 +560,7 @@
       margin: 0 auto;
     }
 
-    /* â”€â”€ CAPABILITIES CARDS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    /* -- CAPABILITIES CARDS -------------------------------- */
     .capabilities-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -610,7 +623,7 @@
     .feature-points li { display: flex; align-items: center; gap: 10px; }
     .bullet-chk { color: var(--cyan); font-weight: 800; }
 
-    /* â”€â”€ MIGRATION TABLE â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    /* -- MIGRATION TABLE ---------------------------------- */
     .matrix-box {
       background: var(--surface2);
       border: 1px solid var(--border);
@@ -640,7 +653,7 @@
     .matrix-table tr:hover { background: rgba(91, 110, 245, 0.04); }
     .speed-badge { color: #10b981; font-weight: 700; }
 
-    /* â”€â”€ PROCESS TIMELINE â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    /* -- PROCESS TIMELINE --------------------------------- */
     .process-timeline {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -673,7 +686,7 @@
       line-height: 1.6;
     }
 
-    /* â”€â”€ FAQ ACCORDION â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    /* -- FAQ ACCORDION ------------------------------------ */
     .faq-wrapper {
       max-width: 840px;
       margin: 0 auto;
@@ -708,7 +721,7 @@
     .faq-item.active .faq-icon { transform: rotate(180deg); }
     .faq-icon { transition: transform 0.2s; font-size: 18px; color: var(--cyan); }
 
-    /* â”€â”€ BOTTOM CTA BANNER â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    /* -- BOTTOM CTA BANNER -------------------------------- */
     .bottom-cta-banner {
       background: radial-gradient(ellipse at 50% 50%, rgba(91, 110, 245, 0.25) 0%, rgba(3, 4, 11, 0.95) 100%);
       border: 1px solid var(--border2);
@@ -721,7 +734,7 @@
       background: radial-gradient(ellipse at 50% 50%, rgba(37, 99, 235, 0.15) 0%, rgba(248, 250, 252, 0.95) 100%);
     }
 
-    /* â”€â”€ FOOTER â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    /* -- FOOTER ------------------------------------------- */
     .footer {
       position: relative;
       border-top: 1px solid var(--border);
@@ -830,7 +843,7 @@
     <div class="fluid-blob fluid-2"></div>
   </div>
 
-  <!-- â”€â”€ NAVBAR â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
+  <!-- -- NAVBAR ----------------------------------------------- -->
   <nav class="navbar" id="navbar">
     <div class="nav-container">
       <a href="index.html" class="nav-logo">
@@ -876,7 +889,7 @@
       <span class="breadcrumb-active">AWS Cloud Infrastructure & DevOps</span>
     </nav>
 
-    <!-- â”€â”€ HERO SECTION â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
+    <!-- -- HERO SECTION ------------------------------------- -->
     <section class="service-hero">
       <div>
         <div class="service-brand-badge">
@@ -905,7 +918,7 @@
           Architect resilient, auto-scaling cloud environments with certified AWS consultants. Serverless Lambda APIs, secure PostgreSQL/RDS databases, and zero-downtime CI/CD pipelines.
         </p>
         <div class="hero-action-group">
-          <a href="#audit" class="btn-primary">Schedule Architecture Audit â†’</a>
+          <a href="#audit" class="btn-primary">Schedule Architecture Audit  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:middle; margin-left:6px;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
           <a href="#capabilities" class="btn-outline">Explore Capabilities</a>
         </div>
       </div>
@@ -954,7 +967,7 @@
       </div>
     </section>
 
-    <!-- â”€â”€ SECTION 1: CORE CAPABILITIES â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
+    <!-- -- SECTION 1: CORE CAPABILITIES --------------------- -->
     <section class="section-wrap" id="capabilities">
       <div class="section-head">
         <span class="section-tag">High-Intent Capabilities</span>
@@ -983,9 +996,9 @@
           <h3>Serverless & Microservices Architecture</h3>
           <p>Cut server idle costs with event-driven serverless architectures using AWS Lambda, API Gateway, and SQS/SNS message queues that scale instantaneously on demand.</p>
           <ul class="feature-points">
-            <li><span class="bullet-chk">âœ“</span> Pay-per-execution cost efficiency</li>
-            <li><span class="bullet-chk">âœ“</span> Auto-scaling from 1 to 1,000,000 concurrent users</li>
-            <li><span class="bullet-chk">âœ“</span> Zero operating system patching overhead</li>
+            <li><span class="bullet-chk">✓</span> Pay-per-execution cost efficiency</li>
+            <li><span class="bullet-chk">✓</span> Auto-scaling from 1 to 1,000,000 concurrent users</li>
+            <li><span class="bullet-chk">✓</span> Zero operating system patching overhead</li>
           </ul>
         </article>
 
@@ -1009,9 +1022,9 @@
           <h3>Containerization & ECS/EKS Orchestration</h3>
           <p>Package complex web and backend services into high-performance Docker containers running on AWS Fargate or Elastic Kubernetes Service (EKS) with automated health recovery.</p>
           <ul class="feature-points">
-            <li><span class="bullet-chk">âœ“</span> Multi-zone high availability cluster design</li>
-            <li><span class="bullet-chk">âœ“</span> Application Load Balancer (ALB) traffic routing</li>
-            <li><span class="bullet-chk">âœ“</span> Automated horizontal pod auto-scaling</li>
+            <li><span class="bullet-chk">✓</span> Multi-zone high availability cluster design</li>
+            <li><span class="bullet-chk">✓</span> Application Load Balancer (ALB) traffic routing</li>
+            <li><span class="bullet-chk">✓</span> Automated horizontal pod auto-scaling</li>
           </ul>
         </article>
 
@@ -1035,15 +1048,15 @@
           <h3>DevOps & Automated CI/CD Pipelines</h3>
           <p>Streamline code shipping from GitHub to production. We configure automated testing, blue-green deployment pipelines, and CloudWatch telemetry with zero downtime.</p>
           <ul class="feature-points">
-            <li><span class="bullet-chk">âœ“</span> GitHub Actions & AWS CodePipeline automation</li>
-            <li><span class="bullet-chk">âœ“</span> Blue/Green and Canary deployment strategies</li>
-            <li><span class="bullet-chk">âœ“</span> Real-time CloudWatch metrics & Sentry alerting</li>
+            <li><span class="bullet-chk">✓</span> GitHub Actions & AWS CodePipeline automation</li>
+            <li><span class="bullet-chk">✓</span> Blue/Green and Canary deployment strategies</li>
+            <li><span class="bullet-chk">✓</span> Real-time CloudWatch metrics & Sentry alerting</li>
           </ul>
         </article>
       </div>
     </section>
 
-    <!-- â”€â”€ SECTION 2: DATA MIGRATION MATRIX â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
+    <!-- -- SECTION 2: DATA MIGRATION MATRIX ---------------- -->
     <section class="section-wrap" id="migration">
       <div class="section-head">
         <span class="section-tag">Infrastructure Comparison</span>
@@ -1091,7 +1104,7 @@
       </div>
     </section>
 
-    <!-- â”€â”€ SECTION 3: 4-STEP PROCESS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
+    <!-- -- SECTION 3: 4-STEP PROCESS ------------------------ -->
     <section class="section-wrap" id="process">
       <div class="section-head">
         <span class="section-tag">Proven Engineering Methodology</span>
@@ -1123,7 +1136,7 @@
       </div>
     </section>
 
-    <!-- â”€â”€ SECTION 4: FREQUENTLY ASKED QUESTIONS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
+    <!-- -- SECTION 4: FREQUENTLY ASKED QUESTIONS ------------ -->
     <section class="section-wrap" id="faq">
       <div class="section-head">
         <span class="section-tag">Clear Answers</span>
@@ -1135,7 +1148,7 @@
         <div class="faq-item">
           <div class="faq-question">
             <span>How can moving to AWS Serverless reduce our cloud hosting bill?</span>
-            <span class="faq-icon">â–¾</span>
+            <span class="faq-icon">▾</span>
           </div>
           <div class="faq-answer">
             With serverless architectures like AWS Lambda and DynamoDB, you never pay for idle computing power. You are billed strictly per millisecond of compute time consumed.
@@ -1145,7 +1158,7 @@
         <div class="faq-item">
           <div class="faq-question">
             <span>Can you migrate our existing applications from VPS or DigitalOcean to AWS?</span>
-            <span class="faq-icon">â–¾</span>
+            <span class="faq-icon">▾</span>
           </div>
           <div class="faq-answer">
             Yes! We specialize in zero-downtime database and container migrations from legacy hosting providers to AWS with full DNS and SSL cutover management.
@@ -1155,7 +1168,7 @@
         <div class="faq-item">
           <div class="faq-question">
             <span>Do you provide 24/7 monitoring and cloud maintenance?</span>
-            <span class="faq-icon">â–¾</span>
+            <span class="faq-icon">▾</span>
           </div>
           <div class="faq-answer">
             Yes, our DevOps engineers offer ongoing infrastructure management, automated security patching, cost-optimization audits, and 24/7 SLA monitoring.
@@ -1165,7 +1178,7 @@
         <div class="faq-item">
           <div class="faq-question">
             <span>Do you offer ongoing support after go-live?</span>
-            <span class="faq-icon">â–¾</span>
+            <span class="faq-icon">▾</span>
           </div>
           <div class="faq-answer">
             Yes, every implementation includes 30 days of complimentary post-deployment support. We also provide monthly retainer packages for continuous Deluge development and workflow optimizations.
@@ -1174,7 +1187,7 @@
       </div>
     </section>
 
-    <!-- â”€â”€ BOTTOM CTA BANNER â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
+    <!-- -- BOTTOM CTA BANNER -------------------------------- -->
     <section class="bottom-cta-banner" id="audit">
       <h2 style="font-family: var(--font-h); font-size: 38px; font-weight: 800; margin-bottom: 14px;">
         Modernize Your Cloud Architecture Today
@@ -1183,12 +1196,12 @@
         Book a 30-minute infrastructure audit with our certified AWS cloud architects to optimize performance and reduce cloud spend.
       </p>
       <a href="mailto:hello@mooncliq.com" class="btn-primary" style="font-size: 16px; padding: 16px 36px;">
-        Claim Your Free 30-Min Audit â†’
+        Claim Your Free 30-Min Audit  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:middle; margin-left:6px;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
       </a>
     </section>
   </main>
 
-  <!-- â”€â”€ FOOTER (100% Synced with Live Site) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
+  <!-- -- FOOTER (100% Synced with Live Site) ---------------- -->
   <footer class="footer">
     <div class="footer-top-glow"></div>
     <div class="container">
@@ -1251,7 +1264,7 @@
   </footer>
 
   <script>
-    /* â”€â”€ LENIS SMOOTH SCROLL â”€â”€ */
+    /* -- LENIS SMOOTH SCROLL -- */
     const lenis = new Lenis({
       duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
@@ -1263,22 +1276,35 @@
     }
     requestAnimationFrame(raf);
 
-    /* â”€â”€ DAY / NIGHT THEME SWITCHER â”€â”€ */
+    /* -- DAY / NIGHT THEME SWITCHER -- */
+        /* ── DAY / NIGHT THEME SWITCHER (SYNCED ACROSS ALL PAGES) ── */
     const themeToggle = document.getElementById('themeToggle');
-    let isDayMode = false;
-    themeToggle.addEventListener('click', () => {
-      isDayMode = !isDayMode;
-      document.body.classList.toggle('day-mode', isDayMode);
-    });
+    function applyDayMode(isDay, save = false) {
+      document.body.classList.toggle('day-mode', isDay);
+      if (save) localStorage.setItem('mooncliq_theme', isDay ? 'day' : 'dark');
+    }
+    const savedTheme = localStorage.getItem('mooncliq_theme');
+    if (savedTheme) {
+      applyDayMode(savedTheme === 'day');
+    } else {
+      const isDayTime = new Date().getHours() >= 6 && new Date().getHours() < 18;
+      applyDayMode(isDayTime);
+    }
+    if (themeToggle) {
+      themeToggle.addEventListener('click', () => {
+        const nextDay = !document.body.classList.contains('day-mode');
+        applyDayMode(nextDay, true);
+      });
+    }
 
-    /* â”€â”€ ACCORDION INTERACTIVITY â”€â”€ */
+    /* -- ACCORDION INTERACTIVITY -- */
     document.querySelectorAll('.faq-question').forEach(q => {
       q.addEventListener('click', () => {
         q.parentElement.classList.toggle('active');
       });
     });
 
-    /* â”€â”€ STAR CANVAS (GPU) â”€â”€ */
+    /* -- STAR CANVAS (GPU) -- */
     const canvas = document.getElementById('starCanvas');
     const ctx = canvas.getContext('2d');
     let stars = [];

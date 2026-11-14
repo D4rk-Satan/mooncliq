@@ -3,6 +3,19 @@
 
 <head>
   <meta charset="UTF-8" />
+  <script>
+    (function() {
+      try {
+        var saved = localStorage.getItem('mooncliq_theme');
+        if (saved === 'day' || (!saved && (new Date().getHours() >= 6 && new Date().getHours() < 18))) {
+          document.documentElement.classList.add('day-mode');
+          document.addEventListener('DOMContentLoaded', function() {
+            document.body.classList.add('day-mode');
+          });
+        }
+      } catch(e) {}
+    })();
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MoonCliq | Custom Software & E-Commerce Solutions</title>
   <meta name="description"
@@ -349,7 +362,7 @@
             <li>Custom modules &amp; fields</li>
             <li>Third-party integrations</li>
           </ul>
-          <div class="card-arrow">→</div>
+          <div class="card-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:middle;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div>
         </a>
 
 <a href="zoho-books.html" class="service-card glass-card" id="svc-books" style="text-decoration: none; color: inherit; display: block; cursor: pointer;">
@@ -365,7 +378,7 @@
             <li>Multi-currency support</li>
             <li>Bank reconciliation</li>
           </ul>
-          <div class="card-arrow">→</div>
+          <div class="card-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:middle;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div>
         </a>
 
 <a href="zoho-inventory.html" class="service-card glass-card" id="svc-inventory" style="text-decoration: none; color: inherit; display: block; cursor: pointer;">
@@ -381,7 +394,7 @@
             <li>Automated reorder points</li>
             <li>Sales channel sync</li>
           </ul>
-          <div class="card-arrow">→</div>
+          <div class="card-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:middle;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div>
         </a>
 
 <a href="zoho-analytics.html" class="service-card glass-card" id="svc-analytics" style="text-decoration: none; color: inherit; display: block; cursor: pointer;">
@@ -397,7 +410,7 @@
             <li>Scheduled automated reports</li>
             <li>AI-powered insights</li>
           </ul>
-          <div class="card-arrow">→</div>
+          <div class="card-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:middle;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div>
         </a>
 
 <a href="shopify-development.html" class="service-card glass-card" id="svc-commerce" style="text-decoration: none; color: inherit; display: block; cursor: pointer;">
@@ -414,7 +427,7 @@
             <li>Inventory, shipping & order sync</li>
             <li>Conversion rate optimization</li>
           </ul>
-          <div class="card-arrow">→</div>
+          <div class="card-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:middle;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div>
         </a>
 
 <a href="whatsapp-automation.html" class="service-card glass-card" id="svc-whatsapp" style="text-decoration: none; color: inherit; display: block; cursor: pointer;">
@@ -431,7 +444,7 @@
             <li>Notification Systems</li>
             <li>System Integration</li>
           </ul>
-          <div class="card-arrow">→</div>
+          <div class="card-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:middle;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div>
         </a>
 
 <a href="zoho-social.html" class="service-card glass-card" id="svc-social" style="text-decoration: none; color: inherit; display: block; cursor: pointer;">
@@ -447,7 +460,7 @@
             <li>Engagement analytics</li>
             <li>Team collaboration</li>
           </ul>
-          <div class="card-arrow">→</div>
+          <div class="card-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:middle;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div>
         </a>
 
 <a href="zoho-mail.html" class="service-card glass-card" id="svc-mail" style="text-decoration: none; color: inherit; display: block; cursor: pointer;">
@@ -463,7 +476,7 @@
             <li>User &amp; group management</li>
             <li>Security policy setup</li>
           </ul>
-          <div class="card-arrow">→</div>
+          <div class="card-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:middle;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div>
         </a>
 
 <a href="zoho-cliq.html" class="service-card glass-card" id="svc-cliq" style="text-decoration: none; color: inherit; display: block; cursor: pointer;">
@@ -479,7 +492,7 @@
             <li>CRM &amp; tool integrations</li>
             <li>Video conferencing setup</li>
           </ul>
-          <div class="card-arrow">→</div>
+          <div class="card-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:middle;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div>
         </a>
 
 <a href="zoho-pos.html" class="service-card glass-card" id="svc-pos" style="text-decoration: none; color: inherit; display: block; cursor: pointer;">
@@ -495,7 +508,7 @@
             <li>Customer loyalty programs</li>
             <li>Sales reporting</li>
           </ul>
-          <div class="card-arrow">→</div>
+          <div class="card-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:middle;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div>
         </a>
 
 </div>
@@ -534,7 +547,7 @@
             <li><span>Mobile-ready app deployment</span></li>
           </ul>
           <div style="display:flex; gap:16px; flex-wrap:wrap; margin-top:20px;">
-            <a href="zoho-creator.html" class="sol-cta" style="background:var(--grad); color:#fff; border:none; padding:10px 22px; border-radius:99px; font-weight:600; text-decoration:none; display:inline-flex; align-items:center; gap:8px;">Explore Zoho Creator Page →</a>
+            <a href="zoho-creator.html" class="sol-cta" style="background:var(--grad); color:#fff; border:none; padding:10px 22px; border-radius:99px; font-weight:600; text-decoration:none; display:inline-flex; align-items:center; gap:8px;">Explore Zoho Creator Page <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:middle;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
             <a href="#contact" class="sol-cta" style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.15); color:var(--txt); padding:10px 22px; border-radius:99px; text-decoration:none;">Discuss Requirements</a>
           </div>
         </div>
@@ -582,7 +595,7 @@
             <li><span>SEO &amp; Accessibility</span></li>
             <li><span>Headless CMS Integration</span></li>
           </ul>
-          <div style="margin-top:20px;"><a href="custom-web-development.html" class="sol-cta" style="background:var(--grad); color:#fff; border:none; padding:10px 22px; border-radius:99px; font-weight:600; text-decoration:none; display:inline-flex; align-items:center; gap:8px;">View Custom Web Development →</a></div>
+          <div style="margin-top:20px;"><a href="custom-web-development.html" class="sol-cta" style="background:var(--grad); color:#fff; border:none; padding:10px 22px; border-radius:99px; font-weight:600; text-decoration:none; display:inline-flex; align-items:center; gap:8px;">View Custom Web Development <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:middle;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a></div>
         </div>
 
       </div>

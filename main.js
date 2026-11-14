@@ -4,19 +4,22 @@
 (function () {
   'use strict';
 
-  /* ── BUTTERY SMOOTH LENIS SCROLL ── */
+  /* ── BUTTERY SMOOTH LENIS SCROLL (SILKY & RESPONSIVE) ── */
+  let lenisInstance = null;
   if (typeof Lenis !== 'undefined') {
-    const lenis = new Lenis({
-      duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Exponential smooth deceleration
+    lenisInstance = new Lenis({
+      duration: 0.8,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       orientation: 'vertical',
+      gestureOrientation: 'vertical',
       smoothWheel: true,
-      wheelMultiplier: 1.05,
-      touchMultiplier: 1.5,
+      wheelMultiplier: 1.0,
+      touchMultiplier: 1.0,
+      infinite: false,
     });
 
     function raf(time) {
-      lenis.raf(time);
+      lenisInstance.raf(time);
       requestAnimationFrame(raf);
     }
     requestAnimationFrame(raf);
@@ -289,35 +292,51 @@
       });
   });
 
-  /* ── SMOOTH SCROLL ────────────────────────── */
+  /* ── SMOOTH SCROLL (SYNCED WITH LENIS) ── */
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', e => {
-      const t = document.querySelector(a.getAttribute('href'));
-      if (t) { e.preventDefault(); window.scrollTo({ top: t.offsetTop - 78, behavior: 'smooth' }); }
+      const href = a.getAttribute('href');
+      if (href === '#' || href === '') return;
+      const t = document.querySelector(href);
+      if (t) {
+        e.preventDefault();
+        if (lenisInstance) {
+          lenisInstance.scrollTo(t, { offset: -78, duration: 1.0 });
+        } else {
+          window.scrollTo({ top: t.offsetTop - 78, behavior: 'smooth' });
+        }
+      }
     });
   });
 
-  /* ── DAY/NIGHT THEME LOGIC ────────────────── */
+  /* ── DAY/NIGHT THEME LOGIC (PERSISTENT VIA LOCALSTORAGE) ── */
   const themeToggle = document.getElementById('themeToggle');
 
-  function applyTheme(isDay) {
+  function applyTheme(isDay, save = false) {
     if (isDay) {
       document.body.classList.add('day-mode');
+      if (save) localStorage.setItem('mooncliq_theme', 'day');
     } else {
       document.body.classList.remove('day-mode');
+      if (save) localStorage.setItem('mooncliq_theme', 'dark');
     }
   }
 
-  // Set time-based theme (6 AM to 6 PM is Day)
-  const hour = new Date().getHours();
-  const isDayTime = hour >= 6 && hour < 18;
-  applyTheme(isDayTime);
+  // Initialize: check saved preference first, then system/time-based fallback
+  const savedTheme = localStorage.getItem('mooncliq_theme');
+  if (savedTheme) {
+    applyTheme(savedTheme === 'day');
+  } else {
+    const hour = new Date().getHours();
+    const isDayTime = hour >= 6 && hour < 18;
+    applyTheme(isDayTime);
+  }
 
   // Toggle handler
   if (themeToggle) {
     themeToggle.addEventListener('click', () => {
       const isCurrentlyDay = document.body.classList.contains('day-mode');
-      applyTheme(!isCurrentlyDay);
+      applyTheme(!isCurrentlyDay, true);
     });
   }
 
