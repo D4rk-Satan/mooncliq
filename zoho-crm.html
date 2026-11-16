@@ -16,18 +16,19 @@
     })();
   </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="assets/logo.png" />
   
   <!-- ================ ADVANCED SEO & META METRICS ================ -->
   <title>Zoho CRM Implementation Partner & Deluge Customization Services | MoonCliq</title>
   <meta name="description" content="Certified Zoho CRM consultants at MoonCliq deliver enterprise pipeline architecture, Deluge custom functions, multi-tier security profiles, and zero-loss Salesforce/HubSpot migration with ongoing SLA support." />
   <meta name="keywords" content="Zoho CRM Implementation, Zoho CRM Partner, Zoho CRM Customization, Deluge Scripting Developers, Salesforce to Zoho Migration, Zoho Blueprint Automation, Zoho CRM Consulting Agency, MoonCliq" />
-  <link rel="canonical" href="https://mooncliq.com/zoho-crm.html" />
+  <link rel="canonical" href="https://mooncliq.com/zoho-crm" />
 
   <!-- Open Graph / Social Sharing -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Zoho CRM Implementation & Deluge Customization Services | MoonCliq" />
   <meta property="og:description" content="Scale your sales pipeline with certified Zoho CRM architecture. Custom Deluge functions, stage-gate Blueprints, and zero-downtime CRM migrations." />
-  <meta property="og:url" content="https://mooncliq.com/zoho-crm.html" />
+  <meta property="og:url" content="https://mooncliq.com/zoho-crm" />
   <meta property="og:image" content="https://mooncliq.com/assets/logo.png" />
 
   <!-- Twitter Card -->
@@ -42,11 +43,11 @@
     "@graph": [
       {
         "@type": "ProfessionalService",
-        "@id": "https://mooncliq.com/zoho-crm.html#service",
+        "@id": "https://mooncliq.com/zoho-crm#service",
         "name": "MoonCliq Zoho CRM Implementation & Customization",
-        "url": "https://mooncliq.com/zoho-crm.html",
+        "url": "https://mooncliq.com/zoho-crm",
         "logo": "https://mooncliq.com/assets/logo.png",
-        "serviceType": "Zoho CRM Consulting & Custom Deluge Engineering",
+        "serviceType": "Zoho CRM Implementation & Customization",
         "provider": {
           "@type": "Organization",
           "name": "MoonCliq",
@@ -55,7 +56,7 @@
         "areaServed": "Global",
         "hasOfferCatalog": {
           "@type": "OfferCatalog",
-          "name": "Zoho CRM Implementation Services",
+          "name": "Zoho CRM Implementation & Customization",
           "itemListElement": [
             {
               "@type": "Offer",
@@ -628,11 +629,13 @@
       background: var(--surface2);
       border: 1px solid var(--border);
       border-radius: 20px;
-      overflow: hidden;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
       margin-top: 30px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     }
     .matrix-table {
+      min-width: 620px;
       width: 100%;
       border-collapse: collapse;
       text-align: left;
@@ -820,19 +823,278 @@
       font-size: 13.5px;
     }
 
+    
+    /* ── CROSS-SELL BANNER (Mooncliq CRM) ── */
+    .cross-sell-crm-box {
+      background: linear-gradient(135deg, rgba(91, 110, 245, 0.12) 0%, rgba(34, 211, 238, 0.08) 100%);
+      border: 1px solid rgba(91, 110, 245, 0.3);
+      border-radius: 20px;
+      padding: 30px 36px;
+      margin: 40px 0 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    }
+    body.day-mode .cross-sell-crm-box {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(240, 249, 255, 0.95) 100%);
+      border-color: rgba(91, 110, 245, 0.25);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    }
+    .cross-sell-left {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+    .cross-sell-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      background: rgba(91, 110, 245, 0.15);
+      border: 1px solid rgba(91, 110, 245, 0.35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    body.day-mode .cross-sell-icon {
+      background: #ffffff;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    }
+    .cross-sell-badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #38bdf8;
+      margin-bottom: 4px;
+    }
+    body.day-mode .cross-sell-badge {
+      color: #0284c7;
+    }
+    .cross-sell-title {
+      font-family: var(--font-h);
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--txt);
+      margin-bottom: 4px;
+    }
+    .cross-sell-sub {
+      font-size: 14px;
+      color: var(--txt2);
+    }
+    .cross-sell-btn {
+      background: var(--grad);
+      color: #ffffff !important;
+      padding: 12px 24px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 14px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+      box-shadow: 0 6px 20px rgba(91, 110, 245, 0.35);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .cross-sell-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(91, 110, 245, 0.5);
+    }
+    @media (max-width: 800px) {
+      .cross-sell-crm-box {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 24px 20px;
+        gap: 20px;
+      }
+      .cross-sell-btn {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+
+    /* -- MOBILE OPTIMIZATIONS -- */
+    .cta-btn-responsive {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-size: 16px;
+      padding: 16px 36px;
+      text-decoration: none;
+      border-radius: 12px;
+      font-weight: 700;
+      transition: transform 0.2s, box-shadow 0.2s;
+      white-space: normal;
+      text-align: center;
+    }
+    .cta-btn-responsive svg {
+      flex-shrink: 0;
+    }
+
     @media (max-width: 900px) {
       .service-hero { grid-template-columns: 1fr; }
       .process-timeline { grid-template-columns: 1fr 1fr; }
       .footer-grid { grid-template-columns: 1fr 1fr; }
       .nav-links { display: none; }
       .hamburger { display: flex; }
+      .nav-links.open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 76px;
+        left: 0;
+        right: 0;
+        background: rgba(3, 4, 11, 0.96);
+        backdrop-filter: blur(20px);
+        padding: 24px;
+        border-bottom: 1px solid var(--border);
+        gap: 16px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      }
+      body.day-mode .nav-links.open {
+        background: rgba(255, 255, 255, 0.98);
+        border-bottom-color: rgba(91, 110, 245, 0.2);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      }
     }
+
     @media (max-width: 600px) {
+      .hero-title {
+        font-size: clamp(2rem, 7vw, 2.7rem) !important;
+        letter-spacing: -0.8px;
+        margin-bottom: 16px;
+      }
+      .hero-subtitle {
+        font-size: 15px;
+        line-height: 1.6;
+        margin-bottom: 24px;
+      }
+      .hero-action-group {
+        flex-direction: column;
+        gap: 12px;
+      }
+      .hero-action-group .btn-primary,
+      .hero-action-group .btn-outline {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        display: inline-flex;
+        align-items: center;
+      }
+      .hero-graphic-box {
+        padding: 24px 20px;
+      }
+      .stat-bar-list {
+        gap: 10px;
+      }
+      .section-title {
+        font-size: 28px !important;
+      }
+      .section-subtitle {
+        font-size: 14.5px;
+      }
+      .bottom-cta-banner {
+        padding: 40px 20px !important;
+        margin: 50px 0 60px !important;
+        border-radius: 20px;
+      }
+      .bottom-cta-banner h2 {
+        font-size: 26px !important;
+        line-height: 1.25 !important;
+        margin-bottom: 12px !important;
+      }
+      .bottom-cta-banner p {
+        font-size: 14.5px !important;
+        line-height: 1.55 !important;
+        margin-bottom: 24px !important;
+      }
+      .bottom-cta-banner .cta-btn-responsive {
+        width: 100%;
+        max-width: 320px;
+        padding: 14px 20px !important;
+        font-size: 15px !important;
+      }
       .process-timeline { grid-template-columns: 1fr; }
-      .footer-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; gap: 30px; }
       .footer-bottom { flex-direction: column; gap: 10px; text-align: center; }
     }
-  </style>
+  
+  /* ── STICKY MOBILE BOTTOM BAR ── */
+  .mobile-bottom-bar {
+    display: none;
+  }
+  @media (max-width: 991px) {
+    .mobile-bottom-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 9999;
+      display: flex;
+      gap: 10px;
+      padding: 10px 16px;
+      background: rgba(3, 4, 11, 0.94);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-top: 1px solid rgba(167, 139, 250, 0.2);
+      box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.5);
+    }
+    body {
+      padding-bottom: 65px !important;
+    }
+    .mobile-action-btn {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 11px 16px;
+      border-radius: 12px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-align: center;
+      text-decoration: none;
+      transition: transform 0.15s;
+    }
+    .mobile-action-btn:active {
+      transform: scale(0.97);
+    }
+    .mobile-call-btn {
+      background: rgba(255, 255, 255, 0.08);
+      color: #fff !important;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .mobile-whatsapp-btn {
+      background: #25d366 !important;
+      color: #ffffff !important;
+      border: 1px solid #20bd5a !important;
+      box-shadow: 0 4px 16px rgba(37, 211, 102, 0.35) !important;
+    }
+    .mobile-whatsapp-btn span {
+      color: #ffffff !important;
+    }
+    .mobile-whatsapp-btn svg {
+      fill: #ffffff !important;
+    }
+    body.day-mode .mobile-bottom-bar {
+      background: rgba(255, 255, 255, 0.96);
+      border-top-color: rgba(0, 0, 0, 0.1);
+    }
+    body.day-mode .mobile-call-btn {
+      background: #f1f5f9;
+      color: #0f172a !important;
+      border-color: #cbd5e1;
+    }
+  }
+
+</style>
 </head>
 <body>
 
@@ -894,20 +1156,7 @@
       <div>
         <div class="service-brand-badge">
           <div class="brand-icon-mini">
-            <!-- Exact Zoho CRM Vector Logo -->
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="20" height="20">
-              <g transform="translate(1.7, 11.8)">
-                <path fill="#006EB9" d="M39.6,40.4c-4.8,0-9.3-1.9-12.8-5.2l-10-10C15.6,24,15,22.5,15,20.8c0-1.6,0.7-3.2,1.8-4.3
-                  c2.4-2.4,6.3-2.4,8.7,0l9.2,9.2c1.1,1.1,2.8,1.1,3.9,0c0.5-0.5,0.8-1.2,0.8-2c0-0.7-0.3-1.4-0.8-2l-10-10C25.8,9,22,7.5,18.1,7.5
-                  c-4,0-7.7,1.6-10.5,4.4c-2.8,2.9-4.3,6.6-4.2,10.6c0.2,8,6.8,14.5,14.8,14.5c1.4,0,2.8-0.2,4.2-0.6c0.9-0.3,1.8,0.2,2.1,1.1
-                  c0.3,0.9-0.2,1.8-1.1,2.1c-1.7,0.5-3.4,0.7-5.2,0.7c-9.8,0-18-8-18.2-17.8c-0.1-4.9,1.7-9.6,5.2-13.1c3.4-3.5,8-5.4,12.9-5.4
-                  c4.8,0,9.4,1.9,12.8,5.2l10,10c1.2,1.2,1.8,2.7,1.8,4.4c0,1.6-0.7,3.2-1.8,4.4c-2.4,2.4-6.3,2.4-8.7,0l-9.2-9.2
-                  c-1.1-1.1-2.8-1.1-3.9,0c-0.5,0.5-0.8,1.2-0.8,2c0,0.7,0.3,1.4,0.8,2l10,10c2.8,2.7,6.5,4.3,10.4,4.3c8.1,0,14.8-6.6,14.8-14.8
-                  c0-3.9-1.5-7.7-4.3-10.5s-6.5-4.3-10.4-4.3c-1.3,0-2.5,0.2-3.7,0.5c-0.2,0-0.4,0.1-0.5,0.1c-0.9,0.3-1.8-0.2-2.1-1.1
-                  c-0.3-0.9,0.2-1.8,1.1-2.1c0.2-0.1,0.4-0.1,0.6-0.2c1.5-0.4,3-0.6,4.6-0.6c4.8,0,9.4,1.9,12.8,5.3c3.4,3.4,5.3,8,5.3,12.8
-                  C57.7,32.3,49.5,40.4,39.6,40.4L39.6,40.4z"/>
-              </g>
-            </svg>
+            <img src="assets/zoho-icons/crm.svg" alt="Certified Zoho CRM Partner" width="20" height="20" style="object-fit:contain;" />
           </div>
           <span>Certified Zoho CRM Consulting Partner</span>
         </div>
@@ -918,7 +1167,10 @@
           Accelerate your deal velocity with bespoke pipeline Blueprints, custom Deluge scripting, automated lead scoring, and zero-loss Salesforce/HubSpot migrations engineered by certified MoonCliq developers.
         </p>
         <div class="hero-action-group">
-          <a href="#audit" class="btn-primary">Claim Free 30-Min Architecture Audit  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:middle; margin-left:6px;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+          <a href="https://wa.me/919998663338?text=Hi%20MoonCliq%2C%20I%20am%20looking%20for%20expert%20Zoho%20CRM%20implementation%20and%20Deluge%20customization%20for%20my%20business." target="_blank" rel="noopener" class="btn-primary" style="background:#25d366; border:1px solid #20bd5a; box-shadow:0 6px 24px rgba(37,211,102,0.35); display:inline-flex; align-items:center; gap:8px;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#ffffff" style="display:inline-block; vertical-align:middle; flex-shrink:0;"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+            Book Free Architecture Audit
+          </a>
           <a href="#capabilities" class="btn-outline">Explore Capabilities</a>
         </div>
       </div>
@@ -927,22 +1179,10 @@
       <div class="hero-graphic-box">
         <div class="graphic-header">
           <div class="zoho-logo-wrap">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="48" height="48">
-              <g transform="translate(1.7, 11.8)">
-                <path fill="#006EB9" d="M39.6,40.4c-4.8,0-9.3-1.9-12.8-5.2l-10-10C15.6,24,15,22.5,15,20.8c0-1.6,0.7-3.2,1.8-4.3
-                  c2.4-2.4,6.3-2.4,8.7,0l9.2,9.2c1.1,1.1,2.8,1.1,3.9,0c0.5-0.5,0.8-1.2,0.8-2c0-0.7-0.3-1.4-0.8-2l-10-10C25.8,9,22,7.5,18.1,7.5
-                  c-4,0-7.7,1.6-10.5,4.4c-2.8,2.9-4.3,6.6-4.2,10.6c0.2,8,6.8,14.5,14.8,14.5c1.4,0,2.8-0.2,4.2-0.6c0.9-0.3,1.8,0.2,2.1,1.1
-                  c0.3,0.9-0.2,1.8-1.1,2.1c-1.7,0.5-3.4,0.7-5.2,0.7c-9.8,0-18-8-18.2-17.8c-0.1-4.9,1.7-9.6,5.2-13.1c3.4-3.5,8-5.4,12.9-5.4
-                  c4.8,0,9.4,1.9,12.8,5.2l10,10c1.2,1.2,1.8,2.7,1.8,4.4c0,1.6-0.7,3.2-1.8,4.4c-2.4,2.4-6.3,2.4-8.7,0l-9.2-9.2
-                  c-1.1-1.1-2.8-1.1-3.9,0c-0.5,0.5-0.8,1.2-0.8,2c0,0.7,0.3,1.4,0.8,2l10,10c2.8,2.7,6.5,4.3,10.4,4.3c8.1,0,14.8-6.6,14.8-14.8
-                  c0-3.9-1.5-7.7-4.3-10.5s-6.5-4.3-10.4-4.3c-1.3,0-2.5,0.2-3.7,0.5c-0.2,0-0.4,0.1-0.5,0.1c-0.9,0.3-1.8-0.2-2.1-1.1
-                  c-0.3-0.9,0.2-1.8,1.1-2.1c0.2-0.1,0.4-0.1,0.6-0.2c1.5-0.4,3-0.6,4.6-0.6c4.8,0,9.4,1.9,12.8,5.3c3.4,3.4,5.3,8,5.3,12.8
-                  C57.7,32.3,49.5,40.4,39.6,40.4L39.6,40.4z"/>
-              </g>
-            </svg>
+            <img src="assets/zoho-icons/crm.svg" alt="Zoho CRM Blueprint Engine" width="44" height="44" style="object-fit:contain;" />
           </div>
           <div>
-            <h3 style="font-size: 20px; font-weight: 800;">Zoho CRM Certified Flow</h3>
+            <h3 style="font-size: 20px; font-weight: 800;">Zoho CRM Blueprint Engine</h3>
             <span style="font-size: 13.5px; color: var(--txt2);">Enterprise Configuration by MoonCliq</span>
           </div>
         </div>
@@ -979,19 +1219,7 @@
         <!-- 1. Blueprint Automation -->
         <article class="glass-card">
           <div class="card-icon-pill">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="30" height="30">
-              <g transform="translate(1.7, 11.8)">
-                <path fill="#006EB9" d="M39.6,40.4c-4.8,0-9.3-1.9-12.8-5.2l-10-10C15.6,24,15,22.5,15,20.8c0-1.6,0.7-3.2,1.8-4.3
-                  c2.4-2.4,6.3-2.4,8.7,0l9.2,9.2c1.1,1.1,2.8,1.1,3.9,0c0.5-0.5,0.8-1.2,0.8-2c0-0.7-0.3-1.4-0.8-2l-10-10C25.8,9,22,7.5,18.1,7.5
-                  c-4,0-7.7,1.6-10.5,4.4c-2.8,2.9-4.3,6.6-4.2,10.6c0.2,8,6.8,14.5,14.8,14.5c1.4,0,2.8-0.2,4.2-0.6c0.9-0.3,1.8,0.2,2.1,1.1
-                  c0.3,0.9-0.2,1.8-1.1,2.1c-1.7,0.5-3.4,0.7-5.2,0.7c-9.8,0-18-8-18.2-17.8c-0.1-4.9,1.7-9.6,5.2-13.1c3.4-3.5,8-5.4,12.9-5.4
-                  c4.8,0,9.4,1.9,12.8,5.2l10,10c1.2,1.2,1.8,2.7,1.8,4.4c0,1.6-0.7,3.2-1.8,4.4c-2.4,2.4-6.3,2.4-8.7,0l-9.2-9.2
-                  c-1.1-1.1-2.8-1.1-3.9,0c-0.5,0.5-0.8,1.2-0.8,2c0,0.7,0.3,1.4,0.8,2l10,10c2.8,2.7,6.5,4.3,10.4,4.3c8.1,0,14.8-6.6,14.8-14.8
-                  c0-3.9-1.5-7.7-4.3-10.5s-6.5-4.3-10.4-4.3c-1.3,0-2.5,0.2-3.7,0.5c-0.2,0-0.4,0.1-0.5,0.1c-0.9,0.3-1.8-0.2-2.1-1.1
-                  c-0.3-0.9,0.2-1.8,1.1-2.1c0.2-0.1,0.4-0.1,0.6-0.2c1.5-0.4,3-0.6,4.6-0.6c4.8,0,9.4,1.9,12.8,5.3c3.4,3.4,5.3,8,5.3,12.8
-                  C57.7,32.3,49.5,40.4,39.6,40.4L39.6,40.4z"/>
-              </g>
-            </svg>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
           </div>
           <h3>Zoho Blueprint & Deal Pipelines</h3>
           <p>Enforce disciplined sales execution. We design stage-gate transitions, mandatory deal qualification criteria, and automated SLA escalations to eliminate sales leaks.</p>
@@ -1005,19 +1233,7 @@
         <!-- 2. Deluge Scripting -->
         <article class="glass-card">
           <div class="card-icon-pill">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="30" height="30">
-              <g transform="translate(1.7, 11.8)">
-                <path fill="#006EB9" d="M39.6,40.4c-4.8,0-9.3-1.9-12.8-5.2l-10-10C15.6,24,15,22.5,15,20.8c0-1.6,0.7-3.2,1.8-4.3
-                  c2.4-2.4,6.3-2.4,8.7,0l9.2,9.2c1.1,1.1,2.8,1.1,3.9,0c0.5-0.5,0.8-1.2,0.8-2c0-0.7-0.3-1.4-0.8-2l-10-10C25.8,9,22,7.5,18.1,7.5
-                  c-4,0-7.7,1.6-10.5,4.4c-2.8,2.9-4.3,6.6-4.2,10.6c0.2,8,6.8,14.5,14.8,14.5c1.4,0,2.8-0.2,4.2-0.6c0.9-0.3,1.8,0.2,2.1,1.1
-                  c0.3,0.9-0.2,1.8-1.1,2.1c-1.7,0.5-3.4,0.7-5.2,0.7c-9.8,0-18-8-18.2-17.8c-0.1-4.9,1.7-9.6,5.2-13.1c3.4-3.5,8-5.4,12.9-5.4
-                  c4.8,0,9.4,1.9,12.8,5.2l10,10c1.2,1.2,1.8,2.7,1.8,4.4c0,1.6-0.7,3.2-1.8,4.4c-2.4,2.4-6.3,2.4-8.7,0l-9.2-9.2
-                  c-1.1-1.1-2.8-1.1-3.9,0c-0.5,0.5-0.8,1.2-0.8,2c0,0.7,0.3,1.4,0.8,2l10,10c2.8,2.7,6.5,4.3,10.4,4.3c8.1,0,14.8-6.6,14.8-14.8
-                  c0-3.9-1.5-7.7-4.3-10.5s-6.5-4.3-10.4-4.3c-1.3,0-2.5,0.2-3.7,0.5c-0.2,0-0.4,0.1-0.5,0.1c-0.9,0.3-1.8-0.2-2.1-1.1
-                  c-0.3-0.9,0.2-1.8,1.1-2.1c0.2-0.1,0.4-0.1,0.6-0.2c1.5-0.4,3-0.6,4.6-0.6c4.8,0,9.4,1.9,12.8,5.3c3.4,3.4,5.3,8,5.3,12.8
-                  C57.7,32.3,49.5,40.4,39.6,40.4L39.6,40.4z"/>
-              </g>
-            </svg>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
           </div>
           <h3>Custom Deluge Scripting & REST APIs</h3>
           <p>Overcome software limitations. We write complex Deluge custom functions to calculate dynamic pricing, trigger external webhooks, and sync bi-directionally with Shopify, WhatsApp, and ERPs.</p>
@@ -1031,19 +1247,7 @@
         <!-- 3. Hierarchy & Security -->
         <article class="glass-card">
           <div class="card-icon-pill">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="30" height="30">
-              <g transform="translate(1.7, 11.8)">
-                <path fill="#006EB9" d="M39.6,40.4c-4.8,0-9.3-1.9-12.8-5.2l-10-10C15.6,24,15,22.5,15,20.8c0-1.6,0.7-3.2,1.8-4.3
-                  c2.4-2.4,6.3-2.4,8.7,0l9.2,9.2c1.1,1.1,2.8,1.1,3.9,0c0.5-0.5,0.8-1.2,0.8-2c0-0.7-0.3-1.4-0.8-2l-10-10C25.8,9,22,7.5,18.1,7.5
-                  c-4,0-7.7,1.6-10.5,4.4c-2.8,2.9-4.3,6.6-4.2,10.6c0.2,8,6.8,14.5,14.8,14.5c1.4,0,2.8-0.2,4.2-0.6c0.9-0.3,1.8,0.2,2.1,1.1
-                  c0.3,0.9-0.2,1.8-1.1,2.1c-1.7,0.5-3.4,0.7-5.2,0.7c-9.8,0-18-8-18.2-17.8c-0.1-4.9,1.7-9.6,5.2-13.1c3.4-3.5,8-5.4,12.9-5.4
-                  c4.8,0,9.4,1.9,12.8,5.2l10,10c1.2,1.2,1.8,2.7,1.8,4.4c0,1.6-0.7,3.2-1.8,4.4c-2.4,2.4-6.3,2.4-8.7,0l-9.2-9.2
-                  c-1.1-1.1-2.8-1.1-3.9,0c-0.5,0.5-0.8,1.2-0.8,2c0,0.7,0.3,1.4,0.8,2l10,10c2.8,2.7,6.5,4.3,10.4,4.3c8.1,0,14.8-6.6,14.8-14.8
-                  c0-3.9-1.5-7.7-4.3-10.5s-6.5-4.3-10.4-4.3c-1.3,0-2.5,0.2-3.7,0.5c-0.2,0-0.4,0.1-0.5,0.1c-0.9,0.3-1.8-0.2-2.1-1.1
-                  c-0.3-0.9,0.2-1.8,1.1-2.1c0.2-0.1,0.4-0.1,0.6-0.2c1.5-0.4,3-0.6,4.6-0.6c4.8,0,9.4,1.9,12.8,5.3c3.4,3.4,5.3,8,5.3,12.8
-                  C57.7,32.3,49.5,40.4,39.6,40.4L39.6,40.4z"/>
-              </g>
-            </svg>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><polyline points="9 12 11 14 15 10"></polyline></svg>
           </div>
           <h3>Role Hierarchy & Data Visibility</h3>
           <p>Protect confidential enterprise data. We structure granular security profiles and reporting managers so reps only access their assigned accounts while leaders retain panoramic oversight.</p>
@@ -1195,8 +1399,9 @@
       <p style="color: var(--txt2); max-width: 600px; margin: 0 auto 30px; font-size: 16px;">
         Book a complimentary 30-minute architecture review with our certified Zoho CRM engineers. We'll audit your current pipeline and outline a high-impact implementation blueprint.
       </p>
-      <a href="mailto:hello@mooncliq.com" class="btn-primary" style="font-size: 16px; padding: 16px 36px;">
-        Claim Your Free 30-Min Audit  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:middle; margin-left:6px;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+      <a href="https://wa.me/919998663338?text=Hi%20MoonCliq%2C%20I%20am%20looking%20for%20expert%20Zoho%20CRM%20implementation%20and%20Deluge%20customization%20for%20my%20business." target="_blank" rel="noopener" class="btn-primary cta-btn-responsive" style="background:#25d366; border:1px solid #20bd5a; box-shadow:0 6px 24px rgba(37,211,102,0.35);">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="#ffffff" style="display:inline-block; vertical-align:middle; flex-shrink:0;"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+        Claim Your Free 30-Min Audit
       </a>
     </section>
   </main>
@@ -1340,6 +1545,24 @@
     }
     drawStars();
   </script>
+
+  <!-- ── STICKY MOBILE BOTTOM BAR (Lead Conversion) ─────────── -->
+  <div class="mobile-bottom-bar" id="mobileBottomBar">
+    <a href="tel:+919998663338" class="mobile-action-btn mobile-call-btn">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+        stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;">
+        <path
+          d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z">
+        </path>
+      </svg>
+      <span>Call Us</span>
+    </a>
+    <a href="https://wa.me/919998663338?text=Hi%20MoonCliq%2C%20I%20am%20looking%20for%20expert%20Zoho%20CRM%20implementation%20and%20Deluge%20customization%20for%20my%20business." target="_blank" rel="noopener" class="mobile-action-btn mobile-whatsapp-btn">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="#ffffff" style="display:inline-block; vertical-align:middle; flex-shrink:0;"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+      <span>WhatsApp</span>
+    </a>
+  </div>
+
 </body>
 </html>
 

@@ -4,21 +4,23 @@
 (function () {
   'use strict';
 
-  /* ── BUTTERY SMOOTH LENIS SCROLL (SILKY & RESPONSIVE) ── */
+  /* ── BUTTERY SMOOTH LENIS SCROLL (SILKY & ULTRA-SMOOTH) ── */
   let lenisInstance = null;
   if (typeof Lenis !== 'undefined') {
     lenisInstance = new Lenis({
-      duration: 0.8,
+      duration: 1.25,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       orientation: 'vertical',
       gestureOrientation: 'vertical',
       smoothWheel: true,
-      wheelMultiplier: 1.0,
-      touchMultiplier: 1.0,
+      wheelMultiplier: 0.9,
+      touchMultiplier: 1.5,
       infinite: false,
     });
 
-    lenisInstance.on('scroll', handleScrollPause);
+    if (typeof handleScrollPause === 'function') {
+      lenisInstance.on('scroll', handleScrollPause);
+    }
 
     function raf(time) {
       lenisInstance.raf(time);
@@ -26,6 +28,30 @@
     }
     requestAnimationFrame(raf);
   }
+
+  /* ── PAGE PRELOADER HANDLER ── */
+  window.addEventListener('load', function () {
+    const preloader = document.getElementById('mc-preloader');
+    if (preloader) {
+      setTimeout(() => {
+        preloader.classList.add('mc-preloader-hide');
+        setTimeout(() => {
+          preloader.style.display = 'none';
+        }, 600);
+      }, 350);
+    }
+  });
+
+  // Safety fallback: if page load takes too long, hide loader automatically after 2s
+  setTimeout(function () {
+    const preloader = document.getElementById('mc-preloader');
+    if (preloader && !preloader.classList.contains('mc-preloader-hide')) {
+      preloader.classList.add('mc-preloader-hide');
+      setTimeout(() => {
+        preloader.style.display = 'none';
+      }, 600);
+    }
+  }, 2000);
 
 
 
@@ -220,7 +246,9 @@
     hamburger.classList.toggle('open');
     navLinks.classList.toggle('open');
   });
-  links.forEach(l => l.addEventListener('click', () => {
+  links.forEach(l => l.addEventListener('click', (e) => {
+    // Don't close mobile menu or interfere if clicking the Services dropdown trigger
+    if (l.id === 'servicesDropdownTrigger') return;
     hamburger.classList.remove('open');
     navLinks.classList.remove('open');
   }));
@@ -367,13 +395,22 @@
   const crmCard = document.getElementById('up-crm');
   const crmModal = document.getElementById('crmModal');
   const closeCrmModal = document.getElementById('closeCrmModal');
+  const crmMoreInfoBtn = document.getElementById('crmMoreInfo');
+
+  // Prevent parent card modal when clicking 'More Info' link
+  if (crmMoreInfoBtn) {
+    crmMoreInfoBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      window.open('https://crm.mooncliq.com', '_blank');
+    });
+  }
 
   if (crmCard && crmModal) {
     crmCard.style.cursor = 'pointer';
-    crmCard.addEventListener('click', () => {
-      crmModal.classList.add('open');
-      crmModal.setAttribute('aria-hidden', 'false');
-      document.body.style.overflow = 'hidden';
+    crmCard.addEventListener('click', (e) => {
+      // Don't open modal if user clicked directly on More Info
+      if (e.target.closest('#crmMoreInfo')) return;
+      window.open('https://crm.mooncliq.com', '_blank');
     });
   }
 
@@ -401,5 +438,81 @@
       }
     });
   }
+
+  /* ── FAQ ACCORDION INTERACTIVE TOGGLE ── */
+  const faqQuestions = document.querySelectorAll('.faq-question');
+  faqQuestions.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.faq-item');
+      const isActive = item.classList.contains('active');
+
+      // Close all other FAQs for clean single-expand experience
+      document.querySelectorAll('.faq-item').forEach(f => {
+        f.classList.remove('active');
+        const q = f.querySelector('.faq-question');
+        if (q) q.setAttribute('aria-expanded', 'false');
+      });
+
+      if (!isActive) {
+        item.classList.add('active');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+
+  /* ── SPOTLIGHT MODAL TRIGGER ── */
+  const spotlightFeaturesBtn = document.getElementById('spotlightFeaturesBtn');
+  if (spotlightFeaturesBtn && crmModal) {
+    spotlightFeaturesBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      crmModal.classList.add('open');
+      crmModal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    });
+  }
+  const servicesDropdownTrigger = document.getElementById('servicesDropdownTrigger');
+  const navDropdownItem = servicesDropdownTrigger ? servicesDropdownTrigger.closest('.nav-item-dropdown') : null;
+  const servicesMegaMenu = document.getElementById('servicesMegaMenu');
+
+  if (servicesDropdownTrigger && navDropdownItem) {
+    // Click toggle
+    servicesDropdownTrigger.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      navDropdownItem.classList.toggle('open');
+    });
+
+    // Close when clicking anywhere outside
+    document.addEventListener('click', (e) => {
+      if (!navDropdownItem.contains(e.target)) {
+        navDropdownItem.classList.remove('open');
+      }
+    });
+
+    // Desktop hover safety
+    navDropdownItem.addEventListener('mouseenter', () => {
+      if (window.innerWidth > 991) {
+        navDropdownItem.classList.add('open');
+      }
+    });
+
+    navDropdownItem.addEventListener('mouseleave', () => {
+      if (window.innerWidth > 991) {
+        navDropdownItem.classList.remove('open');
+      }
+    });
+  }
+
+  // Close mega menu when any link inside is clicked
+  const megaLinks = document.querySelectorAll('.mega-col-list a, .mega-footer-link');
+  megaLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      if (navDropdownItem) navDropdownItem.classList.remove('open');
+      if (window.innerWidth <= 991 && navLinks) {
+        navLinks.classList.remove('open');
+        hamburger.classList.remove('open');
+      }
+    });
+  });
 
 })();

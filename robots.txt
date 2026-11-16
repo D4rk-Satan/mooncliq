@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Disallow internal assets or private directories
+Disallow: /convert.py
+
+# XML Sitemap Location
+Sitemap: https://mooncliq.com/sitemap.xml
