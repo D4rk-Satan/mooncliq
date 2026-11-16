@@ -717,8 +717,8 @@ body.day-mode .mock-card {
 
 .mc-loader-core {
   position: relative;
-  width: 72px;
-  height: 72px;
+  width: 140px;
+  height: 140px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -743,11 +743,12 @@ body.day-mode .mock-card {
 }
 
 .mc-loader-logo {
-  width: 36px;
-  height: 36px;
+  width: 110px;
+  height: 110px;
   object-fit: contain;
-  filter: drop-shadow(0 0 12px rgba(167, 139, 250, 0.6));
+  filter: drop-shadow(0 0 20px rgba(167, 139, 250, 0.6));
   animation: mcPulse 1.8s ease-in-out infinite;
+  display: block;
 }
 
 .mc-loader-bar {
@@ -1297,17 +1298,48 @@ button {
   border-radius: 50%;
 }
 
+.nav-wordmark-img {
+  height: 38px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  margin-left: 6px;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.4));
+}
+
+@media (max-width: 768px) {
+  .nav-wordmark-img {
+    height: 28px;
+  }
+}
+
+.footer-logo .nav-wordmark-img {
+  height: 38px;
+  margin-left: 0;
+}
+
 .logo-text {
-  font-family: var(--font-h);
-  font-size: 2.1rem;
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  color: var(--txt);
+  font-family: 'Comfortaa', var(--font-h), sans-serif;
+  font-size: 1.95rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: #3d4d85;
   transition: var(--t);
+  display: inline-flex;
+  align-items: center;
 }
 
 .logo-accent {
-  color: var(--p2);
+  color: #a1ce49;
+  margin-left: 1px;
+}
+
+body.day-mode .logo-text {
+  color: #3d4d85;
+}
+
+body.day-mode .logo-accent {
+  color: #a1ce49;
 }
 
 .nav-links {
@@ -1579,7 +1611,7 @@ button {
 }
 
 .hero-partner-badge-img {
-  height: 52px;
+  height: 60px;
   width: auto;
   max-width: 250px;
   object-fit: contain;

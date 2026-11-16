@@ -513,16 +513,27 @@ button {
 }
 
 .logo-text {
-  font-family: var(--font-h);
-  font-size: 2.1rem;
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  color: var(--txt);
+  font-family: 'Comfortaa', var(--font-h), sans-serif;
+  font-size: 1.95rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: #3d4d85;
   transition: var(--t);
+  display: inline-flex;
+  align-items: center;
 }
 
 .logo-accent {
-  color: var(--p2);
+  color: #a1ce49;
+  margin-left: 1px;
+}
+
+body.day-mode .logo-text {
+  color: #3d4d85;
+}
+
+body.day-mode .logo-accent {
+  color: #a1ce49;
 }
 
 .nav-links {

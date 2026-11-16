@@ -29,10 +29,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@600;700&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="style-v2.css" />
-  <link rel="icon" type="image/png" href="assets/logo.png" />
+  <link rel="icon" type="image/png" href="assets/favicon-32x32.png" />
+  <link rel="apple-touch-icon" href="assets/logo-clean-large.png" />
   <!-- Lenis Smooth Inertia Scroll -->
   <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
 </head>
@@ -44,7 +45,7 @@
     <div class="mc-loader-core">
       <div class="mc-loader-ring"></div>
       <div class="mc-loader-ring-pulse"></div>
-      <img src="assets/logo.png" alt="MoonCliq" class="mc-loader-logo" />
+      <img src="assets/loader-original-artwork.png" alt="MoonCliq" class="mc-loader-logo" />
     </div>
     <div class="mc-loader-bar">
       <div class="mc-loader-bar-fill"></div>
@@ -70,7 +71,7 @@
         <div class="logo-glow-ring">
           <img src="assets/logo.png" alt="MoonCliq Logo" class="logo-img" />
         </div>
-        <span class="logo-text">moon<span class="logo-accent">Cliq</span></span>
+        <img src="assets/mooncliq-logo-clean.png" alt="MoonCliq" class="nav-wordmark-img" />
       </a>
       <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
         <span></span><span></span><span></span>
@@ -268,22 +269,7 @@
           <a href="#contact" class="btn btn-outline">Talk to an Expert</a>
         </div>
 
-        <div class="hero-stats">
-          <div class="stat-item">
-            <span class="stat-num">50<span class="stat-plus">+</span></span>
-            <span class="stat-label">Projects Delivered</span>
-          </div>
-          <div class="stat-sep"></div>
-          <div class="stat-item">
-            <span class="stat-num">99.99<span class="stat-plus">%</span></span>
-            <span class="stat-label">Success Rate</span>
-          </div>
-          <div class="stat-sep"></div>
-          <div class="stat-item">
-            <span class="stat-num">∞</span>
-            <span class="stat-label">Custom Solutions</span>
-          </div>
-        </div>
+
 
         <!-- ── HERO TRUST BADGE (Zoho Authorised Partner Horizontal) ── -->
         <div class="hero-partner-strip">
@@ -814,43 +800,11 @@
 
       <div class="solutions-grid">
 
-        <div class="sol-card sol-featured glass-card" id="sol-creator">
-          <div class="sol-header">
-            <div class="sol-num gradient-text">01</div>
-            <div class="sol-icon-wrap grad-blue">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-                <polyline points="16 18 22 12 16 6" stroke="white" stroke-width="1.5" stroke-linecap="round" />
-                <polyline points="8 6 2 12 8 18" stroke="white" stroke-width="1.5" stroke-linecap="round" />
-              </svg>
-            </div>
-          </div>
-          <h3>Zoho Creator Custom Applications</h3>
-          <p>We design and develop fully custom low-code applications on Zoho Creator — from simple data tools to
-            complex multi-user enterprise apps with intricate workflows, dashboards, and external integrations.</p>
-          <ul class="sol-list">
-            <li><span>Custom form &amp; workflow builder</span></li>
-            <li><span>Role-based access control</span></li>
-            <li><span>API &amp; webhook integrations</span></li>
-            <li><span>Mobile-ready app deployment</span></li>
-          </ul>
-          <div style="display:flex; gap:16px; flex-wrap:wrap; margin-top:20px;">
-            <a href="/zoho-creator" class="sol-cta"
-              style="background:var(--grad); color:#fff; border:none; padding:10px 22px; border-radius:99px; font-weight:600; text-decoration:none; display:inline-flex; align-items:center; gap:8px;">Explore
-              Zoho Creator Page <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
-                style="display:inline-block; vertical-align:middle;">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg></a>
-            <a href="#contact" class="sol-cta"
-              style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.15); color:var(--txt); padding:10px 22px; border-radius:99px; text-decoration:none;">Discuss
-              Requirements</a>
-          </div>
-        </div>
+
 
         <div class="sol-card glass-card" id="sol-platforms">
           <div class="sol-header">
-            <div class="sol-num gradient-text">02</div>
+            <div class="sol-num gradient-text">01</div>
             <div class="sol-icon-wrap grad-purple">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
                 <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" stroke="white" stroke-width="1.5"
@@ -869,11 +823,19 @@
             <li><span>Data migration &amp; ETL pipelines</span></li>
             <li><span>Legacy system integration</span></li>
           </ul>
+          <div style="margin-top:20px;"><a href="/zoho-creator" class="sol-cta"
+              style="background:var(--grad); color:#fff; border:none; padding:10px 22px; border-radius:99px; font-weight:600; text-decoration:none; display:inline-flex; align-items:center; gap:8px;">View
+              Custom Solution<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
+                style="display:inline-block; vertical-align:middle;">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg></a></div>
         </div>
 
         <div class="sol-card glass-card" id="sol-website">
           <div class="sol-header">
-            <div class="sol-num gradient-text">03</div>
+            <div class="sol-num gradient-text">02</div>
             <div class="sol-icon-wrap grad-blue">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
                 <rect x="2" y="3" width="20" height="14" rx="2" ry="2" stroke="white" stroke-width="1.5" />
@@ -1327,7 +1289,7 @@
               <img src="assets/logo.png" alt="MoonCliq" class="logo-img"
                 onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'%235b6ef5\'><circle cx=\'12\' cy=\'12\' r=\'10\'/></svg>'" />
             </div>
-            <span class="logo-text">moon<span class="logo-accent">Cliq</span></span>
+            <img src="assets/mooncliq-logo-clean.png" alt="MoonCliq" class="nav-wordmark-img" />
           </div>
           <p class="footer-tagline">Authorised Zoho Partner and technology services company in Surat. Software and
             systems that fit how your business actually works.</p>
@@ -1408,8 +1370,13 @@
       </svg>
       <span>Call Us</span>
     </a>
-    <a href="https://wa.me/919998663338?text=Hi%20MoonCliq%2C%20I%20would%20like%20to%20book%20a%20free%20consultation%20for%20my%20business." target="_blank" rel="noopener" class="mobile-action-btn mobile-whatsapp-btn">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="#ffffff" style="display:inline-block; vertical-align:middle; flex-shrink:0;"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+    <a href="https://wa.me/919998663338?text=Hi%20MoonCliq%2C%20I%20would%20like%20to%20book%20a%20free%20consultation%20for%20my%20business."
+      target="_blank" rel="noopener" class="mobile-action-btn mobile-whatsapp-btn">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="#ffffff"
+        style="display:inline-block; vertical-align:middle; flex-shrink:0;">
+        <path
+          d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+      </svg>
       <span>WhatsApp</span>
     </a>
   </div>
