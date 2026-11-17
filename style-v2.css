@@ -1621,15 +1621,18 @@ body.day-mode .logo-accent {
 
 /* ── HERO TRUST PARTNER STRIP (Horizontal Official Badge) ── */
 .hero-partner-strip {
-  margin-top: 30px;
-  display: inline-flex;
+  margin-top: 0;
+  margin-bottom: 28px;
+  display: flex;
   align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 .hero-partner-badge-img {
-  height: 60px;
+  height: 52px;
   width: auto;
-  max-width: 250px;
+  max-width: 230px;
   object-fit: contain;
   filter: drop-shadow(0 4px 16px rgba(0, 0, 0, 0.4));
   transition: transform 0.25s ease;
@@ -1931,6 +1934,7 @@ body.day-mode .mobile-call-btn {
   justify-content: center;
   padding: 0 32px;
   padding-top: var(--nav);
+  padding-bottom: 40px;
   position: relative;
   z-index: 1;
   overflow: hidden;
@@ -2015,11 +2019,18 @@ body.day-mode .mobile-call-btn {
   animation: fadeUp 0.6s 0.32s ease both;
 }
 
+.hero-actions-wrapper {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%;
+}
+
 .hero-actions {
   display: flex;
   gap: 14px;
   flex-wrap: wrap;
-  margin-bottom: 60px;
+  margin-bottom: 20px;
   animation: fadeUp 0.6s 0.4s ease both;
 }
 
@@ -2160,6 +2171,12 @@ body.day-mode .mobile-call-btn {
   animation-direction: reverse;
 }
 
+.orbit-7 {
+  width: 1480px;
+  height: 1480px;
+  animation-duration: 95s;
+}
+
 .orbit-icon {
   position: absolute;
   top: -24px;
@@ -2208,6 +2225,14 @@ body.day-mode .mobile-call-btn {
 .orbit-6 .orbit-icon {
   animation-duration: 85s;
   animation-direction: reverse;
+}
+
+.orbit-7 .orbit-icon {
+  animation-duration: 95s;
+}
+
+body.day-mode img[src*="aws.svg"] {
+  filter: brightness(0) saturate(100%) invert(14%) sepia(20%) saturate(1074%) hue-rotate(174deg) brightness(94%) contrast(92%);
 }
 
 @keyframes spinOrbit {
