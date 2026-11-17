@@ -515,4 +515,24 @@
     });
   });
 
+  /* ── PREVENT MOBILE DROPDOWN SHAKE / JITTER ON FOCUS ── */
+  const serviceSelect = document.getElementById('service');
+  if (serviceSelect && lenisInstance) {
+    serviceSelect.addEventListener('focus', () => {
+      if (window.innerWidth <= 768) {
+        lenisInstance.stop();
+      }
+    });
+    serviceSelect.addEventListener('blur', () => {
+      if (window.innerWidth <= 768) {
+        lenisInstance.start();
+      }
+    });
+    serviceSelect.addEventListener('change', () => {
+      if (window.innerWidth <= 768) {
+        lenisInstance.start();
+      }
+    });
+  }
+
 })();
