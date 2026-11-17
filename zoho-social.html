@@ -16,6 +16,7 @@
     })();
   </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="header-footer.css" />
   <link rel="icon" type="image/png" href="assets/favicon-32x32.png" /><link rel="apple-touch-icon" href="assets/logo-clean-large.png" />
   
   <!-- ================ ADVANCED SEO & META METRICS ================ -->
@@ -1108,32 +1109,169 @@
   <!-- -- NAVBAR ----------------------------------------------- -->
   <nav class="navbar" id="navbar">
     <div class="nav-container">
-      <a href="index.html" class="nav-logo">
+      <a href="/#home" class="nav-logo">
         <div class="logo-glow-ring">
-          <img src="assets/logo.png" alt="MoonCliq Logo" class="logo-img" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'%235b6ef5\'><circle cx=\'12\' cy=\'12\' r=\'10\'/></svg>'" />
+          <img src="assets/logo.png" alt="MoonCliq Logo" class="logo-img" />
         </div>
-        <span class="logo-text">moon<span class="logo-accent">Cliq</span></span>
+        <img src="assets/mooncliq-wordmark-dark.png" alt="MoonCliq" class="nav-wordmark-img wordmark-dark-mode" />
+        <img src="assets/mooncliq-logo-clean.png" alt="MoonCliq" class="nav-wordmark-img wordmark-day-mode" />
       </a>
-
       <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
         <span></span><span></span><span></span>
       </button>
-
       <ul class="nav-links" id="navLinks">
-        <li><a href="index.html#home" class="nav-link">Home</a></li>
-        <li><a href="index.html#about" class="nav-link">About</a></li>
-        <li><a href="index.html#services" class="nav-link active">Services</a></li>
-        <li><a href="index.html#tech-stack" class="nav-link">Technologies</a></li>
-        <li><a href="index.html#solutions" class="nav-link">Solutions</a></li>
-        <li><a href="#audit" class="nav-link nav-cta">Get in Touch</a></li>
-        <li>
-          <!-- Day / Night Toggle -->
-          <button id="themeToggle" class="theme-toggle" aria-label="Toggle Theme" title="Switch Theme">
-            <svg class="sun-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+        <li><a href="/#home" class="nav-link active">Home</a></li>
+
+        <!-- SERVICES MEGA MENU ITEM -->
+        <li class="nav-item-dropdown">
+          <a href="/#services" class="nav-link nav-link-dropdown" id="servicesDropdownTrigger">
+            <span>Services</span>
+            <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
             </svg>
+          </a>
+
+          <div class="mega-menu" id="servicesMegaMenu">
+            <div class="mega-menu-grid">
+              <!-- Column 1: Business Software (Zoho) -->
+              <div class="mega-menu-col">
+                <div class="mega-col-header">
+                  <span class="mega-badge">Zoho Suite</span>
+                  <h4>Business Software</h4>
+                </div>
+                <ul class="mega-col-list">
+                  <li>
+                    <a href="/zoho-crm">
+                      <span class="mega-item-title">Zoho CRM</span>
+                      <span class="mega-item-desc">Lead pipelines &amp; WhatsApp integration</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/zoho-books">
+                      <span class="mega-item-title">Zoho Books &amp; Inventory</span>
+                      <span class="mega-item-desc">GST billing, Tally migration &amp; stock sync</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/zoho-creator">
+                      <span class="mega-item-title">Zoho Creator</span>
+                      <span class="mega-item-desc">Custom low-code business ERP apps</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/zoho-analytics">
+                      <span class="mega-item-title">Other Zoho Apps</span>
+                      <span class="mega-item-desc">Analytics BI, Mail, Cliq &amp; Projects</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Column 2: Online Presence & Growth -->
+              <div class="mega-menu-col">
+                <div class="mega-col-header">
+                  <span class="mega-badge">Growth</span>
+                  <h4>Online Presence</h4>
+                </div>
+                <ul class="mega-col-list">
+                  <li>
+                    <a href="/custom-web-development">
+                      <span class="mega-item-title">Website Design &amp; Care</span>
+                      <span class="mega-item-desc">Fast, SEO-ready business websites</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/shopify-development">
+                      <span class="mega-item-title">Shopify Development</span>
+                      <span class="mega-item-desc">E-commerce stores synced with Zoho</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/social-media-marketing">
+                      <span class="mega-item-title">Social Media Growth</span>
+                      <span class="mega-item-desc">Content, creatives, reels &amp; ads</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Column 3: Automation & Cloud -->
+              <div class="mega-menu-col">
+                <div class="mega-col-header">
+                  <span class="mega-badge">Scalability</span>
+                  <h4>Automation &amp; Cloud</h4>
+                </div>
+                <ul class="mega-col-list">
+                  <li>
+                    <a href="/whatsapp-automation">
+                      <span class="mega-item-title">WhatsApp Automation</span>
+                      <span class="mega-item-desc">Official Cloud API, chatbots &amp; broadcast</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/aws-cloud-solutions">
+                      <span class="mega-item-title">AWS Cloud Services</span>
+                      <span class="mega-item-desc">Cloud architecture, migration &amp; DevOps</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Column 4: Custom & Product -->
+              <div class="mega-menu-col highlight-col">
+                <div class="mega-col-header">
+                  <span class="mega-badge beta">Product &amp; Code</span>
+                  <h4>Custom &amp; SaaS</h4>
+                </div>
+                <ul class="mega-col-list">
+                  <li>
+                    <a href="/custom-app-development">
+                      <span class="mega-item-title">Custom App Dev</span>
+                      <span class="mega-item-desc">Next.js, Node.js &amp; PostgreSQL systems</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://crm.mooncliq.com" target="_blank" rel="noopener" class="mega-product-card">
+                      <div class="mega-crm-tag">Our SaaS</div>
+                      <span class="mega-item-title">Mooncliq CRM <span class="beta-pill">Beta</span></span>
+                      <span class="mega-item-desc">sales CRM for growing teams</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="mega-menu-footer">
+              <span class="mega-footer-text">Not sure which setup fits your business?</span>
+              <a href="/#contact" class="mega-footer-link">Talk to our tech architects →</a>
+            </div>
+          </div>
+        </li>
+
+        <!-- MOONCLIQ CRM BADGE LINK -->
+        <li>
+          <a href="https://crm.mooncliq.com" target="_blank" rel="noopener" class="nav-link nav-crm-link">
+            Mooncliq CRM
+            <span class="beta-badge-glow">Beta</span>
+          </a>
+        </li>
+
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#solutions" class="nav-link">Case Studies</a></li>
+        <li><a href="/#contact" class="nav-link nav-cta">Book Free Consultation</a></li>
+        <li>
+          <button id="themeToggle" class="theme-toggle" aria-label="Toggle Theme">
+            <!-- Sun Icon (shown in dark mode, switches to day) -->
+            <svg class="sun-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z">
+              </path>
+            </svg>
+            <!-- Moon Icon (shown in day mode, switches to night) -->
             <svg class="moon-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
             </svg>
           </button>
         </li>
@@ -1414,56 +1552,75 @@
         <div class="footer-brand">
           <div class="footer-logo">
             <div class="logo-glow-ring">
-              <img src="assets/logo.png" alt="MoonCliq" class="logo-img" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'%235b6ef5\'><circle cx=\'12\' cy=\'12\' r=\'10\'/></svg>'" />
+              <img src="assets/logo.png" alt="MoonCliq" class="logo-img"
+                onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'%235b6ef5\'><circle cx=\'12\' cy=\'12\' r=\'10\'/></svg>'" />
             </div>
-            <span class="logo-text">moon<span class="logo-accent">Cliq</span></span>
+            <img src="assets/mooncliq-wordmark-dark.png" alt="MoonCliq" class="nav-wordmark-img wordmark-dark-mode" />
+        <img src="assets/mooncliq-logo-clean.png" alt="MoonCliq" class="nav-wordmark-img wordmark-day-mode" />
           </div>
-          <p class="footer-tagline">Custom enterprise software engineering, cloud infrastructure, and certified Zoho &amp; Shopify solutions built with precision.</p>
-          <div class="footer-partner-pill">✦ Certified Tech &amp; Cloud Partners</div>
+          <p class="footer-tagline">Authorised Zoho Partner and technology services company in Surat. Software and
+            systems that fit how your business actually works.</p>
+
+          <div class="footer-trust-box">
+            <div class="footer-partner-badge-wrap">
+              <img src="assets/zoho-partner-horizontal-dark.webp" alt="Zoho Authorized Partner"
+                class="footer-zoho-badge badge-dark" />
+              <img src="assets/zoho-partner-horizontal.webp" alt="Zoho Authorized Partner"
+                class="footer-zoho-badge badge-light" />
+            </div>
+            <div class="footer-location-info">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>Homeland City, 408, University Rd, Piplod, Surat, Gujarat 395007</span>
+            </div>
+            <div class="footer-contact-fast">
+              <a href="tel:+919998663338" class="footer-quick-link">📞 +91 99986 63338</a>
+              <a href="mailto:contact@mooncliq.com" class="footer-quick-link">✉ hello@mooncliq.com</a>
+            </div>
+          </div>
         </div>
 
         <div class="footer-col">
-          <h4>E-Commerce &amp; Tech</h4>
+          <h4>Business Software</h4>
           <ul>
-            <li><a href="shopify-development.html">Shopify E-Commerce</a></li>
-            <li><a href="whatsapp-automation.html">WhatsApp Business API</a></li>
-            <li><a href="aws-cloud-solutions.html">AWS Cloud Architecture</a></li>
-            <li><a href="custom-web-development.html">Custom Web Development</a></li>
-            <li><a href="custom-app-development.html">Custom App Development</a></li>
-            <li><a href="social-media-marketing.html">Social Media Marketing</a></li>
+            <li><a href="/zoho-crm">Zoho CRM Implementation</a></li>
+            <li><a href="/zoho-books">Zoho Books &amp; Inventory</a></li>
+            <li><a href="/zoho-creator">Zoho Creator ERP</a></li>
+            <li><a href="/zoho-analytics">Zoho Analytics &amp; Reports</a></li>
+            <li><a href="/zoho-mail">Zoho Mail &amp; WorkDrive</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4>Zoho Complete Suite</h4>
+          <h4>Growth &amp; Cloud</h4>
           <ul>
-            <li><a href="zoho-crm.html">Zoho CRM</a></li>
-            <li><a href="zoho-books.html">Zoho Books</a></li>
-            <li><a href="zoho-inventory.html">Zoho Inventory</a></li>
-            <li><a href="zoho-creator.html">Zoho Creator ERP</a></li>
-            <li><a href="zoho-analytics.html">Zoho Analytics BI</a></li>
-            <li><a href="zoho-mail.html">Zoho Mail</a> &amp; <a href="zoho-cliq.html">Cliq</a></li>
-            <li><a href="zoho-pos.html">Zoho POS</a> &amp; <a href="zoho-commerce.html">Commerce</a></li>
+            <li><a href="/shopify-development">Shopify E-Commerce</a></li>
+            <li><a href="/custom-web-development">Website Design &amp; Care</a></li>
+            <li><a href="/whatsapp-automation">WhatsApp Business API</a></li>
+            <li><a href="/aws-cloud-solutions">AWS Cloud Architecture</a></li>
+            <li><a href="/custom-app-development">Custom App Development</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4>Company</h4>
+          <h4>Company &amp; SaaS</h4>
           <ul>
-            <li><a href="index.html#about">About MoonCliq</a></li>
-            <li><a href="index.html#solutions">Custom Solutions</a></li>
-            <li><a href="index.html#upcoming">Upcoming Products</a></li>
-            <li><a href="privacy-policy.html">Privacy Policy</a></li>
-            <li><a href="terms-of-service.html">Terms of Service</a></li>
-            <li><a href="data-deletion.html">Data Deletion Instructions</a></li>
-            <li><a href="index.html#contact">Contact Us</a></li>
+            <li><a href="/#about">About MoonCliq</a></li>
+            <li><a href="/#upcoming">Mooncliq CRM <span class="beta-pill-sm">Beta</span></a></li>
+            <li><a href="/#solutions">Client Results</a></li>
+            <li><a href="/#contact">Book Free Consultation</a></li>
+            <li><a href="/privacy-policy">Privacy Policy</a></li>
+            <li><a href="/terms-of-service">Terms of Service</a></li>
+            <li><a href="/data-deletion">Data Deletion Policy</a></li>
           </ul>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <span>© 2026 MoonCliq. All rights reserved.</span>
-        <span class="footer-right">Built for business excellence by MoonCliq.</span>
+        <span>© 2026 MoonCliq. All rights reserved. Surat, Gujarat, India.</span>
+        <span class="footer-right">Authorised Zoho Partner &amp; Cloud Solution Architects.</span>
       </div>
     </div>
   </footer>
