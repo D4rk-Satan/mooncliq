@@ -3,9 +3,17 @@
   <!-- Homepage -->
   <url>
     <loc>https://mooncliq.com/</loc>
-    <lastmod>2026-11-16</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+  </url>
+
+  <!-- High-Converting Case Studies (Client Transformations) -->
+  <url>
+    <loc>https://mooncliq.com/case-studies</loc>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
   </url>
 
   <!-- Zoho Core Service Pages -->
