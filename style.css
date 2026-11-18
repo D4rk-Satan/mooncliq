@@ -2790,3 +2790,202 @@ body.day-mode .modal-container::-webkit-scrollbar-thumb {
   color: var(--txt);
   gap: 10px;
 }
+
+/* ── BRANDS WE SERVED MARQUEE ────────────────────────────── */
+.brands-served-section {
+  position: relative;
+  padding: 46px 0 54px;
+  overflow: hidden;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.01) 0%, rgba(91, 110, 245, 0.04) 50%, rgba(255, 255, 255, 0.01) 100%);
+}
+
+body.day-mode .brands-served-section {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(241, 245, 249, 0.8) 50%, rgba(255, 255, 255, 0.5) 100%);
+  border-top-color: rgba(91, 110, 245, 0.12);
+  border-bottom-color: rgba(91, 110, 245, 0.12);
+}
+
+.brands-served-header {
+  text-align: center;
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 2;
+}
+
+.brands-served-tag {
+  font-family: var(--font-h);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--cyan);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+body.day-mode .brands-served-tag {
+  color: var(--p);
+}
+
+.brands-served-title {
+  font-family: var(--font-h);
+  font-size: 1.55rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--txt);
+  margin-top: 6px;
+}
+
+.brands-marquee-wrap {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 10px 0;
+}
+
+/* Gradient edge fades */
+.brands-marquee-wrap::before,
+.brands-marquee-wrap::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 140px;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.brands-marquee-wrap::before {
+  left: 0;
+  background: linear-gradient(to right, var(--bg) 0%, rgba(3, 5, 19, 0) 100%);
+}
+
+.brands-marquee-wrap::after {
+  right: 0;
+  background: linear-gradient(to left, var(--bg) 0%, rgba(3, 5, 19, 0) 100%);
+}
+
+body.day-mode .brands-marquee-wrap::before {
+  background: linear-gradient(to right, #eaf2fc 0%, rgba(234, 242, 252, 0) 100%);
+}
+
+body.day-mode .brands-marquee-wrap::after {
+  background: linear-gradient(to left, #eaf2fc 0%, rgba(234, 242, 252, 0) 100%);
+}
+
+.brands-marquee-track {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  width: max-content;
+  animation: brandsScroll 32s linear infinite;
+}
+
+.brands-marquee-wrap:hover .brands-marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes brandsScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Individual Brand Card in Marquee */
+.brand-marquee-card {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 94px;
+  min-width: 220px;
+  padding: 12px 28px;
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+body.day-mode .brand-marquee-card {
+  background: #ffffff;
+  border-color: rgba(91, 110, 245, 0.15);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.brand-marquee-card:hover {
+  transform: translateY(-4px) scale(1.02);
+  border-color: var(--cyan);
+  box-shadow: 0 10px 30px rgba(34, 211, 238, 0.2);
+  background: rgba(255, 255, 255, 0.07);
+}
+
+body.day-mode .brand-marquee-card:hover {
+  border-color: var(--p);
+  box-shadow: 0 10px 30px rgba(91, 110, 245, 0.18);
+  background: #ffffff;
+}
+
+.brand-marquee-card img {
+  max-height: 56px;
+  max-width: 190px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  filter: grayscale(15%) opacity(0.88);
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.brand-marquee-card:hover img {
+  filter: grayscale(0%) opacity(1);
+  transform: scale(1.04);
+}
+
+/* Day/Dark specific toggle for logos that need color inversion */
+.brand-logo-dark {
+  display: block;
+}
+
+.brand-logo-light {
+  display: none;
+}
+
+body.day-mode .brand-logo-dark {
+  display: none;
+}
+
+body.day-mode .brand-logo-light {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .brands-served-section {
+    padding: 36px 0 44px;
+  }
+  .brands-served-title {
+    font-size: 1.35rem;
+  }
+  .brand-marquee-card {
+    height: 82px;
+    min-width: 180px;
+    padding: 10px 20px;
+  }
+  .brand-marquee-card img {
+    max-height: 46px;
+    max-width: 150px;
+  }
+  .brands-marquee-wrap::before,
+  .brands-marquee-wrap::after {
+    width: 60px;
+  }
+}

@@ -4199,3 +4199,220 @@ body.day-mode .modal-container::-webkit-scrollbar-thumb {
   color: var(--txt);
   gap: 10px;
 }
+
+/* ── BRANDS WE SERVED MARQUEE ────────────────────────────── */
+.brands-served-section {
+  position: relative;
+  padding: 50px 0 60px;
+  overflow: hidden;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.01) 0%, rgba(91, 110, 245, 0.04) 50%, rgba(255, 255, 255, 0.01) 100%);
+  z-index: 10;
+}
+
+body.day-mode .brands-served-section {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(241, 245, 249, 0.8) 50%, rgba(255, 255, 255, 0.5) 100%);
+  border-top-color: rgba(91, 110, 245, 0.12);
+  border-bottom-color: rgba(91, 110, 245, 0.12);
+}
+
+.brands-served-header {
+  text-align: center;
+  margin-bottom: 34px;
+  position: relative;
+  z-index: 2;
+}
+
+.brands-served-tag {
+  font-family: var(--font-h);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--cyan);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+body.day-mode .brands-served-tag {
+  color: var(--p);
+}
+
+/* ── MODERN TRANSPARENT BRAND LOGOS (HARDWARE-ACCELERATED & 60FPS) ── */
+.brands-served-section {
+  position: relative;
+  padding: 48px 0 54px;
+  overflow: hidden;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: rgba(3, 4, 11, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 10;
+  contain: layout paint;
+}
+
+body.day-mode .brands-served-section {
+  background: rgba(241, 245, 249, 0.85);
+  border-top-color: rgba(91, 110, 245, 0.15);
+  border-bottom-color: rgba(91, 110, 245, 0.15);
+}
+
+.brands-served-header {
+  text-align: center;
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 2;
+}
+
+.brands-served-tag {
+  font-family: var(--font-h);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--cyan);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+body.day-mode .brands-served-tag {
+  color: var(--p);
+}
+
+.brands-served-title {
+  font-family: var(--font-h);
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--txt);
+  margin-top: 6px;
+}
+
+.brands-marquee-wrap {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 15px 0;
+}
+
+/* Gradient edge fades */
+.brands-marquee-wrap::before,
+.brands-marquee-wrap::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 160px;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.brands-marquee-wrap::before {
+  left: 0;
+  background: linear-gradient(to right, #03040b 0%, rgba(3, 4, 11, 0) 100%);
+}
+
+.brands-marquee-wrap::after {
+  right: 0;
+  background: linear-gradient(to left, #03040b 0%, rgba(3, 4, 11, 0) 100%);
+}
+
+body.day-mode .brands-marquee-wrap::before {
+  background: linear-gradient(to right, #f1f5f9 0%, rgba(241, 245, 249, 0) 100%);
+}
+
+body.day-mode .brands-marquee-wrap::after {
+  background: linear-gradient(to left, #f1f5f9 0%, rgba(241, 245, 249, 0) 100%);
+}
+
+.brands-marquee-track {
+  display: flex;
+  align-items: center;
+  gap: 65px;
+  width: max-content;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+  animation: brandsMarqueeScroll 28s linear infinite;
+}
+
+.brands-marquee-wrap:hover .brands-marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes brandsMarqueeScroll {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+/* Seamless Transparent Brand Item */
+.brand-marquee-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 12px;
+  text-decoration: none;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: transform 0.25s ease, filter 0.25s ease;
+  filter: opacity(0.88);
+}
+
+.brand-marquee-item:hover {
+  transform: scale(1.06);
+  filter: opacity(1) drop-shadow(0 6px 18px rgba(34, 211, 238, 0.3));
+}
+
+body.day-mode .brand-marquee-item:hover {
+  filter: opacity(1) drop-shadow(0 6px 18px rgba(91, 110, 245, 0.25));
+}
+
+.brand-marquee-item img {
+  height: 72px;
+  max-width: 240px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* Perfect Day/Dark Mode Switching: strictly 1 visible at a time */
+.brand-item-dark {
+  display: block;
+}
+
+.brand-item-light {
+  display: none !important;
+}
+
+body.day-mode .brand-item-dark {
+  display: none !important;
+}
+
+body.day-mode .brand-item-light {
+  display: block !important;
+}
+
+@media (max-width: 768px) {
+  .brands-served-section {
+    padding: 34px 0 40px;
+  }
+  .brands-marquee-track {
+    gap: 36px;
+    animation-duration: 22s;
+  }
+  .brand-marquee-item img {
+    height: 54px;
+    max-width: 170px;
+  }
+  .brands-marquee-wrap::before,
+  .brands-marquee-wrap::after {
+    width: 60px;
+  }
+}

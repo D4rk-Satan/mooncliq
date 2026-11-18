@@ -110,14 +110,18 @@ body.day-mode .wordmark-day-mode {
   z-index: 1001;
 }
 
-/* Invisible bridge so mouse hover never drops */
+/* Hover bridge only active right below navbar link */
+.nav-item-dropdown {
+  position: relative;
+}
+
 .nav-item-dropdown::after {
   content: '';
   position: absolute;
   top: 100%;
-  left: -20px;
-  right: -20px;
-  height: 40px;
+  left: 0;
+  right: 0;
+  height: 20px;
   background: transparent;
   pointer-events: auto;
 }
@@ -196,12 +200,32 @@ body.day-mode .wordmark-day-mode {
   flex-direction: column;
   padding: 8px 10px;
   border-radius: 8px;
+  text-decoration: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+  outline: none !important;
   transition: background 0.2s, transform 0.2s;
+}
+
+.mega-col-list a:hover,
+.mega-col-list a:focus,
+.mega-col-list a:visited {
+  text-decoration: none !important;
+  border-bottom: none !important;
 }
 
 .mega-col-list a:hover {
   background: rgba(255, 255, 255, 0.06);
   transform: translateX(4px);
+}
+
+body.day-mode .mega-col-list a:hover {
+  background: rgba(91, 110, 245, 0.08);
+}
+
+.mega-product-card {
+  text-decoration: none !important;
+  border-bottom: none !important;
 }
 
 .mega-item-title {
