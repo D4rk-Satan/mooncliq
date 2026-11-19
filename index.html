@@ -32,7 +32,7 @@
   <link rel="icon" type="image/png" href="assets/favicon-32x32.png" />
   <link rel="apple-touch-icon" href="assets/logo-clean-large.png" />
   <!-- Lenis Smooth Inertia Scroll -->
-  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="assets/lenis.min.js" defer></script>
 </head>
 
 <body>
@@ -75,7 +75,7 @@
             </svg>
           </a>
 
-          <div class="mega-menu" id="servicesMegaMenu">
+          <div class="mega-menu" id="servicesMegaMenu" data-lenis-prevent>
             <div class="mega-menu-grid">
               <!-- Column 1: Business Software (Zoho) -->
               <div class="mega-menu-col">
@@ -1299,7 +1299,7 @@
 
   <!-- ── CRM FEATURE MODAL ────────────────────────────────────── -->
   <div id="crmModal" class="modal-overlay" aria-hidden="true" role="dialog">
-    <div class="modal-container glass-card">
+    <div class="modal-container glass-card" data-lenis-prevent>
       <button class="modal-close" id="closeCrmModal" aria-label="Close Modal">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
           stroke-linecap="round" stroke-linejoin="round">
@@ -1392,7 +1392,7 @@
     </div>
   </div>
 
-  <script src="main.js"></script>
+  <script src="main.js" defer></script>
 </body>
 
 </html>

@@ -6,7 +6,8 @@
 
   /* ── BUTTERY SMOOTH LENIS SCROLL (SILKY & ULTRA-SMOOTH) ── */
   let lenisInstance = null;
-  if (typeof Lenis !== 'undefined') {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (typeof Lenis !== 'undefined' && !reduce) {
     lenisInstance = new Lenis({
       duration: 1.25,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),

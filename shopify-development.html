@@ -135,7 +135,7 @@
     rel="stylesheet" />
 
   <!-- Lenis Smooth Inertia Scroll -->
-  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="assets/lenis.min.js" defer></script>
 
   <style>
     /* =======================================================
@@ -1360,7 +1360,7 @@
             </svg>
           </a>
 
-          <div class="mega-menu" id="servicesMegaMenu">
+          <div class="mega-menu" id="servicesMegaMenu" data-lenis-prevent>
             <div class="mega-menu-grid">
               <!-- Column 1: Business Software (Zoho) -->
               <div class="mega-menu-col">
@@ -1900,15 +1900,9 @@
 
   <script>
     /* -- LENIS SMOOTH SCROLL -- */
-    const lenis = new Lenis({
-      duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      smoothWheel: true,
-    });
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
+    const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const lenis = (typeof Lenis !== 'undefined' && !reduce) ? new Lenis({ duration: 1.2, smoothWheel: true }) : null;
+    function raf(t) { lenis && lenis.raf(t); requestAnimationFrame(raf); }
     requestAnimationFrame(raf);
 
     /* -- DAY / NIGHT THEME SWITCHER -- */
