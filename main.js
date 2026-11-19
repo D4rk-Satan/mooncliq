@@ -29,29 +29,7 @@
     requestAnimationFrame(raf);
   }
 
-  /* ── PAGE PRELOADER HANDLER ── */
-  window.addEventListener('load', function () {
-    const preloader = document.getElementById('mc-preloader');
-    if (preloader) {
-      setTimeout(() => {
-        preloader.classList.add('mc-preloader-hide');
-        setTimeout(() => {
-          preloader.style.display = 'none';
-        }, 600);
-      }, 350);
-    }
-  });
 
-  // Safety fallback: if page load takes too long, hide loader automatically after 2s
-  setTimeout(function () {
-    const preloader = document.getElementById('mc-preloader');
-    if (preloader && !preloader.classList.contains('mc-preloader-hide')) {
-      preloader.classList.add('mc-preloader-hide');
-      setTimeout(() => {
-        preloader.style.display = 'none';
-      }, 600);
-    }
-  }, 2000);
 
 
 
