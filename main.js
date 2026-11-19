@@ -143,13 +143,15 @@
   window.addEventListener('scroll', handleScrollPause, { passive: true });
 
   function animateParticles() {
-    const isMobile = window.innerWidth < 768;
+    if (!canvas || document.hidden || window.getComputedStyle(canvas).display === 'none') {
+      raf = null;
+      return;
+    }
+
+    const isMobile = window.innerWidth <= 768;
     if (isMobile) {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      for (let i = 0; i < particles.length; i++) {
-        particles[i].draw();
-      }
       if (raf) cancelAnimationFrame(raf);
+      raf = null;
       return;
     }
 
@@ -166,6 +168,12 @@
     }
     raf = requestAnimationFrame(animateParticles);
   }
+
+  document.addEventListener('visibilitychange', () => {
+    if (!document.hidden && (!raf || raf === null)) {
+      animateParticles();
+    }
+  });
 
   let lastWidth = window.innerWidth;
   window.addEventListener('resize', () => {

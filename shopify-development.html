@@ -130,9 +130,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet" />
 
   <!-- Lenis Smooth Inertia Scroll -->
   <script src="assets/lenis.min.js" defer></script>
@@ -1339,10 +1337,10 @@
     <div class="nav-container">
       <a href="/#home" class="nav-logo">
         <div class="logo-glow-ring">
-          <img src="assets/logo.png" alt="MoonCliq Logo" class="logo-img" />
+          <img src="assets/logo.png" alt="MoonCliq Logo" class="logo-img" width="40" height="40" />
         </div>
-        <img src="assets/mooncliq-wordmark-dark.png" alt="MoonCliq" class="nav-wordmark-img wordmark-dark-mode" />
-        <img src="assets/mooncliq-logo-clean.png" alt="MoonCliq" class="nav-wordmark-img wordmark-day-mode" />
+        <img src="assets/mooncliq-wordmark-dark.png" alt="MoonCliq" class="nav-wordmark-img wordmark-dark-mode" width="171" height="38" />
+        <img src="assets/mooncliq-logo-clean.png" alt="MoonCliq" class="nav-wordmark-img wordmark-day-mode" width="177" height="38" />
       </a>
       <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
         <span></span><span></span><span></span>
@@ -1825,21 +1823,19 @@
         <div class="footer-brand">
           <div class="footer-logo">
             <div class="logo-glow-ring">
-              <img src="assets/logo.png" alt="MoonCliq" class="logo-img"
+              <img src="assets/logo.png" alt="MoonCliq" class="logo-img" width="38" height="38" loading="lazy" decoding="async"
                 onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'%235b6ef5\'><circle cx=\'12\' cy=\'12\' r=\'10\'/></svg>'" />
             </div>
-            <img src="assets/mooncliq-wordmark-dark.png" alt="MoonCliq" class="nav-wordmark-img wordmark-dark-mode" />
-            <img src="assets/mooncliq-logo-clean.png" alt="MoonCliq" class="nav-wordmark-img wordmark-day-mode" />
+            <img src="assets/mooncliq-wordmark-dark.png" alt="MoonCliq" class="nav-wordmark-img wordmark-dark-mode" width="171" height="38" />
+            <img src="assets/mooncliq-logo-clean.png" alt="MoonCliq" class="nav-wordmark-img wordmark-day-mode" width="177" height="38" />
           </div>
           <p class="footer-tagline">Authorised Zoho Partner and technology services company in Surat. Software and
             systems that fit how your business actually works.</p>
 
           <div class="footer-trust-box">
             <div class="footer-partner-badge-wrap">
-              <img src="assets/zoho-partner-horizontal-dark.webp" alt="Zoho Authorized Partner"
-                class="footer-zoho-badge badge-dark" />
-              <img src="assets/zoho-partner-horizontal.webp" alt="Zoho Authorized Partner"
-                class="footer-zoho-badge badge-light" />
+              <img src="assets/zoho-partner-horizontal-dark.webp" alt="Zoho Authorized Partner" class="footer-zoho-badge badge-dark" width="172" height="48" loading="lazy" decoding="async" />
+              <img src="assets/zoho-partner-horizontal.webp" alt="Zoho Authorized Partner" class="footer-zoho-badge badge-light" width="172" height="48" loading="lazy" decoding="async" />
             </div>
             <div class="footer-location-info">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1954,6 +1950,9 @@
     resizeStars();
     window.addEventListener('resize', resizeStars);
     function drawStars() {
+      if (!canvas || document.hidden || window.getComputedStyle(canvas).display === 'none') {
+        return;
+      }
       if (!document.documentElement.classList.contains('day-mode')) {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         for (let s of stars) {
@@ -1961,13 +1960,17 @@
           if (s.y < 0) s.y = canvas.height;
           ctx.beginPath();
           ctx.arc(s.x, s.y, s.radius, 0, Math.PI * 2);
-          ctx.fillStyle = `rgba(167, 139, 250, ${s.alpha})`;
+          ctx.fillStyle = 
+gba(167, 139, 250, );
           ctx.fill();
         }
       }
       requestAnimationFrame(drawStars);
     }
     drawStars();
+    document.addEventListener('visibilitychange', () => {
+      if (!document.hidden) requestAnimationFrame(drawStars);
+    });
   </script>
 
   <!-- ── STICKY MOBILE BOTTOM BAR (Lead Conversion) ─────────── -->
