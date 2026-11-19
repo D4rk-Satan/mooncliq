@@ -350,7 +350,10 @@
 }
 
 .footer-partner-badge-wrap {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
   margin-bottom: 8px;
   padding: 4px 0;
 }
