@@ -258,7 +258,7 @@
   const revealSels = [
     '.service-card', '.sol-card', '.up-card',
     '.about-card-primary', '.about-card-secondary',
-    '.value-item', '.contact-panel', '.contact-form',
+    '.value-item',
     '.notify-block', '.footer-col', '.about-card-icon-wrap'
   ].join(',');
 

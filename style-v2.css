@@ -1191,6 +1191,7 @@ button {
 .wordmark-dark-mode {
   display: block !important;
 }
+
 .wordmark-day-mode {
   display: none !important;
 }
@@ -1198,11 +1199,13 @@ button {
 .day-mode .wordmark-dark-mode {
   display: none !important;
 }
+
 .day-mode .wordmark-day-mode {
   display: block !important;
 }
 
-@media (max-width: 768px), (prefers-reduced-motion: reduce) {
+@media (max-width: 768px),
+(prefers-reduced-motion: reduce) {
   .fluid-blob {
     animation: none !important;
   }
@@ -1505,9 +1508,18 @@ button {
 }
 
 .footer-partner-badge-wrap {
-  display: inline-block;
+  display: flex !important;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: nowrap;
   margin-bottom: 8px;
-  padding: 4px;
+  padding: 4px 0;
+}
+
+.footer-meta-badge {
+  height: 56px;
+  width: auto;
+  object-fit: contain;
 }
 
 .zoho-partner-official-badge {
@@ -1537,6 +1549,14 @@ button {
   gap: 20px;
   width: 100%;
 }
+
+.hero-partner-meta-badge {
+  height: 74px;
+  /* Default Zoho 52px hai, Meta ko 64px ya 68px karne par perfect optical balance ban jayega */
+  width: auto;
+  object-fit: contain;
+}
+
 
 .hero-partner-badge-img {
   height: 52px;
@@ -2772,6 +2792,13 @@ button {
   grid-template-columns: 380px 1fr;
   gap: 28px;
   align-items: start;
+  contain: paint;
+}
+
+.contact-panel,
+.contact-form {
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 .contact-panel {
@@ -3623,7 +3650,8 @@ a.citem-value:hover {
   .form-group input,
   .form-group select,
   .form-group textarea {
-    font-size: 16px; /* Prevents auto-zoom on iOS Safari */
+    font-size: 16px;
+    /* Prevents auto-zoom on iOS Safari */
     padding: 12px 14px;
     transition: none !important;
   }
@@ -4257,6 +4285,7 @@ a.citem-value:hover {
   0% {
     transform: translate3d(0, 0, 0);
   }
+
   100% {
     transform: translate3d(-50%, 0, 0);
   }
@@ -4313,14 +4342,17 @@ a.citem-value:hover {
   .brands-served-section {
     padding: 34px 0 40px;
   }
+
   .brands-marquee-track {
     gap: 36px;
     animation-duration: 22s;
   }
+
   .brand-marquee-item img {
     height: 54px;
     max-width: 170px;
   }
+
   .brands-marquee-wrap::before,
   .brands-marquee-wrap::after {
     width: 60px;

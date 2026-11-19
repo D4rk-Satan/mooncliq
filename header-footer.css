@@ -353,9 +353,16 @@
   display: flex;
   align-items: center;
   gap: 16px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   margin-bottom: 8px;
   padding: 4px 0;
+}
+
+.footer-meta-badge {
+  height: 56px;
+  /* 48px se bada karke 56px ya 60px karein */
+  width: auto;
+  object-fit: contain;
 }
 
 .footer-zoho-badge {
