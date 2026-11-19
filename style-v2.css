@@ -1890,10 +1890,10 @@ button {
 /* Hero Title */
 .hero-title {
   font-family: var(--font-h);
-  font-size: clamp(3.2rem, 7vw, 6rem);
+  font-size: clamp(2.4rem, 5.2vw, 4.2rem);
   font-weight: 900;
-  line-height: 1.02;
-  margin-bottom: 24px;
+  line-height: 1.08;
+  margin-bottom: 20px;
   letter-spacing: -0.03em;
   display: flex;
   flex-direction: column;
@@ -3480,7 +3480,8 @@ a.citem-value:hover {
   }
 
   .hero-title {
-    font-size: clamp(2.2rem, 8vw, 3.5rem);
+    font-size: clamp(1.85rem, 6.5vw, 2.7rem);
+    line-height: 1.12;
   }
 
   .hero-visual {
