@@ -528,11 +528,11 @@ button {
   margin-left: 1px;
 }
 
-body.day-mode .logo-text {
+.day-mode .logo-text {
   color: #3d4d85;
 }
 
-body.day-mode .logo-accent {
+.day-mode .logo-accent {
   color: #a1ce49;
 }
 
@@ -2385,7 +2385,7 @@ a.citem-value:hover {
 }
 
 /* ── DAY/NIGHT THEME ───────────────────────────────────── */
-body.day-mode {
+.day-mode {
   --bg: #f8fafc;
   --bg2: #f1f5f9;
   --surface: rgba(255, 255, 255, 0.6);
@@ -2407,35 +2407,35 @@ body.day-mode {
   --grad2: linear-gradient(135deg, #0891b2, #2563eb);
 }
 
-body.day-mode .fluid-bg {
+.day-mode .fluid-bg {
   background: linear-gradient(to bottom, #4da4ff 0%, #87c3ff 40%, #e2c1a8 70%, #ffdfba 100%);
 }
 
-body.day-mode .glass-card {
+.day-mode .glass-card {
   background: rgba(255, 255, 255, 0.65);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
 }
 
-body.day-mode .navbar.scrolled {
+.day-mode .navbar.scrolled {
   background: rgba(255, 255, 255, 0.88);
 }
 
-body.day-mode #starCanvas {
+.day-mode #starCanvas {
   opacity: 0;
 }
 
 /* Ensure Moon logo is visible against light sky */
-body.day-mode .hero-logo-img {
+.day-mode .hero-logo-img {
   filter: drop-shadow(0 0 30px rgba(0, 0, 0, 0.2));
 }
 
-body.day-mode .star-aura::before {
+.day-mode .star-aura::before {
   background-image: none;
   /* Hide stars behind moon */
   background: radial-gradient(circle at center, rgba(255, 255, 255, 0.5) 0%, transparent 60%);
 }
 
-body.day-mode .btn-outline {
+.day-mode .btn-outline {
   background: rgba(255, 255, 255, 0.5);
   color: var(--txt);
   border-color: rgba(91, 110, 245, 0.4);
@@ -2465,7 +2465,7 @@ body.day-mode .btn-outline {
   height: 20px;
 }
 
-body.day-mode .theme-toggle:hover {
+.day-mode .theme-toggle:hover {
   background: rgba(0, 0, 0, 0.05);
 }
 
@@ -2473,56 +2473,56 @@ body.day-mode .theme-toggle:hover {
   display: none;
 }
 
-body.day-mode .moon-icon {
+.day-mode .moon-icon {
   display: block;
 }
 
-body.day-mode .sun-icon {
+.day-mode .sun-icon {
   display: none;
 }
 
 /* Better visibility for tags in day mode */
-body.day-mode .hero-eyebrow,
-body.day-mode .section-tag {
+.day-mode .hero-eyebrow,
+.day-mode .section-tag {
   color: #1e3a8a;
   background: rgba(30, 58, 138, 0.1);
   border-color: rgba(30, 58, 138, 0.2);
 }
 
-body.day-mode .sol-badge-dev,
-body.day-mode .up-status-bar {
+.day-mode .sol-badge-dev,
+.day-mode .up-status-bar {
   color: #4c1d95;
   background: rgba(76, 29, 149, 0.1);
   border-color: rgba(76, 29, 149, 0.2);
 }
 
-body.day-mode .eyebrow-dot,
-body.day-mode .section-tag::before {
+.day-mode .eyebrow-dot,
+.day-mode .section-tag::before {
   background: #1e3a8a;
   box-shadow: 0 0 10px rgba(30, 58, 138, 0.5);
 }
 
-body.day-mode .sol-badge-dev::before,
-body.day-mode .pulse-dot {
+.day-mode .sol-badge-dev::before,
+.day-mode .pulse-dot {
   background: #4c1d95;
 }
 
 @media(max-width:768px) {
-  body.day-mode .nav-links {
+  .day-mode .nav-links {
     background: rgba(255, 255, 255, 0.97);
   }
 }
 
 /* Fix dark gradients in sections for day mode */
-body.day-mode .about {
+.day-mode .about {
   background: linear-gradient(180deg, transparent 0%, rgba(255, 255, 255, 0.4) 50%, transparent 100%);
 }
 
-body.day-mode .solutions {
+.day-mode .solutions {
   background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.5) 50%, transparent);
 }
 
-body.day-mode .contact {
+.day-mode .contact {
   background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.4) 100%);
 }
 
@@ -2587,7 +2587,7 @@ body.day-mode .contact {
   transform: rotate(90deg);
 }
 
-body.day-mode .modal-close:hover {
+.day-mode .modal-close:hover {
   background: rgba(0, 0, 0, 0.05);
 }
 
@@ -2639,12 +2639,12 @@ body.day-mode .modal-close:hover {
   border-color: rgba(91, 110, 245, 0.15);
 }
 
-body.day-mode .modal-feature-item {
+.day-mode .modal-feature-item {
   background: rgba(0, 0, 0, 0.01);
   border-color: rgba(0, 0, 0, 0.03);
 }
 
-body.day-mode .modal-feature-item:hover {
+.day-mode .modal-feature-item:hover {
   background: rgba(91, 110, 245, 0.04);
   border-color: rgba(91, 110, 245, 0.15);
 }
@@ -2682,12 +2682,12 @@ body.day-mode .modal-feature-item:hover {
   border-color: rgba(34, 211, 238, 0.15);
 }
 
-body.day-mode .tech-card-modal {
+.day-mode .tech-card-modal {
   background: rgba(0, 0, 0, 0.01);
   border-color: rgba(0, 0, 0, 0.03);
 }
 
-body.day-mode .tech-card-modal:hover {
+.day-mode .tech-card-modal:hover {
   background: rgba(34, 211, 238, 0.04);
   border-color: rgba(34, 211, 238, 0.15);
 }
@@ -2712,7 +2712,7 @@ body.day-mode .tech-card-modal:hover {
   line-height: 1.8;
 }
 
-body.day-mode .modal-overlay {
+.day-mode .modal-overlay {
   background: rgba(241, 245, 249, 0.7);
 }
 
@@ -2730,7 +2730,7 @@ body.day-mode .modal-overlay {
   border-radius: 3px;
 }
 
-body.day-mode .modal-container::-webkit-scrollbar-thumb {
+.day-mode .modal-container::-webkit-scrollbar-thumb {
   background: rgba(0, 0, 0, 0.1);
 }
 
@@ -2801,7 +2801,7 @@ body.day-mode .modal-container::-webkit-scrollbar-thumb {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.01) 0%, rgba(91, 110, 245, 0.04) 50%, rgba(255, 255, 255, 0.01) 100%);
 }
 
-body.day-mode .brands-served-section {
+.day-mode .brands-served-section {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(241, 245, 249, 0.8) 50%, rgba(255, 255, 255, 0.5) 100%);
   border-top-color: rgba(91, 110, 245, 0.12);
   border-bottom-color: rgba(91, 110, 245, 0.12);
@@ -2826,7 +2826,7 @@ body.day-mode .brands-served-section {
   gap: 8px;
 }
 
-body.day-mode .brands-served-tag {
+.day-mode .brands-served-tag {
   color: var(--p);
 }
 
@@ -2868,11 +2868,11 @@ body.day-mode .brands-served-tag {
   background: linear-gradient(to left, var(--bg) 0%, rgba(3, 5, 19, 0) 100%);
 }
 
-body.day-mode .brands-marquee-wrap::before {
+.day-mode .brands-marquee-wrap::before {
   background: linear-gradient(to right, #eaf2fc 0%, rgba(234, 242, 252, 0) 100%);
 }
 
-body.day-mode .brands-marquee-wrap::after {
+.day-mode .brands-marquee-wrap::after {
   background: linear-gradient(to left, #eaf2fc 0%, rgba(234, 242, 252, 0) 100%);
 }
 
@@ -2917,7 +2917,7 @@ body.day-mode .brands-marquee-wrap::after {
   flex-shrink: 0;
 }
 
-body.day-mode .brand-marquee-card {
+.day-mode .brand-marquee-card {
   background: #ffffff;
   border-color: rgba(91, 110, 245, 0.15);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
@@ -2930,7 +2930,7 @@ body.day-mode .brand-marquee-card {
   background: rgba(255, 255, 255, 0.07);
 }
 
-body.day-mode .brand-marquee-card:hover {
+.day-mode .brand-marquee-card:hover {
   border-color: var(--p);
   box-shadow: 0 10px 30px rgba(91, 110, 245, 0.18);
   background: #ffffff;
@@ -2960,11 +2960,11 @@ body.day-mode .brand-marquee-card:hover {
   display: none;
 }
 
-body.day-mode .brand-logo-dark {
+.day-mode .brand-logo-dark {
   display: none;
 }
 
-body.day-mode .brand-logo-light {
+.day-mode .brand-logo-light {
   display: block;
 }
 

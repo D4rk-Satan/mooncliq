@@ -11,9 +11,6 @@
         var saved = localStorage.getItem('mooncliq_theme');
         if (saved === 'day' || (!saved && (new Date().getHours() >= 6 && new Date().getHours() < 18))) {
           document.documentElement.classList.add('day-mode');
-          document.addEventListener('DOMContentLoaded', function () {
-            document.body.classList.add('day-mode');
-          });
         }
       } catch (e) { }
     })();

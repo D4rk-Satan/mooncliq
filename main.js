@@ -365,10 +365,10 @@
 
   function applyTheme(isDay, save = false) {
     if (isDay) {
-      document.body.classList.add('day-mode');
+      document.documentElement.classList.add('day-mode');
       if (save) localStorage.setItem('mooncliq_theme', 'day');
     } else {
-      document.body.classList.remove('day-mode');
+      document.documentElement.classList.remove('day-mode');
       if (save) localStorage.setItem('mooncliq_theme', 'dark');
     }
   }
@@ -386,7 +386,7 @@
   // Toggle handler
   if (themeToggle) {
     themeToggle.addEventListener('click', () => {
-      const isCurrentlyDay = document.body.classList.contains('day-mode');
+      const isCurrentlyDay = document.documentElement.classList.contains('day-mode');
       applyTheme(!isCurrentlyDay, true);
     });
   }

@@ -9,9 +9,6 @@
         var saved = localStorage.getItem('mooncliq_theme');
         if (saved === 'day' || (!saved && (new Date().getHours() >= 6 && new Date().getHours() < 18))) {
           document.documentElement.classList.add('day-mode');
-          document.addEventListener('DOMContentLoaded', function () {
-            document.body.classList.add('day-mode');
-          });
         }
       } catch (e) { }
     })();
@@ -170,7 +167,7 @@
     }
 
     /* DAY / LIGHT MODE */
-    body.day-mode {
+    .day-mode {
       --bg: #f8fafc;
       --bg2: #f1f5f9;
       --surface: rgba(255, 255, 255, 0.7);
@@ -229,7 +226,7 @@
       transition: opacity 0.4s ease;
     }
 
-    body.day-mode #starCanvas {
+    .day-mode #starCanvas {
       opacity: 0;
     }
 
@@ -245,7 +242,7 @@
       transition: background 0.5s ease;
     }
 
-    body.day-mode .fluid-bg {
+    .day-mode .fluid-bg {
       background: linear-gradient(to bottom, #4da4ff 0%, #87c3ff 40%, #e2c1a8 70%, #ffdfba 100%);
     }
 
@@ -299,7 +296,7 @@
       transition: background 0.3s ease, border-color 0.3s ease;
     }
 
-    body.day-mode .navbar {
+    .day-mode .navbar {
       background: rgba(255, 255, 255, 0.88);
       border-bottom: 1px solid rgba(91, 110, 245, 0.18);
     }
@@ -406,7 +403,7 @@
       transition: transform 0.2s ease, background 0.2s;
     }
 
-    body.day-mode .theme-toggle {
+    .day-mode .theme-toggle {
       background: rgba(0, 0, 0, 0.05);
     }
 
@@ -427,11 +424,11 @@
       height: 20px;
     }
 
-    body.day-mode .sun-icon {
+    .day-mode .sun-icon {
       display: none;
     }
 
-    body.day-mode .moon-icon {
+    .day-mode .moon-icon {
       display: block;
     }
 
@@ -508,7 +505,7 @@
       margin-bottom: 22px;
     }
 
-    body.day-mode .service-brand-badge {
+    .day-mode .service-brand-badge {
       background: rgba(0, 110, 185, 0.08);
       color: #0284c7;
     }
@@ -586,7 +583,7 @@
       backdrop-filter: blur(16px);
     }
 
-    body.day-mode .hero-graphic-box {
+    .day-mode .hero-graphic-box {
       box-shadow: 0 20px 45px rgba(0, 0, 0, 0.06);
     }
 
@@ -609,7 +606,7 @@
       padding: 10px;
     }
 
-    body.day-mode .zoho-logo-wrap {
+    .day-mode .zoho-logo-wrap {
       background: #ffffff;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     }
@@ -711,7 +708,7 @@
       padding: 10px;
     }
 
-    body.day-mode .card-icon-pill {
+    .day-mode .card-icon-pill {
       background: #ffffff;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     }
@@ -890,7 +887,7 @@
       margin: 70px 0 90px;
     }
 
-    body.day-mode .bottom-cta-banner {
+    .day-mode .bottom-cta-banner {
       background: radial-gradient(ellipse at 50% 50%, rgba(37, 99, 235, 0.15) 0%, rgba(248, 250, 252, 0.95) 100%);
     }
 
@@ -905,7 +902,7 @@
       transition: background 0.3s ease;
     }
 
-    body.day-mode .footer {
+    .day-mode .footer {
       background: #f1f5f9;
       border-top-color: rgba(91, 110, 245, 0.15);
     }
@@ -1010,7 +1007,7 @@
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
     }
 
-    body.day-mode .cross-sell-crm-box {
+    .day-mode .cross-sell-crm-box {
       background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(240, 249, 255, 0.95) 100%);
       border-color: rgba(91, 110, 245, 0.25);
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
@@ -1034,7 +1031,7 @@
       flex-shrink: 0;
     }
 
-    body.day-mode .cross-sell-icon {
+    .day-mode .cross-sell-icon {
       background: #ffffff;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
     }
@@ -1049,7 +1046,7 @@
       margin-bottom: 4px;
     }
 
-    body.day-mode .cross-sell-badge {
+    .day-mode .cross-sell-badge {
       color: #0284c7;
     }
 
@@ -1157,7 +1154,7 @@
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
       }
 
-      body.day-mode .nav-links.open {
+      .day-mode .nav-links.open {
         background: rgba(255, 255, 255, 0.98);
         border-bottom-color: rgba(91, 110, 245, 0.2);
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
@@ -1314,12 +1311,12 @@
         fill: #ffffff !important;
       }
 
-      body.day-mode .mobile-bottom-bar {
+      .day-mode .mobile-bottom-bar {
         background: rgba(255, 255, 255, 0.96);
         border-top-color: rgba(0, 0, 0, 0.1);
       }
 
-      body.day-mode .mobile-call-btn {
+      .day-mode .mobile-call-btn {
         background: #f1f5f9;
         color: #0f172a !important;
         border-color: #cbd5e1;
@@ -1918,7 +1915,7 @@
     /* ── DAY / NIGHT THEME SWITCHER (SYNCED ACROSS ALL PAGES) ── */
     const themeToggle = document.getElementById('themeToggle');
     function applyDayMode(isDay, save = false) {
-      document.body.classList.toggle('day-mode', isDay);
+      document.documentElement.classList.toggle('day-mode', isDay);
       if (save) localStorage.setItem('mooncliq_theme', isDay ? 'day' : 'dark');
     }
     const savedTheme = localStorage.getItem('mooncliq_theme');
@@ -1930,7 +1927,7 @@
     }
     if (themeToggle) {
       themeToggle.addEventListener('click', () => {
-        const nextDay = !document.body.classList.contains('day-mode');
+        const nextDay = !document.documentElement.classList.contains('day-mode');
         applyDayMode(nextDay, true);
       });
     }
@@ -1963,7 +1960,7 @@
     resizeStars();
     window.addEventListener('resize', resizeStars);
     function drawStars() {
-      if (!document.body.classList.contains('day-mode')) {
+      if (!document.documentElement.classList.contains('day-mode')) {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         for (let s of stars) {
           s.y -= s.speed;

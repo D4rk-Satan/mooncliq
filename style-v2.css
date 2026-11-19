@@ -149,25 +149,25 @@
 }
 
 /* Day Mode Styling for group header icons */
-body.day-mode .group-header-icon {
+.day-mode .group-header-icon {
   background: #ffffff !important;
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
   border-color: rgba(0, 0, 0, 0.08) !important;
 }
 
-body.day-mode .icon-zoho-wrap {
+.day-mode .icon-zoho-wrap {
   border-bottom: 2px solid #006eb9 !important;
 }
 
-body.day-mode .icon-shopify-wrap {
+.day-mode .icon-shopify-wrap {
   border-bottom: 2px solid #96bf36 !important;
 }
 
-body.day-mode .icon-whatsapp-wrap {
+.day-mode .icon-whatsapp-wrap {
   border-bottom: 2px solid #25d366 !important;
 }
 
-body.day-mode .icon-crm-wrap {
+.day-mode .icon-crm-wrap {
   border-bottom: 2px solid #5b6ef5 !important;
 }
 
@@ -594,104 +594,104 @@ body.day-mode .icon-crm-wrap {
 }
 
 /* Day Mode styling for groups & FAQ */
-body.day-mode .group-card {
+.day-mode .group-card {
   background: #ffffff;
   border-color: rgba(0, 0, 0, 0.08);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
-body.day-mode .group-header-left h3 {
+.day-mode .group-header-left h3 {
   color: #0f172a;
 }
 
-body.day-mode .group-tool-pill {
+.day-mode .group-tool-pill {
   background: #f8fafc;
   border-color: #e2e8f0;
   color: #1e293b;
 }
 
-body.day-mode .group-tool-pill:hover {
+.day-mode .group-tool-pill:hover {
   background: #eef2ff;
   color: #4f5de4;
 }
 
-body.day-mode .faq-item {
+.day-mode .faq-item {
   background: #ffffff;
   border-color: #e2e8f0;
 }
 
-body.day-mode .faq-question {
+.day-mode .faq-question {
   color: #0f172a;
 }
 
 /* Day Mode Styling for CRM Spotlight Band */
-body.day-mode .crm-spotlight-card {
+.day-mode .crm-spotlight-card {
   background: #ffffff !important;
   border-color: rgba(91, 110, 245, 0.25) !important;
   box-shadow: 0 16px 45px rgba(0, 0, 0, 0.08) !important;
 }
 
-body.day-mode .crm-spotlight-title {
+.day-mode .crm-spotlight-title {
   color: #0f172a !important;
 }
 
-body.day-mode .crm-spotlight-desc {
+.day-mode .crm-spotlight-desc {
   color: #475569 !important;
 }
 
-body.day-mode .crm-mini-feat {
+.day-mode .crm-mini-feat {
   color: #1e293b !important;
   font-weight: 600;
 }
 
-body.day-mode .crm-mockup-frame {
+.day-mode .crm-mockup-frame {
   background: #ffffff;
   border-color: #cbd5e1;
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
 }
 
-body.day-mode .mockup-header-bar {
+.day-mode .mockup-header-bar {
   background: #f1f5f9;
   border-bottom-color: #e2e8f0;
 }
 
-body.day-mode .mockup-url-pill {
+.day-mode .mockup-url-pill {
   color: #64748b;
   background: #e2e8f0;
 }
 
-body.day-mode .mockup-sidebar {
+.day-mode .mockup-sidebar {
   border-right-color: #e2e8f0;
   background: #f8fafc;
 }
 
-body.day-mode .mockup-side-item {
+.day-mode .mockup-side-item {
   background: #e2e8f0;
 }
 
-body.day-mode .mockup-main {
+.day-mode .mockup-main {
   background: #f8fafc;
 }
 
-body.day-mode .mock-stat {
+.day-mode .mock-stat {
   background: #ffffff;
   border: 1px solid #e2e8f0;
 }
 
-body.day-mode .mock-stat-num {
+.day-mode .mock-stat-num {
   color: #0f172a;
 }
 
-body.day-mode .mock-col {
+.day-mode .mock-col {
   background: #ffffff;
   border: 1px solid #e2e8f0;
 }
 
-body.day-mode .mock-col-title {
+.day-mode .mock-col-title {
   color: #334155;
 }
 
-body.day-mode .mock-card {
+.day-mode .mock-card {
   background: #f1f5f9;
   color: #0f172a;
 }
@@ -809,11 +809,11 @@ body.day-mode .mock-card {
 }
 
 /* Day-mode support for preloader */
-body.day-mode #mc-preloader {
+.day-mode #mc-preloader {
   background: #f8fafc;
 }
 
-body.day-mode .mc-loader-bar {
+.day-mode .mc-loader-bar {
   background: rgba(0, 0, 0, 0.08);
 }
 
@@ -1316,10 +1316,10 @@ button {
   display: none !important;
 }
 
-body.day-mode .wordmark-dark-mode {
+.day-mode .wordmark-dark-mode {
   display: none !important;
 }
-body.day-mode .wordmark-day-mode {
+.day-mode .wordmark-day-mode {
   display: block !important;
 }
 
@@ -1350,11 +1350,11 @@ body.day-mode .wordmark-day-mode {
   margin-left: 1px;
 }
 
-body.day-mode .logo-text {
+.day-mode .logo-text {
   color: #3d4d85;
 }
 
-body.day-mode .logo-accent {
+.day-mode .logo-accent {
   color: #a1ce49;
 }
 
@@ -1665,21 +1665,21 @@ body.day-mode .logo-accent {
   display: none;
 }
 
-body.day-mode .badge-dark {
+.day-mode .badge-dark {
   display: none;
 }
 
-body.day-mode .badge-light {
+.day-mode .badge-light {
   display: block;
 }
 
-body.day-mode .hero-partner-badge-img,
-body.day-mode .footer-zoho-badge {
+.day-mode .hero-partner-badge-img,
+.day-mode .footer-zoho-badge {
   filter: drop-shadow(0 4px 14px rgba(0, 0, 0, 0.08));
 }
 
 /* Day Mode Badge Styling */
-body.day-mode .zoho-partner-official-badge {
+.day-mode .zoho-partner-official-badge {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
@@ -1826,41 +1826,41 @@ body.day-mode .zoho-partner-official-badge {
 }
 
 /* Day-mode support for new elements */
-body.day-mode .mega-menu {
+.day-mode .mega-menu {
   background: rgba(255, 255, 255, 0.98);
   border-color: rgba(0, 0, 0, 0.1);
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
 }
 
-body.day-mode .mega-col-header h4,
-body.day-mode .mega-item-title {
+.day-mode .mega-col-header h4,
+.day-mode .mega-item-title {
   color: #0f172a;
 }
 
-body.day-mode .footer-quick-link {
+.day-mode .footer-quick-link {
   color: #1e293b;
   font-weight: 600;
 }
 
-body.day-mode .footer-quick-link:hover {
+.day-mode .footer-quick-link:hover {
   color: #4f5de4;
 }
 
-body.day-mode .footer-location-info {
+.day-mode .footer-location-info {
   color: #334155;
   font-weight: 500;
 }
 
-body.day-mode .footer-location-info svg {
+.day-mode .footer-location-info svg {
   color: #4f5de4;
 }
 
-body.day-mode .mobile-bottom-bar {
+.day-mode .mobile-bottom-bar {
   background: rgba(255, 255, 255, 0.96);
   border-top-color: rgba(0, 0, 0, 0.1);
 }
 
-body.day-mode .mobile-call-btn {
+.day-mode .mobile-call-btn {
   background: #f1f5f9;
   color: #0f172a;
   border-color: #cbd5e1;
@@ -2231,7 +2231,7 @@ body.day-mode .mobile-call-btn {
   animation-duration: 95s;
 }
 
-body.day-mode img[src*="aws.svg"] {
+.day-mode img[src*="aws.svg"] {
   filter: brightness(0) saturate(100%) invert(14%) sepia(20%) saturate(1074%) hue-rotate(174deg) brightness(94%) contrast(92%);
 }
 
@@ -3031,31 +3031,31 @@ a.citem-value:hover {
 }
 
 /* Day Mode Form Inputs & Select Styling */
-body.day-mode .form-group input,
-body.day-mode .form-group select,
-body.day-mode .form-group textarea {
+.day-mode .form-group input,
+.day-mode .form-group select,
+.day-mode .form-group textarea {
   background-color: #ffffff !important;
   border-color: #cbd5e1 !important;
   color: #0f172a !important;
 }
 
-body.day-mode .form-group input::placeholder,
-body.day-mode .form-group textarea::placeholder {
+.day-mode .form-group input::placeholder,
+.day-mode .form-group textarea::placeholder {
   color: #94a3b8 !important;
 }
 
-body.day-mode .form-group select {
+.day-mode .form-group select {
   color-scheme: light;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23475569' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
 }
 
-body.day-mode .form-group select option {
+.day-mode .form-group select option {
   background-color: #ffffff !important;
   color: #0f172a !important;
 }
 
-body.day-mode .form-group select option:checked,
-body.day-mode .form-group select option:hover {
+.day-mode .form-group select option:checked,
+.day-mode .form-group select option:hover {
   background-color: #5b6ef5 !important;
   color: #ffffff !important;
 }
@@ -3794,7 +3794,7 @@ body.day-mode .form-group select option:hover {
 }
 
 /* ── DAY/NIGHT THEME ───────────────────────────────────── */
-body.day-mode {
+.day-mode {
   --bg: #f8fafc;
   --bg2: #f1f5f9;
   --surface: rgba(255, 255, 255, 0.6);
@@ -3816,35 +3816,35 @@ body.day-mode {
   --grad2: linear-gradient(135deg, #0891b2, #2563eb);
 }
 
-body.day-mode .fluid-bg {
+.day-mode .fluid-bg {
   background: linear-gradient(to bottom, #4da4ff 0%, #87c3ff 40%, #e2c1a8 70%, #ffdfba 100%);
 }
 
-body.day-mode .glass-card {
+.day-mode .glass-card {
   background: rgba(255, 255, 255, 0.65);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
 }
 
-body.day-mode .navbar.scrolled {
+.day-mode .navbar.scrolled {
   background: rgba(255, 255, 255, 0.88);
 }
 
-body.day-mode #starCanvas {
+.day-mode #starCanvas {
   opacity: 0;
 }
 
 /* Ensure Moon logo is visible against light sky */
-body.day-mode .hero-logo-img {
+.day-mode .hero-logo-img {
   filter: drop-shadow(0 0 30px rgba(0, 0, 0, 0.2));
 }
 
-body.day-mode .star-aura::before {
+.day-mode .star-aura::before {
   background-image: none;
   /* Hide stars behind moon */
   background: radial-gradient(circle at center, rgba(255, 255, 255, 0.5) 0%, transparent 60%);
 }
 
-body.day-mode .btn-outline {
+.day-mode .btn-outline {
   background: rgba(255, 255, 255, 0.5);
   color: var(--txt);
   border-color: rgba(91, 110, 245, 0.4);
@@ -3874,7 +3874,7 @@ body.day-mode .btn-outline {
   height: 20px;
 }
 
-body.day-mode .theme-toggle:hover {
+.day-mode .theme-toggle:hover {
   background: rgba(0, 0, 0, 0.05);
 }
 
@@ -3882,56 +3882,56 @@ body.day-mode .theme-toggle:hover {
   display: none;
 }
 
-body.day-mode .moon-icon {
+.day-mode .moon-icon {
   display: block;
 }
 
-body.day-mode .sun-icon {
+.day-mode .sun-icon {
   display: none;
 }
 
 /* Better visibility for tags in day mode */
-body.day-mode .hero-eyebrow,
-body.day-mode .section-tag {
+.day-mode .hero-eyebrow,
+.day-mode .section-tag {
   color: #1e3a8a;
   background: rgba(30, 58, 138, 0.1);
   border-color: rgba(30, 58, 138, 0.2);
 }
 
-body.day-mode .sol-badge-dev,
-body.day-mode .up-status-bar {
+.day-mode .sol-badge-dev,
+.day-mode .up-status-bar {
   color: #4c1d95;
   background: rgba(76, 29, 149, 0.1);
   border-color: rgba(76, 29, 149, 0.2);
 }
 
-body.day-mode .eyebrow-dot,
-body.day-mode .section-tag::before {
+.day-mode .eyebrow-dot,
+.day-mode .section-tag::before {
   background: #1e3a8a;
   box-shadow: 0 0 10px rgba(30, 58, 138, 0.5);
 }
 
-body.day-mode .sol-badge-dev::before,
-body.day-mode .pulse-dot {
+.day-mode .sol-badge-dev::before,
+.day-mode .pulse-dot {
   background: #4c1d95;
 }
 
 @media(max-width:768px) {
-  body.day-mode .nav-links {
+  .day-mode .nav-links {
     background: rgba(255, 255, 255, 0.97);
   }
 }
 
 /* Fix dark gradients in sections for day mode */
-body.day-mode .about {
+.day-mode .about {
   background: linear-gradient(180deg, transparent 0%, rgba(255, 255, 255, 0.4) 50%, transparent 100%);
 }
 
-body.day-mode .solutions {
+.day-mode .solutions {
   background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.5) 50%, transparent);
 }
 
-body.day-mode .contact {
+.day-mode .contact {
   background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.4) 100%);
 }
 
@@ -3996,7 +3996,7 @@ body.day-mode .contact {
   transform: rotate(90deg);
 }
 
-body.day-mode .modal-close:hover {
+.day-mode .modal-close:hover {
   background: rgba(0, 0, 0, 0.05);
 }
 
@@ -4048,12 +4048,12 @@ body.day-mode .modal-close:hover {
   border-color: rgba(91, 110, 245, 0.15);
 }
 
-body.day-mode .modal-feature-item {
+.day-mode .modal-feature-item {
   background: rgba(0, 0, 0, 0.01);
   border-color: rgba(0, 0, 0, 0.03);
 }
 
-body.day-mode .modal-feature-item:hover {
+.day-mode .modal-feature-item:hover {
   background: rgba(91, 110, 245, 0.04);
   border-color: rgba(91, 110, 245, 0.15);
 }
@@ -4091,12 +4091,12 @@ body.day-mode .modal-feature-item:hover {
   border-color: rgba(34, 211, 238, 0.15);
 }
 
-body.day-mode .tech-card-modal {
+.day-mode .tech-card-modal {
   background: rgba(0, 0, 0, 0.01);
   border-color: rgba(0, 0, 0, 0.03);
 }
 
-body.day-mode .tech-card-modal:hover {
+.day-mode .tech-card-modal:hover {
   background: rgba(34, 211, 238, 0.04);
   border-color: rgba(34, 211, 238, 0.15);
 }
@@ -4121,7 +4121,7 @@ body.day-mode .tech-card-modal:hover {
   line-height: 1.8;
 }
 
-body.day-mode .modal-overlay {
+.day-mode .modal-overlay {
   background: rgba(241, 245, 249, 0.7);
 }
 
@@ -4139,7 +4139,7 @@ body.day-mode .modal-overlay {
   border-radius: 3px;
 }
 
-body.day-mode .modal-container::-webkit-scrollbar-thumb {
+.day-mode .modal-container::-webkit-scrollbar-thumb {
   background: rgba(0, 0, 0, 0.1);
 }
 
@@ -4211,7 +4211,7 @@ body.day-mode .modal-container::-webkit-scrollbar-thumb {
   z-index: 10;
 }
 
-body.day-mode .brands-served-section {
+.day-mode .brands-served-section {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(241, 245, 249, 0.8) 50%, rgba(255, 255, 255, 0.5) 100%);
   border-top-color: rgba(91, 110, 245, 0.12);
   border-bottom-color: rgba(91, 110, 245, 0.12);
@@ -4236,7 +4236,7 @@ body.day-mode .brands-served-section {
   gap: 8px;
 }
 
-body.day-mode .brands-served-tag {
+.day-mode .brands-served-tag {
   color: var(--p);
 }
 
@@ -4254,7 +4254,7 @@ body.day-mode .brands-served-tag {
   contain: layout paint;
 }
 
-body.day-mode .brands-served-section {
+.day-mode .brands-served-section {
   background: rgba(241, 245, 249, 0.85);
   border-top-color: rgba(91, 110, 245, 0.15);
   border-bottom-color: rgba(91, 110, 245, 0.15);
@@ -4279,7 +4279,7 @@ body.day-mode .brands-served-section {
   gap: 8px;
 }
 
-body.day-mode .brands-served-tag {
+.day-mode .brands-served-tag {
   color: var(--p);
 }
 
@@ -4321,11 +4321,11 @@ body.day-mode .brands-served-tag {
   background: linear-gradient(to left, #03040b 0%, rgba(3, 4, 11, 0) 100%);
 }
 
-body.day-mode .brands-marquee-wrap::before {
+.day-mode .brands-marquee-wrap::before {
   background: linear-gradient(to right, #f1f5f9 0%, rgba(241, 245, 249, 0) 100%);
 }
 
-body.day-mode .brands-marquee-wrap::after {
+.day-mode .brands-marquee-wrap::after {
   background: linear-gradient(to left, #f1f5f9 0%, rgba(241, 245, 249, 0) 100%);
 }
 
@@ -4370,7 +4370,7 @@ body.day-mode .brands-marquee-wrap::after {
   filter: opacity(1) drop-shadow(0 6px 18px rgba(34, 211, 238, 0.3));
 }
 
-body.day-mode .brand-marquee-item:hover {
+.day-mode .brand-marquee-item:hover {
   filter: opacity(1) drop-shadow(0 6px 18px rgba(91, 110, 245, 0.25));
 }
 
@@ -4391,11 +4391,11 @@ body.day-mode .brand-marquee-item:hover {
   display: none !important;
 }
 
-body.day-mode .brand-item-dark {
+.day-mode .brand-item-dark {
   display: none !important;
 }
 
-body.day-mode .brand-item-light {
+.day-mode .brand-item-light {
   display: block !important;
 }
 
