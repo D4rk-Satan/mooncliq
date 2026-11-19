@@ -1,38 +1,44 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <script>
-    (function() {
+    (function () {
       try {
         var saved = localStorage.getItem('mooncliq_theme');
         if (saved === 'day' || (!saved && (new Date().getHours() >= 6 && new Date().getHours() < 18))) {
           document.documentElement.classList.add('day-mode');
         }
-      } catch(e) {}
+      } catch (e) { }
     })();
   </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="header-footer.css" />
-  <link rel="icon" type="image/png" href="assets/favicon-32x32.png" /><link rel="apple-touch-icon" href="assets/logo-clean-large.png" />
-  
+  <link rel="icon" type="image/png" href="assets/favicon-32x32.png" />
+  <link rel="apple-touch-icon" href="assets/logo-clean-large.png" />
+
   <!-- ================ ADVANCED SEO & META METRICS ================ -->
   <title>AWS Cloud Architecture, Serverless & DevOps Consulting | MoonCliq</title>
-  <meta name="description" content="Scale infrastructure with certified AWS cloud architects. Serverless microservices, auto-scaling ECS containers, PostgreSQL RDS databases, CI/CD, and 99.99% uptime." />
-  <meta name="keywords" content="AWS Cloud Consulting, AWS Partner, Serverless Architecture, AWS DevOps CI/CD, Cloud Migration, MoonCliq" />
+  <meta name="description"
+    content="Scale infrastructure with certified AWS cloud architects. Serverless microservices, auto-scaling ECS containers, PostgreSQL RDS databases, CI/CD, and 99.99% uptime." />
+  <meta name="keywords"
+    content="AWS Cloud Consulting, AWS Partner, Serverless Architecture, AWS DevOps CI/CD, Cloud Migration, MoonCliq" />
   <link rel="canonical" href="https://mooncliq.com/aws-cloud-solutions" />
 
   <!-- Open Graph / Social Sharing -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="AWS Cloud Architecture, Serverless & DevOps Consulting | MoonCliq" />
-  <meta property="og:description" content="Enterprise cloud infrastructure on Amazon Web Services. Serverless architectures (Lambda, API Gateway), auto-scaling containers, CI/CD pipelines, and cloud security." />
+  <meta property="og:description"
+    content="Enterprise cloud infrastructure on Amazon Web Services. Serverless architectures (Lambda, API Gateway), auto-scaling containers, CI/CD pipelines, and cloud security." />
   <meta property="og:url" content="https://mooncliq.com/aws-cloud-solutions" />
   <meta property="og:image" content="https://mooncliq.com/assets/logo.png" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="AWS Cloud Architecture & DevOps Partner — MoonCliq" />
-  <meta name="twitter:description" content="Scalable serverless infrastructure, microservices, and continuous deployment on AWS." />
+  <meta name="twitter:description"
+    content="Scalable serverless infrastructure, microservices, and continuous deployment on AWS." />
 
   <!-- JSON-LD STRUCTURED DATA (ProfessionalService & FAQPage for Google Rich Snippets) -->
   <script type="application/ld+json">
@@ -124,8 +130,10 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet" />
-  
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&family=Outfit:wght@500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+
   <!-- Lenis Smooth Inertia Scroll -->
   <script src="assets/lenis.min.js" defer></script>
 
@@ -181,14 +189,22 @@
       --grad2: linear-gradient(135deg, #0284c7, #2563eb);
     }
 
-    *, *::before, *::after {
+    *,
+    *::before,
+    *::after {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
 
-    html.lenis, html.lenis body { height: auto; }
-    .lenis.lenis-smooth { scroll-behavior: auto !important; }
+    html.lenis,
+    html.lenis body {
+      height: auto;
+    }
+
+    .lenis.lenis-smooth {
+      scroll-behavior: auto !important;
+    }
 
     body {
       font-family: var(--font-b);
@@ -209,7 +225,10 @@
       opacity: 0.85;
       transition: opacity 0.4s ease;
     }
-    .day-mode #starCanvas { opacity: 0; }
+
+    .day-mode #starCanvas {
+      opacity: 0;
+    }
 
     /* -- FLUID AURORA BACKGROUND --------------------------- */
     .fluid-bg {
@@ -222,15 +241,18 @@
       transform: translateZ(0);
       transition: background 0.5s ease;
     }
+
     .day-mode .fluid-bg {
       background: linear-gradient(to bottom, #4da4ff 0%, #87c3ff 40%, #e2c1a8 70%, #ffdfba 100%);
     }
+
     .fluid-blob {
       position: absolute;
       border-radius: 50%;
       will-change: transform;
       contain: layout style paint;
     }
+
     .fluid-1 {
       width: 900px;
       height: 900px;
@@ -239,6 +261,7 @@
       left: -10%;
       animation: fluidSpin 25s ease-in-out infinite alternate;
     }
+
     .fluid-2 {
       width: 800px;
       height: 800px;
@@ -247,10 +270,19 @@
       right: -10%;
       animation: fluidSpin 30s ease-in-out infinite alternate-reverse;
     }
+
     @keyframes fluidSpin {
-      0% { transform: translate3d(0, 0, 0) scale(1); }
-      50% { transform: translate3d(80px, 100px, 0) scale(1.15); }
-      100% { transform: translate3d(-40px, 50px, 0) scale(0.9); }
+      0% {
+        transform: translate3d(0, 0, 0) scale(1);
+      }
+
+      50% {
+        transform: translate3d(80px, 100px, 0) scale(1.15);
+      }
+
+      100% {
+        transform: translate3d(-40px, 50px, 0) scale(0.9);
+      }
     }
 
     /* -- EXACT HEADER / NAVBAR ----------------------------- */
@@ -263,10 +295,12 @@
       border-bottom: 1px solid var(--border);
       transition: background 0.3s ease, border-color 0.3s ease;
     }
+
     .day-mode .navbar {
       background: rgba(255, 255, 255, 0.88);
       border-bottom: 1px solid rgba(91, 110, 245, 0.18);
     }
+
     .nav-container {
       max-width: 1240px;
       margin: 0 auto;
@@ -276,6 +310,7 @@
       align-items: center;
       justify-content: space-between;
     }
+
     .nav-logo {
       display: flex;
       align-items: center;
@@ -287,6 +322,7 @@
       font-size: 24px;
       letter-spacing: -0.5px;
     }
+
     .logo-glow-ring {
       width: 40px;
       height: 40px;
@@ -299,23 +335,30 @@
       box-shadow: 0 0 15px rgba(91, 110, 245, 0.4);
       overflow: hidden;
     }
+
     .logo-img {
       width: 28px;
       height: 28px;
       object-fit: contain;
     }
-    .logo-text { font-family: var(--font-h); }
+
+    .logo-text {
+      font-family: var(--font-h);
+    }
+
     .logo-accent {
       background: var(--grad2);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
+
     .nav-links {
       display: flex;
       align-items: center;
       gap: 26px;
       list-style: none;
     }
+
     .nav-link {
       color: var(--txt2);
       text-decoration: none;
@@ -323,7 +366,12 @@
       font-weight: 500;
       transition: color 0.2s;
     }
-    .nav-link:hover, .nav-link.active { color: var(--txt); }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: var(--txt);
+    }
+
     .nav-cta {
       background: var(--grad);
       color: #fff !important;
@@ -335,7 +383,10 @@
       transition: transform 0.2s ease;
       text-decoration: none;
     }
-    .nav-cta:hover { transform: translateY(-2px); }
+
+    .nav-cta:hover {
+      transform: translateY(-2px);
+    }
 
     /* Day / Night Switch Button */
     .theme-toggle {
@@ -351,15 +402,35 @@
       color: var(--txt);
       transition: transform 0.2s ease, background 0.2s;
     }
-    .day-mode .theme-toggle { background: rgba(0, 0, 0, 0.05); }
+
+    .day-mode .theme-toggle {
+      background: rgba(0, 0, 0, 0.05);
+    }
+
     .theme-toggle:hover {
       transform: scale(1.08);
       background: rgba(255, 255, 255, 0.1);
     }
-    .sun-icon { display: block; width: 20px; height: 20px; }
-    .moon-icon { display: none; width: 20px; height: 20px; }
-    .day-mode .sun-icon { display: none; }
-    .day-mode .moon-icon { display: block; }
+
+    .sun-icon {
+      display: block;
+      width: 20px;
+      height: 20px;
+    }
+
+    .moon-icon {
+      display: none;
+      width: 20px;
+      height: 20px;
+    }
+
+    .day-mode .sun-icon {
+      display: none;
+    }
+
+    .day-mode .moon-icon {
+      display: block;
+    }
 
     .hamburger {
       display: none;
@@ -369,6 +440,7 @@
       flex-direction: column;
       gap: 5px;
     }
+
     .hamburger span {
       width: 24px;
       height: 2px;
@@ -394,12 +466,17 @@
       font-size: 13.5px;
       color: var(--txt2);
     }
+
     .breadcrumb-row a {
       color: var(--txt2);
       text-decoration: none;
       transition: color 0.2s;
     }
-    .breadcrumb-row a:hover { color: var(--txt); }
+
+    .breadcrumb-row a:hover {
+      color: var(--txt);
+    }
+
     .breadcrumb-active {
       color: var(--cyan);
       font-weight: 700;
@@ -413,6 +490,7 @@
       gap: 50px;
       align-items: center;
     }
+
     .service-brand-badge {
       display: inline-flex;
       align-items: center;
@@ -426,10 +504,12 @@
       color: #38bdf8;
       margin-bottom: 22px;
     }
+
     .day-mode .service-brand-badge {
       background: rgba(0, 110, 185, 0.08);
       color: #0284c7;
     }
+
     .brand-icon-mini {
       width: 20px;
       height: 20px;
@@ -437,6 +517,7 @@
       align-items: center;
       justify-content: center;
     }
+
     .hero-title {
       font-family: var(--font-h);
       font-size: 52px;
@@ -445,17 +526,20 @@
       letter-spacing: -1.2px;
       margin-bottom: 20px;
     }
+
     .hero-subtitle {
       font-size: 17.5px;
       color: var(--txt2);
       line-height: 1.7;
       margin-bottom: 34px;
     }
+
     .hero-action-group {
       display: flex;
       gap: 16px;
       flex-wrap: wrap;
     }
+
     .btn-primary {
       background: var(--grad);
       color: #fff;
@@ -467,7 +551,11 @@
       box-shadow: 0 8px 30px rgba(91, 110, 245, 0.4);
       transition: transform 0.2s;
     }
-    .btn-primary:hover { transform: translateY(-2px); }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+    }
+
     .btn-outline {
       background: var(--surface2);
       border: 1px solid var(--border);
@@ -479,7 +567,10 @@
       text-decoration: none;
       transition: background 0.2s;
     }
-    .btn-outline:hover { background: var(--surface); }
+
+    .btn-outline:hover {
+      background: var(--surface);
+    }
 
     /* Right Glass Box with Official Logo */
     .hero-graphic-box {
@@ -491,15 +582,18 @@
       box-shadow: 0 20px 45px rgba(0, 0, 0, 0.2);
       backdrop-filter: blur(16px);
     }
+
     .day-mode .hero-graphic-box {
       box-shadow: 0 20px 45px rgba(0, 0, 0, 0.06);
     }
+
     .graphic-header {
       display: flex;
       align-items: center;
       gap: 18px;
       margin-bottom: 24px;
     }
+
     .zoho-logo-wrap {
       width: 68px;
       height: 68px;
@@ -511,15 +605,18 @@
       justify-content: center;
       padding: 10px;
     }
+
     .day-mode .zoho-logo-wrap {
       background: #ffffff;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     }
+
     .stat-bar-list {
       display: flex;
       flex-direction: column;
       gap: 14px;
     }
+
     .stat-bar-item {
       display: flex;
       justify-content: space-between;
@@ -531,11 +628,22 @@
       font-size: 14.5px;
       font-weight: 500;
     }
-    .stat-val { font-weight: 800; color: var(--cyan); }
+
+    .stat-val {
+      font-weight: 800;
+      color: var(--cyan);
+    }
 
     /* -- SECTION COMMONS ----------------------------------- */
-    .section-wrap { padding: 70px 0; }
-    .section-head { text-align: center; margin-bottom: 50px; }
+    .section-wrap {
+      padding: 70px 0;
+    }
+
+    .section-head {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
     .section-tag {
       font-size: 12.5px;
       font-weight: 800;
@@ -545,6 +653,7 @@
       margin-bottom: 10px;
       display: inline-block;
     }
+
     .section-title {
       font-family: var(--font-h);
       font-size: 40px;
@@ -552,6 +661,7 @@
       letter-spacing: -1px;
       margin-bottom: 14px;
     }
+
     .section-subtitle {
       color: var(--txt2);
       font-size: 16.5px;
@@ -565,6 +675,7 @@
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 24px;
     }
+
     .glass-card {
       background: var(--surface2);
       border: 1px solid var(--border);
@@ -577,11 +688,13 @@
       transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease, box-shadow 0.25s ease;
       will-change: transform;
     }
+
     .glass-card:hover {
       border-color: var(--border2);
       box-shadow: 0 18px 40px rgba(0, 0, 0, 0.15);
       transform: translateY(-4px);
     }
+
     .card-icon-pill {
       width: 52px;
       height: 52px;
@@ -594,16 +707,19 @@
       margin-bottom: 22px;
       padding: 10px;
     }
+
     .day-mode .card-icon-pill {
       background: #ffffff;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     }
+
     .glass-card h3 {
       font-family: var(--font-h);
       font-size: 22px;
       font-weight: 800;
       margin-bottom: 12px;
     }
+
     .glass-card p {
       font-size: 14.5px;
       color: var(--txt2);
@@ -611,6 +727,7 @@
       margin-bottom: 22px;
       flex-grow: 1;
     }
+
     .feature-points {
       list-style: none;
       display: flex;
@@ -619,8 +736,17 @@
       font-size: 14px;
       color: var(--txt2);
     }
-    .feature-points li { display: flex; align-items: center; gap: 10px; }
-    .bullet-chk { color: var(--cyan); font-weight: 800; }
+
+    .feature-points li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .bullet-chk {
+      color: var(--cyan);
+      font-weight: 800;
+    }
 
     /* -- MIGRATION TABLE ---------------------------------- */
     .matrix-box {
@@ -632,6 +758,7 @@
       margin-top: 30px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     }
+
     .matrix-table {
       min-width: 620px;
       width: 100%;
@@ -639,10 +766,13 @@
       text-align: left;
       font-size: 14.5px;
     }
-    .matrix-table th, .matrix-table td {
+
+    .matrix-table th,
+    .matrix-table td {
       padding: 18px 24px;
       border-bottom: 1px solid var(--border);
     }
+
     .matrix-table th {
       background: var(--surface);
       font-size: 12.5px;
@@ -651,8 +781,15 @@
       color: var(--txt);
       font-weight: 800;
     }
-    .matrix-table tr:hover { background: rgba(91, 110, 245, 0.04); }
-    .speed-badge { color: #10b981; font-weight: 700; }
+
+    .matrix-table tr:hover {
+      background: rgba(91, 110, 245, 0.04);
+    }
+
+    .speed-badge {
+      color: #10b981;
+      font-weight: 700;
+    }
 
     /* -- PROCESS TIMELINE --------------------------------- */
     .process-timeline {
@@ -661,6 +798,7 @@
       gap: 20px;
       margin-top: 30px;
     }
+
     .step-box {
       background: var(--surface2);
       border: 1px solid var(--border);
@@ -668,6 +806,7 @@
       padding: 30px 24px;
       position: relative;
     }
+
     .step-num {
       font-family: var(--font-h);
       font-size: 34px;
@@ -676,11 +815,13 @@
       opacity: 0.6;
       margin-bottom: 10px;
     }
+
     .step-box h4 {
       font-size: 18px;
       font-weight: 800;
       margin-bottom: 10px;
     }
+
     .step-box p {
       font-size: 14px;
       color: var(--txt2);
@@ -695,6 +836,7 @@
       flex-direction: column;
       gap: 16px;
     }
+
     .faq-item {
       background: var(--surface2);
       border: 1px solid var(--border);
@@ -702,6 +844,7 @@
       overflow: hidden;
       transition: border-color 0.2s;
     }
+
     .faq-question {
       padding: 22px 24px;
       cursor: pointer;
@@ -711,6 +854,7 @@
       font-weight: 700;
       font-size: 16px;
     }
+
     .faq-answer {
       padding: 0 24px 22px;
       color: var(--txt2);
@@ -718,9 +862,20 @@
       line-height: 1.65;
       display: none;
     }
-    .faq-item.active .faq-answer { display: block; }
-    .faq-item.active .faq-icon { transform: rotate(180deg); }
-    .faq-icon { transition: transform 0.2s; font-size: 18px; color: var(--cyan); }
+
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+
+    .faq-item.active .faq-icon {
+      transform: rotate(180deg);
+    }
+
+    .faq-icon {
+      transition: transform 0.2s;
+      font-size: 18px;
+      color: var(--cyan);
+    }
 
     /* -- BOTTOM CTA BANNER -------------------------------- */
     .bottom-cta-banner {
@@ -731,6 +886,7 @@
       text-align: center;
       margin: 70px 0 90px;
     }
+
     .day-mode .bottom-cta-banner {
       background: radial-gradient(ellipse at 50% 50%, rgba(37, 99, 235, 0.15) 0%, rgba(248, 250, 252, 0.95) 100%);
     }
@@ -745,10 +901,12 @@
       color: var(--txt2);
       transition: background 0.3s ease;
     }
+
     .day-mode .footer {
       background: #f1f5f9;
       border-top-color: rgba(91, 110, 245, 0.15);
     }
+
     .footer-top-glow {
       position: absolute;
       top: 0;
@@ -757,12 +915,14 @@
       height: 1px;
       background: linear-gradient(90deg, transparent, var(--cyan), transparent);
     }
+
     .footer-grid {
       display: grid;
       grid-template-columns: 2fr 1fr 1fr 1fr;
       gap: 40px;
       margin-bottom: 50px;
     }
+
     .footer-logo {
       display: flex;
       align-items: center;
@@ -774,6 +934,7 @@
       font-size: 24px;
       margin-bottom: 16px;
     }
+
     .footer-tagline {
       font-size: 14px;
       line-height: 1.6;
@@ -781,6 +942,7 @@
       margin-bottom: 20px;
       max-width: 320px;
     }
+
     .footer-partner-pill {
       display: inline-flex;
       align-items: center;
@@ -793,6 +955,7 @@
       font-weight: 600;
       color: var(--acc);
     }
+
     .footer-col h4 {
       font-family: var(--font-h);
       color: var(--txt);
@@ -800,18 +963,24 @@
       font-weight: 700;
       margin-bottom: 20px;
     }
+
     .footer-col ul {
       list-style: none;
       display: flex;
       flex-direction: column;
       gap: 12px;
     }
+
     .footer-col a {
       color: var(--txt2);
       text-decoration: none;
       transition: color 0.2s;
     }
-    .footer-col a:hover { color: var(--txt); }
+
+    .footer-col a:hover {
+      color: var(--txt);
+    }
+
     .footer-bottom {
       display: flex;
       justify-content: space-between;
@@ -821,7 +990,7 @@
       font-size: 13.5px;
     }
 
-    
+
     /* ── CROSS-SELL BANNER (Mooncliq CRM) ── */
     .cross-sell-crm-box {
       background: linear-gradient(135deg, rgba(91, 110, 245, 0.12) 0%, rgba(34, 211, 238, 0.08) 100%);
@@ -837,16 +1006,19 @@
       overflow: hidden;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
     }
+
     .day-mode .cross-sell-crm-box {
       background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(240, 249, 255, 0.95) 100%);
       border-color: rgba(91, 110, 245, 0.25);
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     }
+
     .cross-sell-left {
       display: flex;
       align-items: center;
       gap: 18px;
     }
+
     .cross-sell-icon {
       width: 52px;
       height: 52px;
@@ -858,10 +1030,12 @@
       justify-content: center;
       flex-shrink: 0;
     }
+
     .day-mode .cross-sell-icon {
       background: #ffffff;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
     }
+
     .cross-sell-badge {
       display: inline-block;
       font-size: 11px;
@@ -871,9 +1045,11 @@
       color: #38bdf8;
       margin-bottom: 4px;
     }
+
     .day-mode .cross-sell-badge {
       color: #0284c7;
     }
+
     .cross-sell-title {
       font-family: var(--font-h);
       font-size: 20px;
@@ -881,10 +1057,12 @@
       color: var(--txt);
       margin-bottom: 4px;
     }
+
     .cross-sell-sub {
       font-size: 14px;
       color: var(--txt2);
     }
+
     .cross-sell-btn {
       background: var(--grad);
       color: #ffffff !important;
@@ -900,10 +1078,12 @@
       box-shadow: 0 6px 20px rgba(91, 110, 245, 0.35);
       transition: transform 0.2s, box-shadow 0.2s;
     }
+
     .cross-sell-btn:hover {
       transform: translateY(-2px);
       box-shadow: 0 8px 25px rgba(91, 110, 245, 0.5);
     }
+
     @media (max-width: 800px) {
       .cross-sell-crm-box {
         flex-direction: column;
@@ -911,6 +1091,7 @@
         padding: 24px 20px;
         gap: 20px;
       }
+
       .cross-sell-btn {
         width: 100%;
         justify-content: center;
@@ -932,16 +1113,32 @@
       white-space: normal;
       text-align: center;
     }
+
     .cta-btn-responsive svg {
       flex-shrink: 0;
     }
 
     @media (max-width: 900px) {
-      .service-hero { grid-template-columns: 1fr; }
-      .process-timeline { grid-template-columns: 1fr 1fr; }
-      .footer-grid { grid-template-columns: 1fr 1fr; }
-      .nav-links { display: none; }
-      .hamburger { display: flex; }
+      .service-hero {
+        grid-template-columns: 1fr;
+      }
+
+      .process-timeline {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
       .nav-links.open {
         display: flex;
         flex-direction: column;
@@ -954,12 +1151,13 @@
         padding: 24px;
         border-bottom: 1px solid var(--border);
         gap: 16px;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
       }
+
       .day-mode .nav-links.open {
         background: rgba(255, 255, 255, 0.98);
         border-bottom-color: rgba(91, 110, 245, 0.2);
-        box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
       }
     }
 
@@ -969,15 +1167,18 @@
         letter-spacing: -0.8px;
         margin-bottom: 16px;
       }
+
       .hero-subtitle {
         font-size: 15px;
         line-height: 1.6;
         margin-bottom: 24px;
       }
+
       .hero-action-group {
         flex-direction: column;
         gap: 12px;
       }
+
       .hero-action-group .btn-primary,
       .hero-action-group .btn-outline {
         width: 100%;
@@ -986,114 +1187,144 @@
         display: inline-flex;
         align-items: center;
       }
+
       .hero-graphic-box {
         padding: 24px 20px;
       }
+
       .stat-bar-list {
         gap: 10px;
       }
+
       .section-title {
         font-size: 28px !important;
       }
+
       .section-subtitle {
         font-size: 14.5px;
       }
+
       .bottom-cta-banner {
         padding: 40px 20px !important;
         margin: 50px 0 60px !important;
         border-radius: 20px;
       }
+
       .bottom-cta-banner h2 {
         font-size: 26px !important;
         line-height: 1.25 !important;
         margin-bottom: 12px !important;
       }
+
       .bottom-cta-banner p {
         font-size: 14.5px !important;
         line-height: 1.55 !important;
         margin-bottom: 24px !important;
       }
+
       .bottom-cta-banner .cta-btn-responsive {
         width: 100%;
         max-width: 320px;
         padding: 14px 20px !important;
         font-size: 15px !important;
       }
-      .process-timeline { grid-template-columns: 1fr; }
-      .footer-grid { grid-template-columns: 1fr; gap: 30px; }
-      .footer-bottom { flex-direction: column; gap: 10px; text-align: center; }
-    }
-  
-  /* ── STICKY MOBILE BOTTOM BAR ── */
-  .mobile-bottom-bar {
-    display: none;
-  }
-  @media (max-width: 991px) {
-    .mobile-bottom-bar {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      z-index: 9999;
-      display: flex;
-      gap: 10px;
-      padding: 10px 16px;
-      background: rgba(3, 4, 11, 0.94);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border-top: 1px solid rgba(167, 139, 250, 0.2);
-      box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.5);
-    }
-    body {
-      padding-bottom: 65px !important;
-    }
-    .mobile-action-btn {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 11px 16px;
-      border-radius: 12px;
-      font-size: 0.9rem;
-      font-weight: 700;
-      text-align: center;
-      text-decoration: none;
-      transition: transform 0.15s;
-    }
-    .mobile-action-btn:active {
-      transform: scale(0.97);
-    }
-    .mobile-call-btn {
-      background: rgba(255, 255, 255, 0.08);
-      color: #fff !important;
-      border: 1px solid rgba(255, 255, 255, 0.15);
-    }
-    .mobile-whatsapp-btn {
-      background: #25d366 !important;
-      color: #ffffff !important;
-      border: 1px solid #20bd5a !important;
-      box-shadow: 0 4px 16px rgba(37, 211, 102, 0.35) !important;
-    }
-    .mobile-whatsapp-btn span {
-      color: #ffffff !important;
-    }
-    .mobile-whatsapp-btn svg {
-      fill: #ffffff !important;
-    }
-    .day-mode .mobile-bottom-bar {
-      background: rgba(255, 255, 255, 0.96);
-      border-top-color: rgba(0, 0, 0, 0.1);
-    }
-    .day-mode .mobile-call-btn {
-      background: #f1f5f9;
-      color: #0f172a !important;
-      border-color: #cbd5e1;
-    }
-  }
 
-</style>
+      .process-timeline {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+      }
+    }
+
+    /* ── STICKY MOBILE BOTTOM BAR ── */
+    .mobile-bottom-bar {
+      display: none;
+    }
+
+    @media (max-width: 991px) {
+      .mobile-bottom-bar {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 9999;
+        display: flex;
+        gap: 10px;
+        padding: 10px 16px;
+        background: rgba(3, 4, 11, 0.94);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-top: 1px solid rgba(167, 139, 250, 0.2);
+        box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.5);
+      }
+
+      body {
+        padding-bottom: 65px !important;
+      }
+
+      .mobile-action-btn {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 11px 16px;
+        border-radius: 12px;
+        font-size: 0.9rem;
+        font-weight: 700;
+        text-align: center;
+        text-decoration: none;
+        transition: transform 0.15s;
+      }
+
+      .mobile-action-btn:active {
+        transform: scale(0.97);
+      }
+
+      .mobile-call-btn {
+        background: rgba(255, 255, 255, 0.08);
+        color: #fff !important;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+      }
+
+      .mobile-whatsapp-btn {
+        background: #25d366 !important;
+        color: #ffffff !important;
+        border: 1px solid #20bd5a !important;
+        box-shadow: 0 4px 16px rgba(37, 211, 102, 0.35) !important;
+      }
+
+      .mobile-whatsapp-btn span {
+        color: #ffffff !important;
+      }
+
+      .mobile-whatsapp-btn svg {
+        fill: #ffffff !important;
+      }
+
+      .day-mode .mobile-bottom-bar {
+        background: rgba(255, 255, 255, 0.96);
+        border-top-color: rgba(0, 0, 0, 0.1);
+      }
+
+      .day-mode .mobile-call-btn {
+        background: #f1f5f9;
+        color: #0f172a !important;
+        border-color: #cbd5e1;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
   <!-- Star Canvas & Aurora -->
@@ -1110,8 +1341,10 @@
         <div class="logo-glow-ring">
           <img src="assets/logo.png" alt="MoonCliq Logo" class="logo-img" width="40" height="40" />
         </div>
-        <img src="assets/mooncliq-wordmark-dark.png" alt="MoonCliq" class="nav-wordmark-img wordmark-dark-mode" width="171" height="38" />
-        <img src="assets/mooncliq-logo-clean.png" alt="MoonCliq" class="nav-wordmark-img wordmark-day-mode" width="177" height="38" />
+        <img src="assets/mooncliq-wordmark-dark.png" alt="MoonCliq" class="nav-wordmark-img wordmark-dark-mode"
+          width="171" height="38" />
+        <img src="assets/mooncliq-logo-clean.png" alt="MoonCliq" class="nav-wordmark-img wordmark-day-mode" width="177"
+          height="38" />
       </a>
       <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
         <span></span><span></span><span></span>
@@ -1291,7 +1524,8 @@
       <div>
         <div class="service-brand-badge">
           <div class="brand-icon-mini">
-            <img src="assets/aws.svg" alt="AWS Cloud Consulting Partner" width="20" height="20" style="object-fit:contain;" />
+            <img src="assets/aws.svg" alt="AWS Cloud Consulting Partner" width="20" height="20"
+              style="object-fit:contain;" />
           </div>
           <span>Certified AWS Cloud Consulting</span>
         </div>
@@ -1299,11 +1533,18 @@
           Enterprise <span class="logo-accent">AWS Cloud Infrastructure</span> & DevOps Architecture
         </h1>
         <p class="hero-subtitle">
-          Architect resilient, auto-scaling cloud environments with certified AWS consultants. Serverless Lambda APIs, secure PostgreSQL/RDS databases, and zero-downtime CI/CD pipelines.
+          Architect resilient, auto-scaling cloud environments with certified AWS consultants. Serverless Lambda APIs,
+          secure PostgreSQL/RDS databases, and zero-downtime CI/CD pipelines.
         </p>
         <div class="hero-action-group">
-          <a href="https://wa.me/919998663338?text=Hi%20MoonCliq%2C%20I%20need%20certified%20AWS%20cloud%20architecture%2C%20DevOps%2C%20and%20serverless%20infrastructure%20consulting." target="_blank" rel="noopener" class="btn-primary" style="background:#25d366; border:1px solid #20bd5a; box-shadow:0 6px 24px rgba(37,211,102,0.35); display:inline-flex; align-items:center; gap:8px;">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="#ffffff" style="display:inline-block; vertical-align:middle; flex-shrink:0;"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+          <a href="https://wa.me/919998663338?text=Hi%20MoonCliq%2C%20I%20need%20certified%20AWS%20cloud%20architecture%2C%20DevOps%2C%20and%20serverless%20infrastructure%20consulting."
+            target="_blank" rel="noopener" class="btn-primary"
+            style="background:#25d366; border:1px solid #20bd5a; box-shadow:0 6px 24px rgba(37,211,102,0.35); display:inline-flex; align-items:center; gap:8px;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#ffffff"
+              style="display:inline-block; vertical-align:middle; flex-shrink:0;">
+              <path
+                d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+            </svg>
             Book Free Architecture Audit
           </a>
           <a href="#capabilities" class="btn-outline">Explore Capabilities</a>
@@ -1314,7 +1555,8 @@
       <div class="hero-graphic-box">
         <div class="graphic-header">
           <div class="zoho-logo-wrap">
-            <img src="assets/aws.svg" alt="AWS Serverless Architecture" width="44" height="44" style="object-fit:contain;" />
+            <img src="assets/aws.svg" alt="AWS Serverless Architecture" width="44" height="44"
+              style="object-fit:contain;" />
           </div>
           <div>
             <h3 style="font-size: 20px; font-weight: 800;">AWS Serverless Architecture</h3>
@@ -1347,17 +1589,22 @@
       <div class="section-head">
         <span class="section-tag">High-Intent Capabilities</span>
         <h2 class="section-title">Our AWS Cloud Capabilities</h2>
-        <p class="section-subtitle">We don't settle for out-of-the-box defaults. Our engineers craft tailored Deluge scripts, automated blueprints, and deep API integrations.</p>
+        <p class="section-subtitle">We don't settle for out-of-the-box defaults. Our engineers craft tailored Deluge
+          scripts, automated blueprints, and deep API integrations.</p>
       </div>
 
       <div class="capabilities-grid">
         <!-- 1. Blueprint Automation -->
         <article class="glass-card">
           <div class="card-icon-pill">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path></svg>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2.2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
+            </svg>
           </div>
           <h3>Serverless & Microservices Architecture</h3>
-          <p>Cut server idle costs with event-driven serverless architectures using AWS Lambda, API Gateway, and SQS/SNS message queues that scale instantaneously on demand.</p>
+          <p>Cut server idle costs with event-driven serverless architectures using AWS Lambda, API Gateway, and SQS/SNS
+            message queues that scale instantaneously on demand.</p>
           <ul class="feature-points">
             <li><span class="bullet-chk">✓</span> Pay-per-execution cost efficiency</li>
             <li><span class="bullet-chk">✓</span> Auto-scaling from 1 to 1,000,000 concurrent users</li>
@@ -1368,10 +1615,19 @@
         <!-- 2. Deluge Scripting -->
         <article class="glass-card">
           <div class="card-icon-pill">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="16.5" y1="9.4" x2="7.5" y2="4.21"></line><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2.2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <line x1="16.5" y1="9.4" x2="7.5" y2="4.21"></line>
+              <path
+                d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+              </path>
+              <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+              <line x1="12" y1="22.08" x2="12" y2="12"></line>
+            </svg>
           </div>
           <h3>Containerization & ECS/EKS Orchestration</h3>
-          <p>Package complex web and backend services into high-performance Docker containers running on AWS Fargate or Elastic Kubernetes Service (EKS) with automated health recovery.</p>
+          <p>Package complex web and backend services into high-performance Docker containers running on AWS Fargate or
+            Elastic Kubernetes Service (EKS) with automated health recovery.</p>
           <ul class="feature-points">
             <li><span class="bullet-chk">✓</span> Multi-zone high availability cluster design</li>
             <li><span class="bullet-chk">✓</span> Application Load Balancer (ALB) traffic routing</li>
@@ -1382,10 +1638,17 @@
         <!-- 3. Hierarchy & Security -->
         <article class="glass-card">
           <div class="card-icon-pill">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="3" x2="6" y2="15"></line><circle cx="18" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><path d="M18 9a9 9 0 0 1-9 9"></path></svg>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2.2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <line x1="6" y1="3" x2="6" y2="15"></line>
+              <circle cx="18" cy="6" r="3"></circle>
+              <circle cx="6" cy="18" r="3"></circle>
+              <path d="M18 9a9 9 0 0 1-9 9"></path>
+            </svg>
           </div>
           <h3>DevOps & Automated CI/CD Pipelines</h3>
-          <p>Streamline code shipping from GitHub to production. We configure automated testing, blue-green deployment pipelines, and CloudWatch telemetry with zero downtime.</p>
+          <p>Streamline code shipping from GitHub to production. We configure automated testing, blue-green deployment
+            pipelines, and CloudWatch telemetry with zero downtime.</p>
           <ul class="feature-points">
             <li><span class="bullet-chk">✓</span> GitHub Actions & AWS CodePipeline automation</li>
             <li><span class="bullet-chk">✓</span> Blue/Green and Canary deployment strategies</li>
@@ -1448,29 +1711,34 @@
       <div class="section-head">
         <span class="section-tag">Proven Engineering Methodology</span>
         <h2 class="section-title">Our 4-Phase Implementation Roadmap</h2>
-        <p class="section-subtitle">Structured, milestone-driven execution designed to launch your CRM without interrupting active sales conversations.</p>
+        <p class="section-subtitle">Structured, milestone-driven execution designed to launch your CRM without
+          interrupting active sales conversations.</p>
       </div>
 
       <div class="process-timeline">
         <div class="step-box">
           <div class="step-num">01</div>
           <h4>Process Audit & Scoping</h4>
-          <p>We analyze your sales funnel, interview key stakeholders, and define mandatory field schemas, pipeline stages, and integration criteria.</p>
+          <p>We analyze your sales funnel, interview key stakeholders, and define mandatory field schemas, pipeline
+            stages, and integration criteria.</p>
         </div>
         <div class="step-box">
           <div class="step-num">02</div>
           <h4>Staging Sandbox Build</h4>
-          <p>We configure custom modules, write Deluge functions, and connect third-party webhooks inside an isolated staging environment.</p>
+          <p>We configure custom modules, write Deluge functions, and connect third-party webhooks inside an isolated
+            staging environment.</p>
         </div>
         <div class="step-box">
           <div class="step-num">03</div>
           <h4>Data Migration & Testing</h4>
-          <p>Legacy databases are cleaned, de-duped, and imported with complete field verification. End-to-end stress testing validates every trigger.</p>
+          <p>Legacy databases are cleaned, de-duped, and imported with complete field verification. End-to-end stress
+            testing validates every trigger.</p>
         </div>
         <div class="step-box">
           <div class="step-num">04</div>
           <h4>Team Training & Go-Live</h4>
-          <p>Live interactive training for sales reps and management, complete SOP documentation, and 30 days of complimentary hypercare support.</p>
+          <p>Live interactive training for sales reps and management, complete SOP documentation, and 30 days of
+            complimentary hypercare support.</p>
         </div>
       </div>
     </section>
@@ -1480,7 +1748,8 @@
       <div class="section-head">
         <span class="section-tag">Clear Answers</span>
         <h2 class="section-title">Frequently Asked Questions</h2>
-        <p class="section-subtitle">Everything you need to know about Zoho CRM pricing, deployment timelines, and API integrations.</p>
+        <p class="section-subtitle">Everything you need to know about Zoho CRM pricing, deployment timelines, and API
+          integrations.</p>
       </div>
 
       <div class="faq-wrapper">
@@ -1490,7 +1759,8 @@
             <span class="faq-icon">▾</span>
           </div>
           <div class="faq-answer">
-            With serverless architectures like AWS Lambda and DynamoDB, you never pay for idle computing power. You are billed strictly per millisecond of compute time consumed.
+            With serverless architectures like AWS Lambda and DynamoDB, you never pay for idle computing power. You are
+            billed strictly per millisecond of compute time consumed.
           </div>
         </div>
 
@@ -1500,7 +1770,8 @@
             <span class="faq-icon">▾</span>
           </div>
           <div class="faq-answer">
-            Yes! We specialize in zero-downtime database and container migrations from legacy hosting providers to AWS with full DNS and SSL cutover management.
+            Yes! We specialize in zero-downtime database and container migrations from legacy hosting providers to AWS
+            with full DNS and SSL cutover management.
           </div>
         </div>
 
@@ -1510,7 +1781,8 @@
             <span class="faq-icon">▾</span>
           </div>
           <div class="faq-answer">
-            Yes, our DevOps engineers offer ongoing infrastructure management, automated security patching, cost-optimization audits, and 24/7 SLA monitoring.
+            Yes, our DevOps engineers offer ongoing infrastructure management, automated security patching,
+            cost-optimization audits, and 24/7 SLA monitoring.
           </div>
         </div>
 
@@ -1520,7 +1792,8 @@
             <span class="faq-icon">▾</span>
           </div>
           <div class="faq-answer">
-            Yes, every implementation includes 30 days of complimentary post-deployment support. We also provide monthly retainer packages for continuous Deluge development and workflow optimizations.
+            Yes, every implementation includes 30 days of complimentary post-deployment support. We also provide monthly
+            retainer packages for continuous Deluge development and workflow optimizations.
           </div>
         </div>
       </div>
@@ -1532,10 +1805,17 @@
         Modernize Your Cloud Architecture Today
       </h2>
       <p style="color: var(--txt2); max-width: 600px; margin: 0 auto 30px; font-size: 16px;">
-        Book a 30-minute infrastructure audit with our certified AWS cloud architects to optimize performance and reduce cloud spend.
+        Book a 30-minute infrastructure audit with our certified AWS cloud architects to optimize performance and reduce
+        cloud spend.
       </p>
-      <a href="https://wa.me/919998663338?text=Hi%20MoonCliq%2C%20I%20need%20certified%20AWS%20cloud%20architecture%2C%20DevOps%2C%20and%20serverless%20infrastructure%20consulting." target="_blank" rel="noopener" class="btn-primary cta-btn-responsive" style="background:#25d366; border:1px solid #20bd5a; box-shadow:0 6px 24px rgba(37,211,102,0.35);">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="#ffffff" style="display:inline-block; vertical-align:middle; flex-shrink:0;"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+      <a href="https://wa.me/919998663338?text=Hi%20MoonCliq%2C%20I%20need%20certified%20AWS%20cloud%20architecture%2C%20DevOps%2C%20and%20serverless%20infrastructure%20consulting."
+        target="_blank" rel="noopener" class="btn-primary cta-btn-responsive"
+        style="background:#25d366; border:1px solid #20bd5a; box-shadow:0 6px 24px rgba(37,211,102,0.35);">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="#ffffff"
+          style="display:inline-block; vertical-align:middle; flex-shrink:0;">
+          <path
+            d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+        </svg>
         Claim Your Free 30-Min Audit
       </a>
     </section>
@@ -1549,19 +1829,24 @@
         <div class="footer-brand">
           <div class="footer-logo">
             <div class="logo-glow-ring">
-              <img src="assets/logo.png" alt="MoonCliq" class="logo-img" width="38" height="38" loading="lazy" decoding="async"
+              <img src="assets/logo.png" alt="MoonCliq" class="logo-img" width="38" height="38" loading="lazy"
+                decoding="async"
                 onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'%235b6ef5\'><circle cx=\'12\' cy=\'12\' r=\'10\'/></svg>'" />
             </div>
-            <img src="assets/mooncliq-wordmark-dark.png" alt="MoonCliq" class="nav-wordmark-img wordmark-dark-mode" width="171" height="38" />
-        <img src="assets/mooncliq-logo-clean.png" alt="MoonCliq" class="nav-wordmark-img wordmark-day-mode" width="177" height="38" />
+            <img src="assets/mooncliq-wordmark-dark.png" alt="MoonCliq" class="nav-wordmark-img wordmark-dark-mode"
+              width="171" height="38" />
+            <img src="assets/mooncliq-logo-clean.png" alt="MoonCliq" class="nav-wordmark-img wordmark-day-mode"
+              width="177" height="38" />
           </div>
           <p class="footer-tagline">Authorised Zoho Partner and technology services company in Surat. Software and
             systems that fit how your business actually works.</p>
 
           <div class="footer-trust-box">
             <div class="footer-partner-badge-wrap">
-              <img src="assets/zoho-partner-horizontal-dark.webp" alt="Zoho Authorized Partner" class="footer-zoho-badge badge-dark" width="172" height="48" loading="lazy" decoding="async" />
-              <img src="assets/zoho-partner-horizontal.webp" alt="Zoho Authorized Partner" class="footer-zoho-badge badge-light" width="172" height="48" loading="lazy" decoding="async" />
+              <img src="assets/zoho-partner-horizontal-dark.webp" alt="Zoho Authorized Partner"
+                class="footer-zoho-badge badge-dark" width="172" height="48" loading="lazy" decoding="async" />
+              <img src="assets/zoho-partner-horizontal.webp" alt="Zoho Authorized Partner"
+                class="footer-zoho-badge badge-light" width="172" height="48" loading="lazy" decoding="async" />
             </div>
             <div class="footer-location-info">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1572,7 +1857,7 @@
             </div>
             <div class="footer-contact-fast">
               <a href="tel:+919998663338" class="footer-quick-link">📞 +91 99986 63338</a>
-              <a href="mailto:contact@mooncliq.com" class="footer-quick-link">✉ hello@mooncliq.com</a>
+              <a href="mailto:hello@mooncliq.com" class="footer-quick-link">✉ hello@mooncliq.com</a>
             </div>
           </div>
         </div>
@@ -1628,7 +1913,7 @@
     requestAnimationFrame(raf);
 
     /* -- DAY / NIGHT THEME SWITCHER -- */
-        /* ── DAY / NIGHT THEME SWITCHER (SYNCED ACROSS ALL PAGES) ── */
+    /* ── DAY / NIGHT THEME SWITCHER (SYNCED ACROSS ALL PAGES) ── */
     const themeToggle = document.getElementById('themeToggle');
     function applyDayMode(isDay, save = false) {
       document.documentElement.classList.toggle('day-mode', isDay);
@@ -1686,8 +1971,8 @@
           if (s.y < 0) s.y = canvas.height;
           ctx.beginPath();
           ctx.arc(s.x, s.y, s.radius, 0, Math.PI * 2);
-          ctx.fillStyle = 
-gba(167, 139, 250, );
+          ctx.fillStyle =
+            gba(167, 139, 250,);
           ctx.fill();
         }
       }
@@ -1710,12 +1995,17 @@ gba(167, 139, 250, );
       </svg>
       <span>Call Us</span>
     </a>
-    <a href="https://wa.me/919998663338?text=Hi%20MoonCliq%2C%20I%20need%20certified%20AWS%20cloud%20architecture%2C%20DevOps%2C%20and%20serverless%20infrastructure%20consulting." target="_blank" rel="noopener" class="mobile-action-btn mobile-whatsapp-btn">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="#ffffff" style="display:inline-block; vertical-align:middle; flex-shrink:0;"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+    <a href="https://wa.me/919998663338?text=Hi%20MoonCliq%2C%20I%20need%20certified%20AWS%20cloud%20architecture%2C%20DevOps%2C%20and%20serverless%20infrastructure%20consulting."
+      target="_blank" rel="noopener" class="mobile-action-btn mobile-whatsapp-btn">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="#ffffff"
+        style="display:inline-block; vertical-align:middle; flex-shrink:0;">
+        <path
+          d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+      </svg>
       <span>WhatsApp</span>
     </a>
   </div>
 
 </body>
-</html>
 
+</html>
