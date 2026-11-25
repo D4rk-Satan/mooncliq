@@ -1,0 +1,608 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MEASUREMENT_ID"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MEASUREMENT_ID');
+</script>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MoonCliq Blog: Zoho &amp; Automation Guides</title>
+<meta name="description" content="Guides on Zoho CRM, Books, Inventory, Creator, WhatsApp automation and custom software from MoonCliq, an authorised Zoho partner.">
+<link rel="canonical" href="https://mooncliq.com/blog">
+<meta property="og:type" content="website"><meta property="og:title" content="MoonCliq Blog: Zoho &amp; Automation Guides"><meta property="og:description" content="Guides on Zoho CRM, Books, Inventory, Creator, WhatsApp automation and custom software from MoonCliq, an authorised Zoho partner."><meta property="og:url" content="https://mooncliq.com/blog"><meta property="og:image" content="https://mooncliq.com/assets/og-home.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;600&display=swap" rel="stylesheet">
+<style>body{margin:0;background:#F4F0FF;font-family:Inter,system-ui,sans-serif;color:#1B1446;line-height:1.5}
+a{color:inherit;text-decoration:none}h1,h2,h3,p{margin:0}h1,h2,h3{font-family:Outfit,Inter,sans-serif;font-weight:400}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 26px;border-radius:999px;font-weight:600;font-size:16px;border:0;cursor:pointer;font-family:inherit}
+.gold{background:#F6D98B;color:#1A1440}.out{border:1px solid #8FA2F0;color:#fff}
+.card{background:#fff;border:1px solid #DDD5F5;border-radius:20px;padding:28px}
+.muted{color:#4F4A80;line-height:1.65}.eyebrow{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#4B3FBF;font-weight:600}
+.sec{padding:72px 0}.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.chip{border:1px solid #B9AEEA;border-radius:999px;padding:6px 14px;font-size:14px;color:#4B3FBF;background:#fff}
+.dark{background:#0B1040;color:#fff;border-radius:32px;padding:44px 36px}
+
+header.top .in{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:68px}
+.logo{display:flex;align-items:center;gap:10px;font-family:Outfit,sans-serif;font-weight:600;font-size:24px}
+.logo img{border-radius:50%;box-shadow:0 0 18px rgba(160,170,255,.55)}
+.nav{display:flex;gap:22px;align-items:center;font-size:15px}.beta{font-size:11px;font-weight:700;background:#3A2D0A;color:#F5B83D;border-radius:99px;padding:2px 8px}
+.mn{display:none}.mn summary{list-style:none;cursor:pointer;min-height:44px;min-width:44px;display:flex;align-items:center;justify-content:center;font-weight:600}
+.mn div{position:absolute;left:0;right:0;top:68px;background:#0B1040;padding:16px 24px;display:flex;flex-direction:column;gap:14px}
+@media(max-width:900px){.nav{display:none}.mn{display:block}.dark{padding:32px 20px}.sec{padding:52px 0}.btn{width:100%}}
+.hero{background:linear-gradient(180deg,#4A2C94 0%,#25318F 50%,#0B1550 100%);color:#fff;position:relative;overflow:hidden}
+.hero h1{font-size:clamp(30px,4.6vw,50px);line-height:1.12;max-width:860px}
+details.faq{background:#fff;border:1px solid #DDD5F5;border-radius:16px;padding:18px 22px}details.faq summary{cursor:pointer;font-weight:600}details.faq p{margin-top:10px}
+.field{box-sizing:border-box;width:100%;min-height:48px;background:#0A1140;border:1px solid #2F3C9A;border-radius:10px;padding:0 14px;color:#EAF0FF;font:inherit;font-size:15px}.field::placeholder{color:#9FB0E8}
+.fgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.ph{display:flex;flex-direction:column;gap:10px}.ph p{color:#B8C4F0;font-size:15px;line-height:1.6}
+footer{background:#060C32;color:#A8B7EE}footer a{font-size:14px}
+:focus-visible{outline:3px solid #F6D98B;outline-offset:2px}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}.prose p{margin:0 0 16px;color:#2E2860;line-height:1.75;font-size:17px}.prose h2{font-size:28px;margin:36px 0 12px}.prose li{margin-bottom:8px;line-height:1.7;color:#2E2860;font-size:17px}
+/* Header & Floating Glass Bar */
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            width: 100%;
+            background: rgba(8,14,64,.94);
+            border-bottom: 1px solid rgba(255,255,255,.12);
+            transition: all .28s cubic-bezier(.16,1,.3,1);
+        }
+        .site-header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            min-height: 68px;
+            transition: all .28s cubic-bezier(.16,1,.3,1);
+        }
+        .site-header.is-scrolled {
+            position: fixed;
+            top: 14px;
+            left: 0;
+            right: 0;
+            max-width: 1160px;
+            margin: 0 auto;
+            padding: 0 24px;
+            box-sizing: border-box;
+            background: transparent;
+            border-bottom: none;
+            animation: headerSlideDown .3s cubic-bezier(.16,1,.3,1);
+        }
+        @keyframes headerSlideDown {
+            from { transform: translateY(-20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        .site-header.is-scrolled .site-header-inner {
+            background: rgba(10, 16, 56, 0.88);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.16);
+            border-radius: 999px;
+            box-shadow: 0 16px 40px -10px rgba(0, 0, 0, 0.65), 0 0 0 1px rgba(143, 162, 240, 0.25);
+            padding: 10px 24px;
+            min-height: 52px;
+        }
+        .site-header.is-scrolled .logo img {
+            width: 36px !important;
+            height: 36px !important;
+        }
+        .site-header.is-scrolled .nav {
+            font-size: 14px !important;
+            gap: 18px !important;
+        }
+        .site-header.is-scrolled .nav-cta {
+            background: #F6D98B !important;
+            color: #1A1440 !important;
+            box-shadow: 0 4px 16px rgba(246, 217, 139, 0.35);
+        }
+
+header.top .in{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:68px}
+.logo{display:flex;align-items:center;gap:10px;font-family:Outfit,sans-serif;font-weight:600;font-size:24px}
+.logo img{border-radius:50%;box-shadow:0 0 18px rgba(160,170,255,.55)}
+.nav{display:flex;gap:22px;align-items:center;font-size:15px}.beta{font-size:11px;font-weight:700;background:#3A2D0A;color:#F5B83D;border-radius:99px;padding:2px 8px}
+.mn{display:none}.mn summary{list-style:none;cursor:pointer;min-height:44px;min-width:44px;display:flex;align-items:center;justify-content:center;font-weight:600}
+.mn div{position:absolute;left:0;right:0;top:68px;background:#0B1040;padding:16px 24px;display:flex;flex-direction:column;gap:14px}
+@media(max-width:900px){.nav{display:none}.mn{display:block}.dark{padding:32px 20px}.sec{padding:52px 0}.btn{width:100%}}
+.hero{background:linear-gradient(180deg,#4A2C94 0%,#25318F 50%,#0B1550 100%);color:#fff;position:relative;overflow:hidden}
+.hero h1{font-size:clamp(30px,4.6vw,50px);line-height:1.12;max-width:860px}
+details.faq{background:#fff;border:1px solid #DDD5F5;border-radius:16px;padding:18px 22px}details.faq summary{cursor:pointer;font-weight:600}details.faq p{margin-top:10px}
+.field{box-sizing:border-box;width:100%;min-height:48px;background:#0A1140;border:1px solid #2F3C9A;border-radius:10px;padding:0 14px;color:#EAF0FF;font:inherit;font-size:15px}.field::placeholder{color:#9FB0E8}
+.fgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.ph{display:flex;flex-direction:column;gap:10px}.ph p{color:#B8C4F0;font-size:15px;line-height:1.6}
+footer{background:#060C32;color:#A8B7EE}footer a{font-size:14px}
+:focus-visible{outline:3px solid #F6D98B;outline-offset:2px}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}.prose p{margin:0 0 16px;color:#2E2860;line-height:1.75;font-size:17px}.prose h2{font-size:28px;margin:36px 0 12px}.prose li{margin-bottom:8px;line-height:1.7;color:#2E2860;font-size:17px}
+        /* Header & Floating Glass Bar */
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            width: 100%;
+            background: rgba(8, 14, 64, 0.95);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+            color: #fff;
+            transition: all .28s cubic-bezier(.16,1,.3,1);
+        }
+        .site-header a {
+            color: #E3E8FF;
+            transition: color .2s ease;
+        }
+        .site-header a.btn.gold,
+        .site-header .nav-cta {
+            color: #1A1440 !important;
+            font-weight: 600 !important;
+        }
+        .site-header a:hover {
+            color: #F6D98B;
+        }
+        .site-header a.btn.gold:hover,
+        .site-header .nav-cta:hover {
+            color: #1A1440 !important;
+        }
+        .site-header .logo {
+            color: #fff !important;
+        }
+        .site-header .nav a {
+            color: #E3E8FF;
+        }
+        .site-header .nav a:hover {
+            color: #F6D98B;
+        }
+        .site-header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            min-height: 68px;
+            transition: all .28s cubic-bezier(.16,1,.3,1);
+        }
+        .site-header.is-scrolled {
+            position: fixed;
+            top: 14px;
+            left: 0;
+            right: 0;
+            max-width: 1160px;
+            margin: 0 auto;
+            padding: 0 24px;
+            box-sizing: border-box;
+            background: transparent !important;
+            border-bottom: none !important;
+            animation: headerSlideDown .3s cubic-bezier(.16,1,.3,1);
+        }
+        @keyframes headerSlideDown {
+            from { transform: translateY(-20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        .site-header.is-scrolled .site-header-inner {
+            background: rgba(10, 16, 56, 0.92) !important;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.16) !important;
+            border-radius: 999px;
+            box-shadow: 0 16px 40px -10px rgba(0, 0, 0, 0.65), 0 0 0 1px rgba(143, 162, 240, 0.25);
+            padding: 8px 22px;
+            min-height: 52px;
+        }
+        .site-header.is-scrolled .logo img {
+            width: 36px !important;
+            height: 36px !important;
+        }
+        .site-header.is-scrolled .nav {
+            font-size: 14px !important;
+            gap: 18px !important;
+        }
+        .site-header.is-scrolled .nav-cta {
+            background: #F6D98B !important;
+            color: #1A1440 !important;
+            box-shadow: 0 4px 16px rgba(246, 217, 139, 0.35);
+        }
+
+/* DIRECTION A: Luxury Stripe/Linear Minimal 2-Panel Mega Menu (Zero Emojis, 60fps) */
+        .nav-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .nav-dropdown-trigger {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            cursor: pointer;
+            padding: 8px 16px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, .08);
+            border: 1px solid rgba(255, 255, 255, .2);
+            color: #fff;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all .2s ease;
+        }
+        .nav-dropdown-trigger:hover,
+        .nav-dropdown:focus-within .nav-dropdown-trigger {
+            background: rgba(255, 255, 255, .16);
+            border-color: #F6D98B;
+            color: #F6D98B;
+        }
+        .nav-dropdown-trigger svg {
+            transition: transform .2s ease;
+        }
+        .nav-dropdown:hover .nav-dropdown-trigger svg,
+        .nav-dropdown:focus-within .nav-dropdown-trigger svg {
+            transform: rotate(180deg);
+        }
+        .mega-menu {
+            position: absolute;
+            top: calc(100% + 14px);
+            left: 50%;
+            transform: translateX(-50%) translateY(8px);
+            width: min(94vw, 840px);
+            background: #0B0E28;
+            border: 1px solid rgba(255, 255, 255, .14);
+            border-radius: 20px;
+            box-shadow: 0 30px 70px rgba(0, 0, 0, .8), 0 0 0 1px rgba(255, 255, 255, .06);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            padding: 24px;
+            display: none;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity .16s ease, transform .16s ease;
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+        .nav-dropdown:hover .mega-menu,
+        .nav-dropdown:focus-within .mega-menu {
+            display: block;
+            opacity: 1;
+            pointer-events: auto;
+            transform: translateX(-50%) translateY(0);
+        }
+        .nav-dropdown::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            height: 16px;
+        }
+        .sol-col {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .sol-group-tag {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            color: #8D99CE;
+            margin-bottom: 4px;
+        }
+        .sol-link {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            text-decoration: none;
+            padding: 8px 10px;
+            border-radius: 10px;
+            transition: background .15s ease, transform .12s ease;
+        }
+        .sol-link:hover {
+            background: rgba(255, 255, 255, .06);
+            transform: translateX(3px);
+        }
+        .sol-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, .05);
+            border: 1px solid rgba(255, 255, 255, .1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #F6D98B;
+            flex-shrink: 0;
+            transition: border-color .15s ease, background .15s ease;
+        }
+        .sol-link:hover .sol-icon {
+            border-color: #F6D98B;
+            background: rgba(246, 217, 139, .1);
+        }
+        .sol-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: color .15s ease;
+        }
+        .sol-link:hover .sol-title {
+            color: #F6D98B;
+        }
+        .sol-desc {
+            font-size: 12px;
+            color: #8EA0D6;
+            line-height: 1.4;
+            margin-top: 2px;
+        }
+        /* Right Spotlight Card */
+        .spotlight-card {
+            background: linear-gradient(170deg, rgba(255, 255, 255, .07) 0%, rgba(255, 255, 255, .02) 100%);
+            border: 1px solid rgba(255, 255, 255, .12);
+            border-radius: 16px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+            box-sizing: border-box;
+            transition: border-color .2s ease;
+        }
+        .spotlight-card:hover {
+            border-color: rgba(246, 217, 139, .4);
+        }
+
+        
+
+@keyframes formFadeIn{from{opacity:0;transform:scale(0.96)}to{opacity:1;transform:scale(1)}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Blog", "name": "MoonCliq Blog", "url": "https://mooncliq.com/blog"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mooncliq.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://mooncliq.com/blog"}]}</script>
+</head>
+<body>
+<a href="#main" style="position:absolute;left:-999px">Skip to content</a>
+<a href="https://crm.mooncliq.com/" style="display:block;background:#F6D98B;color:#1A1440;text-align:center;padding:10px 16px;font-size:14px;font-weight:600">moonCliq CRM public launch: 15 Jan 2027 · Start your 14-day free trial now →</a>
+<header class="site-header" id="siteHeader"><div class="wrap site-header-inner"><a href="index.html" class="logo"><img src="assets/logo.png" alt="moonCliq logo" width="44" height="44" style="transition:all .28s ease">moon<span style="color:#F6D98B">Cliq</span></a>
+<nav class="nav" aria-label="Main" style="transition:all .28s ease"><a href="index.html">Home</a><div class="nav-dropdown">
+                                <span class="nav-dropdown-trigger">
+                                    Services
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                                </span>
+                                <div class="mega-menu">
+                                    <div style="display:grid;grid-template-columns:1.8fr 1.2fr;gap:24px;text-align:left">
+                                        <!-- Left Panel: Core Client Solutions (2 Columns) -->
+                                        <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px">
+                                            <div class="sol-col">
+                                                <span class="sol-group-tag">Zoho Enterprise</span>
+                                                <a href="zoho-crm.html" class="sol-link">
+                                                    <div class="sol-icon">
+                                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg>
+                                                    </div>
+                                                    <div>
+                                                        <div class="sol-title">Zoho CRM Architecture</div>
+                                                        <div class="sol-desc">Lead routing, pipeline automation &amp; KPI analytics</div>
+                                                    </div>
+                                                </a>
+                                                <a href="zoho-books.html" class="sol-link">
+                                                    <div class="sol-icon">
+                                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.29 7 12 12 20.71 7"/><line x1="12" y1="22" x2="12" y2="12"/></svg>
+                                                    </div>
+                                                    <div>
+                                                        <div class="sol-title">Books, Inventory &amp; GST</div>
+                                                        <div class="sol-desc">Multi-warehouse billing, e-way bills &amp; stock sync</div>
+                                                    </div>
+                                                </a>
+                                                <a href="zoho-creator.html" class="sol-link">
+                                                    <div class="sol-icon">
+                                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+                                                    </div>
+                                                    <div>
+                                                        <div class="sol-title">Zoho Creator Low-Code</div>
+                                                        <div class="sol-desc">Custom vendor portals &amp; tailor-made operational ERPs</div>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <div class="sol-col">
+                                                <span class="sol-group-tag">Cloud &amp; Development</span>
+                                                <a href="whatsapp-automation.html" class="sol-link">
+                                                    <div class="sol-icon">
+                                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                                                    </div>
+                                                    <div>
+                                                        <div class="sol-title">Official WhatsApp API</div>
+                                                        <div class="sol-desc">Automated quotation dispatches, alerts &amp; chat routing</div>
+                                                    </div>
+                                                </a>
+                                                <a href="custom-app-development.html" class="sol-link">
+                                                    <div class="sol-icon">
+                                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                                                    </div>
+                                                    <div>
+                                                        <div class="sol-title">Custom Full-Stack Apps</div>
+                                                        <div class="sol-desc">High-speed Next.js, Node.js &amp; PostgreSQL systems</div>
+                                                    </div>
+                                                </a>
+                                                <a href="custom-web-development.html" class="sol-link">
+                                                    <div class="sol-icon">
+                                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>
+                                                    </div>
+                                                    <div>
+                                                        <div class="sol-title">AWS &amp; API Integrations</div>
+                                                        <div class="sol-desc">Shopify, payment gateways &amp; custom webhooks</div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <!-- Right Panel: Spotlight SaaS & Direct Audit -->
+                                        <div>
+                                            <div class="spotlight-card">
+                                                <div>
+                                                    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px">
+                                                        <span style="font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#F6D98B">PROPRIETARY SAAS</span>
+                                                        <span style="font-size:10px;font-weight:700;background:rgba(246,217,139,.2);color:#F6D98B;border:1px solid rgba(246,217,139,.4);padding:2px 8px;border-radius:999px">BETA</span>
+                                                    </div>
+                                                    <h4 style="font-size:16px;font-weight:600;color:#fff;margin:0 0 6px">moonCliq CRM</h4>
+                                                    <p style="font-size:12px;color:#A8B7EE;line-height:1.45;margin:0 0 14px">
+                                                        Built for sales teams that require disciplined process stages, 15-minute response tracking, and native WhatsApp logging.
+                                                    </p>
+                                                    <a href="https://crm.mooncliq.com/" style="display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:#F6D98B;text-decoration:none">
+                                                        <span>Start 14-Day Free Trial</span>
+                                                        <span>→</span>
+                                                    </a>
+                                                </div>
+                                                <div style="border-top:1px solid rgba(255,255,255,.08);padding-top:14px;margin-top:14px">
+                                                    <a href="contact.html" style="display:flex;align-items:center;justify-content:space-between;color:#fff;text-decoration:none;font-size:12px;font-weight:600">
+                                                        <span>Book Architecture Consultation</span>
+                                                        <span style="color:#F6D98B">→</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="https://crm.mooncliq.com/">Mooncliq CRM <span class="beta">BETA</span></a><a href="case-studies.html">Case Studies</a><a href="#contact" class="btn gold nav-cta" style="min-height:42px;transition:all .28s ease">Book Free Consultation</a></nav>
+<details class="mn"><summary aria-label="Menu">☰ Menu</summary><div><a href="index.html">Home</a><a href="zoho-crm.html">Zoho CRM</a><a href="zoho-books.html">Zoho Books</a><a href="whatsapp-automation.html">WhatsApp Automation</a><a href="custom-app-development.html">Custom Apps</a><a href="https://crm.mooncliq.com/">Mooncliq CRM</a><a href="case-studies.html">Case Studies</a><a href="#contact" class="btn gold">Book Free Consultation</a></div></details></div></header>
+<main id="main">
+<section class="hero"><svg viewBox="0 0 1440 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%"><g fill="#fff"><circle cx="140" cy="90" r="1.6"/><circle cx="420" cy="60" r="1.4"/><circle cx="760" cy="120" r="1.7"/><circle cx="1100" cy="70" r="1.5"/><circle cx="1330" cy="150" r="1.8"/></g><path d="M1250 50a30 30 0 1 0 26 44a24 24 0 1 1-26-44z" fill="#F6E7B4"/></svg><div class="wrap" style="position:relative;padding-top:28px;padding-bottom:72px"><nav aria-label="Breadcrumb" style="font-size:14px;color:#D3DAFF;margin-bottom:28px"><a href="index.html">Home</a> › Blog</nav><span style="display:inline-flex;align-items:center;gap:6px;border:1px solid rgba(255,255,255,.4);border-radius:999px;padding:6px 16px;font-size:13px;margin-bottom:18px;background:rgba(255,255,255,0.06);flex-wrap:wrap"><span>Authorised Zoho Partner:</span> <a href="zoho-partner-india.html" style="color:#F6D98B;text-decoration:underline;text-underline-offset:2px">India</a> · <a href="zoho-partner-uk.html" style="color:#F6D98B;text-decoration:underline;text-underline-offset:2px">UK</a> · <a href="zoho-implementation-usa.html" style="color:#F6D98B;text-decoration:underline;text-underline-offset:2px">US</a> · <a href="zoho-partner-uae.html" style="color:#F6D98B;text-decoration:underline;text-underline-offset:2px">UAE</a></span><h1>MoonCliq Blog: Zoho, WhatsApp Automation and Custom Software Guides</h1><p style="font-size:18px;line-height:1.6;color:#E3E8FF;max-width:700px;margin-top:18px">Practical, plain-language guides to help you choose, set up and get more from Zoho, WhatsApp automation and custom software.</p></div></section><section class="wrap" style="padding-top:56px;padding-bottom:40px"><div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:28px"><span class="chip">Zoho CRM</span><span class="chip">Zoho Books</span><span class="chip">Zoho Inventory</span><span class="chip">Zoho Creator</span><span class="chip">WhatsApp automation</span><span class="chip">Custom apps</span><span class="chip">Website development</span></div><a href="blog-tally-to-zoho-books-migration.html" class="card" style="display:flex;gap:28px;flex-wrap:wrap;align-items:center;padding:36px"><div style="flex:1 1 420px"><span class="eyebrow">Featured guide · Zoho Books</span><h2 style="font-size:30px;margin:10px 0">Tally to Zoho Books Migration: A Step-by-Step Guide for Indian Businesses</h2><p class="muted">A practical 7-step checklist to move ledgers, parties, items and balances without losing accuracy.</p></div><span class="btn gold">Read the guide</span></a></section><section class="wrap" style="padding-bottom:72px"><span class="eyebrow">Coming soon</span><h2 style="font-size:clamp(24px,3vw,34px);margin:10px 0 24px">Guides we are writing next</h2><div class="grid"><div class="card"><h3 style="font-size:19px">Zoho CRM implementation checklist</h3><p class="muted" style="font-size:15px">What to decide before you set up your pipeline.</p></div><div class="card"><h3 style="font-size:19px">WhatsApp Cloud API vs WhatsApp Business app</h3><p class="muted" style="font-size:15px">Which one fits your team and volume.</p></div><div class="card"><h3 style="font-size:19px">Zoho Creator vs custom code</h3><p class="muted" style="font-size:15px">How to choose the right build approach.</p></div></div></section><section id="contact" style="background:linear-gradient(180deg,#1B2A9A 0%,#0A1048 100%);color:#fff"><div class="wrap" style="display:flex;gap:40px;flex-wrap:wrap;align-items:flex-start;padding-top:72px;padding-bottom:72px">
+<div style="flex:1 1 340px;display:flex;flex-direction:column;gap:16px"><h2 style="font-size:clamp(26px,3.6vw,40px);line-height:1.15">Have a question we should answer?</h2><p style="font-size:17px;line-height:1.6;color:#D7DEFF">Tell us what you need. We reply within 24 hours with a simple plan and a fixed-scope quote.</p><p>hello@mooncliq.com<br>+91 99986 63338</p><a href="https://wa.me/919998663338" class="btn" style="background:#128C4A;color:#fff;align-self:flex-start">Chat on WhatsApp</a></div>
+<form action="/api/contact" method="post" style="flex:1 1 380px;background:rgba(8,14,64,.82);border:1px solid #27348F;border-radius:20px;padding:28px;display:flex;flex-direction:column;gap:14px">
+<input type="hidden" name="page" value="blog"><input type="text" name="website" tabindex="-1" autocomplete="off" style="display:none">
+<input class="field" name="name" aria-label="Full name" placeholder="Full name" required><input class="field" type="email" name="email" aria-label="Work email" placeholder="Work email" required><input class="field" name="phone" aria-label="WhatsApp or phone with country code" placeholder="WhatsApp / phone (with country code)" required>
+<select class="field" name="country" aria-label="Country"><option>Country</option><option>India</option><option>United States</option><option>United Kingdom</option><option>UAE</option><option>Canada</option><option>Australia</option><option>Other</option></select>
+<textarea class="field" name="message" aria-label="Message (optional)" placeholder="Message (optional)" style="min-height:90px;padding-top:12px"></textarea>
+<button class="btn gold" type="submit">Request Free Consultation</button></form></div></section>
+</main>
+<footer><div class="wrap" style="padding:56px 24px 32px;display:flex;flex-direction:column;gap:32px"><div style="display:flex;gap:32px;flex-wrap:wrap">
+                    <div style="flex:1 1 160px;display:flex;flex-direction:column;gap:10px">
+                        <p style="font-weight:600;color:#fff">Zoho services</p>
+                        <a href="zoho-crm.html" style="font-size:14px;color:#A8B7EE">Zoho CRM</a>
+                        <a href="zoho-books.html" style="font-size:14px;color:#A8B7EE">Zoho Books</a>
+                        <a href="zoho-inventory.html" style="font-size:14px;color:#A8B7EE">Zoho Inventory</a>
+                        <a href="zoho-creator.html" style="font-size:14px;color:#A8B7EE">Zoho Creator</a>
+                        <a href="zoho-crm.html" style="font-size:14px;color:#A8B7EE">Zoho Analytics</a>
+                    </div>
+                    <div style="flex:1 1 160px;display:flex;flex-direction:column;gap:10px">
+                        <p style="font-weight:600;color:#fff">Build &amp; grow</p>
+                        <a href="custom-app-development.html" style="font-size:14px;color:#A8B7EE">Custom App Development</a>
+                        <a href="custom-web-development.html" style="font-size:14px;color:#A8B7EE">Website Development</a>
+                        <a href="custom-web-development.html" style="font-size:14px;color:#A8B7EE">Shopify Development</a>
+                        <a href="whatsapp-automation.html" style="font-size:14px;color:#A8B7EE">WhatsApp Automation</a>
+                        <a href="custom-app-development.html" style="font-size:14px;color:#A8B7EE">AWS Cloud</a>
+                    </div>
+                    <div style="flex:1 1 160px;display:flex;flex-direction:column;gap:10px">
+                        <p style="font-weight:600;color:#fff">Global Presence</p>
+                        <a href="zoho-partner-india.html" style="font-size:14px;color:#A8B7EE">Zoho Partner India</a>
+                        <a href="zoho-partner-uae.html" style="font-size:14px;color:#A8B7EE">Zoho Partner UAE</a>
+                        <a href="zoho-partner-uk.html" style="font-size:14px;color:#A8B7EE">Zoho Partner UK</a>
+                        <a href="zoho-implementation-usa.html" style="font-size:14px;color:#A8B7EE">Zoho Partner USA</a>
+                    </div>
+                    <div style="flex:1 1 150px;display:flex;flex-direction:column;gap:10px">
+                        <p style="font-weight:600;color:#fff">Company</p>
+                        <a href="about.html" style="font-size:14px;color:#A8B7EE">About Us</a>
+                        <a href="case-studies.html" style="font-size:14px;color:#A8B7EE">Case Studies</a>
+                        <a href="blog.html" style="font-size:14px;color:#A8B7EE">Blog &amp; Guides</a>
+                        <a href="https://crm.mooncliq.com/" style="font-size:14px;color:#A8B7EE">moonCliq CRM</a>
+                        <a href="contact.html" style="font-size:14px;color:#A8B7EE">Contact</a>
+                    </div>
+                    <div style="flex:1 1 130px;display:flex;flex-direction:column;gap:10px">
+                        <p style="font-weight:600;color:#fff">Legal</p>
+                        <a href="contact.html" style="font-size:14px;color:#A8B7EE">Privacy Policy</a>
+                        <a href="contact.html" style="font-size:14px;color:#A8B7EE">Terms of Service</a>
+                        <a href="contact.html" style="font-size:14px;color:#A8B7EE">Data Deletion</a>
+                    </div>
+                </div>
+                <p style="font-size:13px;border-top:1px solid #1B2670;padding-top:20px">© 2026 MoonCliq (Kshiv) · Authorised Zoho Partner · Meta Tech Provider · Headquartered in Surat, India · Serving clients worldwide</p></div></footer>
+<script>
+    (function() {
+        var siteHeader = document.getElementById('siteHeader');
+        if (siteHeader) {
+            var isScrolled = false;
+            var onScroll = function() {
+                var y = window.scrollY || window.pageYOffset || 0;
+                if (y > 70 && !isScrolled) {
+                    isScrolled = true;
+                    siteHeader.classList.add('is-scrolled');
+                } else if (y <= 70 && isScrolled) {
+                    isScrolled = false;
+                    siteHeader.classList.remove('is-scrolled');
+                }
+            };
+            window.addEventListener('scroll', onScroll, { passive: true });
+            onScroll();
+        }
+    })();
+    </script>
+
+    <!-- MoonCliq Enterprise Form & Lead Capture Handler -->
+    <script>
+    (function() {
+        var WA_NUMBER = '919998663338';
+        var form = document.querySelector('form[action="/api/contact"], form#leadForm');
+        if (!form) return;
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Honeypot check for bots
+            var honeypot = form.querySelector('input[name="website"]');
+            if (honeypot && honeypot.value) return;
+
+            var nameInput = form.querySelector('[name="name"]');
+            var emailInput = form.querySelector('[name="email"]');
+            var phoneInput = form.querySelector('[name="phone"]');
+            var countryInput = form.querySelector('[name="country"]');
+            var messageInput = form.querySelector('[name="message"]');
+            var pageInput = form.querySelector('input[name="page"]');
+
+            var name = nameInput ? nameInput.value.trim() : '';
+            var email = emailInput ? emailInput.value.trim() : '';
+            var phone = phoneInput ? phoneInput.value.trim() : '';
+            var country = countryInput ? countryInput.value : '';
+            var message = messageInput ? messageInput.value.trim() : '';
+            var page = pageInput ? pageInput.value : (document.title || 'MoonCliq Website');
+
+            // Format high-converting WhatsApp message
+            var leadText = 'ðŸ‘‹ Hi MoonCliq Team, I just submitted an inquiry on your website:';
+            leadText += '\n\nâ€¢ Name: ' + (name || 'Not provided');
+            leadText += '\nâ€¢ Work Email: ' + (email || 'Not provided');
+            leadText += '\nâ€¢ Phone / WhatsApp: ' + (phone || 'Not provided');
+            if (country && country !== 'Country') {
+                leadText += '\nâ€¢ Country: ' + country;
+            }
+            leadText += '\nâ€¢ Page / Interest: ' + page;
+            if (message) {
+                leadText += '\nâ€¢ Requirement: ' + message;
+            }
+
+            // Replace form with luxury success card
+            var formParent = form.parentElement;
+            var successCard = document.createElement('div');
+            successCard.style.cssText = 'flex:1 1 380px;background:rgba(10, 16, 56, 0.95);border:1px solid #F6D98B;border-radius:20px;padding:36px 28px;display:flex;flex-direction:column;gap:18px;align-items:center;text-align:center;box-shadow:0 20px 50px rgba(0,0,0,0.6);animation:formFadeIn .3s ease forwards';
+            
+            successCard.innerHTML = [
+                '<div style="width:64px;height:64px;border-radius:50%;background:rgba(246, 217, 139, 0.15);border:1px solid #F6D98B;display:flex;align-items:center;justify-content:center;color:#F6D98B;font-size:30px;box-shadow:0 0 24px rgba(246, 217, 139, 0.3)">âœ“</div>',
+                '<h3 style="font-size:24px;font-family:Outfit,sans-serif;color:#fff;margin:6px 0 0">Thank You, ' + (name ? name.split(' ')[0] : 'there') + '!</h3>',
+                '<p style="color:#C8D3F8;font-size:15px;line-height:1.6;margin:0;max-width:320px">We have received your details. Our tech team will review your requirement and reply within <strong>24 hours</strong> with a fixed-scope plan.</p>',
+                '<div style="width:100%;height:1px;background:rgba(255,255,255,0.1);margin:6px 0"></div>',
+                '<p style="color:#F6D98B;font-size:13px;font-weight:600;margin:0">Need immediate answers?</p>',
+                '<a href="https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(leadText) + '" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:48px;padding:0 20px;border-radius:999px;background:#128C4A;color:#fff;font-weight:600;text-decoration:none;font-size:15px;box-shadow:0 4px 18px rgba(18, 140, 74, 0.35);box-sizing:border-box">Chat directly on WhatsApp â†’</a>',
+                '<span style="font-size:12px;color:#8EA0D6">Official WhatsApp Business Â· Instant connection</span>'
+            ].join('');
+
+            form.replaceWith(successCard);
+
+            // Optional instant auto-open after 1.8s
+            setTimeout(function() {
+                var waUrl = 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(leadText);
+                window.open(waUrl, '_blank');
+            }, 1800);
+        });
+    })();
+    </script>
+
+</body></html>

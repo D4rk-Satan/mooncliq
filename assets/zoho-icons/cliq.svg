@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
-  <!-- Left chat bubble (blue) -->
-  <path fill="#1E88E5" d="M12 28 C12 20, 20 16, 28 16 C36 16, 40 20, 40 28 C40 34, 34 38, 28 38 L20 44 V38 H18 C14 38, 12 34, 12 28 Z" opacity="0.8"/>
-  <!-- Right chat bubble (cyan/teal) -->
-  <path fill="#00ACC1" d="M24 34 C24 28, 30 24, 38 24 C46 24, 52 28, 52 34 C52 40, 46 44, 38 44 H36 L30 50 V44 C26 44, 24 40, 24 34 Z"/>
-</svg>

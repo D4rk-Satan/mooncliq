@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
-  <rect x="8" y="16" width="48" height="32" rx="5" fill="#1E88E5"/>
-  <!-- Back flap -->
-  <path fill="#1565C0" d="M8 16 L32 32 L56 16 Z"/>
-  <!-- Front lines -->
-  <path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" d="M10 46 L28 32 M54 46 L36 32"/>
-</svg>

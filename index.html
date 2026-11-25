@@ -1,1470 +1,1410 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-  <link rel="canonical" href="https://mooncliq.com/" />
-  <meta property="og:url" content="https://mooncliq.com/" />
-  <meta charset="UTF-8" />
-  <script>
-    (function () {
-      try {
-        var saved = localStorage.getItem('mooncliq_theme');
-        if (saved === 'day' || (!saved && (new Date().getHours() >= 6 && new Date().getHours() < 18))) {
-          document.documentElement.classList.add('day-mode');
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MoonCliq – Zoho Partner / Meta Partner</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            background: #F4F0FF;
+            font-family: Inter, system-ui, sans-serif;
+            color: #1B1446
         }
-      } catch (e) { }
-    })();
-  </script>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MoonCliq | Zoho Partner in India</title>
-  <meta name="description"
-    content="Authorized Zoho Partner in India. Zoho CRM, Books &amp; Inventory setup, Tally migration, WhatsApp automation and Shopify stores. Book a free consultation." />
 
-  <!-- Open Graph / Facebook / WhatsApp Preview -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://mooncliq.com" />
-  <meta property="og:site_name" content="MoonCliq" />
-  <meta property="og:locale" content="en_IN" />
-  <meta property="og:title" content="Zoho Partner in India | Zoho CRM, Books, Shopify | MoonCliq" />
-  <meta property="og:description"
-    content="Authorized Zoho Partner in India. Zoho CRM, Books &amp; Inventory setup, Tally migration, WhatsApp automation and Shopify stores. Book a free consultation." />
-  <!-- TODO: Create a 1200x630 branded preview image and save as /assets/og-home.png -->
-  <meta property="og:image" content="https://mooncliq.com/assets/og-home.png" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
+        a {
+            color: inherit;
+            text-decoration: none
+        }
 
-  <!-- Twitter / X Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Zoho Partner in India | Zoho CRM, Books, Shopify | MoonCliq" />
-  <meta name="twitter:description"
-    content="Authorized Zoho Partner in India. Zoho CRM, Books &amp; Inventory setup, Tally migration, WhatsApp automation and Shopify stores. Book a free consultation." />
-  <meta name="twitter:image" content="https://mooncliq.com/assets/og-home.png" />
-  <link rel="canonical" href="https://mooncliq.com" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&family=Outfit:wght@500;600;700;800;900&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="style-v2.css" />
-  <link rel="icon" type="image/png" href="assets/favicon-32x32.png" />
-  <link rel="apple-touch-icon" href="assets/logo-clean-large.png" />
-  <!-- Lenis Smooth Inertia Scroll -->
-  <script src="assets/lenis.min.js" defer></script>
-  <!-- Google Analytics & Event Tracking -->
-  <script src="assets/analytics.js" defer></script>
+        h1,
+        h2,
+        h3,
+        p {
+            margin: 0
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: Outfit, Inter, sans-serif;
+            font-weight: 400
+        }
+
+        .wrap {
+            max-width: 1160px;
+            margin: 0 auto;
+            padding: 0 24px
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 48px;
+            padding: 0 26px;
+            border-radius: 999px;
+            font-weight: 600;
+            font-size: 16px;
+            border: 0;
+            cursor: pointer;
+            font-family: inherit
+        }
+
+        .glassbar {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border: 1px solid rgba(255, 255, 255, .35);
+            background: rgba(255, 255, 255, .12);
+            border-radius: 999px;
+            padding: 10px 18px;
+            font-size: 14px;
+            color: #fff
+        }
+
+        .lcard {
+            background: #fff;
+            border: 1px solid #DDD5F5;
+            border-radius: 20px;
+            padding: 28px
+        }
+
+        .muted {
+            color: #4F4A80;
+            line-height: 1.65
+        }
+
+        .eyebrow {
+            font-size: 13px;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+            color: #4B3FBF;
+            font-weight: 600
+        }
+
+        .sec {
+            padding-top: 80px;
+            padding-bottom: 80px
+        }
+
+        .ul {
+            border-bottom: 1px solid #1B1446;
+            padding-bottom: 4px;
+            font-weight: 600
+        }
+
+        .field {
+            box-sizing: border-box;
+            width: 100%;
+            min-height: 48px;
+            background: #0A1140;
+            border: 1px solid #2F3C9A;
+            border-radius: 10px;
+            padding: 0 14px;
+            color: #EAF0FF;
+            font: inherit;
+            font-size: 15px
+        }
+
+        .field::placeholder {
+            color: #9FB0E8
+        }
+
+        .opt {
+            min-height: 44px;
+            padding: 0 20px;
+            border-radius: 999px;
+            border: 1px solid #B9AEEA;
+            background: #fff;
+            color: #1B1446;
+            font: inherit;
+            font-weight: 600;
+            cursor: pointer
+        }
+
+        /* Zero-lag native FAQ styling */
+        details.faq-item {
+            cursor: pointer;
+            border: 1px solid #DDD5F5;
+            transition: border-color .15s ease;
+        }
+
+        details.faq-item[open] {
+            border-color: #B9AEEA;
+        }
+
+        details.faq-item summary {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            user-select: none;
+        }
+
+        details.faq-item summary::-webkit-details-marker {
+            display: none;
+        }
+
+        details.faq-item .faq-icon {
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 1;
+            transition: transform .15s ease;
+            display: inline-block;
+        }
+
+        details.faq-item[open] .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        /* Interactive Chips Styling */
+        .chip-btn {
+            cursor: pointer;
+            user-select: none;
+            transition: background .15s ease, border-color .15s ease, transform .1s ease;
+        }
+
+        .chip-btn:hover {
+            background: rgba(255, 255, 255, .22);
+            transform: translateY(-1px);
+        }
+
+        .chip-btn.active {
+            background: #F6D98B !important;
+            color: #1A1440 !important;
+            border-color: #F6D98B !important;
+            font-weight: 600;
+        }
+
+        /* DIRECTION A: Luxury Stripe/Linear Minimal 2-Panel Mega Menu (Zero Emojis, 60fps) */
+        .nav-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .nav-dropdown-trigger {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            cursor: pointer;
+            padding: 8px 16px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, .08);
+            border: 1px solid rgba(255, 255, 255, .2);
+            color: #fff;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all .2s ease;
+        }
+
+        .nav-dropdown-trigger:hover,
+        .nav-dropdown:focus-within .nav-dropdown-trigger {
+            background: rgba(255, 255, 255, .16);
+            border-color: #F6D98B;
+            color: #F6D98B;
+        }
+
+        .nav-dropdown-trigger svg {
+            transition: transform .2s ease;
+        }
+
+        .nav-dropdown:hover .nav-dropdown-trigger svg,
+        .nav-dropdown:focus-within .nav-dropdown-trigger svg {
+            transform: rotate(180deg);
+        }
+
+        .mega-menu {
+            position: absolute;
+            top: calc(100% + 14px);
+            left: 50%;
+            transform: translateX(-50%) translateY(8px);
+            width: min(94vw, 840px);
+            background: #0B0E28;
+            border: 1px solid rgba(255, 255, 255, .14);
+            border-radius: 20px;
+            box-shadow: 0 30px 70px rgba(0, 0, 0, .8), 0 0 0 1px rgba(255, 255, 255, .06);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            padding: 24px;
+            display: none;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity .16s ease, transform .16s ease;
+            z-index: 100000;
+            box-sizing: border-box;
+        }
+
+        .nav-dropdown:hover .mega-menu,
+        .nav-dropdown:focus-within .mega-menu {
+            display: block;
+            opacity: 1;
+            pointer-events: auto;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        .nav-dropdown::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            height: 16px;
+        }
+
+        .sol-col {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .sol-group-tag {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            color: #8D99CE;
+            margin-bottom: 4px;
+        }
+
+        .sol-link {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            text-decoration: none;
+            padding: 8px 10px;
+            border-radius: 10px;
+            transition: background .15s ease, transform .12s ease;
+        }
+
+        .sol-link:hover {
+            background: rgba(255, 255, 255, .06);
+            transform: translateX(3px);
+        }
+
+        .sol-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, .05);
+            border: 1px solid rgba(255, 255, 255, .1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #F6D98B;
+            flex-shrink: 0;
+            transition: border-color .15s ease, background .15s ease;
+        }
+
+        .sol-link:hover .sol-icon {
+            border-color: #F6D98B;
+            background: rgba(246, 217, 139, .1);
+        }
+
+        .sol-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: color .15s ease;
+        }
+
+        .sol-link:hover .sol-title {
+            color: #F6D98B;
+        }
+
+        .sol-desc {
+            font-size: 12px;
+            color: #8EA0D6;
+            line-height: 1.4;
+            margin-top: 2px;
+        }
+
+        /* Right Spotlight Card */
+        .spotlight-card {
+            background: linear-gradient(170deg, rgba(255, 255, 255, .07) 0%, rgba(255, 255, 255, .02) 100%);
+            border: 1px solid rgba(255, 255, 255, .12);
+            border-radius: 16px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+            box-sizing: border-box;
+            transition: border-color .2s ease;
+        }
+
+        .spotlight-card:hover {
+            border-color: rgba(246, 217, 139, .4);
+        }
+
+        /* Sticky Floating Navigation Bar */
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 99999;
+            width: 100%;
+            color: #fff;
+            transition: all .28s cubic-bezier(.16, 1, .3, 1);
+        }
+
+        .site-header a {
+            color: #E3E8FF;
+            text-decoration: none;
+            transition: color .2s ease;
+        }
+
+        .site-header a:hover {
+            color: #F6D98B;
+        }
+
+        .site-header .logo-link {
+            color: #fff !important;
+        }
+
+        .site-header nav a {
+            color: #E3E8FF;
+        }
+
+        .site-header nav a:hover {
+            color: #F6D98B;
+        }
+
+        .site-header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            flex-wrap: wrap;
+            padding: 8px 12px;
+            border-radius: 999px;
+            border: 1px solid transparent;
+            background: transparent;
+            transition: all .28s cubic-bezier(.16, 1, .3, 1);
+        }
+
+        /* Scrolled Floating State - Fixed globally at top of viewport */
+        .site-header.is-scrolled {
+            z-index: 99999 !important;
+            position: fixed;
+            top: 14px;
+            left: 0;
+            right: 0;
+            max-width: 1160px;
+            margin: 0 auto;
+            padding: 0 24px;
+            box-sizing: border-box;
+            animation: headerSlideDown .3s cubic-bezier(.16, 1, .3, 1);
+        }
+
+        @keyframes headerSlideDown {
+            from {
+                transform: translateY(-20px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .site-header.is-scrolled .site-header-inner {
+            background: rgba(10, 16, 56, 0.88);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-color: rgba(255, 255, 255, 0.16);
+            box-shadow: 0 16px 40px -10px rgba(0, 0, 0, 0.65), 0 0 0 1px rgba(143, 162, 240, 0.25);
+            padding: 10px 24px;
+        }
+
+        .site-header.is-scrolled .logo-img {
+            width: 36px !important;
+            height: 36px !important;
+        }
+
+        .site-header.is-scrolled nav {
+            font-size: 14px !important;
+            gap: 18px !important;
+        }
+
+        .site-header.is-scrolled .nav-cta {
+            background: #F6D98B !important;
+            color: #1A1440 !important;
+            box-shadow: 0 4px 16px rgba(246, 217, 139, 0.35);
+        }
+    </style>
+    <style>
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 72px
+        }
+
+        img {
+            max-width: 100%
+        }
+    </style>
 </head>
 
 <body>
+    <div>
+        <a href="#crm"
+            style="display:block;background:#F6D98B;color:#1A1440;text-align:center;padding:10px 16px;font-size:14px;font-weight:600">moonCliq
+            CRM public launch: 15 Jan 2027 · Start your 14-day free trial now →</a>
 
-  <!-- STAR CANVAS -->
-  <canvas id="starCanvas"></canvas>
-
-  <!-- FLUID AURORA BACKGROUND -->
-  <div class="fluid-bg">
-    <div class="fluid-blob fluid-1"></div>
-    <div class="fluid-blob fluid-2"></div>
-    <div class="fluid-blob fluid-3"></div>
-    <div class="fluid-blob fluid-4"></div>
-    <div class="fluid-noise"></div>
-  </div>
-
-  <!-- ── NAVBAR ─────────────────────────────────────────────── -->
-  <nav class="navbar" id="navbar">
-    <div class="nav-container">
-      <a href="#home" class="nav-logo">
-        <div class="logo-glow-ring">
-          <img src="assets/logo.png" alt="MoonCliq Logo" class="logo-img" width="40" height="40" />
-        </div>
-        <img src="assets/mooncliq-wordmark-dark.png" alt="MoonCliq" class="nav-wordmark-img wordmark-dark-mode"
-          width="171" height="38" />
-        <img src="assets/mooncliq-logo-clean.png" alt="MoonCliq" class="nav-wordmark-img wordmark-day-mode" width="177"
-          height="38" />
-      </a>
-      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#home" class="nav-link active">Home</a></li>
-
-        <!-- SERVICES MEGA MENU ITEM -->
-        <li class="nav-item-dropdown">
-          <a href="#services" class="nav-link nav-link-dropdown" id="servicesDropdownTrigger">
-            <span>Services</span>
-            <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-              stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="6 9 12 15 18 9"></polyline>
+        <section
+            style="position:relative;z-index:99999;background:linear-gradient(180deg,#5B3FA8 0%,#3047B8 55%,#0B1550 100%);padding:28px 0">
+            <svg viewBox="0 0 1440 800" preserveAspectRatio="xMidYMax slice" aria-hidden="true"
+                style="position:absolute;inset:0;width:100%;height:100%">
+                <g fill="#fff">
+                    <circle cx="140" cy="150" r="1.8" />
+                    <circle cx="300" cy="80" r="1.4" />
+                    <circle cx="520" cy="200" r="1.7" />
+                    <circle cx="880" cy="90" r="1.6" />
+                    <circle cx="1180" cy="170" r="1.8" />
+                    <circle cx="1330" cy="80" r="1.5" />
+                    <circle cx="90" cy="360" r="1.5" />
+                </g>
+                <path d="M0 640C240 580 520 560 800 620S1250 640 1440 590V800H0z" fill="#2B3CC0" opacity=".55" />
+                <path d="M0 700C300 650 640 640 940 685S1320 700 1440 670V800H0z" fill="#0A1048" />
             </svg>
-          </a>
+            <div class="wrap" style="position:relative;z-index:1">
+                <div
+                    style="border:1px solid rgba(255,255,255,.4);border-radius:36px;background:rgba(255,255,255,.07);color:#fff;padding:26px 32px 30px;min-height:640px;display:flex;flex-direction:column">
+                    <header class="site-header" id="siteHeader">
+                        <div class="site-header-inner">
+                            <a href="#" class="logo-link"
+                                style="display:flex;align-items:center;gap:10px;font-family:Outfit,sans-serif;font-weight:600;font-size:24px;color:#fff"><img
+                                    class="logo-img" src="assets/logo.png" alt="moonCliq logo" width="48" height="48"
+                                    style="border-radius:50%;box-shadow:0 0 24px rgba(160,170,255,.6);transition:all .28s ease">moon<span
+                                    style="color:#F6D98B">Cliq</span></a>
+                            <nav style="display:flex;gap:22px;align-items:center;flex-wrap:wrap;font-size:15px">
+                                <a href="#">Home</a>
+                                <div class="nav-dropdown">
+                                    <span class="nav-dropdown-trigger">
+                                        Services
+                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <path d="m6 9 6 6 6-6" />
+                                        </svg>
+                                    </span>
+                                    <div class="mega-menu">
+                                        <div
+                                            style="display:grid;grid-template-columns:1.8fr 1.2fr;gap:24px;text-align:left">
+                                            <!-- Left Panel: Core Client Solutions (2 Columns) -->
+                                            <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px">
+                                                <div class="sol-col">
+                                                    <span class="sol-group-tag">Zoho Enterprise</span>
+                                                    <a href="zoho-crm.html" class="sol-link">
+                                                        <div class="sol-icon">
+                                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                                                stroke="currentColor" stroke-width="2"
+                                                                stroke-linecap="round" stroke-linejoin="round">
+                                                                <path d="M12 20V10" />
+                                                                <path d="M18 20V4" />
+                                                                <path d="M6 20v-4" />
+                                                            </svg>
+                                                        </div>
+                                                        <div>
+                                                            <div class="sol-title">Zoho CRM Architecture</div>
+                                                            <div class="sol-desc">Lead routing, pipeline automation
+                                                                &amp; KPI analytics</div>
+                                                        </div>
+                                                    </a>
+                                                    <a href="zoho-books.html" class="sol-link">
+                                                        <div class="sol-icon">
+                                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                                                stroke="currentColor" stroke-width="2"
+                                                                stroke-linecap="round" stroke-linejoin="round">
+                                                                <path
+                                                                    d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                                                                <polyline points="3.29 7 12 12 20.71 7" />
+                                                                <line x1="12" y1="22" x2="12" y2="12" />
+                                                            </svg>
+                                                        </div>
+                                                        <div>
+                                                            <div class="sol-title">Books, Inventory &amp; GST</div>
+                                                            <div class="sol-desc">Multi-warehouse billing, e-way bills
+                                                                &amp; stock sync</div>
+                                                        </div>
+                                                    </a>
+                                                    <a href="zoho-creator.html" class="sol-link">
+                                                        <div class="sol-icon">
+                                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                                                stroke="currentColor" stroke-width="2"
+                                                                stroke-linecap="round" stroke-linejoin="round">
+                                                                <rect x="3" y="3" width="18" height="18" rx="2"
+                                                                    ry="2" />
+                                                                <line x1="3" y1="9" x2="21" y2="9" />
+                                                                <line x1="9" y1="21" x2="9" y2="9" />
+                                                            </svg>
+                                                        </div>
+                                                        <div>
+                                                            <div class="sol-title">Zoho Creator Low-Code</div>
+                                                            <div class="sol-desc">Custom vendor portals &amp;
+                                                                tailor-made operational ERPs</div>
+                                                        </div>
+                                                    </a>
+                                                </div>
 
-          <div class="mega-menu" id="servicesMegaMenu" data-lenis-prevent>
-            <div class="mega-menu-grid">
-              <!-- Column 1: Business Software (Zoho) -->
-              <div class="mega-menu-col">
-                <div class="mega-col-header">
-                  <span class="mega-badge">Zoho Suite</span>
-                  <h4>Business Software</h4>
-                </div>
-                <ul class="mega-col-list">
-                  <li>
-                    <a href="/zoho-crm">
-                      <span class="mega-item-title">Zoho CRM</span>
-                      <span class="mega-item-desc">Lead pipelines &amp; WhatsApp integration</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/zoho-books">
-                      <span class="mega-item-title">Zoho Books &amp; Inventory</span>
-                      <span class="mega-item-desc">GST billing, Tally migration &amp; stock sync</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/zoho-creator">
-                      <span class="mega-item-title">Zoho Creator</span>
-                      <span class="mega-item-desc">Custom low-code business ERP apps</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/zoho-analytics">
-                      <span class="mega-item-title">Other Zoho Apps</span>
-                      <span class="mega-item-desc">Analytics BI, Mail, Cliq &amp; Projects</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
+                                                <div class="sol-col">
+                                                    <span class="sol-group-tag">Cloud &amp; Development</span>
+                                                    <a href="whatsapp-automation.html" class="sol-link">
+                                                        <div class="sol-icon">
+                                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                                                stroke="currentColor" stroke-width="2"
+                                                                stroke-linecap="round" stroke-linejoin="round">
+                                                                <path
+                                                                    d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+                                                            </svg>
+                                                        </div>
+                                                        <div>
+                                                            <div class="sol-title">Official WhatsApp API</div>
+                                                            <div class="sol-desc">Automated quotation dispatches, alerts
+                                                                &amp; chat routing</div>
+                                                        </div>
+                                                    </a>
+                                                    <a href="custom-app-development.html" class="sol-link">
+                                                        <div class="sol-icon">
+                                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                                                stroke="currentColor" stroke-width="2"
+                                                                stroke-linecap="round" stroke-linejoin="round">
+                                                                <polyline points="16 18 22 12 16 6" />
+                                                                <polyline points="8 6 2 12 8 18" />
+                                                            </svg>
+                                                        </div>
+                                                        <div>
+                                                            <div class="sol-title">Custom Full-Stack Apps</div>
+                                                            <div class="sol-desc">High-speed Next.js, Node.js &amp;
+                                                                PostgreSQL systems</div>
+                                                        </div>
+                                                    </a>
+                                                    <a href="custom-web-development.html" class="sol-link">
+                                                        <div class="sol-icon">
+                                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                                                stroke="currentColor" stroke-width="2"
+                                                                stroke-linecap="round" stroke-linejoin="round">
+                                                                <path
+                                                                    d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" />
+                                                            </svg>
+                                                        </div>
+                                                        <div>
+                                                            <div class="sol-title">AWS &amp; API Integrations</div>
+                                                            <div class="sol-desc">Shopify, payment gateways &amp; custom
+                                                                webhooks</div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
 
-              <!-- Column 2: Online Presence & Growth -->
-              <div class="mega-menu-col">
-                <div class="mega-col-header">
-                  <span class="mega-badge">Growth</span>
-                  <h4>Online Presence</h4>
-                </div>
-                <ul class="mega-col-list">
-                  <li>
-                    <a href="/custom-web-development">
-                      <span class="mega-item-title">Website Design &amp; Care</span>
-                      <span class="mega-item-desc">Fast, SEO-ready business websites</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/shopify-development">
-                      <span class="mega-item-title">Shopify Development</span>
-                      <span class="mega-item-desc">E-commerce stores synced with Zoho</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/social-media-marketing">
-                      <span class="mega-item-title">Social Media Growth</span>
-                      <span class="mega-item-desc">Content, creatives, reels &amp; ads</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
+                                            <!-- Right Panel: Spotlight SaaS & Direct Audit -->
+                                            <div>
+                                                <div class="spotlight-card">
+                                                    <div>
+                                                        <div
+                                                            style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px">
+                                                            <span
+                                                                style="font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#F6D98B">PROPRIETARY
+                                                                SAAS</span>
+                                                            <span
+                                                                style="font-size:10px;font-weight:700;background:rgba(246,217,139,.2);color:#F6D98B;border:1px solid rgba(246,217,139,.4);padding:2px 8px;border-radius:999px">BETA</span>
+                                                        </div>
+                                                        <h4
+                                                            style="font-size:16px;font-weight:600;color:#fff;margin:0 0 6px">
+                                                            moonCliq CRM</h4>
+                                                        <p
+                                                            style="font-size:12px;color:#A8B7EE;line-height:1.45;margin:0 0 14px">
+                                                            Built for sales teams that require disciplined process
+                                                            stages, 15-minute response tracking, and native WhatsApp
+                                                            logging.
+                                                        </p>
+                                                        <a href="https://crm.mooncliq.com/"
+                                                            style="display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:#F6D98B;text-decoration:none">
+                                                            <span>Start 14-Day Free Trial</span>
+                                                            <span>→</span>
+                                                        </a>
+                                                    </div>
+                                                    <div
+                                                        style="border-top:1px solid rgba(255,255,255,.08);padding-top:14px;margin-top:14px">
+                                                        <a href="contact.html"
+                                                            style="display:flex;align-items:center;justify-content:space-between;color:#fff;text-decoration:none;font-size:12px;font-weight:600">
+                                                            <span>Book Architecture Consultation</span>
+                                                            <span style="color:#F6D98B">→</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="#crm">Mooncliq CRM <span
+                                        style="font-size:11px;font-weight:700;background:#3A2D0A;color:#F5B83D;border-radius:99px;padding:2px 8px">BETA</span></a>
+                                <a href="#results">Case Studies</a>
+                                <a href="#contact" class="glassbar nav-cta"
+                                    style="padding:8px 18px;transition:all .28s ease">Get a quote</a>
+                            </nav>
+                        </div>
+                    </header>
 
-              <!-- Column 3: Automation & Cloud -->
-              <div class="mega-menu-col">
-                <div class="mega-col-header">
-                  <span class="mega-badge">Scalability</span>
-                  <h4>Automation &amp; Cloud</h4>
-                </div>
-                <ul class="mega-col-list">
-                  <li>
-                    <a href="/whatsapp-automation">
-                      <span class="mega-item-title">WhatsApp Automation</span>
-                      <span class="mega-item-desc">Official Cloud API, chatbots &amp; broadcast</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/aws-cloud-solutions">
-                      <span class="mega-item-title">AWS Cloud Services</span>
-                      <span class="mega-item-desc">Cloud architecture, migration &amp; DevOps</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-
-              <!-- Column 4: Custom & Product -->
-              <div class="mega-menu-col highlight-col">
-                <div class="mega-col-header">
-                  <span class="mega-badge beta">Product &amp; Code</span>
-                  <h4>Custom &amp; SaaS</h4>
-                </div>
-                <ul class="mega-col-list">
-                  <li>
-                    <a href="/custom-app-development">
-                      <span class="mega-item-title">Custom App Dev</span>
-                      <span class="mega-item-desc">Next.js, Node.js &amp; PostgreSQL systems</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://crm.mooncliq.com" target="_blank" rel="noopener" class="mega-product-card">
-                      <div class="mega-crm-tag">Our SaaS</div>
-                      <span class="mega-item-title">Mooncliq CRM <span class="beta-pill">Beta</span></span>
-                      <span class="mega-item-desc">sales CRM for growing teams</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="mega-menu-footer">
-              <span class="mega-footer-text">Not sure which setup fits your business?</span>
-              <a href="#contact" class="mega-footer-link">Talk to our tech architects →</a>
-            </div>
-          </div>
-        </li>
-
-        <!-- MOONCLIQ CRM BADGE LINK -->
-        <li>
-          <a href="https://crm.mooncliq.com" target="_blank" rel="noopener" class="nav-link nav-crm-link">
-            Mooncliq CRM
-            <span class="beta-badge-glow">Beta</span>
-          </a>
-        </li>
-
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="/case-studies" class="nav-link">Case Studies</a></li>
-        <li><a href="#contact" class="nav-link nav-cta">Book Free Consultation</a></li>
-        <li>
-          <button id="themeToggle" class="theme-toggle" aria-label="Toggle Theme">
-            <!-- Sun Icon (shown in dark mode, switches to day) -->
-            <svg class="sun-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z">
-              </path>
-            </svg>
-            <!-- Moon Icon (shown in day mode, switches to night) -->
-            <svg class="moon-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
-            </svg>
-          </button>
-        </li>
-      </ul>
-    </div>
-  </nav>
-
-  <!-- ── HERO ──────────────────────────────────────────────── -->
-  <section class="hero" id="home">
-    <div class="hero-inner">
-      <!-- Left Content -->
-      <div class="hero-content">
-        <div class="hero-eyebrow">
-          <span class="eyebrow-dot"></span>
-          <span>Engineered For Growth</span>
-        </div>
-
-        <h1 class="hero-title">
-          <span class="hero-line-1">Zoho CRM, Books &amp;</span>
-          <span class="hero-line-2 gradient-text">WhatsApp Automation</span>
-          <span class="hero-line-3">for Growing Businesses</span>
-        </h1>
-
-        <p class="hero-subtitle">
-          MoonCliq delivers end-to-end custom development, e-commerce stores, and business integration, empowering
-          businesses
-          to operate smarter, scale faster, and grow with confidence.
-        </p>
-
-        <div class="hero-actions-wrapper">
-          <div class="hero-actions">
-            <a href="#services" class="btn btn-primary">
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
-              Explore Services
-            </a>
-            <a href="#contact" class="btn btn-outline">Talk to an Expert</a>
-          </div>
-
-          <!-- ── HERO TRUST BADGES (Zoho Authorised Partner & Meta Verified Tech Provider) ── -->
-          <div class="hero-partner-strip">
-            <img src="assets/zoho-partner-horizontal-dark.webp" alt="Zoho Authorized Partner"
-              class="hero-partner-badge-img badge-dark" width="186" height="52" />
-            <img src="assets/zoho-partner-horizontal.webp" alt="Zoho Authorized Partner"
-              class="hero-partner-badge-img badge-light" width="186" height="52" />
-            <img src="assets/meta-verified-partner-dark.webp"
-              alt="Meta Verified Tech Provider - MoonCliq Official Partner"
-              class="hero-partner-badge-img hero-partner-meta-badge badge-dark" width="98" height="74" />
-            <img src="assets/meta-verified-partner-light.webp"
-              alt="Meta Verified Tech Provider - MoonCliq Official Partner"
-              class="hero-partner-badge-img hero-partner-meta-badge badge-light" width="98" height="74" />
-          </div>
-        </div>
-      </div>
-
-      <!-- Right Visual -->
-      <div class="hero-visual">
-        <div class="hero-visual-bg"></div>
-        <div class="logo-center star-aura">
-          <img src="assets/moon-cliq-favicon.webp" alt="MoonCliq" class="hero-logo-img" width="700" height="700" />
-
-          <!-- Orbit 1: Zoho Books -->
-          <div class="orbit orbit-1">
-            <div class="orbit-icon">
-              <img src="assets/books.svg" alt="Zoho Books" width="48" height="48" />
-            </div>
-          </div>
-
-          <!-- Orbit 2: Shopify -->
-          <div class="orbit orbit-2">
-            <div class="orbit-icon">
-              <img src="assets/shopify.svg" alt="Shopify" width="48" height="48" />
-            </div>
-          </div>
-
-          <!-- Orbit 3: WhatsApp -->
-          <div class="orbit orbit-3">
-            <div class="orbit-icon">
-              <img src="assets/whatsapp.png" alt="WhatsApp" width="48" height="48" />
-            </div>
-          </div>
-
-          <!-- Orbit 4: AWS -->
-          <div class="orbit orbit-4">
-            <div class="orbit-icon">
-              <img src="assets/aws.svg" alt="AWS" width="48" height="48" />
-            </div>
-          </div>
-
-          <!-- Orbit 5: Zoho Inventory -->
-          <div class="orbit orbit-5">
-            <div class="orbit-icon">
-              <img src="assets/zoho-inventory-1024x1024.svg" alt="Zoho Inventory" width="48" height="48" />
-            </div>
-          </div>
-
-          <!-- Orbit 6: Zoho Creator -->
-          <div class="orbit orbit-6">
-            <div class="orbit-icon">
-              <img src="assets/zoho-creator.svg" alt="Zoho Creator" width="48" height="48" />
-            </div>
-          </div>
-
-          <!-- Orbit 7: Mooncliq CRM -->
-          <div class="orbit orbit-7">
-            <div class="orbit-icon">
-              <img src="assets/mooncliq-crm-puzzle-icon.png" alt="Mooncliq CRM" width="48" height="48" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Scroll hint -->
-    <div class="hero-scroll">
-      <div class="scroll-mouse">
-        <div class="scroll-wheel"></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── TICKER STRIP ───────────────────────────────────────── -->
-  <div class="ticker-strip">
-    <div class="ticker-track">
-      <span class="ticker-item">✦ Zoho CRM</span>
-      <span class="ticker-item">✦ Zoho Books</span>
-      <span class="ticker-item">✦ Zoho Inventory</span>
-      <span class="ticker-item">✦ Shopify</span>
-      <span class="ticker-item">✦ Whatsapp Automation</span>
-      <spam class="ticker-item">✦ AWS Cloud Services </spam>
-      <spam class="ticker-item">✦ Custom Web Development </spam>
-      <spam class="ticker-item">✦ Custom App Development </spam>
-      <span class="ticker-item">✦ Zoho Creator</span>
-      <!-- duplicate for seamless loop -->
-      <span class="ticker-item">✦ Zoho CRM</span>
-      <span class="ticker-item">✦ Zoho Books</span>
-      <span class="ticker-item">✦ Zoho Inventory</span>
-      <span class="ticker-item">✦ Shopify</span>
-      <span class="ticker-item">✦ Whatsapp Automation</span>
-      <spam class="ticker-item">✦ AWS Cloud Services </spam>
-      <spam class="ticker-item">✦ Custom Web Development </spam>
-      <spam class="ticker-item">✦ Custom App Development </spam>
-      <span class="ticker-item">✦ Zoho Creator</span>
-    </div>
-  </div>
-
-  <!-- ── ABOUT ──────────────────────────────────────────────── -->
-  <section class="section about" id="about">
-    <div class="container">
-      <div class="about-grid">
-        <!-- Left -->
-        <div class="about-left">
-          <div class="section-tag">Who We Are</div>
-          <h2 class="section-title">Your Trusted<br /><span class="gradient-text">Technology Partner</span></h2>
-          <p class="body-text">
-            MoonCliq is a premium technology agency committed to transforming how businesses operate. We specialize in
-            custom application development, e-commerce stores, and system integrations.
-          </p>
-          <p class="body-text">
-            Beyond standard tools, we design and build custom-tailored software solutions using cutting-edge
-            technologies,
-            helping organizations achieve outcomes that off-the-shelf software simply can't deliver.
-          </p>
-          <div class="value-list">
-            <div class="value-item">
-              <div class="value-icon-wrap">
-                <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-                  <path d="M3 9l4 4 8-8" stroke="#5b6ef5" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round" />
-                </svg>
-              </div>
-              <div>
-                <strong>Custom Application Engineers</strong>
-                <span>Experts in Next.js, React, Node.js, Python, AWS, and Postgres</span>
-              </div>
-            </div>
-            <div class="value-item">
-              <div class="value-icon-wrap">
-                <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-                  <path d="M3 9l4 4 8-8" stroke="#5b6ef5" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round" />
-                </svg>
-              </div>
-              <div>
-                <strong>End-to-End Implementation</strong>
-                <span>Setup, migration, training, and ongoing support</span>
-              </div>
-            </div>
-            <div class="value-item">
-              <div class="value-icon-wrap">
-                <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-                  <path d="M3 9l4 4 8-8" stroke="#5b6ef5" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round" />
-                </svg>
-              </div>
-              <div>
-                <strong>Custom Development</strong>
-                <span>Bespoke apps and integrations built for your workflows</span>
-              </div>
-            </div>
-            <div class="value-item">
-              <div class="value-icon-wrap">
-                <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-                  <path d="M3 9l4 4 8-8" stroke="#5b6ef5" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round" />
-                </svg>
-              </div>
-              <div>
-                <strong>Dedicated Support</strong>
-                <span>A committed team always ready to assist and optimize</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Right -->
-        <div class="about-right">
-          <div class="about-card-primary glass-card">
-            <div class="about-card-icon-wrap grad-blue">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <circle cx="12" cy="12" r="10" stroke="white" stroke-width="1.5" />
-                <path
-                  d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
-                  stroke="white" stroke-width="1.5" stroke-linecap="round" />
-              </svg>
-            </div>
-            <h3>Full-Stack Product Engineering</h3>
-            <p>Deep expertise across every layer — from responsive UI design to high-throughput backend APIs and
-              scalable database configurations.</p>
-            <div class="card-metric-row">
-              <div class="card-metric"><span class="metric-val">50+</span><span class="metric-lbl">Deployments</span>
-              </div>
-              <div class="card-metric"><span class="metric-val">100%</span><span class="metric-lbl">Support</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="about-card-secondary glass-card">
-            <div class="about-card-icon-wrap grad-purple">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="white" stroke-width="1.5"
-                  stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-            </div>
-            <h3>Scalable Infrastructure</h3>
-            <p>We deploy on robust cloud ecosystems, ensuring your software scales dynamically with zero downtime.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── SERVICES ───────────────────────────────────────────── -->
-  <section class="section services" id="services">
-    <div class="container">
-      <div class="section-header text-center">
-        <div class="section-tag">Complete Ecosystem</div>
-        <h2 class="section-title">Everything Your Business Needs to <span class="gradient-text">Run and Grow</span></h2>
-        <p class="section-subtitle">
-          We organize our expertise into four focused groups to streamline your operations, accelerate sales, and scale
-          your systems.
-        </p>
-      </div>
-
-      <div class="services-groups-grid">
-
-        <!-- ── GROUP 1: BUSINESS SOFTWARE (ZOHO) ── -->
-        <div class="group-card glass-card">
-          <div class="group-card-header">
-            <div class="group-header-left">
-              <span class="group-cat-pill">Zoho Ecosystem</span>
-              <h3>Business Software (Zoho)</h3>
-              <p class="group-tagline">"Run sales, accounts and operations on one connected system."</p>
-            </div>
-            <div class="group-header-icon icon-zoho-wrap">
-              <img src="assets/zoho-logo-blocks.webp" alt="Zoho Suite" width="46" height="34" loading="lazy"
-                decoding="async" />
-            </div>
-          </div>
-
-          <p class="group-body-desc">
-            End-to-end setup, custom Deluge scripting, workflow Blueprints, and multi-app integration by certified Zoho
-            consultants.
-          </p>
-
-          <div class="group-items-strip">
-            <a href="/zoho-crm" class="group-tool-pill">
-              <img src="assets/zoho-icons/crm.svg" alt="Zoho CRM" width="20" height="20" />
-              <span>Zoho CRM</span>
-            </a>
-            <a href="/zoho-books" class="group-tool-pill">
-              <img src="assets/books.svg" alt="Zoho Books" width="20" height="20" />
-              <span>Zoho Books </span>
-            </a>
-            <a href="/zoho-inventory" class="group-tool-pill">
-              <img src="assets/zoho-inventory-1024x1024.svg" alt="Zoho Inventory" width="20" height="20" />
-              <span>Inventory </span>
-            </a>
-            <a href="/zoho-creator" class="group-tool-pill">
-              <img src="assets/zoho-creator.svg" alt="Zoho Creator" width="20" height="20" />
-              <span>Creator </span>
-            </a>
-            <a href="/zoho-analytics" class="group-tool-pill">
-              <img src="assets/analytics.svg" alt="Zoho Analytics" width="20" height="20" />
-              <span>Analytics </span>
-            </a>
-          </div>
-
-          <div class="group-card-footer">
-            <a href="/zoho-crm" class="group-cta-link">
-              <span>Explore Zoho Services</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </a>
-          </div>
-        </div>
-
-        <!-- ── GROUP 2: ONLINE PRESENCE & GROWTH ── -->
-        <div class="group-card glass-card">
-          <div class="group-card-header">
-            <div class="group-header-left">
-              <span class="group-cat-pill">E-Commerce &amp; Web</span>
-              <h3>Online Presence &amp; Growth</h3>
-              <p class="group-tagline">"Get found, look professional and sell online."</p>
-            </div>
-            <div class="group-header-icon icon-shopify-wrap">
-              <img src="assets/shopify.svg" alt="Online Growth" width="34" height="34" loading="lazy"
-                decoding="async" />
-            </div>
-          </div>
-
-          <p class="group-body-desc">
-            Ultra-fast headless websites, conversion-optimized Shopify stores, and targeted social media marketing
-            campaigns.
-          </p>
-
-          <div class="group-items-strip">
-            <a href="/custom-web-development" class="group-tool-pill">
-              <span class="pill-code-icon">&lt;/&gt;</span>
-              <span>Website Design &amp; Care</span>
-            </a>
-            <a href="/shopify-development" class="group-tool-pill">
-              <img src="assets/shopify.svg" alt="Shopify" width="20" height="20" />
-              <span>Shopify Stores</span>
-            </a>
-            <a href="/social-media-marketing" class="group-tool-pill">
-              <img src="assets/meta.svg" alt="Meta Marketing" width="20" height="20" />
-              <span>Social Media Growth</span>
-            </a>
-          </div>
-
-          <div class="group-card-footer">
-            <a href="/shopify-development" class="group-cta-link">
-              <span>Explore Growth Services</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </a>
-          </div>
-        </div>
-
-        <!-- ── GROUP 3: AUTOMATION & CLOUD ── -->
-        <div class="group-card glass-card">
-          <div class="group-card-header">
-            <div class="group-header-left">
-              <span class="group-cat-pill">Infrastructure &amp; API</span>
-              <h3>Automation &amp; Cloud</h3>
-              <p class="group-tagline">"Save hours with WhatsApp automation and reliable AWS hosting."</p>
-            </div>
-            <div class="group-header-icon icon-whatsapp-wrap">
-              <img src="assets/whatsapp.png" alt="Automation & Cloud" width="34" height="34" loading="lazy"
-                decoding="async" />
-            </div>
-          </div>
-
-          <p class="group-body-desc">
-            Official WhatsApp Cloud API broadcasts, multi-agent chat inboxes, automated follow-up sequences, and
-            bulletproof AWS architectures.
-          </p>
-
-          <div class="group-items-strip">
-            <a href="/whatsapp-automation" class="group-tool-pill">
-              <img src="assets/whatsapp.png" alt="WhatsApp Business API" width="20" height="20" />
-              <span>WhatsApp Cloud API</span>
-            </a>
-            <a href="/aws-cloud-solutions" class="group-tool-pill">
-              <img src="assets/aws.svg" alt="AWS Cloud" width="20" height="20" />
-              <span>AWS Cloud DevOps</span>
-            </a>
-          </div>
-
-          <div class="group-card-footer">
-            <a href="/whatsapp-automation" class="group-cta-link">
-              <span>Explore Automation &amp; Cloud</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </a>
-          </div>
-        </div>
-
-        <!-- ── GROUP 4: CUSTOM & PRODUCT ── -->
-        <div class="group-card glass-card highlight-product-card">
-          <div class="group-card-header">
-            <div class="group-header-left">
-              <span class="group-cat-pill beta">Bespoke Engineering</span>
-              <h3>Custom &amp; Product</h3>
-              <p class="group-tagline">"Need something built for you? Or a ready WhatsApp-first CRM?"</p>
-            </div>
-            <div class="group-header-icon icon-crm-wrap">
-              <img src="assets/mooncliq-crm-logo-full.png" alt="Custom &amp; Product - Mooncliq CRM" width="46"
-                height="38" style="object-fit:contain;" />
-            </div>
-          </div>
-
-          <p class="group-body-desc">
-            Bespoke full-stack web applications built on Next.js/Node/PostgreSQL, plus our proprietary SaaS:
-            <strong>Mooncliq CRM</strong>.
-          </p>
-
-          <div class="group-items-strip">
-            <a href="/custom-app-development" class="group-tool-pill">
-              <span class="pill-code-icon">&lt;/&gt;</span>
-              <span>Custom App Dev</span>
-            </a>
-            <a href="https://crm.mooncliq.com" target="_blank" rel="noopener"
-              class="group-tool-pill crm-highlight-pill">
-              <img src="assets/mooncliq-crm-puzzle-icon.png" alt="Mooncliq CRM" width="20" height="20"
-                style="object-fit:contain;" loading="lazy" decoding="async" />
-              <span>Mooncliq CRM <span class="badge-micro">Beta</span></span>
-            </a>
-          </div>
-
-          <div class="group-card-footer">
-            <a href="/custom-app-development" class="group-cta-link">
-              <span>Explore Custom &amp; Product</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ── BRANDS WE SERVED MARQUEE ────────────────────────────── -->
-
-
-
-
-  <!-- ── MOONCLIQ CRM SPOTLIGHT BAND (Blueprint Section 4) ───── -->
-  <section class="section crm-spotlight-section" id="crm-spotlight">
-    <div class="container">
-      <div class="crm-spotlight-card glass-card">
-        <div class="crm-spotlight-glow"></div>
-        <div class="crm-spotlight-grid">
-
-          <div class="crm-spotlight-content">
-            <div class="crm-spotlight-tag-row">
-              <span class="crm-beta-tag">✦ Beta Now • Public Launch 15 January 2027</span>
-            </div>
-
-            <h2 class="crm-spotlight-title">
-              Meet Mooncliq CRM: The <span class="gradient-text">WhatsApp-First CRM</span> Built by Our Team
-            </h2>
-
-            <p class="crm-spotlight-desc">
-              Manage leads, deals, sales orders, tasks, meetings and projects in one place — with native WhatsApp and
-              calling automation built right in.
-            </p>
-
-            <div class="crm-mini-features-grid">
-              <div class="crm-mini-feat">
-                <span class="feat-dot"></span>
-                <span>Leads &amp; Deals Pipeline</span>
-              </div>
-              <div class="crm-mini-feat">
-                <span class="feat-dot"></span>
-                <span>Sales Orders &amp; Invoices</span>
-              </div>
-              <div class="crm-mini-feat">
-                <span class="feat-dot"></span>
-                <span>WhatsApp Automation</span>
-              </div>
-              <div class="crm-mini-feat">
-                <span class="feat-dot"></span>
-                <span>Automated Follow-ups</span>
-              </div>
-              <div class="crm-mini-feat">
-                <span class="feat-dot"></span>
-                <span>Click-to-Call &amp; Logs</span>
-              </div>
-              <div class="crm-mini-feat">
-                <span class="feat-dot"></span>
-                <span>Project Milestones</span>
-              </div>
-            </div>
-
-            <div class="crm-spotlight-actions">
-              <a href="https://crm.mooncliq.com" target="_blank" rel="noopener" class="btn btn-primary crm-cta-btn">
-                <span>Join the Beta</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                  <line x1="5" y1="12" x2="19" y2="12"></line>
-                  <polyline points="12 5 19 12 12 19"></polyline>
-                </svg>
-              </a>
-              <a href="#crmModal" class="btn btn-outline" id="spotlightFeaturesBtn">
-                See Features &amp; Architecture
-              </a>
-            </div>
-          </div>
-
-          <div class="crm-spotlight-visual">
-            <div class="crm-mockup-frame">
-              <div class="mockup-header-bar">
-                <span class="dot-red"></span>
-                <span class="dot-yellow"></span>
-                <span class="dot-green"></span>
-                <span class="mockup-url-pill">crm.mooncliq.com</span>
-              </div>
-              <div class="mockup-screen-content">
-                <div class="mockup-sidebar">
-                  <div class="mockup-side-item active"></div>
-                  <div class="mockup-side-item"></div>
-                  <div class="mockup-side-item"></div>
-                  <div class="mockup-side-item"></div>
-                </div>
-                <div class="mockup-main">
-                  <div class="mockup-top-stats">
-                    <div class="mock-stat">
-                      <span class="mock-stat-num">₹24.8L</span>
-                      <span class="mock-stat-lbl">Active Pipeline</span>
+                    <div
+                        style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:20px;padding:56px 0 48px">
+                        <span class="glassbar" style="font-size:13px;display:inline-flex;align-items:center;gap:6px;flex-wrap:wrap"><span>Authorised Zoho Partner:</span> <a href="zoho-partner-india.html" style="color:#F6D98B;text-decoration:underline;text-underline-offset:2px">India</a> · <a href="zoho-partner-uk.html" style="color:#F6D98B;text-decoration:underline;text-underline-offset:2px">UK</a> · <a href="zoho-implementation-usa.html" style="color:#F6D98B;text-decoration:underline;text-underline-offset:2px">US</a> · <a href="zoho-partner-uae.html" style="color:#F6D98B;text-decoration:underline;text-underline-offset:2px">UAE</a></span>
+                        <h1 style="font-size:clamp(34px,4.6vw,54px);line-height:1.12;max-width:820px">Zoho
+                            Implementation Partner, Custom Apps &amp; WhatsApp Automation for Growing Businesses</h1>
+                        <p style="font-size:18px;line-height:1.6;color:#E3E8FF;max-width:560px">Zoho CRM, Books,
+                            Inventory and Creator, custom app and website development, and WhatsApp automation,
+                            delivered remotely to clients across India, the US, the UK and beyond.</p>
+                        <div style="display:flex;gap:14px;flex-wrap:wrap;justify-content:center"><a href="#path"
+                                class="btn" style="background:#F6D98B;color:#1A1440">Book Free Consultation</a><a
+                                href="#crm" class="btn" style="border:1px solid #fff;color:#fff">Try moonCliq CRM
+                                free</a></div>
                     </div>
-                    <div class="mock-stat">
-                      <span class="mock-stat-num">98.4%</span>
-                      <span class="mock-stat-lbl">Response Rate</span>
+                    <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:space-between">
+                        <a href="tel:+919998663338" class="glassbar" style="text-decoration:none">📞 +91 99986 63338</a>
+                        <span class="glassbar" style="gap:20px">
+                            <a href="https://wa.me/919998663338" target="_blank" rel="noopener">WhatsApp</a>
+                            <a href="mailto:hello@mooncliq.com">hello@mooncliq.com</a>
+                            <a href="#contact">Remote delivery worldwide</a>
+                        </span>
+                        <a href="#crm" class="glassbar">Try moonCliq CRM →</a>
                     </div>
-                  </div>
-                  <div class="mockup-kanban-cols">
-                    <div class="mock-col">
-                      <div class="mock-col-title">New Leads (12)</div>
-                      <div class="mock-card"><span>WhatsApp Enquiry</span>
-                        <div class="mock-badge">Hot</div>
-                      </div>
-                      <div class="mock-card"><span>Website Form</span></div>
-                    </div>
-                    <div class="mock-col">
-                      <div class="mock-col-title">In Negotiation (5)</div>
-                      <div class="mock-card highlight"><span>Proposal Sent</span>
-                        <div class="mock-badge won">Active</div>
-                      </div>
-                    </div>
-                  </div>
                 </div>
-              </div>
             </div>
-          </div>
+        </section>
 
-        </div>
-      </div>
+        <section style="background:#fff;border-bottom:1px solid #EEE9FB">
+            <div class="wrap"
+                style="display:flex;gap:28px 40px;align-items:center;justify-content:center;flex-wrap:wrap;padding-top:20px;padding-bottom:20px">
+                <img src="assets/zoho.png" alt="Zoho Authorized Partner" height="48" style="height:48px;width:auto"><img
+                    src="assets/meta.png" alt="Meta Tech Provider" height="48"
+                    style="height:48px;width:auto;border-radius:6px"><span class="muted" style="font-size:14px">Verified
+                    partner credentials</span>
+            </div>
+        </section>
+        <section style="background:#fff;border-bottom:1px solid #DDD5F5">
+            <div class="wrap"
+                style="display:flex;gap:24px 56px;flex-wrap:wrap;justify-content:space-between;padding-top:28px;padding-bottom:28px">
+                <div>
+                    <p style="font-family:Outfit,sans-serif;font-size:30px">50+</p>
+                    <p class="muted" style="font-size:14px">Deployments</p>
+                </div>
+                <div>
+                    <p style="font-family:Outfit,sans-serif;font-size:30px">Meta Verified</p>
+                    <p class="muted" style="font-size:14px">Tech Provider</p>
+                </div>
+                <div>
+                    <p style="font-family:Outfit,sans-serif;font-size:30px">2–3 weeks</p>
+                    <p class="muted" style="font-size:14px">Typical go-live</p>
+                </div>
+                <div>
+                    <p style="font-family:Outfit,sans-serif;font-size:30px">30–60 days</p>
+                    <p class="muted" style="font-size:14px">Post-launch hypercare</p>
+                </div>
+                <div>
+                    <p style="font-family:Outfit,sans-serif;font-size:30px">3+</p>
+                    <p class="muted" style="font-size:14px">Countries served</p>
+                </div>
+                <div>
+                    <p style="font-family:Outfit,sans-serif;font-size:30px">95%</p>
+                    <p class="muted" style="font-size:14px">Project success rate</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="wrap sec" style="display:flex;flex-direction:column;gap:32px">
+            <div style="text-align:center;display:flex;flex-direction:column;gap:10px"><span class="eyebrow">Why growing
+                    teams switch</span>
+                <h2 style="font-size:clamp(28px,3.4vw,40px);line-height:1.2">Most businesses don't lose customers. They
+                    leak them in between.</h2>
+            </div>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px">
+                <div class="lcard">
+                    <h3 style="font-size:20px;margin-bottom:8px">Fresh leads go cold</h3>
+                    <p class="muted" style="font-size:15px">Enquiries sit in WhatsApp and Excel until someone remembers.
+                    </p>
+                </div>
+                <div class="lcard">
+                    <h3 style="font-size:20px;margin-bottom:8px">Billing and stock don't match</h3>
+                    <p class="muted" style="font-size:15px">Invoices, accounting and inventory live in different tools.
+                    </p>
+                </div>
+                <div class="lcard">
+                    <h3 style="font-size:20px;margin-bottom:8px">Chats stuck on personal phones</h3>
+                    <p class="muted" style="font-size:15px">Quotes and updates depend on one person's mobile.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="cards" class="wrap" style="padding-bottom:80px;display:flex;flex-direction:column;gap:28px">
+            <div style="display:flex;gap:28px;align-items:center;flex-wrap:wrap">
+                <div
+                    style="flex:3 1 640px;background:#6F74C6;border-radius:32px;padding:32px;display:flex;gap:28px;align-items:center;flex-wrap:wrap;color:#fff">
+                    <div
+                        style="flex:1 1 240px;background:#0B1550;border-radius:18px;padding:18px;display:flex;flex-direction:column;gap:10px;font-size:14px">
+                        <p style="font-size:12px;color:#B8C4FF">Demo preview · Zoho CRM</p>
+                        <div
+                            style="display:flex;justify-content:space-between;background:#1A2470;border-radius:10px;padding:10px 12px">
+                            <span>New lead · WhatsApp</span><span style="color:#FCA5A5">Hot</span>
+                        </div>
+                        <div style="background:#1A2470;border-radius:10px;padding:10px 12px">Quote sent · Invoice
+                            created</div>
+                    </div>
+                    <div style="flex:1 1 260px;display:flex;flex-direction:column;gap:14px">
+                        <h2 style="font-size:28px;line-height:1.2">Zoho for your business: CRM, Books &amp; Inventory
+                        </h2>
+                        <p style="font-size:16px;line-height:1.6;color:#F0F2FF">Every lead tracked, every invoice
+                            tax-ready, every item in stock. Setup, data migration from Tally, Excel or your current
+                            tools, and training included.</p>
+                    </div>
+                </div>
+                <div
+                    style="flex:1 1 220px;text-align:center;display:flex;flex-direction:column;gap:14px;align-items:center">
+                    <p class="muted">Not sure what fits? Get a fixed-scope quote in 24 hours.</p><a href="#contact"
+                        class="ul">Get a quote</a>
+                </div>
+            </div>
+            <div style="display:flex;gap:28px;align-items:center;flex-wrap:wrap">
+                <div
+                    style="flex:1 1 220px;text-align:center;display:flex;flex-direction:column;gap:14px;align-items:center">
+                    <p class="muted">Have an app or website idea? Get a scoped quote in 24 hours.</p><a
+                        href="/custom-app-development" class="ul">Plan my app</a>
+                </div>
+                <div
+                    style="flex:3 1 640px;background:#0B1040;border-radius:32px;padding:32px;display:flex;gap:28px;align-items:center;flex-wrap:wrap;color:#fff">
+                    <div style="flex:1 1 260px;display:flex;flex-direction:column;gap:14px">
+                        <h2 style="font-size:28px;line-height:1.2">Zoho Creator and custom apps built around your
+                            workflow</h2>
+                        <p style="font-size:16px;line-height:1.6;color:#D3DAFF">Replace spreadsheets and paper with
+                            approvals, field service, inventory and customer portals, built on Zoho Creator or custom
+                            code.</p>
+                    </div>
+                    <div
+                        style="flex:1 1 240px;background:#141B66;border-radius:18px;padding:18px;display:flex;flex-direction:column;gap:10px;font-size:14px">
+                        <p style="font-size:12px;color:#B8C4FF">Demo preview · Custom app</p>
+                        <div style="background:#232C8A;border-radius:10px;padding:10px 12px">Order approvals ✓</div>
+                        <div style="background:#232C8A;border-radius:10px;padding:10px 12px">Field service app</div>
+                        <div style="background:#232C8A;border-radius:10px;padding:10px 12px">Customer portal</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="wrap sec" style="display:flex;flex-direction:column;gap:32px">
+            <div style="display:flex;flex-direction:column;gap:10px;max-width:780px"><span class="eyebrow">Our
+                    services</span>
+                <h2 style="font-size:clamp(28px,3.4vw,40px);line-height:1.2">Zoho implementation, custom apps and
+                    websites from one Surat team</h2>
+                <p class="muted">Zoho CRM, Books, Inventory and Creator are our most requested services. We also build
+                    custom software and websites for businesses that have outgrown spreadsheets.</p>
+            </div>
+            <p class="eyebrow" style="color:#1B1446">Zoho implementation &amp; migration</p>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px"><a
+                    href="/zoho-crm" class="lcard" style="display:flex;flex-direction:column;gap:8px">
+                    <h3 style="font-size:20px">Zoho CRM</h3>
+                    <p class="muted" style="font-size:15px">Lead capture, pipelines, WhatsApp and email follow-ups, and
+                        sales reports.</p><span style="color:#4B3FBF;font-weight:600;margin-top:auto">Learn more
+                        →</span>
+                </a><a href="/zoho-books" class="lcard" style="display:flex;flex-direction:column;gap:8px">
+                    <h3 style="font-size:20px">Zoho Books</h3>
+                    <p class="muted" style="font-size:15px">Invoicing set up for your tax rules (GST or VAT), banking
+                        sync and migration from your current accounting tool.</p><span
+                        style="color:#4B3FBF;font-weight:600;margin-top:auto">Learn more →</span>
+                </a><a href="/zoho-inventory" class="lcard" style="display:flex;flex-direction:column;gap:8px">
+                    <h3 style="font-size:20px">Zoho Inventory</h3>
+                    <p class="muted" style="font-size:15px">Multi-warehouse stock, orders, barcode scanning and Shopify
+                        sync.</p><span style="color:#4B3FBF;font-weight:600;margin-top:auto">Learn more →</span>
+                </a><a href="/zoho-creator" class="lcard" style="display:flex;flex-direction:column;gap:8px">
+                    <h3 style="font-size:20px">Zoho Creator</h3>
+                    <p class="muted" style="font-size:15px">Custom low-code apps for approvals, field service and
+                        portals.</p><span style="color:#4B3FBF;font-weight:600;margin-top:auto">Learn more →</span>
+                </a></div>
+            <p class="eyebrow" style="color:#1B1446">Custom development &amp; growth</p>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px"><a
+                    href="/custom-app-development" class="lcard" style="display:flex;flex-direction:column;gap:8px">
+                    <h3 style="font-size:20px">Custom App Development</h3>
+                    <p class="muted" style="font-size:15px">Web and mobile apps built around your workflow, with
+                        dashboards and APIs.</p><span style="color:#4B3FBF;font-weight:600;margin-top:auto">Learn more
+                        →</span>
+                </a><a href="/custom-web-development" class="lcard" style="display:flex;flex-direction:column;gap:8px">
+                    <h3 style="font-size:20px">Custom Website Development</h3>
+                    <p class="muted" style="font-size:15px">Fast, SEO-ready business websites and web portals.</p><span
+                        style="color:#4B3FBF;font-weight:600;margin-top:auto">Learn more →</span>
+                </a><a href="/shopify-development" class="lcard" style="display:flex;flex-direction:column;gap:8px">
+                    <h3 style="font-size:20px">Shopify Development</h3>
+                    <p class="muted" style="font-size:15px">Stores that convert, synced with Zoho Inventory and Books.
+                    </p><span style="color:#4B3FBF;font-weight:600;margin-top:auto">Learn more →</span>
+                </a><a href="/whatsapp-automation" class="lcard" style="display:flex;flex-direction:column;gap:8px">
+                    <h3 style="font-size:20px">WhatsApp Automation</h3>
+                    <p class="muted" style="font-size:15px">Official Cloud API, broadcasts, chatbots and a shared inbox.
+                    </p><span style="color:#4B3FBF;font-weight:600;margin-top:auto">Learn more →</span>
+                </a></div>
+            <p class="muted" style="font-size:15px">Also: <a href="/zoho-analytics" class="ul">Zoho Analytics</a> · <a
+                    href="/zoho-mail" class="ul">Mail</a> · <a href="/zoho-cliq" class="ul">Cliq</a> · <a
+                    href="/zoho-pos" class="ul">POS</a> · <a href="/zoho-social" class="ul">Social</a> · <a
+                    href="/zoho-commerce" class="ul">Commerce</a> · <a href="/aws-cloud-solutions" class="ul">AWS
+                    Cloud</a> · <a href="/social-media-marketing" class="ul">Social Media Marketing</a></p>
+        </section>
+        <section class="wrap" style="padding-bottom:80px;display:flex;flex-direction:column;gap:28px">
+            <div style="display:flex;flex-direction:column;gap:10px;max-width:700px"><span class="eyebrow">Built for
+                    growing businesses worldwide</span>
+                <h2 style="font-size:clamp(26px,3.2vw,36px);line-height:1.2">Setups shaped around how your industry
+                    sells</h2>
+            </div>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px">
+                <div class="lcard">
+                    <h3 style="font-size:19px;margin-bottom:8px">Manufacturing</h3>
+                    <p class="muted" style="font-size:15px">Enquiries, samples, quotations and production orders in one
+                        flow.</p>
+                </div>
+                <div class="lcard">
+                    <h3 style="font-size:19px;margin-bottom:8px">Trading &amp; distribution</h3>
+                    <p class="muted" style="font-size:15px">Billing, ledgers and stock across warehouses and branches.
+                    </p>
+                </div>
+                <div class="lcard">
+                    <h3 style="font-size:19px;margin-bottom:8px">Retail &amp; e-commerce</h3>
+                    <p class="muted" style="font-size:15px">Shopify orders synced with inventory and accounts
+                        automatically.</p>
+                </div>
+                <div class="lcard">
+                    <h3 style="font-size:19px;margin-bottom:8px">Logistics &amp; service teams</h3>
+                    <p class="muted" style="font-size:15px">Dispatch updates on WhatsApp and custom apps for site
+                        visits.</p>
+                </div>
+            </div>
+        </section>
+        <section id="path" style="background:#fff;border-top:1px solid #DDD5F5;border-bottom:1px solid #DDD5F5">
+            <div class="wrap sec"
+                style="display:flex;flex-direction:column;gap:28px;align-items:center;text-align:center">
+                <span class="eyebrow">Choose your path</span>
+                <h2 style="font-size:clamp(28px,3.4vw,40px);line-height:1.2">Where is your business based?</h2>
+                <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center"><button class="opt"
+                        style="background:#1B1446;color:#fff;border-color:#1B1446">India</button><button
+                        class="opt">United Kingdom</button><button class="opt">United States</button><button
+                        class="opt">UAE</button></div>
+                <div class="lcard"
+                    style="max-width:720px;width:100%;box-sizing:border-box;text-align:left;display:flex;flex-direction:column;gap:12px;background:#F4F0FF">
+                    <h3 style="font-size:22px">Recommended for India: Zoho CRM + Books with GST and WhatsApp</h3>
+                    <p class="muted">GST-ready invoicing, Tally migration, official WhatsApp automation and CRM
+                        follow-ups, set up in 2–3 weeks.</p>
+                    <div><a href="#contact" class="btn" style="background:#F6D98B;color:#1A1440">Get my free plan</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="whatsapp" class="wrap" style="padding-top:80px;padding-bottom:40px">
+            <div
+                style="background:#1B2A9A;border-radius:32px;padding:44px 40px;color:#fff;display:flex;gap:36px;flex-wrap:wrap;align-items:center">
+                <div style="flex:1 1 380px;display:flex;flex-direction:column;gap:16px"><span class="glassbar"
+                        style="align-self:flex-start;font-size:13px">WhatsApp automation</span>
+                    <h2 style="font-size:clamp(26px,3.2vw,38px);line-height:1.2">WhatsApp automation that turns chats
+                        into customers</h2>
+                    <p style="font-size:16px;line-height:1.65;color:#DCE3FF">Official WhatsApp Cloud API, broadcasts,
+                        chatbots, a shared team inbox and CRM sync. Strongest for businesses selling in India, the
+                        Middle East, the UK and Europe.</p>
+                    <div><a href="/whatsapp-automation" class="btn" style="background:#F6D98B;color:#1A1440">Explore
+                            WhatsApp automation</a></div>
+                </div>
+                <div
+                    style="flex:1 1 300px;background:#0B1550;border-radius:18px;padding:18px;display:flex;flex-direction:column;gap:10px;font-size:14px">
+                    <div style="align-self:flex-start;background:#232C8A;border-radius:12px;padding:10px 12px">Hi, do
+                        you ship to Dubai?</div>
+                    <div style="align-self:flex-end;background:#0F3D2E;border-radius:12px;padding:10px 12px">Yes!
+                        Sending our catalogue and a quote now.</div>
+                    <p style="font-size:12px;color:#A8B7EE">Lead created in CRM · Owner assigned</p>
+                </div>
+            </div>
+        </section>
+        <section class="wrap sec" style="display:flex;flex-direction:column;gap:32px">
+            <div style="display:flex;flex-direction:column;gap:10px;max-width:760px"><span class="eyebrow">Global
+                    delivery</span>
+                <h2 style="font-size:clamp(28px,3.4vw,40px);line-height:1.2">Remote-first Zoho and software delivery for
+                    clients worldwide</h2>
+            </div>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px">
+                <div class="lcard">
+                    <h3 style="font-size:20px;margin-bottom:8px">Remote onboarding</h3>
+                    <p class="muted" style="font-size:15px">Kickoff, workshops and training over video, with a shared
+                        project board and weekly demos.</p>
+                </div>
+                <div class="lcard">
+                    <h3 style="font-size:20px;margin-bottom:8px">Time-zone friendly</h3>
+                    <p class="muted" style="font-size:15px">UAE: full-day overlap. UK: 5–6 hours daily. US: evening IST
+                        calls by appointment.</p>
+                </div>
+                <div class="lcard">
+                    <h3 style="font-size:20px;margin-bottom:8px">Clear pricing</h3>
+                    <p class="muted" style="font-size:15px">Fixed-scope quotes in INR or USD, with milestone-based
+                        payments.</p>
+                </div>
+                <div class="lcard">
+                    <h3 style="font-size:20px;margin-bottom:8px">Secure by default</h3>
+                    <p class="muted" style="font-size:15px">NDA on request, role-based access and data handled under
+                        agreed privacy terms.</p>
+                </div>
+            </div>
+        </section>
+        <section id="phases" class="wrap sec">
+            <div
+                style="background:#0B1040;border-radius:32px;padding:48px 40px;color:#fff;display:flex;flex-direction:column;gap:36px">
+                <div style="max-width:620px;display:flex;flex-direction:column;gap:10px"><span class="eyebrow"
+                        style="color:#8FC4FF">How we work</span>
+                    <h2 style="font-size:clamp(26px,3.2vw,38px);line-height:1.2">Four phases, like the moon. None are
+                        skipped.</h2>
+                </div>
+                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:28px">
+                    <div style="display:flex;flex-direction:column;gap:10px"><svg width="52" height="52"
+                            viewBox="0 0 40 40" aria-hidden="true">
+                            <circle cx="20" cy="20" r="18" fill="#0A1140" stroke="#3B4BB0" />
+                            <path d="M20 2a18 18 0 0 1 0 36a10 18 0 0 0 0-36z" fill="#F6E7B4" />
+                        </svg>
+                        <h3 style="font-size:20px">1. Discovery</h3>
+                        <p style="font-size:15px;line-height:1.6;color:#B8C4F0">Free call to map your flow. Fixed-scope
+                            quote.</p>
+                    </div>
+                    <div style="display:flex;flex-direction:column;gap:10px"><svg width="52" height="52"
+                            viewBox="0 0 40 40" aria-hidden="true">
+                            <circle cx="20" cy="20" r="18" fill="#0A1140" stroke="#3B4BB0" />
+                            <path d="M20 2a18 18 0 0 1 0 36z" fill="#F6E7B4" />
+                        </svg>
+                        <h3 style="font-size:20px">2. Setup &amp; migration</h3>
+                        <p style="font-size:15px;line-height:1.6;color:#B8C4F0">Automations and data moved from Tally or
+                            Excel.</p>
+                    </div>
+                    <div style="display:flex;flex-direction:column;gap:10px"><svg width="52" height="52"
+                            viewBox="0 0 40 40" aria-hidden="true">
+                            <circle cx="20" cy="20" r="18" fill="#0A1140" stroke="#3B4BB0" />
+                            <path d="M20 2a18 18 0 0 1 0 36a10 18 0 0 1 0-36z" fill="#F6E7B4" />
+                        </svg>
+                        <h3 style="font-size:20px">3. Team training</h3>
+                        <p style="font-size:15px;line-height:1.6;color:#B8C4F0">Hands-on sessions so your staff use it
+                            daily.</p>
+                    </div>
+                    <div style="display:flex;flex-direction:column;gap:10px"><svg width="52" height="52"
+                            viewBox="0 0 40 40" aria-hidden="true">
+                            <circle cx="20" cy="20" r="18" fill="#F6E7B4" />
+                        </svg>
+                        <h3 style="font-size:20px">4. Support &amp; hypercare</h3>
+                        <p style="font-size:15px;line-height:1.6;color:#B8C4F0">30–60 days of close support after
+                            go-live.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="results" class="wrap" style="padding-bottom:80px;display:flex;flex-direction:column;gap:28px">
+            <h2 style="font-size:clamp(28px,3.4vw,38px);line-height:1.2">Results our clients see</h2><a
+                href="/case-studies" class="ul" style="align-self:flex-start">View all case studies →</a>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px">
+                <div class="lcard" style="display:flex;flex-direction:column;gap:12px"><span class="eyebrow">Industrial
+                        products &amp; steel</span>
+                    <h3 style="font-size:24px">Kiran Metallic</h3>
+                    <div style="display:flex;gap:8px;flex-wrap:wrap"><span
+                            style="font-size:12px;border:1px solid #B9AEEA;border-radius:999px;padding:3px 10px;color:#4B3FBF">Zoho
+                            Books</span><span
+                            style="font-size:12px;border:1px solid #B9AEEA;border-radius:999px;padding:3px 10px;color:#4B3FBF">Cash-flow
+                            forecasting</span></div>
+                    <p style="font-family:Outfit,sans-serif;font-size:44px;color:#4B3FBF;line-height:1">4.5x</p>
+                    <p style="font-weight:600">Faster invoicing, purchase orders and dispatches</p>
+                    <p class="muted" style="font-size:15px">1-click GST e-invoicing, automated e-way bills and real-time
+                        cash-flow visibility for a supplier to L&amp;T, Adani and Reliance.</p>
+                    <p class="muted" style="font-size:14px;border-left:3px solid #B9AEEA;padding-left:12px">“Accounting
+                        which used to take days is now completed in real-time.” Abhishek Mehar, Director</p><a
+                        href="/case-studies" class="lnkd" style="margin-top:auto;color:#4B3FBF;font-weight:600">Read
+                        case study →</a>
+                </div>
+                <div class="lcard" style="display:flex;flex-direction:column;gap:12px"><span class="eyebrow">CGI, VFX
+                        &amp; production · Mumbai</span>
+                    <h3 style="font-size:24px">The OZ Studio</h3>
+                    <div style="display:flex;gap:8px;flex-wrap:wrap"><span
+                            style="font-size:12px;border:1px solid #B9AEEA;border-radius:999px;padding:3px 10px;color:#4B3FBF">Zoho
+                            CRM</span><span
+                            style="font-size:12px;border:1px solid #B9AEEA;border-radius:999px;padding:3px 10px;color:#4B3FBF">Custom
+                            web app</span></div>
+                    <p style="font-family:Outfit,sans-serif;font-size:44px;color:#4B3FBF;line-height:1">38%</p>
+                    <p style="font-weight:600">Increase in repeat client retention</p>
+                    <p class="muted" style="font-size:15px">Zoho CRM blueprints plus a custom web app for client briefs,
+                        revision approvals and billing triggers.</p>
+                    <p class="muted" style="font-size:14px;border-left:3px solid #B9AEEA;padding-left:12px">“Our
+                        retainers have expanded and our customer retention has scaled.” The OZ Studio team</p><a
+                        href="/case-studies" class="lnkd" style="margin-top:auto;color:#4B3FBF;font-weight:600">Read
+                        case study →</a>
+                </div>
+                <div class="lcard" style="display:flex;flex-direction:column;gap:12px"><span class="eyebrow">Cleaning,
+                        hygiene &amp; laundry solutions</span>
+                    <h3 style="font-size:24px">The SM Company</h3>
+                    <div style="display:flex;gap:8px;flex-wrap:wrap"><span
+                            style="font-size:12px;border:1px solid #B9AEEA;border-radius:999px;padding:3px 10px;color:#4B3FBF">Zoho
+                            Books</span><span
+                            style="font-size:12px;border:1px solid #B9AEEA;border-radius:999px;padding:3px 10px;color:#4B3FBF">Advanced
+                            Inventory</span><span
+                            style="font-size:12px;border:1px solid #B9AEEA;border-radius:999px;padding:3px 10px;color:#4B3FBF">Zoho
+                            Creator</span></div>
+                    <p style="font-weight:600;font-size:18px">Billing, stock and custom workflows in one connected
+                        system</p>
+                    <p class="muted" style="font-size:15px">Serves industries, pharma, hospitality, healthcare and
+                        commercial clients with integrated cleaning, hygiene and laundry solutions.</p><span
+                        class="muted" style="margin-top:auto;font-size:14px">Full case study coming soon</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="crm" class="wrap" style="padding-bottom:40px">
+            <div
+                style="background:#0B1040;border-radius:32px;padding:48px 40px;color:#fff;display:flex;gap:40px;flex-wrap:wrap;align-items:center">
+                <div style="flex:1 1 420px;display:flex;flex-direction:column;gap:18px">
+                    <span class="glassbar" style="align-self:flex-start;font-size:13px;color:#F5B83D">moonCliq CRM ·
+                        Beta · Public launch 15 Jan 2027</span>
+                    <h2 style="font-size:clamp(28px,3.6vw,42px);line-height:1.15">The WhatsApp-first CRM that makes your
+                        team follow the sales process</h2>
+                    <p style="font-size:17px;line-height:1.65;color:#C9D2FF">Built by the team behind 50+ Zoho and CRM
+                        deployments, and designed for Indian sales teams with INR pricing and official WhatsApp. Stop
+                        leads from going cold and stop deals from skipping stages, without a complex setup.</p>
+                    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px">
+                        <div style="display:flex;gap:10px;font-size:15px;line-height:1.5;color:#E3E8FF"><span
+                                style="color:#F6D98B">✓</span>Process rules that block skipped stages</div>
+                        <div style="display:flex;gap:10px;font-size:15px;line-height:1.5;color:#E3E8FF"><span
+                                style="color:#F6D98B">✓</span>Official WhatsApp API with ₹0 markup</div>
+                        <div style="display:flex;gap:10px;font-size:15px;line-height:1.5;color:#E3E8FF"><span
+                                style="color:#F6D98B">✓</span>15-minute lead response reminders</div>
+                        <div style="display:flex;gap:10px;font-size:15px;line-height:1.5;color:#E3E8FF"><span
+                                style="color:#F6D98B">✓</span>Quotation PDFs and sales orders</div>
+                        <div style="display:flex;gap:10px;font-size:15px;line-height:1.5;color:#E3E8FF"><span
+                                style="color:#F6D98B">✓</span>Click-to-call and call logs</div>
+                        <div style="display:flex;gap:10px;font-size:15px;line-height:1.5;color:#E3E8FF"><span
+                                style="color:#F6D98B">✓</span>Industry-specific custom sections</div>
+                    </div>
+                    <div style="display:flex;gap:14px;flex-wrap:wrap"><a href="https://crm.mooncliq.com/" class="btn"
+                            style="background:#F6D98B;color:#1A1440">Start 14-day free trial</a><a href="#contact"
+                            class="btn" style="border:1px solid #8FA2F0;color:#fff">Book a live demo</a></div>
+                    <p style="font-size:14px;color:#A8B7EE">Already on Zoho? We integrate and migrate your data.</p>
+                </div>
+                <div
+                    style="flex:1 1 320px;background:#0A1140;border:1px solid #2F3C9A;border-radius:18px;padding:22px;display:flex;flex-direction:column;gap:12px;font-size:14px">
+                    <p style="font-size:12px;color:#A8B7EE">Demo preview · Deal stages</p>
+                    <div style="display:flex;justify-content:space-between"><span>New Inquiry</span><span
+                            style="color:#6EE7B7">✓ Done</span></div>
+                    <div style="display:flex;justify-content:space-between"><span>Requirement Captured</span><span
+                            style="color:#6EE7B7">✓ Done</span></div>
+                    <div style="display:flex;justify-content:space-between"><span>Quotation Sent</span><span
+                            style="color:#F5B83D">Blocked: PDF required</span></div>
+                    <div style="display:flex;justify-content:space-between;color:#8EA0E8"><span>Closed
+                            Won</span><span>Locked</span></div>
+                    <p style="font-size:13px;color:#A8B7EE;border-top:1px solid #2F3C9A;padding-top:12px">Start in 3
+                        steps: sign up, connect WhatsApp, add your team.</p>
+                </div>
+            </div>
+        </section>
+        <section id="crm-trial" class="wrap" style="padding-bottom:80px">
+            <div class="lcard"
+                style="display:flex;gap:24px;align-items:center;justify-content:space-between;flex-wrap:wrap;padding:32px">
+                <div style="flex:1 1 400px;display:flex;flex-direction:column;gap:8px"><span class="eyebrow"
+                        style="color:#B7791F">Our product · Beta</span>
+                    <h3 style="font-size:24px">Ready to try moonCliq CRM with your own team?</h3>
+                    <p class="muted" style="font-size:15px">Process rules, 15-minute lead reminders and official
+                        WhatsApp. Pricing announced 15 Jan 2027.</p>
+                </div>
+                <a href="https://crm.mooncliq.com/" class="btn" style="background:#1B1446;color:#fff">Start 14-day free
+                    trial</a>
+            </div>
+        </section>
+
+        <section class="wrap" style="padding-bottom:80px;display:flex;gap:40px;flex-wrap:wrap">
+            <div style="flex:1 1 260px"><span class="eyebrow">Got questions?</span>
+                <h2 style="font-size:clamp(26px,3.2vw,36px);line-height:1.2;margin-top:10px">Frequently asked questions
+                </h2>
+            </div>
+            <div style="flex:2 1 520px;display:flex;flex-direction:column;gap:12px">
+                <details class="lcard faq-item" name="faq" open style="padding:20px 24px">
+                    <summary>
+                        <span>How long does implementation take?</span>
+                        <span class="faq-icon">+</span>
+                    </summary>
+                    <p class="muted" style="font-size:15px;margin-top:10px">Standard Zoho setups take 2–3 weeks. Larger
+                        enterprise deployments take 4–8 weeks depending on custom workflows and data migration.</p>
+                </details>
+                <details class="lcard faq-item" name="faq" style="padding:20px 24px">
+                    <summary>
+                        <span>Do you work with clients in the US, UK and UAE?</span>
+                        <span class="faq-icon">+</span>
+                    </summary>
+                    <p class="muted" style="font-size:15px;margin-top:10px">Yes, we deliver 100% remote implementations
+                        and support for clients across India, the US, the UK, UAE, and beyond with flexible timezone
+                        overlap.</p>
+                </details>
+                <details class="lcard faq-item" name="faq" style="padding:20px 24px">
+                    <summary>
+                        <span>Can you migrate data from Tally or Excel?</span>
+                        <span class="faq-icon">+</span>
+                    </summary>
+                    <p class="muted" style="font-size:15px;margin-top:10px">Yes. We clean, map, and import your
+                        historical data from Tally, Excel sheets, Google Sheets, or legacy CRMs directly into Zoho
+                        Books, Inventory, and CRM.</p>
+                </details>
+                <details class="lcard faq-item" name="faq" style="padding:20px 24px">
+                    <summary>
+                        <span>What can I build with Zoho Creator?</span>
+                        <span class="faq-icon">+</span>
+                    </summary>
+                    <p class="muted" style="font-size:15px;margin-top:10px">Custom ERP modules, vendor portals, approval
+                        workflows, field-service apps, and industry-specific tools tailored exactly to your unique
+                        business process.</p>
+                </details>
+                <details class="lcard faq-item" name="faq" style="padding:20px 24px">
+                    <summary>
+                        <span>How much does a custom app or website cost?</span>
+                        <span class="faq-icon">+</span>
+                    </summary>
+                    <p class="muted" style="font-size:15px;margin-top:10px">Pricing depends on scope and integrations.
+                        After an initial scoping call, we provide a transparent fixed-price quote and timeline within 24
+                        hours.</p>
+                </details>
+                <details class="lcard faq-item" name="faq" style="padding:20px 24px">
+                    <summary>
+                        <span>Is moonCliq CRM free to try?</span>
+                        <span class="faq-icon">+</span>
+                    </summary>
+                    <p class="muted" style="font-size:15px;margin-top:10px">Yes, you get a full-featured 14-day free
+                        trial with no credit card required. Connect WhatsApp and invite your team in minutes.</p>
+                </details>
+            </div>
+        </section>
+
+        <section id="contact"
+            style="position:relative;overflow:hidden;background:linear-gradient(180deg,#1B2A9A 0%,#0A1048 100%);color:#fff">
+            <svg viewBox="0 0 1440 600" preserveAspectRatio="xMidYMax slice" aria-hidden="true"
+                style="position:absolute;inset:0;width:100%;height:100%">
+                <g fill="#fff">
+                    <circle cx="150" cy="90" r="1.6" />
+                    <circle cx="420" cy="170" r="1.4" />
+                    <circle cx="760" cy="60" r="1.7" />
+                    <circle cx="1100" cy="140" r="1.5" />
+                    <circle cx="1330" cy="70" r="1.8" />
+                </g>
+                <path d="M0 500C300 450 700 445 1000 485S1330 500 1440 480V600H0z" fill="#060C32" />
+            </svg>
+            <div class="wrap"
+                style="position:relative;z-index:1;display:flex;gap:48px;flex-wrap:wrap;align-items:center;padding-top:88px;padding-bottom:110px">
+                <div style="flex:1 1 380px;display:flex;flex-direction:column;gap:18px">
+                    <h2 style="font-size:clamp(28px,3.8vw,44px);line-height:1.15">What do you want to automate?</h2>
+                    <input id="autoSearch" class="field" aria-label="What do you want to automate?"
+                        placeholder="Search: lead tracking, GST billing, WhatsApp..."
+                        style="border-radius:999px;min-height:56px;padding:0 24px">
+                    <div id="chipsContainer" style="display:flex;gap:10px;flex-wrap:wrap">
+                        <span class="glassbar chip-btn" data-service="Zoho CRM">Lead tracking</span>
+                        <span class="glassbar chip-btn" data-service="Zoho Books & Inventory">Invoicing</span>
+                        <span class="glassbar chip-btn" data-service="Zoho Books & Inventory">Stock sync</span>
+                        <span class="glassbar chip-btn" data-service="WhatsApp Automation">WhatsApp</span>
+                    </div>
+                    <p style="color:#D3DAFF;font-size:15px">We reply within 24 hours with a simple plan.</p>
+                </div>
+                <div
+                    style="flex:1 1 380px;background:rgba(8,14,64,.82);border:1px solid #27348F;border-radius:20px;padding:28px;display:flex;flex-direction:column;gap:14px">
+                    <input id="userName" class="field" aria-label="Full name" placeholder="Full name">
+                    <input id="userEmail" class="field" aria-label="Work email" placeholder="Work email">
+                    <input id="userPhone" class="field" aria-label="WhatsApp or phone with country code"
+                        placeholder="WhatsApp / phone (with country code)">
+                    <select id="userCountry" class="field" aria-label="Country">
+                        <option value="">Country</option>
+                        <option value="India">India</option>
+                        <option value="United States">United States</option>
+                        <option value="United Kingdom">United Kingdom</option>
+                        <option value="UAE">UAE</option>
+                        <option value="Canada">Canada</option>
+                        <option value="Australia">Australia</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <select id="userService" class="field" aria-label="Service of interest">
+                        <option value="">Service of interest</option>
+                        <option value="Zoho CRM">Zoho CRM</option>
+                        <option value="Zoho Books & Inventory">Zoho Books &amp; Inventory</option>
+                        <option value="WhatsApp Automation">WhatsApp Automation</option>
+                    </select>
+                    <button type="button" id="btnCallback" class="btn" style="background:#F6D98B;color:#1A1440">Request
+                        Callback</button>
+                    <a id="btnWhatsApp" href="https://wa.me/919998663338" target="_blank" rel="noopener" class="btn"
+                        style="background:#128C4A;color:#fff">Chat on WhatsApp</a>
+                </div>
+            </div>
+        </section>
+        <footer style="background:#060C32;color:#A8B7EE">
+            <div class="wrap" style="padding-top:56px;padding-bottom:32px;display:flex;flex-direction:column;gap:36px">
+                <div style="display:flex;gap:32px;flex-wrap:wrap">
+                    <div style="flex:1 1 160px;display:flex;flex-direction:column;gap:10px">
+                        <p style="font-weight:600;color:#fff">Zoho services</p>
+                        <a href="zoho-crm.html" style="font-size:14px;color:#A8B7EE">Zoho CRM</a>
+                        <a href="zoho-books.html" style="font-size:14px;color:#A8B7EE">Zoho Books</a>
+                        <a href="zoho-inventory.html" style="font-size:14px;color:#A8B7EE">Zoho Inventory</a>
+                        <a href="zoho-creator.html" style="font-size:14px;color:#A8B7EE">Zoho Creator</a>
+                        <a href="zoho-crm.html" style="font-size:14px;color:#A8B7EE">Zoho Analytics</a>
+                    </div>
+                    <div style="flex:1 1 160px;display:flex;flex-direction:column;gap:10px">
+                        <p style="font-weight:600;color:#fff">Build &amp; grow</p>
+                        <a href="custom-app-development.html" style="font-size:14px;color:#A8B7EE">Custom App Development</a>
+                        <a href="custom-web-development.html" style="font-size:14px;color:#A8B7EE">Website Development</a>
+                        <a href="custom-web-development.html" style="font-size:14px;color:#A8B7EE">Shopify Development</a>
+                        <a href="whatsapp-automation.html" style="font-size:14px;color:#A8B7EE">WhatsApp Automation</a>
+                        <a href="custom-app-development.html" style="font-size:14px;color:#A8B7EE">AWS Cloud</a>
+                    </div>
+                    <div style="flex:1 1 160px;display:flex;flex-direction:column;gap:10px">
+                        <p style="font-weight:600;color:#fff">Global Presence</p>
+                        <a href="zoho-partner-india.html" style="font-size:14px;color:#A8B7EE">Zoho Partner India</a>
+                        <a href="zoho-partner-uae.html" style="font-size:14px;color:#A8B7EE">Zoho Partner UAE</a>
+                        <a href="zoho-partner-uk.html" style="font-size:14px;color:#A8B7EE">Zoho Partner UK</a>
+                        <a href="zoho-implementation-usa.html" style="font-size:14px;color:#A8B7EE">Zoho Partner USA</a>
+                    </div>
+                    <div style="flex:1 1 150px;display:flex;flex-direction:column;gap:10px">
+                        <p style="font-weight:600;color:#fff">Company</p>
+                        <a href="about.html" style="font-size:14px;color:#A8B7EE">About Us</a>
+                        <a href="case-studies.html" style="font-size:14px;color:#A8B7EE">Case Studies</a>
+                        <a href="blog.html" style="font-size:14px;color:#A8B7EE">Blog &amp; Guides</a>
+                        <a href="https://crm.mooncliq.com/" style="font-size:14px;color:#A8B7EE">moonCliq CRM</a>
+                        <a href="contact.html" style="font-size:14px;color:#A8B7EE">Contact</a>
+                    </div>
+                    <div style="flex:1 1 130px;display:flex;flex-direction:column;gap:10px">
+                        <p style="font-weight:600;color:#fff">Legal</p>
+                        <a href="contact.html" style="font-size:14px;color:#A8B7EE">Privacy Policy</a>
+                        <a href="contact.html" style="font-size:14px;color:#A8B7EE">Terms of Service</a>
+                        <a href="contact.html" style="font-size:14px;color:#A8B7EE">Data Deletion</a>
+                    </div>
+                </div>
+                <p style="font-size:13px;border-top:1px solid #1B2670;padding-top:20px">© 2026 MoonCliq (Kshiv) ·
+                    Authorised Zoho Partner · Meta Verified Tech Provider · Headquartered in Surat, India · Serving
+                    clients worldwide</p>
+            </div>
+        </footer>
     </div>
-  </section>
-  </div>
-  </section>
+    <script>
+        (function () {
+            // Ultra-lightweight event-driven logic (zero lag, < 0.1ms execution)
+            var chipsContainer = document.getElementById('chipsContainer');
+            var userService = document.getElementById('userService');
+            var autoSearch = document.getElementById('autoSearch');
+            var btnWhatsApp = document.getElementById('btnWhatsApp');
+            var userName = document.getElementById('userName');
+            var WA_NUMBER = '919998663338';
 
-  <!-- ── SOLUTIONS ──────────────────────────────────────────── -->
+            // 1. Single Event Delegation for Chips Click
+            if (chipsContainer && userService) {
+                chipsContainer.addEventListener('click', function (e) {
+                    var chip = e.target.closest('.chip-btn');
+                    if (!chip) return;
 
+                    var active = chipsContainer.querySelector('.chip-btn.active');
+                    if (active && active !== chip) active.classList.remove('active');
 
-  <!-- ── TECH STACK ────────────────────────────────────────── -->
-  <section class="section tech-stack" id="tech-stack">
-    <div class="container">
-      <div class="section-header text-center">
-        <div class="section-tag">Development Capabilities</div>
-        <h2 class="section-title">Complex Custom <span class="gradient-text">Applications</span></h2>
-        <p class="section-subtitle">We design and build bespoke, high-performance software systems. From massive scale
-          backends to highly interactive frontends, we use modern technologies to build reliable products.</p>
-      </div>
+                    chip.classList.toggle('active');
+                    var service = chip.classList.contains('active') ? chip.getAttribute('data-service') : '';
+                    userService.value = service;
+                });
 
-      <div class="tech-grid">
-        <div class="tech-card glass-card">
-          <div class="tech-icon-wrap">
-            <!-- Next.js SVG -->
-            <svg width="30" height="30" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M64 128C99.3462 128 128 99.3462 128 64C128 28.6538 99.3462 0 64 0C28.6538 0 0 28.6538 0 64C0 99.3462 28.6538 128 64 128Z"
-                fill="black" />
-              <path
-                d="M102.164 100.826L50.4852 35H40V93H47.6698V45.8941L95.5398 106.149C97.9405 104.593 100.16 102.81 102.164 100.826Z"
-                fill="white" />
-              <path d="M78 35H85V93H78V35Z" fill="white" />
-            </svg>
-          </div>
-          <h3>Next.js</h3>
-          <p>Production-ready React framework offering server-side rendering, static site generation, and optimized web
-            performance right out of the box.</p>
-        </div>
+                // Dropdown change updates chip highlight
+                userService.addEventListener('change', function () {
+                    var selected = userService.value;
+                    var chips = chipsContainer.querySelectorAll('.chip-btn');
+                    chips.forEach(function (c) {
+                        c.classList.toggle('active', selected && c.getAttribute('data-service') === selected);
+                    });
+                });
+            }
 
-        <div class="tech-card glass-card">
-          <div class="tech-icon-wrap">
-            <!-- React SVG -->
-            <svg width="30" height="30" viewBox="-11.5 -10.23174 23 20.46348" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="0" cy="0" r="2.05" fill="#61dafb" />
-              <g stroke="#61dafb" stroke-width="1" fill="none">
-                <ellipse rx="11" ry="4.2" />
-                <ellipse rx="11" ry="4.2" transform="rotate(60)" />
-                <ellipse rx="11" ry="4.2" transform="rotate(120)" />
-              </g>
-            </svg>
-          </div>
-          <h3>React</h3>
-          <p>The industry standard library for building highly dynamic, responsive, and component-based user interfaces
-            with smooth state transitions.</p>
-        </div>
+            // 2. Instant Zero-Lag Search Filter
+            if (autoSearch && chipsContainer) {
+                autoSearch.addEventListener('input', function () {
+                    var q = autoSearch.value.trim().toLowerCase();
+                    var chips = chipsContainer.querySelectorAll('.chip-btn');
+                    chips.forEach(function (chip) {
+                        var text = chip.textContent.toLowerCase();
+                        var match = !q || text.indexOf(q) !== -1;
+                        chip.style.display = match ? 'inline-flex' : 'none';
+                    });
+                });
+            }
 
-        <div class="tech-card glass-card">
-          <div class="tech-icon-wrap">
-            <!-- Node.js SVG -->
-            <svg width="30" height="30" viewBox="0 0 256 284" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M143.21 278.472l100.082-57.822c6.196-3.578 10.016-10.198 10.016-17.355V87.67c0-7.157-3.82-13.777-10.016-17.355L143.21 12.493c-6.196-3.578-13.82-3.578-20.016 0L23.112 70.315c-6.196 3.578-10.016 10.198-10.016 17.355v115.626c0 7.157 3.82 13.777 10.016 17.355l100.082 57.822c6.196 3.578 13.82 3.578 20.016 0z"
-                fill="#339933" />
-              <path d="M125.688 88.026V187.89l-58.82-33.957V86.72l58.82 31.306z" fill="#FFFFFF" opacity="0.9" />
-            </svg>
-          </div>
-          <h3>Node.js</h3>
-          <p>Event-driven, asynchronous JavaScript runtime built on Chrome's V8 engine, designed to execute scalable
-            network applications and REST APIs.</p>
-        </div>
+            // 3. Dynamic WhatsApp & Callback Click Handler
+            var userEmail = document.getElementById('userEmail');
+            var userPhone = document.getElementById('userPhone');
+            var userCountry = document.getElementById('userCountry');
+            var btnCallback = document.getElementById('btnCallback');
 
-        <div class="tech-card glass-card">
-          <div class="tech-icon-wrap">
-            <!-- Python SVG -->
-            <svg width="30" height="30" viewBox="0 0 110 110" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M55.0001 7.1875C28.6001 7.1875 30.1251 18.625 30.1251 18.625L30.1876 30.4062H55.3751V33.9688H20.0626C20.0626 33.9688 7.18762 32.5312 7.18762 58.7812C7.18762 85.0312 18.4064 83.8438 18.4064 83.8438H29.1876V68.6562C29.1876 68.6562 28.5314 50.8438 46.5626 50.8438H71.5314C71.5314 50.8438 83.8439 50.8748 83.8439 38.6875V18.625C83.8439 18.625 85.8126 7.1875 55.0001 7.1875Z"
-                fill="#3776AB" />
-              <path
-                d="M55 102.812C81.4 102.812 79.875 91.375 79.875 91.375L79.8125 79.5938H54.625V76.0312H89.9375C89.9375 76.0312 102.812 77.4688 102.812 51.2188C102.812 24.9688 91.5938 26.1562 91.5938 26.1562H80.8125V41.3438C80.8125 41.3438 81.4688 59.1562 63.4375 59.1562H38.4688C38.4688 59.1562 26.1562 59.1252 26.1562 71.3125V91.375C26.1562 91.375 24.1875 102.812 55 102.812Z"
-                fill="#FFE873" />
-            </svg>
-          </div>
-          <h3>Python</h3>
-          <p>Powerhouse language chosen for data pipelines, microservices, artificial intelligence models, scripting,
-            and enterprise backend engineering.</p>
-        </div>
+            function getLeadMsg() {
+                var name = userName ? userName.value.trim() : '';
+                var email = userEmail ? userEmail.value.trim() : '';
+                var phone = userPhone ? userPhone.value.trim() : '';
+                var country = userCountry ? userCountry.value : '';
+                var service = userService ? userService.value : '';
 
-        <div class="tech-card glass-card">
-          <div class="tech-icon-wrap">
-            <!-- AWS SVG -->
-            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M6.763 10.036c0 .296.032.535.088.71.064.176.144.368.256.576.04.063.056.127.056.183 0 .08-.048.16-.152.24l-.503.335a.383.383 0 0 1-.208.072c-.08 0-.16-.04-.239-.112a2.47 2.47 0 0 1-.287-.375 6.18 6.18 0 0 1-.248-.471c-.622.734-1.405 1.101-2.347 1.101-.67 0-1.205-.191-1.596-.574-.391-.384-.59-.894-.59-1.533 0-.678.239-1.23.726-1.644.487-.415 1.133-.623 1.955-.623.272 0 .551.024.846.064.296.04.6.104.918.176v-.583c0-.607-.127-1.03-.375-1.277-.255-.248-.686-.367-1.3-.367-.28 0-.568.031-.863.103-.295.072-.583.16-.862.272a2.287 2.287 0 0 1-.28.104.488.488 0 0 1-.127.023c-.112 0-.168-.08-.168-.247v-.391c0-.128.016-.224.056-.28a.597.597 0 0 1 .224-.167c.279-.144.614-.264 1.005-.36a4.84 4.84 0 0 1 1.246-.151c.95 0 1.644.216 2.091.647.439.43.662 1.085.662 1.963v2.586zm-3.24 1.214c.263 0 .534-.048.822-.144.287-.096.543-.271.758-.51.128-.152.224-.32.272-.512.047-.191.08-.423.08-.694v-.335a6.66 6.66 0 0 0-.735-.136 6.02 6.02 0 0 0-.75-.048c-.535 0-.926.104-1.19.32-.263.215-.39.518-.39.917 0 .375.095.655.295.846.191.2.47.296.838.296zm6.41.862c-.144 0-.24-.024-.304-.08-.064-.048-.12-.16-.168-.311L7.586 5.55a1.398 1.398 0 0 1-.072-.32c0-.128.064-.2.191-.2h.783c.151 0 .255.025.31.08.065.048.113.16.16.312l1.342 5.284 1.245-5.284c.04-.16.088-.264.151-.312a.549.549 0 0 1 .32-.08h.638c.152 0 .256.025.32.08.063.048.12.16.151.312l1.261 5.348 1.381-5.348c.048-.16.104-.264.16-.312a.52.52 0 0 1 .311-.08h.743c.127 0 .2.065.2.2 0 .04-.009.08-.017.128a1.137 1.137 0 0 1-.056.2l-1.923 6.17c-.048.16-.104.263-.168.311a.51.51 0 0 1-.303.08h-.687c-.151 0-.255-.024-.32-.08-.063-.056-.119-.16-.15-.32l-1.238-5.148-1.23 5.14c-.04.16-.087.264-.15.32-.065.056-.177.08-.32.08zm10.256.215c-.415 0-.83-.048-1.229-.143-.399-.096-.71-.2-.918-.32-.128-.071-.215-.151-.247-.223a.563.563 0 0 1-.048-.224v-.407c0-.167.064-.247.183-.247.048 0 .096.008.144.024.048.016.12.048.2.08.271.12.566.215.878.279.319.064.63.096.95.096.502 0 .894-.088 1.165-.264a.86.86 0 0 0 .415-.758.777.777 0 0 0-.215-.559c-.144-.151-.416-.287-.807-.415l-1.157-.36c-.583-.183-1.014-.454-1.277-.813a1.902 1.902 0 0 1-.4-1.158c0-.335.073-.63.216-.886.144-.255.335-.479.575-.654.24-.184.51-.32.83-.415.32-.096.655-.136 1.006-.136.175 0 .359.008.535.032.183.024.35.056.518.088.16.04.312.08.455.127.144.048.256.096.336.144a.69.69 0 0 1 .24.2.43.43 0 0 1 .071.263v.375c0 .168-.064.256-.184.256a.83.83 0 0 1-.303-.096 3.652 3.652 0 0 0-1.532-.311c-.455 0-.815.071-1.062.223-.248.152-.375.383-.375.71 0 .224.08.416.24.567.159.152.454.304.877.44l1.134.358c.574.184.99.44 1.237.767.247.327.367.702.367 1.117 0 .343-.072.655-.207.926-.144.272-.336.511-.583.703-.248.2-.543.343-.886.447-.36.111-.734.167-1.142.167zM21.698 16.207c-2.626 1.94-6.442 2.969-9.722 2.969-4.598 0-8.74-1.7-11.87-4.526-.247-.223-.024-.527.272-.351 3.384 1.963 7.559 3.153 11.877 3.153 2.914 0 6.114-.607 9.06-1.852.439-.2.814.287.383.607zM22.792 14.961c-.336-.43-2.22-.207-3.074-.103-.255.032-.295-.192-.063-.36 1.5-1.053 3.967-.75 4.254-.399.287.36-.08 2.826-1.485 4.007-.215.184-.423.088-.327-.151.32-.79 1.03-2.57.695-2.994z"
-                fill="#FF9900" />
-            </svg>
-          </div>
-          <h3>Amazon Web Services</h3>
-          <p>Global cloud provider leveraging EC2, RDS, Lambda, and S3 for cost-effective hosting, secure storage, and
-            microservice infrastructure.</p>
-        </div>
+                var msg = '👋 Hi moonCliq team, I am requesting a callback / consultation:';
+                if (name) msg += '\n• Name: ' + name;
+                if (email) msg += '\n• Email: ' + email;
+                if (phone) msg += '\n• Phone / WhatsApp: ' + phone;
+                if (country) msg += '\n• Country: ' + country;
+                if (service) msg += '\n• Service: ' + service;
+                return msg;
+            }
 
-        <div class="tech-card glass-card">
-          <div class="tech-icon-wrap">
-            <!-- Postgres SVG -->
-            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M23.5594 14.7228a.5269.5269 0 0 0-.0563-.1191c-.139-.2632-.4768-.3418-1.0074-.2321-1.6533.3411-2.2935.1312-2.5256-.0191 1.342-2.0482 2.445-4.522 3.0411-6.8297.2714-1.0507.7982-3.5237.1222-4.7316a1.5641 1.5641 0 0 0-.1509-.235C21.6931.9086 19.8007.0248 17.5099.0005c-1.4947-.0158-2.7705.3461-3.1161.4794a9.449 9.449 0 0 0-.5159-.0816 8.044 8.044 0 0 0-1.3114-.1278c-1.1822-.0184-2.2038.2642-3.0498.8406-.8573-.3211-4.7888-1.645-7.2219.0788C.9359 2.1526.3086 3.8733.4302 6.3043c.0409.818.5069 3.334 1.2423 5.7436.4598 1.5065.9387 2.7019 1.4334 3.582.553.9942 1.1259 1.5933 1.7143 1.7895.4474.1491 1.1327.1441 1.8581-.7279.8012-.9635 1.5903-1.8258 1.9446-2.2069.4351.2355.9064.3625 1.39.3772a.0569.0569 0 0 0 .0004.0041 11.0312 11.0312 0 0 0-.2472.3054c-.3389.4302-.4094.5197-1.5002.7443-.3102.064-1.1344.2339-1.1464.8115-.0025.1224.0329.2309.0919.3268.2269.4231.9216.6097 1.015.6331 1.3345.3335 2.5044.092 3.3714-.6787-.017 2.231.0775 4.4174.3454 5.0874.2212.5529.7618 1.9045 2.4692 1.9043.2505 0 .5263-.0291.8296-.0941 1.7819-.3821 2.5557-1.1696 2.855-2.9059.1503-.8707.4016-2.8753.5388-4.1012.0169-.0703.0357-.1207.057-.1362.0007-.0005.0697-.0471.4272.0307a.3673.3673 0 0 0 .0443.0068l.2539.0223.0149.001c.8468.0384 1.9114-.1426 2.5312-.4308.6438-.2988 1.8057-1.0323 1.5951-1.6698zM2.371 11.8765c-.7435-2.4358-1.1779-4.8851-1.2123-5.5719-.1086-2.1714.4171-3.6829 1.5623-4.4927 1.8367-1.2986 4.8398-.5408 6.108-.13-.0032.0032-.0066.0061-.0098.0094-2.0238 2.044-1.9758 5.536-1.9708 5.7495-.0002.0823.0066.1989.0162.3593.0348.5873.0996 1.6804-.0735 2.9184-.1609 1.1504.1937 2.2764.9728 3.0892.0806.0841.1648.1631.2518.2374-.3468.3714-1.1004 1.1926-1.9025 2.1576-.5677.6825-.9597.5517-1.0886.5087-.3919-.1307-.813-.5871-1.2381-1.3223-.4796-.839-.9635-2.0317-1.4155-3.5126zm6.0072 5.0871c-.1711-.0428-.3271-.1132-.4322-.1772.0889-.0394.2374-.0902.4833-.1409 1.2833-.2641 1.4815-.4506 1.9143-1.0002.0992-.126.2116-.2687.3673-.4426a.3549.3549 0 0 0 .0737-.1298c.1708-.1513.2724-.1099.4369-.0417.156.0646.3078.26.3695.4752.0291.1016.0619.2945-.0452.4444-.9043 1.2658-2.2216 1.2494-3.1676 1.0128zm2.094-3.988-.0525.141c-.133.3566-.2567.6881-.3334 1.003-.6674-.0021-1.3168-.2872-1.8105-.8024-.6279-.6551-.9131-1.5664-.7825-2.5004.1828-1.3079.1153-2.4468.079-3.0586-.005-.0857-.0095-.1607-.0122-.2199.2957-.2621 1.6659-.9962 2.6429-.7724.4459.1022.7176.4057.8305.928.5846 2.7038.0774 3.8307-.3302 4.7363-.084.1866-.1633.3629-.2311.5454zm7.3637 4.5725c-.0169.1768-.0358.376-.0618.5959l-.146.4383a.3547.3547 0 0 0-.0182.1077c-.0059.4747-.054.6489-.115.8693-.0634.2292-.1353.4891-.1794 1.0575-.11 1.4143-.8782 2.2267-2.4172 2.5565-1.5155.3251-1.7843-.4968-2.0212-1.2217a6.5824 6.5824 0 0 0-.0769-.2266c-.2154-.5858-.1911-1.4119-.1574-2.5551.0165-.5612-.0249-1.9013-.3302-2.6462.0044-.2932.0106-.5909.019-.8918a.3529.3529 0 0 0-.0153-.1126 1.4927 1.4927 0 0 0-.0439-.208c-.1226-.4283-.4213-.7866-.7797-.9351-.1424-.059-.4038-.1672-.7178-.0869.067-.276.1831-.5875.309-.9249l.0529-.142c.0595-.16.134-.3257.213-.5012.4265-.9476 1.0106-2.2453.3766-5.1772-.2374-1.0981-1.0304-1.6343-2.2324-1.5098-.7207.0746-1.3799.3654-1.7088.5321a5.6716 5.6716 0 0 0-.1958.1041c.0918-1.1064.4386-3.1741 1.7357-4.4823a4.0306 4.0306 0 0 1 .3033-.276.3532.3532 0 0 0 .1447-.0644c.7524-.5706 1.6945-.8506 2.802-.8325.4091.0067.8017.0339 1.1742.081 1.939.3544 3.2439 1.4468 4.0359 2.3827.8143.9623 1.2552 1.9315 1.4312 2.4543-1.3232-.1346-2.2234.1268-2.6797.779-.9926 1.4189.543 4.1729 1.2811 5.4964.1353.2426.2522.4522.2889.5413.2403.5825.5515.9713.7787 1.2552.0696.087.1372.1714.1885.245-.4008.1155-1.1208.3825-1.0552 1.717-.0123.1563-.0423.4469-.0834.8148-.0461.2077-.0702.4603-.0994.7662zm.8905-1.6211c-.0405-.8316.2691-.9185.5967-1.0105a2.8566 2.8566 0 0 0 .135-.0406 1.202 1.202 0 0 0 .1342.103c.5703.3765 1.5823.4213 3.0068.1344-.2016.1769-.5189.3994-.9533.6011-.4098.1903-1.0957.333-1.7473.3636-.7197.0336-1.0859-.0807-1.1721-.151zm.5695-9.2712c-.0059.3508-.0542.6692-.1054 1.0017-.055.3576-.112.7274-.1264 1.1762-.0142.4368.0404.8909.0932 1.3301.1066.887.216 1.8003-.2075 2.7014a3.5272 3.5272 0 0 1-.1876-.3856c-.0527-.1276-.1669-.3326-.3251-.6162-.6156-1.1041-2.0574-3.6896-1.3193-4.7446.3795-.5427 1.3408-.5661 2.1781-.463zm.2284 7.0137a12.3762 12.3762 0 0 0-.0853-.1074l-.0355-.0444c.7262-1.1995.5842-2.3862.4578-3.4385-.0519-.4318-.1009-.8396-.0885-1.2226.0129-.4061.0666-.7543.1185-1.0911.0639-.415.1288-.8443.1109-1.3505.0134-.0531.0188-.1158.0118-.1902-.0457-.4855-.5999-1.938-1.7294-3.253-.6076-.7073-1.4896-1.4972-2.6889-2.0395.5251-.1066 1.2328-.2035 2.0244-.1859 2.0515.0456 3.6746.8135 4.8242 2.2824a.908.908 0 0 1 .0667.1002c.7231 1.3556-.2762 6.2751-2.9867 10.5405zm-8.8166-6.1162c-.025.1794-.3089.4225-.6211.4225a.5821.5821 0 0 1-.0809-.0056c-.1873-.026-.3765-.144-.5059-.3156-.0458-.0605-.1203-.178-.1055-.2844.0055-.0401.0261-.0985.0925-.1488.1182-.0894.3518-.1226.6096-.0867.3163.0441.6426.1938.6113.4186zm7.9305-.4114c.0111.0792-.049.201-.1531.3102-.0683.0717-.212.1961-.4079.2232a.5456.5456 0 0 1-.075.0052c-.2935 0-.5414-.2344-.5607-.3717-.024-.1765.2641-.3106.5611-.352.297-.0414.6111.0088.6356.1851z"
-                fill="#336791" />
-            </svg>
-          </div>
-          <h3>PostgreSQL</h3>
-          <p>The world's most advanced open-source relational database, boasting strong transactional integrity,
-            indexing speeds, and robust reliability.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+            if (btnWhatsApp) {
+                btnWhatsApp.addEventListener('click', function (e) {
+                    var msg = getLeadMsg();
+                    btnWhatsApp.href = 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(msg);
+                });
+            }
 
-
-  <!-- ── FAQ SECTION (Blueprint Section 11 + Schema) ──────── -->
-  <section class="section faq-section" id="faq">
-    <div class="container">
-      <div class="section-header text-center">
-        <div class="section-tag">Got Questions?</div>
-        <h2 class="section-title">Frequently Asked <span class="gradient-text">Questions</span></h2>
-        <p class="section-subtitle">
-          Everything you need to know about our Zoho implementations, pricing, project timelines, and custom solutions.
-        </p>
-      </div>
-
-      <div class="faq-accordion-container">
-
-        <div class="faq-item glass-card">
-          <button class="faq-question" aria-expanded="false">
-            <span>How much does a Zoho, website, or Shopify project cost?</span>
-            <div class="faq-chevron">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
-            </div>
-          </button>
-          <div class="faq-answer">
-            <p>It depends on scope, number of users, and integrations required. Starter setups typically begin from a
-              transparent fixed base, and after a free 30-minute discovery consultation, we provide an itemized
-              fixed-scope quote with zero hidden fees.</p>
-          </div>
-        </div>
-
-        <div class="faq-item glass-card">
-          <button class="faq-question" aria-expanded="false">
-            <span>How long does implementation usually take?</span>
-            <div class="faq-chevron">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
-            </div>
-          </button>
-          <div class="faq-answer">
-            <p>Standard Zoho setups or headless landing stores take <strong>2–3 weeks</strong>. Larger enterprise
-              deployments involving complex ERP modules, multi-channel stock sync, or legacy data migrations take
-              between <strong>4–8 weeks</strong> with staged sprint deliveries.</p>
-          </div>
-        </div>
-
-        <div class="faq-item glass-card">
-          <button class="faq-question" aria-expanded="false">
-            <span>Do you support us after go-live?</span>
-            <div class="faq-chevron">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
-            </div>
-          </button>
-          <div class="faq-answer">
-            <p>Yes, absolutely. Every project comes with dedicated post-launch hypercare (30–60 days). We also offer
-              flexible monthly retainer and SLA support plans covering continuous automation tweaks, employee training,
-              and version upgrades.</p>
-          </div>
-        </div>
-
-        <div class="faq-item glass-card">
-          <button class="faq-question" aria-expanded="false">
-            <span>Can you migrate our existing data from Tally, Excel, or another CRM?</span>
-            <div class="faq-chevron">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
-            </div>
-          </button>
-          <div class="faq-answer">
-            <p>Yes. Our data engineers extract, sanitize, de-duplicate, and map master ledgers, customer histories, and
-              product catalogues directly into Zoho CRM &amp; Books with 100% data fidelity and reconciliation audits.
-            </p>
-          </div>
-        </div>
-
-        <div class="faq-item glass-card">
-          <button class="faq-question" aria-expanded="false">
-            <span>Do you work only with Zoho products?</span>
-            <div class="faq-chevron">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
-            </div>
-          </button>
-          <div class="faq-answer">
-            <p>No. While we are an Authorised Zoho Partner, we are fundamentally full-stack technology architects. We
-              build custom Shopify e-commerce engines, AWS cloud backends, WhatsApp API automations, and bespoke Next.js
-              web applications, alongside running our own SaaS — Mooncliq CRM.</p>
-          </div>
-        </div>
-
-        <div class="faq-item glass-card">
-          <button class="faq-question" aria-expanded="false">
-            <span>Do you work with clients outside Surat and internationally?</span>
-            <div class="faq-chevron">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
-            </div>
-          </button>
-          <div class="faq-answer">
-            <p>Yes! While our headquarters and engineering center is based in Piplod, Surat, we serve clients across
-              Mumbai, Delhi, Ahmedabad, Bangalore, the Middle East, and North America via seamless video calls and
-              collaborative sprint boards.</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Schema.org JSON-LD for Local Business (ProfessionalService) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "MoonCliq",
-    "url": "https://mooncliq.com",
-    "logo": "https://mooncliq.com/assets/logo.png",
-    "image": "https://mooncliq.com/assets/og-home.png",
-    "telephone": "+91-99986-63338",
-    "email": "hello@mooncliq.com",
-    "priceRange": "$$",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Homeland City, 408, University Rd, Piplod",
-      "addressLocality": "Surat",
-      "addressRegion": "Gujarat",
-      "postalCode": "395007",
-      "addressCountry": "IN"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": "21.1578",
-      "longitude": "72.7788"
-    },
-    "areaServed": ["Surat", "Gujarat", "India", "Global"],
-    "sameAs": [
-      /* TODO: Add official social media profile URLs here (LinkedIn, Instagram, Twitter, Facebook) */
-    ]
-  }
-  </script>
-
-  <!-- Google Structured Data: FAQPage JSON-LD for Search Rich Snippets -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How much does a Zoho, website, or Shopify project cost?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "It depends on scope, number of users, and integrations required. Starter setups typically begin from a transparent fixed base, and after a free 30-minute discovery consultation, we provide an itemized fixed-scope quote."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How long does implementation usually take?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Standard Zoho setups or headless landing stores take 2–3 weeks. Larger enterprise deployments involving complex ERP modules take 4–8 weeks."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do you support us after go-live?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, every project comes with dedicated post-launch hypercare. We also offer monthly SLA support plans."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can you migrate our existing data from Tally, Excel, or another CRM?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. Our data engineers extract, clean, and map master data directly into Zoho CRM and Books with zero data loss."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do you work only with Zoho products?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No. We build custom Shopify e-commerce engines, AWS cloud setups, WhatsApp API bots, and our own SaaS product, Mooncliq CRM."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do you work with clients outside Surat?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. We serve clients across India and internationally via video calls, with direct in-person meetings available in Surat."
-        }
-      }
-    ]
-  }
-  </script>
-
-  <!-- ── CONTACT ────────────────────────────────────────────── -->
-  <section class="section contact" id="contact">
-    <div class="container">
-      <div class="section-header text-center">
-        <div class="section-tag">Let's Connect</div>
-        <h2 class="section-title">Start Your <span class="gradient-text">Product Journey</span></h2>
-        <p class="section-subtitle">Tell us about your requirements and let's discover how MoonCliq can engineer your
-          next growth phase.</p>
-      </div>
-
-      <div class="contact-wrap">
-        <!-- Info Panel -->
-        <div class="contact-panel glass-card">
-          <h3>Get in Touch</h3>
-
-          <div class="contact-item">
-            <div class="citem-icon grad-blue">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="white"
-                  stroke-width="1.5" />
-                <polyline points="22,6 12,13 2,6" stroke="white" stroke-width="1.5" />
-              </svg>
-            </div>
-            <div>
-              <span class="citem-label">Email</span>
-              <a href="mailto:hello@mooncliq.com" class="citem-value">hello@mooncliq.com</a>
-            </div>
-          </div>
-
-          <div class="contact-item">
-            <div class="citem-icon grad-purple">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                <path
-                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"
-                  stroke="white" stroke-width="1.5" stroke-linecap="round" />
-              </svg>
-            </div>
-            <div>
-              <span class="citem-label">Phone</span>
-              <a href="tel:+919998663338" class="citem-value">+91 99986 63338</a>
-            </div>
-          </div>
-
-          <div class="contact-item">
-            <div class="citem-icon grad-teal">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                <circle cx="12" cy="12" r="10" stroke="white" stroke-width="1.5" />
-                <path d="M12 8v4l3 3" stroke="white" stroke-width="1.5" stroke-linecap="round" />
-              </svg>
-            </div>
-            <div>
-              <span class="citem-label">Response Time</span>
-              <span class="citem-value">Within 24 hours</span>
-            </div>
-          </div>
-
-          <div class="contact-item">
-            <div class="citem-icon grad-blue">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                <path
-                  d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
-                  stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-            </div>
-            <div>
-              <span class="citem-label">Office Address</span>
-              <span class="citem-value" style="font-size: 0.85rem; line-height: 1.4;">Homeland City, 408, university Rd,
-                Piplod Surat 395007 Gujarat India</span>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- Form -->
-        <form class="contact-form glass-card" id="contactForm">
-          <div class="form-row">
-            <div class="form-group">
-              <label for="fullName">Full Name</label>
-              <input type="text" id="fullName" name="fullName" placeholder="Your full name" required />
-            </div>
-            <div class="form-group">
-              <label for="companyName">Company</label>
-              <input type="text" id="companyName" name="companyName" placeholder="Your company name" />
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="email">Email Address</label>
-              <input type="email" id="email" name="email" placeholder="your@email.com" required />
-            </div>
-            <div class="form-group">
-              <label for="phone">Phone Number</label>
-              <input type="tel" id="phone" name="phone" placeholder="+91 00000 00000" />
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="service">Service of Interest</label>
-            <select id="service" name="service" data-lenis-prevent="true">
-              <option value="">Select a service…</option>
-              <option>Zoho Suite</option>
-              <option>Shopify E-Commerce</option>
-              <option>AWS Cloud Solutions</option>
-              <option>Social Media Growth</option>
-              <option>Website Design</option>
-              <option>Whatsapp Automation</option>
-              <option>Mooncliq CRM</option>
-              <option>Custom Solution / Zoho Creator</option>
-              <option>Multiple Services</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="4" placeholder="Tell us about your requirements…"></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-              <line x1="22" y1="2" x2="11" y2="13" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-              <polygon points="22 2 15 22 11 13 2 9 22 2" stroke="currentColor" stroke-width="2" fill="none"
-                stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-            Send Message
-          </button>
-          <div class="form-success" id="formSuccess">✓ Message received! We'll get back to you within 24 hours.</div>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── FOOTER ─────────────────────────────────────────────── -->
-  <footer class="footer">
-    <div class="footer-top-glow"></div>
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <div class="footer-logo">
-            <div class="logo-glow-ring">
-              <img src="assets/logo.png" alt="MoonCliq" class="logo-img" width="38" height="38" loading="lazy"
-                decoding="async"
-                onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'%235b6ef5\'><circle cx=\'12\' cy=\'12\' r=\'10\'/></svg>'" />
-            </div>
-            <img src="assets/mooncliq-wordmark-dark.png" alt="MoonCliq" class="nav-wordmark-img wordmark-dark-mode"
-              width="171" height="38" />
-            <img src="assets/mooncliq-logo-clean.png" alt="MoonCliq" class="nav-wordmark-img wordmark-day-mode"
-              width="177" height="38" />
-          </div>
-          <p class="footer-tagline">Authorised Zoho Partner and technology services company in Surat. Software and
-            systems that fit how your business actually works.</p>
-
-          <div class="footer-trust-box">
-            <div class="footer-partner-badge-wrap">
-              <img src="assets/zoho-partner-horizontal-dark.webp" alt="Zoho Authorized Partner"
-                class="footer-zoho-badge badge-dark" width="172" height="48" loading="lazy" decoding="async" />
-              <img src="assets/zoho-partner-horizontal.webp" alt="Zoho Authorized Partner"
-                class="footer-zoho-badge badge-light" width="172" height="48" loading="lazy" decoding="async" />
-              <img src="assets/meta-verified-partner-dark.webp"
-                alt="Meta Verified Tech Provider - MoonCliq Official Partner" class="footer-meta-badge badge-dark"
-                width="77" height="56" loading="lazy" decoding="async" />
-              <img src="assets/meta-verified-partner-light.webp"
-                alt="Meta Verified Tech Provider - MoonCliq Official Partner" class="footer-meta-badge badge-light"
-                width="77" height="56" loading="lazy" decoding="async" />
-            </div>
-            <div class="footer-location-info">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path>
-                <circle cx="12" cy="10" r="3"></circle>
-              </svg>
-              <span>Homeland City, 408, University Rd, Piplod, Surat, Gujarat 395007</span>
-            </div>
-            <div class="footer-contact-fast">
-              <a href="tel:+919998663338" class="footer-quick-link">📞 +91 99986 63338</a>
-              <a href="mailto:hello@mooncliq.com" class="footer-quick-link">✉ hello@mooncliq.com</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="footer-col">
-          <h4>Business Software</h4>
-          <ul>
-            <li><a href="/zoho-crm">Zoho CRM Implementation</a></li>
-            <li><a href="/zoho-books">Zoho Books &amp; Inventory</a></li>
-            <li><a href="/zoho-creator">Zoho Creator ERP</a></li>
-            <li><a href="/zoho-analytics">Zoho Analytics &amp; Reports</a></li>
-            <li><a href="/zoho-mail">Zoho Mail &amp; WorkDrive</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Growth &amp; Cloud</h4>
-          <ul>
-            <li><a href="/shopify-development">Shopify E-Commerce</a></li>
-            <li><a href="/custom-web-development">Website Design &amp; Care</a></li>
-            <li><a href="/whatsapp-automation">WhatsApp Business API</a></li>
-            <li><a href="/aws-cloud-solutions">AWS Cloud Architecture</a></li>
-            <li><a href="/custom-app-development">Custom App Development</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Company &amp; SaaS</h4>
-          <ul>
-            <li><a href="#about">About MoonCliq</a></li>
-            <li><a href="https://crm.mooncliq.com" target="_blank" rel="noopener">Mooncliq CRM <span
-                  class="beta-pill-sm">Beta</span></a></li>
-            <li><a href="/case-studies">Client Results</a></li>
-            <li><a href="#contact">Book Free Consultation</a></li>
-            <li><a href="/privacy-policy">Privacy Policy</a></li>
-            <li><a href="/terms-of-service">Terms of Service</a></li>
-            <li><a href="/data-deletion">Data Deletion Policy</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <span>© 2026 MoonCliq. All rights reserved. Surat, Gujarat, India.</span>
-        <span class="footer-right">Authorised Zoho Partner &amp; Cloud Solution Architects.</span>
-      </div>
-    </div>
-  </footer>
-
-  <!-- ── STICKY MOBILE BOTTOM BAR (Lead Conversion) ─────────── -->
-  <!-- ── STICKY MOBILE BOTTOM BAR (Lead Conversion) ─────────── -->
-  <div class="mobile-bottom-bar" id="mobileBottomBar">
-    <a href="tel:+919998663338" class="mobile-action-btn mobile-call-btn">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
-        stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;">
-        <path
-          d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z">
-        </path>
-      </svg>
-      <span>Call Us</span>
-    </a>
-    <a href="https://wa.me/919998663338?text=Hi%20MoonCliq%2C%20I%20would%20like%20to%20book%20a%20free%20consultation%20for%20my%20business."
-      target="_blank" rel="noopener" class="mobile-action-btn mobile-whatsapp-btn">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="#ffffff"
-        style="display:inline-block; vertical-align:middle; flex-shrink:0;">
-        <path
-          d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
-      </svg>
-      <span>WhatsApp</span>
-    </a>
-  </div>
-
-  <!-- ── CRM FEATURE MODAL ────────────────────────────────────── -->
-  <div id="crmModal" class="modal-overlay" aria-hidden="true" role="dialog">
-    <div class="modal-container glass-card" data-lenis-prevent>
-      <button class="modal-close" id="closeCrmModal" aria-label="Close Modal">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-          stroke-linecap="round" stroke-linejoin="round">
-          <line x1="18" y1="6" x2="6" y2="18"></line>
-          <line x1="6" y1="6" x2="18" y2="18"></line>
-        </svg>
-      </button>
-
-      <div class="modal-header">
-        <div class="up-icon-wrap grad-blue modal-icon">
-          <img src="assets/cliq-crm-v2.svg" alt="Cliq CRM Logo" width="36" height="23" loading="lazy"
-            decoding="async" />
-        </div>
-        <div>
-          <span class="section-tag">Deep Dive</span>
-          <h2>Mooncliq CRM <span class="gradient-text">Core Features</span></h2>
-        </div>
-      </div>
-
-      <div class="modal-body">
-        <div class="modal-section">
-          <h3>Core Features in Brief</h3>
-          <div class="modal-features-grid">
-            <div class="modal-feature-item">
-              <h4>WhatsApp Integration</h4>
-              <p>Communicate directly with customers via WhatsApp, track history, send automated messages, and keep
-                chats synced.</p>
-            </div>
-            <div class="modal-feature-item">
-              <h4>AI Sentiment Analysis</h4>
-              <p>Understand customer emotions and feedback automatically to optimize responses and satisfaction.</p>
-            </div>
-            <div class="modal-feature-item">
-              <h4>Lead &amp; Deal Management</h4>
-              <p>Track pipeline stages, deals value, and nurture prospects into happy clients.</p>
-            </div>
-            <div class="modal-feature-item">
-              <h4>Task Management</h4>
-              <p>Assign follow-ups, set reminders, and make sure no lead is ever left unattended.</p>
-            </div>
-            <div class="modal-feature-item">
-              <h4>Project Management</h4>
-              <p>Plan milestones, track progress with Gantt &amp; Kanban boards, manage resources, and collaborate with
-                teams seamlessly.</p>
-            </div>
-            <div class="modal-feature-item">
-              <h4>To-do List</h4>
-              <p>Create personal and shared checklists, prioritize daily tasks, track completion, and stay organized.
-              </p>
-            </div>
-            <div class="modal-feature-item">
-              <h4>Performance Analysis</h4>
-              <p>Monitor team productivity, measure project velocity, analyze bottleneck areas, and generate
-                comprehensive performance reports.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="modal-section border-top">
-          <h3>Our Tech Stack</h3>
-          <div class="tech-stack-grid">
-            <div class="tech-card-modal">
-              <div class="tech-name">Next.js</div>
-              <p>Frontend framework for high performance, SSR/SSG capabilities, outstanding SEO features, and fast page
-                load times.</p>
-            </div>
-            <div class="tech-card-modal">
-              <div class="tech-name">Node.js</div>
-              <p>Backend runtime offering ultra-fast asynchronous I/O, highly scalable, and handling massive concurrent
-                connections efficiently.</p>
-            </div>
-            <div class="tech-card-modal">
-              <div class="tech-name">PostgreSQL</div>
-              <p>Database with absolute ACID compliance, reliable JSON queries, and robust scaling capability to store
-                structured data safely.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="modal-section border-top">
-          <h3>Why FAANG Companies Choose This Stack</h3>
-          <p class="faang-explain">
-            Companies like <strong>Netflix, Apple, Instagram, and Uber</strong> rely heavily on these technologies
-            because they deliver the perfect balance of raw performance, security, and developer productivity.
-            Next.js guarantees blazingly fast user interfaces and superior SEO, Node.js powers microservices that handle
-            billions of requests per second, and PostgreSQL provides a bedrock-solid, highly reliable system of record
-            that handles complex relational data at massive scale.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <script src="main.js" defer></script>
+            if (btnCallback) {
+                btnCallback.addEventListener('click', function (e) {
+                    var name = userName ? userName.value.trim() : '';
+                    var phone = userPhone ? userPhone.value.trim() : '';
+                    if (!phone && !name) {
+                        alert('Please enter your Name and Phone / WhatsApp number so our team can reach you.');
+                        if (userName) userName.focus();
+                        return;
+                    }
+                    var msg = getLeadMsg();
+                    var formBox = btnCallback.closest('div');
+                    if (formBox) {
+                        formBox.innerHTML = [
+                            '<div style="text-align:center;padding:24px 10px;display:flex;flex-direction:column;gap:16px;align-items:center">',
+                            '<div style="width:58px;height:58px;border-radius:50%;background:rgba(246, 217, 139, 0.15);border:1px solid #F6D98B;display:flex;align-items:center;justify-content:center;color:#F6D98B;font-size:28px">✓</div>',
+                            '<h3 style="font-size:22px;color:#fff;margin:0">Callback Requested!</h3>',
+                            '<p style="color:#C8D3F8;font-size:14px;line-height:1.6;margin:0">Thank you' + (name ? ', ' + name : '') + '. Our solutions engineer will call you back within <strong>24 hours</strong>.</p>',
+                            '<div style="width:100%;height:1px;background:rgba(255,255,255,0.1);margin:4px 0"></div>',
+                            '<a href="https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(msg) + '" target="_blank" rel="noopener" class="btn" style="background:#128C4A;color:#fff;width:100%;min-height:46px;font-size:14px;font-weight:600;display:inline-flex;align-items:center;justify-content:center">Open in WhatsApp directly →</a>',
+                            '</div>'
+                        ].join('');
+                    }
+                    setTimeout(function () {
+                        window.open('https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(msg), '_blank');
+                    }, 1600);
+                });
+            }
+            // 4. Smooth Compact Floating Header on Scroll (60fps passive listener)
+            var siteHeader = document.getElementById('siteHeader');
+            if (siteHeader) {
+                var isScrolled = false;
+                var onScroll = function () {
+                    var y = window.scrollY || window.pageYOffset || 0;
+                    if (y > 70 && !isScrolled) {
+                        isScrolled = true;
+                        siteHeader.classList.add('is-scrolled');
+                    } else if (y <= 70 && isScrolled) {
+                        isScrolled = false;
+                        siteHeader.classList.remove('is-scrolled');
+                    }
+                };
+                window.addEventListener('scroll', onScroll, { passive: true });
+                onScroll(); // initial check
+            }
+        })();
+    </script>
 </body>
 
 </html>
