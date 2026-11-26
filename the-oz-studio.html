@@ -379,6 +379,168 @@
                 flex: 1 1 100% !important;
             }
         }
+
+        /* ── MEGA MENU & HEADER DROPDOWN STYLES ── */
+        .nav-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .nav-dropdown-trigger {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            cursor: pointer;
+            padding: 8px 16px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, .08);
+            border: 1px solid rgba(255, 255, 255, .2);
+            color: #fff;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all .2s ease;
+        }
+
+        .nav-dropdown-trigger:hover,
+        .nav-dropdown:focus-within .nav-dropdown-trigger {
+            background: rgba(255, 255, 255, .16);
+            border-color: #F6D98B;
+            color: #F6D98B;
+        }
+
+        .nav-dropdown-trigger svg {
+            transition: transform .2s ease;
+        }
+
+        .nav-dropdown:hover .nav-dropdown-trigger svg,
+        .nav-dropdown:focus-within .nav-dropdown-trigger svg {
+            transform: rotate(180deg);
+        }
+
+        .mega-menu {
+            position: absolute;
+            top: calc(100% + 14px);
+            left: 50%;
+            transform: translateX(-50%) translateY(8px);
+            width: min(94vw, 840px);
+            background: #0B0E28;
+            border: 1px solid rgba(255, 255, 255, .14);
+            border-radius: 20px;
+            box-shadow: 0 30px 70px rgba(0, 0, 0, .8), 0 0 0 1px rgba(255, 255, 255, .06);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            padding: 24px;
+            display: none;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity .16s ease, transform .16s ease;
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+
+        .nav-dropdown:hover .mega-menu,
+        .nav-dropdown:focus-within .mega-menu {
+            display: block;
+            opacity: 1;
+            pointer-events: auto;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        .nav-dropdown::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            height: 16px;
+        }
+
+        .sol-col {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .sol-group-tag {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            color: #8D99CE;
+            margin-bottom: 4px;
+        }
+
+        .sol-link {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            text-decoration: none;
+            padding: 8px 10px;
+            border-radius: 10px;
+            transition: background .15s ease, transform .12s ease;
+        }
+
+        .sol-link:hover {
+            background: rgba(255, 255, 255, .06);
+            transform: translateX(3px);
+        }
+
+        .sol-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, .05);
+            border: 1px solid rgba(255, 255, 255, .1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #F6D98B;
+            flex-shrink: 0;
+            transition: border-color .15s ease, background .15s ease;
+        }
+
+        .sol-link:hover .sol-icon {
+            border-color: #F6D98B;
+            background: rgba(246, 217, 139, .1);
+        }
+
+        .sol-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: color .15s ease;
+        }
+
+        .sol-link:hover .sol-title {
+            color: #F6D98B;
+        }
+
+        .sol-desc {
+            font-size: 12px;
+            color: #8EA0D6;
+            line-height: 1.4;
+            margin-top: 2px;
+        }
+
+        .spotlight-card {
+            background: linear-gradient(170deg, rgba(255, 255, 255, .07) 0%, rgba(255, 255, 255, .02) 100%);
+            border: 1px solid rgba(255, 255, 255, .12);
+            border-radius: 16px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+            box-sizing: border-box;
+            transition: border-color .2s ease;
+        }
+
+        .spotlight-card:hover {
+            border-color: rgba(246, 217, 139, .4);
+        }
     </style>
 </head>
 
