@@ -360,6 +360,32 @@ footer{background:#060C32;color:#A8B7EE}footer a{font-size:14px}
 
 @keyframes formFadeIn{from{opacity:0;transform:scale(0.96)}to{opacity:1;transform:scale(1)}}
 
+
+        /* Responsive Mobile Header Capsule Fix */
+        @media (max-width: 900px) {
+            .site-header nav {
+                display: none !important;
+            }
+            .site-header details.mn {
+                display: block !important;
+                flex-shrink: 0 !important;
+                margin-left: auto !important;
+            }
+            .site-header-inner {
+                padding: 10px 16px !important;
+                border-radius: 999px !important;
+                flex-wrap: nowrap !important;
+                box-sizing: border-box !important;
+            }
+            .site-header.is-scrolled {
+                padding: 0 16px !important;
+                top: 10px !important;
+                left: 0 !important;
+                right: 0 !important;
+                width: 100% !important;
+                box-sizing: border-box !important;
+            }
+        }
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "name": "Zoho Books", "description": "Authorised Zoho partner for Zoho Books setup, GST or VAT configuration, bank feeds and migration from Tally or Excel. Fixed-scope quotes. Free consultation.", "url": "https://mooncliq.com/zoho-books", "provider": {"@type": "ProfessionalService", "name": "MoonCliq", "url": "https://mooncliq.com/", "telephone": "+91-99986-63338", "email": "hello@mooncliq.com"}, "areaServed": ["India", "United Kingdom", "United States", "United Arab Emirates"]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can you migrate from Tally to Zoho Books?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. We move ledgers, parties, items and opening balances, then reconcile the trial balance with your accountant before go-live."}}, {"@type": "Question", "name": "Does Zoho Books support GST?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. It supports GST invoicing, e-invoicing and e-way bills for India. We set them up with your accountant guidance."}}, {"@type": "Question", "name": "Can it handle VAT for the UK or UAE?", "acceptedAnswer": {"@type": "Answer", "text": "Zoho Books has VAT support for several regions. We configure it to your registration details, and your accountant confirms the tax treatment."}}, {"@type": "Question", "name": "How long does setup take?", "acceptedAnswer": {"@type": "Answer", "text": "Typically 2-3 weeks. Multi-branch setups or large data migrations take longer."}}, {"@type": "Question", "name": "Can Books connect with CRM and Inventory?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. We link quotes, invoices, stock and payments so data flows without re-typing."}}]}</script>

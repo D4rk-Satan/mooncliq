@@ -360,6 +360,32 @@ footer{background:#060C32;color:#A8B7EE}footer a{font-size:14px}
 
 @keyframes formFadeIn{from{opacity:0;transform:scale(0.96)}to{opacity:1;transform:scale(1)}}
 
+
+        /* Responsive Mobile Header Capsule Fix */
+        @media (max-width: 900px) {
+            .site-header nav {
+                display: none !important;
+            }
+            .site-header details.mn {
+                display: block !important;
+                flex-shrink: 0 !important;
+                margin-left: auto !important;
+            }
+            .site-header-inner {
+                padding: 10px 16px !important;
+                border-radius: 999px !important;
+                flex-wrap: nowrap !important;
+                box-sizing: border-box !important;
+            }
+            .site-header.is-scrolled {
+                padding: 0 16px !important;
+                top: 10px !important;
+                left: 0 !important;
+                right: 0 !important;
+                width: 100% !important;
+                box-sizing: border-box !important;
+            }
+        }
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "name": "Zoho Creator", "description": "Authorised Zoho partner building custom Zoho Creator apps for approvals, field service, portals and inventory. Replace spreadsheets and paper in weeks.", "url": "https://mooncliq.com/zoho-creator", "provider": {"@type": "ProfessionalService", "name": "MoonCliq", "url": "https://mooncliq.com/", "telephone": "+91-99986-63338", "email": "hello@mooncliq.com"}, "areaServed": ["India", "United Kingdom", "United States", "United Arab Emirates"]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is Zoho Creator?", "acceptedAnswer": {"@type": "Answer", "text": "Zoho Creator is a low-code platform for building custom business apps with forms, reports, workflows and portals, without building everything from scratch."}}, {"@type": "Question", "name": "When should I choose Creator over custom code?", "acceptedAnswer": {"@type": "Answer", "text": "Creator is faster and cost-effective for workflow and data apps. Fully custom code suits complex interfaces or very high scale. We advise on the right fit."}}, {"@type": "Question", "name": "Can Creator integrate with other Zoho apps?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. It connects with Zoho CRM, Books, Inventory and more, and can call external APIs."}}, {"@type": "Question", "name": "Can the app run on mobile?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Creator apps work on mobile devices and can be used by field teams."}}, {"@type": "Question", "name": "How long does it take to build an app?", "acceptedAnswer": {"@type": "Answer", "text": "A focused first version is often ready in a few weeks. We deliver in phases so you can start using it early."}}]}</script>

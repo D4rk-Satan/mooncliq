@@ -360,6 +360,32 @@ footer{background:#060C32;color:#A8B7EE}footer a{font-size:14px}
 
 @keyframes formFadeIn{from{opacity:0;transform:scale(0.96)}to{opacity:1;transform:scale(1)}}
 
+
+        /* Responsive Mobile Header Capsule Fix */
+        @media (max-width: 900px) {
+            .site-header nav {
+                display: none !important;
+            }
+            .site-header details.mn {
+                display: block !important;
+                flex-shrink: 0 !important;
+                margin-left: auto !important;
+            }
+            .site-header-inner {
+                padding: 10px 16px !important;
+                border-radius: 999px !important;
+                flex-wrap: nowrap !important;
+                box-sizing: border-box !important;
+            }
+            .site-header.is-scrolled {
+                padding: 0 16px !important;
+                top: 10px !important;
+                left: 0 !important;
+                right: 0 !important;
+                width: 100% !important;
+                box-sizing: border-box !important;
+            }
+        }
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "name": "Zoho Inventory", "description": "Authorised Zoho partner for Zoho Inventory setup: multi-warehouse stock, barcode scanning, reorder alerts and Shopify sync, connected to Zoho Books and CRM.", "url": "https://mooncliq.com/zoho-inventory", "provider": {"@type": "ProfessionalService", "name": "MoonCliq", "url": "https://mooncliq.com/", "telephone": "+91-99986-63338", "email": "hello@mooncliq.com"}, "areaServed": ["India", "United Kingdom", "United States", "United Arab Emirates"]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Does Zoho Inventory support multiple warehouses?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. You can track stock by warehouse and transfer items between locations."}}, {"@type": "Question", "name": "Can it sync with Shopify?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. We connect Shopify so orders and stock levels update between both systems."}}, {"@type": "Question", "name": "Can we use barcode scanners?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. We set up barcode and scanning workflows for receiving, picking and counting."}}, {"@type": "Question", "name": "How is it different from Zoho Books?", "acceptedAnswer": {"@type": "Answer", "text": "Books handles accounting, while Inventory handles stock and orders. They work together, and we connect them."}}, {"@type": "Question", "name": "How long does implementation take?", "acceptedAnswer": {"@type": "Answer", "text": "Usually 2-4 weeks, depending on items, warehouses and integrations."}}]}</script>

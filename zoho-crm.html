@@ -360,6 +360,32 @@ footer{background:#060C32;color:#A8B7EE}footer a{font-size:14px}
 
 @keyframes formFadeIn{from{opacity:0;transform:scale(0.96)}to{opacity:1;transform:scale(1)}}
 
+
+        /* Responsive Mobile Header Capsule Fix */
+        @media (max-width: 900px) {
+            .site-header nav {
+                display: none !important;
+            }
+            .site-header details.mn {
+                display: block !important;
+                flex-shrink: 0 !important;
+                margin-left: auto !important;
+            }
+            .site-header-inner {
+                padding: 10px 16px !important;
+                border-radius: 999px !important;
+                flex-wrap: nowrap !important;
+                box-sizing: border-box !important;
+            }
+            .site-header.is-scrolled {
+                padding: 0 16px !important;
+                top: 10px !important;
+                left: 0 !important;
+                right: 0 !important;
+                width: 100% !important;
+                box-sizing: border-box !important;
+            }
+        }
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "name": "Zoho CRM", "description": "Authorised Zoho partner for CRM setup, customisation, data migration and WhatsApp integration. Fixed-scope quotes for India, UK, US and UAE teams.", "url": "https://mooncliq.com/zoho-crm", "provider": {"@type": "ProfessionalService", "name": "MoonCliq", "url": "https://mooncliq.com/", "telephone": "+91-99986-63338", "email": "hello@mooncliq.com"}, "areaServed": ["India", "United Kingdom", "United States", "United Arab Emirates"]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How long does Zoho CRM implementation take?", "acceptedAnswer": {"@type": "Answer", "text": "Most setups take 2-3 weeks. Projects with heavy customisation or data migration can take 4-8 weeks. Your quote includes a fixed timeline."}}, {"@type": "Question", "name": "Can you migrate data from Excel or another CRM?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. We clean and import leads, contacts, deals and history, then verify the counts with you before go-live."}}, {"@type": "Question", "name": "Can Zoho CRM work with WhatsApp?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. We connect the official WhatsApp Cloud API so chats create leads, trigger follow-ups and stay logged against the contact."}}, {"@type": "Question", "name": "Do you support teams outside India?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. We work remotely with teams in India, the UK, the US and the UAE, with meeting times agreed to suit your time zone."}}, {"@type": "Question", "name": "What happens after go-live?", "acceptedAnswer": {"@type": "Answer", "text": "Every project includes 30-60 days of hypercare. After that you can choose a monthly support plan."}}]}</script>

@@ -360,6 +360,32 @@ footer{background:#060C32;color:#A8B7EE}footer a{font-size:14px}
 
 @keyframes formFadeIn{from{opacity:0;transform:scale(0.96)}to{opacity:1;transform:scale(1)}}
 
+
+        /* Responsive Mobile Header Capsule Fix */
+        @media (max-width: 900px) {
+            .site-header nav {
+                display: none !important;
+            }
+            .site-header details.mn {
+                display: block !important;
+                flex-shrink: 0 !important;
+                margin-left: auto !important;
+            }
+            .site-header-inner {
+                padding: 10px 16px !important;
+                border-radius: 999px !important;
+                flex-wrap: nowrap !important;
+                box-sizing: border-box !important;
+            }
+            .site-header.is-scrolled {
+                padding: 0 16px !important;
+                top: 10px !important;
+                left: 0 !important;
+                right: 0 !important;
+                width: 100% !important;
+                box-sizing: border-box !important;
+            }
+        }
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "MoonCliq", "legalName": "Kshiv", "url": "https://mooncliq.com/", "logo": "https://mooncliq.com/assets/logo.png", "address": {"@type": "PostalAddress", "streetAddress": "Homeland City, 408, University Rd, Piplod", "addressLocality": "Surat", "addressRegion": "Gujarat", "postalCode": "395007", "addressCountry": "IN"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "AboutPage", "name": "About MoonCliq", "url": "https://mooncliq.com/about"}</script>

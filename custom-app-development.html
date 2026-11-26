@@ -360,6 +360,32 @@ footer{background:#060C32;color:#A8B7EE}footer a{font-size:14px}
 
 @keyframes formFadeIn{from{opacity:0;transform:scale(0.96)}to{opacity:1;transform:scale(1)}}
 
+
+        /* Responsive Mobile Header Capsule Fix */
+        @media (max-width: 900px) {
+            .site-header nav {
+                display: none !important;
+            }
+            .site-header details.mn {
+                display: block !important;
+                flex-shrink: 0 !important;
+                margin-left: auto !important;
+            }
+            .site-header-inner {
+                padding: 10px 16px !important;
+                border-radius: 999px !important;
+                flex-wrap: nowrap !important;
+                box-sizing: border-box !important;
+            }
+            .site-header.is-scrolled {
+                padding: 0 16px !important;
+                top: 10px !important;
+                left: 0 !important;
+                right: 0 !important;
+                width: 100% !important;
+                box-sizing: border-box !important;
+            }
+        }
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "name": "Custom App Development", "description": "Custom web and mobile app development with Next.js, React, Node.js and PostgreSQL. Scoped quotes, milestone delivery and Zoho integrations worldwide.", "url": "https://mooncliq.com/custom-app-development", "provider": {"@type": "ProfessionalService", "name": "MoonCliq", "url": "https://mooncliq.com/", "telephone": "+91-99986-63338", "email": "hello@mooncliq.com"}, "areaServed": ["India", "United Kingdom", "United States", "United Arab Emirates"]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How much does a custom app cost?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on features, users and integrations. After a free discovery call you receive a fixed-scope quote with milestone-based payments."}}, {"@type": "Question", "name": "How long does development take?", "acceptedAnswer": {"@type": "Answer", "text": "Timelines depend on scope. We deliver a focused first version in phases, so you can start using it early."}}, {"@type": "Question", "name": "Who owns the code?", "acceptedAnswer": {"@type": "Answer", "text": "Ownership and licence terms are agreed in writing before the project starts."}}, {"@type": "Question", "name": "Should I use Zoho Creator or custom code?", "acceptedAnswer": {"@type": "Answer", "text": "Creator suits workflow and data apps and is faster to deliver. Custom code suits complex interfaces and high scale. We recommend the right fit."}}, {"@type": "Question", "name": "Do you provide support after launch?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. We offer maintenance plans for updates, fixes and improvements."}}]}</script>

@@ -360,6 +360,32 @@ footer{background:#060C32;color:#A8B7EE}footer a{font-size:14px}
 
 @keyframes formFadeIn{from{opacity:0;transform:scale(0.96)}to{opacity:1;transform:scale(1)}}
 
+
+        /* Responsive Mobile Header Capsule Fix */
+        @media (max-width: 900px) {
+            .site-header nav {
+                display: none !important;
+            }
+            .site-header details.mn {
+                display: block !important;
+                flex-shrink: 0 !important;
+                margin-left: auto !important;
+            }
+            .site-header-inner {
+                padding: 10px 16px !important;
+                border-radius: 999px !important;
+                flex-wrap: nowrap !important;
+                box-sizing: border-box !important;
+            }
+            .site-header.is-scrolled {
+                padding: 0 16px !important;
+                top: 10px !important;
+                left: 0 !important;
+                right: 0 !important;
+                width: 100% !important;
+                box-sizing: border-box !important;
+            }
+        }
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "name": "WhatsApp Automation", "description": "Official WhatsApp Business Cloud API setup, broadcasts, chatbots, shared inbox and CRM sync. Meta Tech Provider. Strongest for India, UAE, UK and Europe.", "url": "https://mooncliq.com/whatsapp-automation", "provider": {"@type": "ProfessionalService", "name": "MoonCliq", "url": "https://mooncliq.com/", "telephone": "+91-99986-63338", "email": "hello@mooncliq.com"}, "areaServed": ["India", "United Kingdom", "United States", "United Arab Emirates"]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is this the official WhatsApp API?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. We are a Meta Tech Provider and set up the official WhatsApp Business Cloud API."}}, {"@type": "Question", "name": "Do customers need to opt in?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. WhatsApp requires customer consent for business messages, and we set up opt-in flows that follow its policies."}}, {"@type": "Question", "name": "Can I keep my existing number?", "acceptedAnswer": {"@type": "Answer", "text": "Often yes, but the number must be eligible for the API. We check it and guide the migration."}}, {"@type": "Question", "name": "What does it cost?", "acceptedAnswer": {"@type": "Answer", "text": "Costs include Meta messaging charges and our setup fee. We explain both in your quote."}}, {"@type": "Question", "name": "Which countries is it best for?", "acceptedAnswer": {"@type": "Answer", "text": "It works worldwide and is strongest in India, the Middle East, the UK and Europe. In the US it is usually an add-on channel."}}]}</script>
