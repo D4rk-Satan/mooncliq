@@ -1,0 +1,40 @@
+# MoonCliq
+
+> MoonCliq is an Authorized Zoho Partner, Meta Verified Tech Provider, and custom technology solutions agency helping businesses in India, UAE, UK, and USA automate operations, integrate systems, and scale digitally.
+
+MoonCliq specializes in end-to-end Zoho implementations, WhatsApp Business API workflows, custom web and mobile app development, and business process automation.
+
+## Core Services
+
+- [Zoho CRM Implementation](https://mooncliq.com/zoho-crm): Custom sales pipelines, lead routing, blueprint automations, and omni-channel communication.
+- [Zoho Books & Accounting](https://mooncliq.com/zoho-books): GST compliance, automated invoicing, e-invoicing, e-way bills, and seamless Tally to Zoho migration.
+- [Zoho Inventory Setup](https://mooncliq.com/zoho-inventory): Multi-warehouse management, order fulfillment, stock sync across Amazon/Flipkart/Shopify.
+- [Zoho Creator Development](https://mooncliq.com/zoho-creator): Bespoke low-code enterprise applications, customer portals, and ERP integrations.
+- [WhatsApp Automation](https://mooncliq.com/whatsapp-automation): Official WhatsApp Business API, chatbot flows, Zoho CRM sync, automated notifications, and payment reminders.
+- [Custom Web Development](https://mooncliq.com/custom-web-development): Fast, responsive, conversion-focused websites and web applications built with modern stacks.
+- [Custom App Development](https://mooncliq.com/custom-app-development): Scalable native and hybrid mobile applications for iOS and Android.
+
+## Global Presence & Regional Practice
+
+- [Zoho Partner in India](https://mooncliq.com/zoho-partner-india): Headquartered in Surat, Gujarat; delivering solutions across India.
+- [Zoho Partner in UAE](https://mooncliq.com/zoho-partner-uae): VAT-compliant Zoho implementations in Dubai, Abu Dhabi, and the GCC region.
+- [Zoho Partner in UK](https://mooncliq.com/zoho-partner-uk): HMRC Making Tax Digital (MTD) compliant Zoho setups across the United Kingdom.
+- [Zoho Implementation USA](https://mooncliq.com/zoho-implementation-usa): Enterprise CRM and ERP cloud implementations for US-based businesses.
+
+## Case Studies & Customer Success
+
+- [Case Studies Hub](https://mooncliq.com/case-studies): Real business transformations across manufacturing, retail, and professional services.
+- [The OZ Studio](https://mooncliq.com/the-oz-studio): Architecture and interior design workflow automation with Zoho and cloud tools.
+- [Kiran Metallic](https://mooncliq.com/kiran-metallic): Manufacturing and industrial yarn process automation and inventory tracking.
+
+## Insights & Guides
+
+- [Blog](https://mooncliq.com/blog): Actionable guides on business software, automation, and digital transformation.
+- [Tally to Zoho Books Migration Guide](https://mooncliq.com/blog-tally-to-zoho-books-migration): Step-by-step master guide for smooth accounting migration without data loss.
+
+## Contact & Company Info
+
+- Website: https://mooncliq.com
+- Email: hello@mooncliq.com
+- Phone / WhatsApp: +91 99986 63338
+- Office Address: Homeland City, 408, University Rd, Piplod, Surat, Gujarat 395007, India

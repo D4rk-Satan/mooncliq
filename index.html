@@ -3,6 +3,9 @@
 
 <head>
     <meta charset="utf-8">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>MoonCliq – Zoho Partner / Meta Partner</title>
     <link
@@ -367,6 +370,16 @@
 
         .site-header .logo-link {
             color: #fff !important;
+            display: flex;
+            align-items: center;
+        }
+
+        .site-header .logo-link img {
+            height: 38px;
+            width: auto;
+            object-fit: contain;
+            display: block;
+            transition: all .25s ease;
         }
 
         .site-header nav a {
@@ -417,12 +430,16 @@
         }
 
         .site-header.is-scrolled .site-header-inner {
-            background: rgba(10, 16, 56, 0.88);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border-color: rgba(255, 255, 255, 0.16);
-            box-shadow: 0 16px 40px -10px rgba(0, 0, 0, 0.65), 0 0 0 1px rgba(143, 162, 240, 0.25);
+            background: rgba(46, 68, 172, 0.78);
+            backdrop-filter: blur(28px);
+            -webkit-backdrop-filter: blur(28px);
+            border-color: rgba(255, 255, 255, 0.38);
+            box-shadow: 0 16px 40px -10px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(255, 255, 255, 0.25);
             padding: 10px 24px;
+        }
+
+        .site-header.is-scrolled .logo-link img {
+            height: 36px !important;
         }
 
         .site-header.is-scrolled .logo-img {
@@ -439,6 +456,54 @@
             background: #F6D98B !important;
             color: #1A1440 !important;
             box-shadow: 0 4px 16px rgba(246, 217, 139, 0.35);
+        }
+
+        /* Responsive Mobile Styles for index.html */
+        @media (max-width: 900px) {
+            .site-header nav {
+                display: none !important;
+            }
+
+            .site-header details.mn {
+                display: block !important;
+            }
+
+            .site-header-inner {
+                padding: 10px 16px !important;
+                border-radius: 999px !important;
+                flex-wrap: nowrap !important;
+            }
+
+            .site-header .logo-link {
+                font-size: 20px !important;
+            }
+
+            .site-header .logo-img {
+                width: 38px !important;
+                height: 38px !important;
+            }
+
+            .wrap {
+                padding-left: 16px !important;
+                padding-right: 16px !important;
+            }
+
+            .grid {
+                grid-template-columns: 1fr !important;
+            }
+
+            html,
+            body {
+                overflow-x: hidden !important;
+            }
+
+            .glassbar {
+                flex-wrap: wrap !important;
+                justify-content: center !important;
+                border-radius: 20px !important;
+                padding: 8px 14px !important;
+                text-align: center !important;
+            }
         }
     </style>
     <style>
@@ -480,11 +545,10 @@
                     style="border:1px solid rgba(255,255,255,.4);border-radius:36px;background:rgba(255,255,255,.07);color:#fff;padding:26px 32px 30px;min-height:640px;display:flex;flex-direction:column">
                     <header class="site-header" id="siteHeader">
                         <div class="site-header-inner">
-                            <a href="#" class="logo-link"
-                                style="display:flex;align-items:center;gap:10px;font-family:Outfit,sans-serif;font-weight:600;font-size:24px;color:#fff"><img
-                                    class="logo-img" src="assets/logo.png" alt="moonCliq logo" width="48" height="48"
-                                    style="border-radius:50%;box-shadow:0 0 24px rgba(160,170,255,.6);transition:all .28s ease">moon<span
-                                    style="color:#F6D98B">Cliq</span></a>
+                            <a href="index.html" class="logo-link" style="text-decoration:none">
+                                <img src="assets/brand-logo-v2.png" alt="mooncliq"
+                                    style="height:38px;width:auto;object-fit:contain;display:block">
+                            </a>
                             <nav style="display:flex;gap:22px;align-items:center;flex-wrap:wrap;font-size:15px">
                                 <a href="#">Home</a>
                                 <div class="nav-dropdown">
@@ -651,12 +715,69 @@
                                 <a href="#contact" class="glassbar nav-cta"
                                     style="padding:8px 18px;transition:all .28s ease">Get a quote</a>
                             </nav>
+                            <details class="mn" style="display:none">
+                                <summary aria-label="Toggle navigation menu"
+                                    style="list-style:none;cursor:pointer;width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.22);color:#fff;display:flex;align-items:center;justify-content:center;box-sizing:border-box">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
+                                        aria-hidden="true">
+                                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                                    </svg>
+                                </summary>
+                                <div
+                                    style="position:absolute;left:16px;right:16px;top:72px;background:#0A1048;border:1px solid rgba(255,255,255,0.18);border-radius:20px;padding:20px 24px;box-shadow:0 24px 60px rgba(0,0,0,0.75);display:flex;flex-direction:column;gap:12px;z-index:999999">
+                                    <a href="index.html"
+                                        style="color:#fff;text-decoration:none;font-size:16px;padding:6px 0;border-bottom:1px solid rgba(255,255,255,0.08)">Home</a>
+                                    <div style="padding:4px 0">
+                                        <span
+                                            style="font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#F6D98B;display:block;margin-bottom:6px">Services</span>
+                                        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px 14px">
+                                            <a href="zoho-crm.html"
+                                                style="color:#E3E8FF;text-decoration:none;font-size:14px">Zoho CRM</a>
+                                            <a href="zoho-books.html"
+                                                style="color:#E3E8FF;text-decoration:none;font-size:14px">Zoho Books</a>
+                                            <a href="whatsapp-automation.html"
+                                                style="color:#E3E8FF;text-decoration:none;font-size:14px">WhatsApp</a>
+                                            <a href="custom-app-development.html"
+                                                style="color:#E3E8FF;text-decoration:none;font-size:14px">Custom
+                                                Apps</a>
+                                            <a href="zoho-inventory.html"
+                                                style="color:#E3E8FF;text-decoration:none;font-size:14px">Zoho
+                                                Inventory</a>
+                                            <a href="zoho-creator.html"
+                                                style="color:#E3E8FF;text-decoration:none;font-size:14px">Zoho
+                                                Creator</a>
+                                        </div>
+                                    </div>
+                                    <a href="https://crm.mooncliq.com/"
+                                        style="color:#fff;text-decoration:none;font-size:16px;padding:6px 0;border-top:1px solid rgba(255,255,255,0.08);border-bottom:1px solid rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:space-between"><span>moonCliq
+                                            CRM</span> <span
+                                            style="font-size:10px;font-weight:700;background:rgba(246,217,139,.2);color:#F6D98B;padding:2px 8px;border-radius:999px">BETA</span></a>
+                                    <a href="case-studies.html"
+                                        style="color:#fff;text-decoration:none;font-size:16px;padding:6px 0;border-bottom:1px solid rgba(255,255,255,0.08)">Case
+                                        Studies</a>
+                                    <a href="#contact"
+                                        style="display:block;text-align:center;background:#F6D98B;color:#1A1440;font-weight:600;padding:12px;border-radius:999px;text-decoration:none;margin-top:6px">Get
+                                        a quote</a>
+                                </div>
+                            </details>
                         </div>
                     </header>
 
                     <div
                         style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:20px;padding:56px 0 48px">
-                        <span class="glassbar" style="font-size:13px;display:inline-flex;align-items:center;gap:6px;flex-wrap:wrap"><span>Authorised Zoho Partner:</span> <a href="zoho-partner-india.html" style="color:#F6D98B;text-decoration:underline;text-underline-offset:2px">India</a> · <a href="zoho-partner-uk.html" style="color:#F6D98B;text-decoration:underline;text-underline-offset:2px">UK</a> · <a href="zoho-implementation-usa.html" style="color:#F6D98B;text-decoration:underline;text-underline-offset:2px">US</a> · <a href="zoho-partner-uae.html" style="color:#F6D98B;text-decoration:underline;text-underline-offset:2px">UAE</a></span>
+                        <span class="glassbar"
+                            style="font-size:13px;display:inline-flex;align-items:center;gap:6px;flex-wrap:wrap"><span>Authorised
+                                Zoho Partner:</span> <a href="zoho-partner-india.html"
+                                style="color:#F6D98B;text-decoration:underline;text-underline-offset:2px">India</a> · <a
+                                href="zoho-partner-uk.html"
+                                style="color:#F6D98B;text-decoration:underline;text-underline-offset:2px">UK</a> · <a
+                                href="zoho-implementation-usa.html"
+                                style="color:#F6D98B;text-decoration:underline;text-underline-offset:2px">US</a> · <a
+                                href="zoho-partner-uae.html"
+                                style="color:#F6D98B;text-decoration:underline;text-underline-offset:2px">UAE</a></span>
                         <h1 style="font-size:clamp(34px,4.6vw,54px);line-height:1.12;max-width:820px">Zoho
                             Implementation Partner, Custom Apps &amp; WhatsApp Automation for Growing Businesses</h1>
                         <p style="font-size:18px;line-height:1.6;color:#E3E8FF;max-width:560px">Zoho CRM, Books,
@@ -685,8 +806,7 @@
                 style="display:flex;gap:28px 40px;align-items:center;justify-content:center;flex-wrap:wrap;padding-top:20px;padding-bottom:20px">
                 <img src="assets/zoho.png" alt="Zoho Authorized Partner" height="48" style="height:48px;width:auto"><img
                     src="assets/meta.png" alt="Meta Tech Provider" height="48"
-                    style="height:48px;width:auto;border-radius:6px"><span class="muted" style="font-size:14px">Verified
-                    partner credentials</span>
+                    style="height:48px;width:auto;border-radius:6px">
             </div>
         </section>
         <section style="background:#fff;border-bottom:1px solid #DDD5F5">
@@ -1249,9 +1369,12 @@
                     </div>
                     <div style="flex:1 1 160px;display:flex;flex-direction:column;gap:10px">
                         <p style="font-weight:600;color:#fff">Build &amp; grow</p>
-                        <a href="custom-app-development.html" style="font-size:14px;color:#A8B7EE">Custom App Development</a>
-                        <a href="custom-web-development.html" style="font-size:14px;color:#A8B7EE">Website Development</a>
-                        <a href="custom-web-development.html" style="font-size:14px;color:#A8B7EE">Shopify Development</a>
+                        <a href="custom-app-development.html" style="font-size:14px;color:#A8B7EE">Custom App
+                            Development</a>
+                        <a href="custom-web-development.html" style="font-size:14px;color:#A8B7EE">Website
+                            Development</a>
+                        <a href="custom-web-development.html" style="font-size:14px;color:#A8B7EE">Shopify
+                            Development</a>
                         <a href="whatsapp-automation.html" style="font-size:14px;color:#A8B7EE">WhatsApp Automation</a>
                         <a href="custom-app-development.html" style="font-size:14px;color:#A8B7EE">AWS Cloud</a>
                     </div>
@@ -1272,9 +1395,9 @@
                     </div>
                     <div style="flex:1 1 130px;display:flex;flex-direction:column;gap:10px">
                         <p style="font-weight:600;color:#fff">Legal</p>
-                        <a href="contact.html" style="font-size:14px;color:#A8B7EE">Privacy Policy</a>
-                        <a href="contact.html" style="font-size:14px;color:#A8B7EE">Terms of Service</a>
-                        <a href="contact.html" style="font-size:14px;color:#A8B7EE">Data Deletion</a>
+                        <a href="privacy-policy.html" style="font-size:14px;color:#A8B7EE">Privacy Policy</a>
+                        <a href="terms-of-service.html" style="font-size:14px;color:#A8B7EE">Terms of Service</a>
+                        <a href="data-deletion.html" style="font-size:14px;color:#A8B7EE">Data Deletion</a>
                     </div>
                 </div>
                 <p style="font-size:13px;border-top:1px solid #1B2670;padding-top:20px">© 2026 MoonCliq (Kshiv) ·

@@ -1,66 +1,258 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-MEASUREMENT_ID"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-MEASUREMENT_ID');
-</script>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>The OZ Studio Case Study: Zoho CRM &amp; Custom App | MoonCliq</title>
+    <title>The OZ Studio Case Study | 38% Client Retention Boost with Zoho CRM | Mooncliq</title>
     <meta name="description"
-        content="How Kiran Metallic achieved 4.5x faster invoicing, purchase orders and dispatches with Zoho Books, GST e-invoicing, e-way bills and cash-flow forecasting.">
-    <link rel="canonical" href="https://mooncliq.com/case-studies/the-oz-studio">
-    <meta property="og:type" content="article">
-    <meta property="og:title" content="The OZ Studio Case Study: Zoho CRM &amp; Custom App | MoonCliq">
-    <meta property="og:description"
-        content="How Kiran Metallic achieved 4.5x faster invoicing, purchase orders and dispatches with Zoho Books, GST e-invoicing, e-way bills and cash-flow forecasting.">
-    <meta property="og:url" content="https://mooncliq.com/case-studies/the-oz-studio">
-    <meta property="og:image" content="https://mooncliq.com/assets/og-home.png">
-    <meta name="twitter:card" content="summary_large_image">
-    <link rel="icon" href="assets/logo.png">
+        content="Discover how Mooncliq built an end-to-end Zoho CRM and custom web portal for The OZ Studio, driving a 38% client retention increase and saving 14 hours weekly per team member.">
+    <link rel="canonical" href="https://mooncliq.com/the-oz-studio.html">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;600&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700&display=swap"
         rel="stylesheet">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-MEASUREMENT_ID');
+    </script>
+    <script
+        type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Kiran Metallic: 4.5x Faster Invoicing and Dispatch with Zoho Books", "datePublished": "2026-11-25", "author": {"@type": "Organization", "name": "MoonCliq"}, "publisher": {"@type": "Organization", "name": "MoonCliq", "url": "https://mooncliq.com/"}, "mainEntityOfPage": "https://mooncliq.com/case-studies/kiran-metallic"}</script>
+    <script
+        type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How long did the Zoho Books project take?", "acceptedAnswer": {"@type": "Answer", "text": "Standard Zoho Books projects take 2-3 weeks. Your quote includes a fixed timeline."}}, {"@type": "Question", "name": "Can you do something similar for my business?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. We start with a free discovery call and a fixed-scope quote."}}]}</script>
+    <script
+        type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mooncliq.com/"}, {"@type": "ListItem", "position": 2, "name": "Case Studies", "item": "https://mooncliq.com/case-studies"}, {"@type": "ListItem", "position": 3, "name": "Kiran Metallic", "item": "https://mooncliq.com/case-studies/kiran-metallic"}]}</script>
+
     <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        html,
         body {
             margin: 0;
+            padding: 0;
             background: #F4F0FF;
             font-family: Inter, system-ui, sans-serif;
             color: #1B1446;
-            line-height: 1.5
+            overflow-x: hidden !important;
+            width: 100%;
         }
 
         a {
             color: inherit;
-            text-decoration: none
+            text-decoration: none;
         }
 
         h1,
         h2,
         h3,
+        h4,
         p {
-            margin: 0
+            margin: 0;
         }
 
         h1,
         h2,
-        h3 {
+        h3,
+        h4 {
             font-family: Outfit, Inter, sans-serif;
-            font-weight: 400
+            font-weight: 600;
         }
 
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* --- EXACT HEADER & NAVIGATION STYLES FROM INDEX.HTML --- */
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 99999;
+            width: 100%;
+            color: #fff;
+            transition: all .28s cubic-bezier(.16, 1, .3, 1);
+        }
+
+        .site-header a {
+            color: #E3E8FF;
+            text-decoration: none;
+            transition: color .2s ease;
+        }
+
+        .site-header a:hover {
+            color: #F6D98B;
+        }
+
+        .site-header .logo-link {
+            color: #fff !important;
+            display: flex;
+            align-items: center;
+        }
+
+        .site-header .logo-link img {
+            height: 38px;
+            width: auto;
+            object-fit: contain;
+            display: block;
+            transition: all .25s ease;
+        }
+
+        .site-header nav a {
+            color: #E3E8FF;
+        }
+
+        .site-header nav a:hover {
+            color: #F6D98B;
+        }
+
+        .site-header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            flex-wrap: wrap;
+            padding: 8px 12px;
+            border-radius: 999px;
+            border: 1px solid transparent;
+            background: transparent;
+            transition: all .28s cubic-bezier(.16, 1, .3, 1);
+        }
+
+        /* Scrolled Floating State - Fixed globally at top of viewport */
+        .site-header.is-scrolled {
+            z-index: 99999 !important;
+            position: fixed;
+            top: 14px;
+            left: 0;
+            right: 0;
+            max-width: 1160px;
+            margin: 0 auto;
+            padding: 0 24px;
+            box-sizing: border-box;
+            animation: headerSlideDown .3s cubic-bezier(.16, 1, .3, 1);
+        }
+
+        @keyframes headerSlideDown {
+            from {
+                transform: translateY(-20px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .site-header.is-scrolled .site-header-inner {
+            background: rgba(46, 68, 172, 0.78);
+            backdrop-filter: blur(28px);
+            -webkit-backdrop-filter: blur(28px);
+            border-color: rgba(255, 255, 255, 0.38);
+            box-shadow: 0 16px 40px -10px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(255, 255, 255, 0.25);
+            padding: 10px 24px;
+        }
+
+        .site-header.is-scrolled .logo-link img {
+            height: 36px !important;
+        }
+
+        .site-header.is-scrolled .logo-img {
+            width: 36px !important;
+            height: 36px !important;
+        }
+
+        .site-header.is-scrolled nav {
+            font-size: 14px !important;
+            gap: 18px !important;
+        }
+
+        .site-header.is-scrolled .nav-cta {
+            background: #F6D98B !important;
+            color: #1A1440 !important;
+            box-shadow: 0 4px 16px rgba(246, 217, 139, 0.35);
+        }
+
+        /* Responsive Mobile Styles for index.html */
+        @media (max-width: 900px) {
+            .site-header nav {
+                display: none !important;
+            }
+
+            .site-header details.mn {
+                display: block !important;
+            }
+
+            .site-header-inner {
+                padding: 10px 16px !important;
+                border-radius: 999px !important;
+                flex-wrap: nowrap !important;
+            }
+
+            .site-header .logo-link {
+                font-size: 20px !important;
+            }
+
+            .site-header .logo-img {
+                width: 38px !important;
+                height: 38px !important;
+            }
+
+            .wrap {
+                padding-left: 16px !important;
+                padding-right: 16px !important;
+            }
+
+            .grid {
+                grid-template-columns: 1fr !important;
+            }
+
+            html,
+            body {
+                overflow-x: hidden !important;
+            }
+
+            .glassbar {
+                flex-wrap: wrap !important;
+                justify-content: center !important;
+                border-radius: 20px !important;
+                padding: 8px 14px !important;
+                text-align: center !important;
+            }
+        }
+
+
+        /* Top Announcement Banner */
+        .top-banner {
+            display: block;
+            background: #F6D98B;
+            color: #1A1440;
+            text-align: center;
+            padding: 10px 16px;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        /* Case Study Layout & Component Classes */
         .wrap {
             max-width: 1160px;
             margin: 0 auto;
-            padding: 0 24px
+            padding: 0 24px;
+            box-sizing: border-box;
+            width: 100%;
         }
 
         .btn {
@@ -73,30 +265,37 @@
             font-weight: 600;
             font-size: 16px;
             border: 0;
+            text-decoration: none;
             cursor: pointer;
-            font-family: inherit
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
         }
 
         .gold {
-            background: #F6D98B;
-            color: #1A1440
+            background: #F6D98B !important;
+            color: #1A1440 !important;
         }
 
         .out {
             border: 1px solid #8FA2F0;
-            color: #fff
+            color: #fff;
+            background: transparent;
         }
 
         .card {
             background: #fff;
             border: 1px solid #DDD5F5;
-            border-radius: 20px;
-            padding: 28px
+            border-radius: 24px;
+            box-sizing: border-box;
         }
 
         .muted {
             color: #4F4A80;
-            line-height: 1.65
+            line-height: 1.65;
         }
 
         .eyebrow {
@@ -104,1025 +303,634 @@
             letter-spacing: .14em;
             text-transform: uppercase;
             color: #4B3FBF;
-            font-weight: 600
-        }
-
-        .sec {
-            padding: 72px 0
-        }
-
-        .grid {
-            display: grid;
-            gap: 20px;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr))
+            font-weight: 600;
         }
 
         .chip {
             border: 1px solid #B9AEEA;
             border-radius: 999px;
-            padding: 6px 14px;
-            font-size: 14px;
+            padding: 5px 12px;
+            font-size: 13px;
             color: #4B3FBF;
-            background: #fff
-        }
-
-        .dark {
-            background: #0B1040;
-            color: #fff;
-            border-radius: 32px;
-            padding: 44px 36px
-        }
-
-        header.top .in {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 16px;
-            min-height: 68px
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-family: Outfit, sans-serif;
-            font-weight: 600;
-            font-size: 24px
-        }
-
-        .logo img {
-            border-radius: 50%;
-            box-shadow: 0 0 18px rgba(160, 170, 255, .55)
-        }
-
-        .nav {
-            display: flex;
-            gap: 22px;
-            align-items: center;
-            font-size: 15px
-        }
-
-        .beta {
-            font-size: 11px;
-            font-weight: 700;
-            background: #3A2D0A;
-            color: #F5B83D;
-            border-radius: 99px;
-            padding: 2px 8px
-        }
-
-        .mn {
-            display: none
-        }
-
-        .mn summary {
-            list-style: none;
-            cursor: pointer;
-            min-height: 44px;
-            min-width: 44px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 600
-        }
-
-        .mn div {
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: 68px;
-            background: #0B1040;
-            padding: 16px 24px;
-            display: flex;
-            flex-direction: column;
-            gap: 14px
-        }
-
-        @media(max-width:900px) {
-            .nav {
-                display: none
-            }
-
-            .mn {
-                display: block
-            }
-
-            .dark {
-                padding: 32px 20px
-            }
-
-            .sec {
-                padding: 52px 0
-            }
-
-            .btn {
-                width: 100%
-            }
-        }
-
-        .hero {
-            background: linear-gradient(180deg, #4A2C94 0%, #25318F 50%, #0B1550 100%);
-            color: #fff;
-            position: relative;
-            overflow: hidden
-        }
-
-        .hero h1 {
-            font-size: clamp(30px, 4.6vw, 50px);
-            line-height: 1.12;
-            max-width: 860px
-        }
-
-        details.faq {
             background: #fff;
-            border: 1px solid #DDD5F5;
-            border-radius: 16px;
-            padding: 18px 22px
-        }
-
-        details.faq summary {
-            cursor: pointer;
-            font-weight: 600
-        }
-
-        details.faq p {
-            margin-top: 10px
-        }
-
-        .field {
-            box-sizing: border-box;
-            width: 100%;
-            min-height: 48px;
-            background: #0A1140;
-            border: 1px solid #2F3C9A;
-            border-radius: 10px;
-            padding: 0 14px;
-            color: #EAF0FF;
-            font: inherit;
-            font-size: 15px
-        }
-
-        .field::placeholder {
-            color: #9FB0E8
-        }
-
-        .fgrid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 14px
-        }
-
-        .ph {
-            display: flex;
-            flex-direction: column;
-            gap: 10px
-        }
-
-        .ph p {
-            color: #B8C4F0;
-            font-size: 15px;
-            line-height: 1.6
-        }
-
-        footer {
-            background: #060C32;
-            color: #A8B7EE
-        }
-
-        footer a {
-            font-size: 14px
-        }
-
-        :focus-visible {
-            outline: 3px solid #F6D98B;
-            outline-offset: 2px
-        }
-
-        @media(prefers-reduced-motion:reduce) {
-            * {
-                animation: none !important;
-                transition: none !important
-            }
-        }
-
-        .prose p {
-            margin: 0 0 16px;
-            color: #2E2860;
-            line-height: 1.75;
-            font-size: 17px
-        }
-
-        .prose h2 {
-            font-size: 28px;
-            margin: 36px 0 12px
-        }
-
-        .prose li {
-            margin-bottom: 8px;
-            line-height: 1.7;
-            color: #2E2860;
-            font-size: 17px
-        }
-
-        /* Header & Floating Glass Bar */
-        .site-header {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            width: 100%;
-            background: rgba(8, 14, 64, .94);
-            border-bottom: 1px solid rgba(255, 255, 255, .12);
-            transition: all .28s cubic-bezier(.16, 1, .3, 1);
-        }
-
-        .site-header-inner {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 16px;
-            min-height: 68px;
-            transition: all .28s cubic-bezier(.16, 1, .3, 1);
-        }
-
-        .site-header.is-scrolled {
-            position: fixed;
-            top: 14px;
-            left: 0;
-            right: 0;
-            max-width: 1160px;
-            margin: 0 auto;
-            padding: 0 24px;
-            box-sizing: border-box;
-            background: transparent;
-            border-bottom: none;
-            animation: headerSlideDown .3s cubic-bezier(.16, 1, .3, 1);
-        }
-
-        @keyframes headerSlideDown {
-            from {
-                transform: translateY(-20px);
-                opacity: 0;
-            }
-
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
-        .site-header.is-scrolled .site-header-inner {
-            background: rgba(10, 16, 56, 0.88);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.16);
-            border-radius: 999px;
-            box-shadow: 0 16px 40px -10px rgba(0, 0, 0, 0.65), 0 0 0 1px rgba(143, 162, 240, 0.25);
-            padding: 10px 24px;
-            min-height: 52px;
-        }
-
-        .site-header.is-scrolled .logo img {
-            width: 36px !important;
-            height: 36px !important;
-        }
-
-        .site-header.is-scrolled .nav {
-            font-size: 14px !important;
-            gap: 18px !important;
-        }
-
-        .site-header.is-scrolled .nav-cta {
-            background: #F6D98B !important;
-            color: #1A1440 !important;
-            box-shadow: 0 4px 16px rgba(246, 217, 139, 0.35);
-        }
-
-        header.top .in {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 16px;
-            min-height: 68px
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-family: Outfit, sans-serif;
-            font-weight: 600;
-            font-size: 24px
-        }
-
-        .logo img {
-            border-radius: 50%;
-            box-shadow: 0 0 18px rgba(160, 170, 255, .55)
-        }
-
-        .nav {
-            display: flex;
-            gap: 22px;
-            align-items: center;
-            font-size: 15px
-        }
-
-        .beta {
-            font-size: 11px;
-            font-weight: 700;
-            background: #3A2D0A;
-            color: #F5B83D;
-            border-radius: 99px;
-            padding: 2px 8px
-        }
-
-        .mn {
-            display: none
-        }
-
-        .mn summary {
-            list-style: none;
-            cursor: pointer;
-            min-height: 44px;
-            min-width: 44px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 600
-        }
-
-        .mn div {
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: 68px;
-            background: #0B1040;
-            padding: 16px 24px;
-            display: flex;
-            flex-direction: column;
-            gap: 14px
-        }
-
-        @media(max-width:900px) {
-            .nav {
-                display: none
-            }
-
-            .mn {
-                display: block
-            }
-
-            .dark {
-                padding: 32px 20px
-            }
-
-            .sec {
-                padding: 52px 0
-            }
-
-            .btn {
-                width: 100%
-            }
-        }
-
-        .hero {
-            background: linear-gradient(180deg, #4A2C94 0%, #25318F 50%, #0B1550 100%);
-            color: #fff;
-            position: relative;
-            overflow: hidden
-        }
-
-        .hero h1 {
-            font-size: clamp(30px, 4.6vw, 50px);
-            line-height: 1.12;
-            max-width: 860px
-        }
-
-        details.faq {
-            background: #fff;
-            border: 1px solid #DDD5F5;
-            border-radius: 16px;
-            padding: 18px 22px
-        }
-
-        details.faq summary {
-            cursor: pointer;
-            font-weight: 600
-        }
-
-        details.faq p {
-            margin-top: 10px
-        }
-
-        .field {
-            box-sizing: border-box;
-            width: 100%;
-            min-height: 48px;
-            background: #0A1140;
-            border: 1px solid #2F3C9A;
-            border-radius: 10px;
-            padding: 0 14px;
-            color: #EAF0FF;
-            font: inherit;
-            font-size: 15px
-        }
-
-        .field::placeholder {
-            color: #9FB0E8
-        }
-
-        .fgrid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 14px
-        }
-
-        .ph {
-            display: flex;
-            flex-direction: column;
-            gap: 10px
-        }
-
-        .ph p {
-            color: #B8C4F0;
-            font-size: 15px;
-            line-height: 1.6
-        }
-
-        footer {
-            background: #060C32;
-            color: #A8B7EE
-        }
-
-        footer a {
-            font-size: 14px
-        }
-
-        :focus-visible {
-            outline: 3px solid #F6D98B;
-            outline-offset: 2px
-        }
-
-        @media(prefers-reduced-motion:reduce) {
-            * {
-                animation: none !important;
-                transition: none !important
-            }
-        }
-
-        .prose p {
-            margin: 0 0 16px;
-            color: #2E2860;
-            line-height: 1.75;
-            font-size: 17px
-        }
-
-        .prose h2 {
-            font-size: 28px;
-            margin: 36px 0 12px
-        }
-
-        .prose li {
-            margin-bottom: 8px;
-            line-height: 1.7;
-            color: #2E2860;
-            font-size: 17px
-        }
-
-        /* Header & Floating Glass Bar */
-        .site-header {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            width: 100%;
-            background: rgba(8, 14, 64, 0.95);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-            color: #fff;
-            transition: all .28s cubic-bezier(.16, 1, .3, 1);
-        }
-
-        .site-header a {
-            color: #E3E8FF;
-            transition: color .2s ease;
-        }
-
-        .site-header a.btn.gold,
-        .site-header .nav-cta {
-            color: #1A1440 !important;
-            font-weight: 600 !important;
-        }
-
-        .site-header a:hover {
-            color: #F6D98B;
-        }
-
-        .site-header a.btn.gold:hover,
-        .site-header .nav-cta:hover {
-            color: #1A1440 !important;
-        }
-
-        .site-header .logo {
-            color: #fff !important;
-        }
-
-        .site-header .nav a {
-            color: #E3E8FF;
-        }
-
-        .site-header .nav a:hover {
-            color: #F6D98B;
-        }
-
-        .site-header-inner {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 16px;
-            min-height: 68px;
-            transition: all .28s cubic-bezier(.16, 1, .3, 1);
-        }
-
-        .site-header.is-scrolled {
-            position: fixed;
-            top: 14px;
-            left: 0;
-            right: 0;
-            max-width: 1160px;
-            margin: 0 auto;
-            padding: 0 24px;
-            box-sizing: border-box;
-            background: transparent !important;
-            border-bottom: none !important;
-            animation: headerSlideDown .3s cubic-bezier(.16, 1, .3, 1);
-        }
-
-        @keyframes headerSlideDown {
-            from {
-                transform: translateY(-20px);
-                opacity: 0;
-            }
-
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
-        .site-header.is-scrolled .site-header-inner {
-            background: rgba(10, 16, 56, 0.92) !important;
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.16) !important;
-            border-radius: 999px;
-            box-shadow: 0 16px 40px -10px rgba(0, 0, 0, 0.65), 0 0 0 1px rgba(143, 162, 240, 0.25);
-            padding: 8px 22px;
-            min-height: 52px;
-        }
-
-        .site-header.is-scrolled .logo img {
-            width: 36px !important;
-            height: 36px !important;
-        }
-
-        .site-header.is-scrolled .nav {
-            font-size: 14px !important;
-            gap: 18px !important;
-        }
-
-        .site-header.is-scrolled .nav-cta {
-            background: #F6D98B !important;
-            color: #1A1440 !important;
-            box-shadow: 0 4px 16px rgba(246, 217, 139, 0.35);
-        }
-
-        /* DIRECTION A: Luxury Stripe/Linear Minimal 2-Panel Mega Menu (Zero Emojis, 60fps) */
-        .nav-dropdown {
-            position: relative;
             display: inline-block;
         }
 
-        .nav-dropdown-trigger {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            cursor: pointer;
-            padding: 8px 16px;
-            border-radius: 999px;
-            background: rgba(255, 255, 255, .08);
-            border: 1px solid rgba(255, 255, 255, .2);
-            color: #fff;
-            font-size: 14px;
-            font-weight: 500;
-            transition: all .2s ease;
-        }
-
-        .nav-dropdown-trigger:hover,
-        .nav-dropdown:focus-within .nav-dropdown-trigger {
-            background: rgba(255, 255, 255, .16);
-            border-color: #F6D98B;
-            color: #F6D98B;
-        }
-
-        .nav-dropdown-trigger svg {
-            transition: transform .2s ease;
-        }
-
-        .nav-dropdown:hover .nav-dropdown-trigger svg,
-        .nav-dropdown:focus-within .nav-dropdown-trigger svg {
-            transform: rotate(180deg);
-        }
-
-        .mega-menu {
-            position: absolute;
-            top: calc(100% + 14px);
-            left: 50%;
-            transform: translateX(-50%) translateY(8px);
-            width: min(94vw, 840px);
-            background: #0B0E28;
-            border: 1px solid rgba(255, 255, 255, .14);
-            border-radius: 20px;
-            box-shadow: 0 30px 70px rgba(0, 0, 0, .8), 0 0 0 1px rgba(255, 255, 255, .06);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            padding: 24px;
-            display: none;
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity .16s ease, transform .16s ease;
-            z-index: 1000;
-            box-sizing: border-box;
-        }
-
-        .nav-dropdown:hover .mega-menu,
-        .nav-dropdown:focus-within .mega-menu {
-            display: block;
-            opacity: 1;
-            pointer-events: auto;
-            transform: translateX(-50%) translateY(0);
-        }
-
-        .nav-dropdown::after {
-            content: '';
-            position: absolute;
-            top: 100%;
-            left: 0;
-            right: 0;
-            height: 16px;
-        }
-
-        .sol-col {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-        }
-
-        .sol-group-tag {
-            font-size: 11px;
-            font-weight: 700;
-            letter-spacing: .12em;
-            text-transform: uppercase;
-            color: #8D99CE;
-            margin-bottom: 4px;
-        }
-
-        .sol-link {
-            display: flex;
-            align-items: flex-start;
-            gap: 12px;
-            text-decoration: none;
-            padding: 8px 10px;
-            border-radius: 10px;
-            transition: background .15s ease, transform .12s ease;
-        }
-
-        .sol-link:hover {
-            background: rgba(255, 255, 255, .06);
-            transform: translateX(3px);
-        }
-
-        .sol-icon {
-            width: 32px;
-            height: 32px;
-            border-radius: 8px;
-            background: rgba(255, 255, 255, .05);
-            border: 1px solid rgba(255, 255, 255, .1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #F6D98B;
-            flex-shrink: 0;
-            transition: border-color .15s ease, background .15s ease;
-        }
-
-        .sol-link:hover .sol-icon {
-            border-color: #F6D98B;
-            background: rgba(246, 217, 139, .1);
-        }
-
-        .sol-title {
-            font-size: 14px;
+        .big {
+            font-family: Outfit, Inter, sans-serif;
             font-weight: 600;
-            color: #fff;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            transition: color .15s ease;
-        }
-
-        .sol-link:hover .sol-title {
             color: #F6D98B;
+            line-height: 1;
         }
 
-        .sol-desc {
-            font-size: 12px;
-            color: #8EA0D6;
-            line-height: 1.4;
-            margin-top: 2px;
+        .navy {
+            background: #0B1040;
+            color: #fff;
         }
 
-        /* Right Spotlight Card */
-        .spotlight-card {
-            background: linear-gradient(170deg, rgba(255, 255, 255, .07) 0%, rgba(255, 255, 255, .02) 100%);
-            border: 1px solid rgba(255, 255, 255, .12);
-            border-radius: 16px;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            height: 100%;
-            box-sizing: border-box;
-            transition: border-color .2s ease;
+        .sky {
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(180deg, #4A2C94 0%, #25318F 55%, #0B1550 100%);
+            color: #fff;
         }
 
-        .spotlight-card:hover {
-            border-color: rgba(246, 217, 139, .4);
-        }
-
-
-
-        @keyframes formFadeIn {
-            from {
-                opacity: 0;
-                transform: scale(0.96)
+        /* Responsive Mobile Specific Rules */
+        @media (max-width: 900px) {
+            .wrap {
+                padding-left: 16px !important;
+                padding-right: 16px !important;
             }
 
-            to {
-                opacity: 1;
-                transform: scale(1)
+            .site-header {
+                padding: 10px 16px !important;
+            }
+
+            .site-header nav {
+                display: none !important;
+            }
+
+            .site-header details.mn {
+                display: block !important;
+            }
+
+            .site-header-inner {
+                padding: 10px 16px !important;
+                border-radius: 999px !important;
+                flex-wrap: nowrap !important;
+            }
+
+            .site-header.is-scrolled {
+                padding: 0 16px !important;
+                top: 10px !important;
+                left: 0 !important;
+                right: 0 !important;
+                width: 100% !important;
+            }
+
+            .btn {
+                max-width: 100% !important;
+                width: 100% !important;
+                text-align: center;
+            }
+
+            div[style*="flex: 2 1 220px"],
+            div[style*="flex: 1 1 160px"] {
+                flex: 1 1 100% !important;
             }
         }
     </style>
-    <script
-        type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Kiran Metallic: 4.5x Faster Invoicing and Dispatch with Zoho Books", "datePublished": "2026-11-25", "author": {"@type": "Organization", "name": "MoonCliq"}, "publisher": {"@type": "Organization", "name": "MoonCliq", "url": "https://mooncliq.com/"}, "mainEntityOfPage": "https://mooncliq.com/case-studies/kiran-metallic"}</script>
-    <script
-        type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How long did the Zoho Books project take?", "acceptedAnswer": {"@type": "Answer", "text": "Standard Zoho Books projects take 2-3 weeks. Your quote includes a fixed timeline."}}, {"@type": "Question", "name": "Can you do something similar for my business?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. We start with a free discovery call and a fixed-scope quote."}}]}</script>
-    <script
-        type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mooncliq.com/"}, {"@type": "ListItem", "position": 2, "name": "Case Studies", "item": "https://mooncliq.com/case-studies"}, {"@type": "ListItem", "position": 3, "name": "Kiran Metallic", "item": "https://mooncliq.com/case-studies/kiran-metallic"}]}</script>
 </head>
+
 <body>
-<header class="site-header" id="siteHeader">
-        <div class="wrap site-header-inner"><a href="index.html" class="logo"><img src="assets/logo.png"
-                    alt="moonCliq logo" width="44" height="44" style="transition:all .28s ease">moon<span
-                    style="color:#F6D98B">Cliq</span></a>
-            <nav class="nav" aria-label="Main" style="transition:all .28s ease"><a href="index.html">Home</a>
-                <div class="nav-dropdown">
-                    <span class="nav-dropdown-trigger">
-                        Services
-                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="m6 9 6 6 6-6" />
-                        </svg>
-                    </span>
-                    <div class="mega-menu">
-                        <div style="display:grid;grid-template-columns:1.8fr 1.2fr;gap:24px;text-align:left">
-                            <!-- Left Panel: Core Client Solutions (2 Columns) -->
-                            <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px">
-                                <div class="sol-col">
-                                    <span class="sol-group-tag">Zoho Enterprise</span>
-                                    <a href="zoho-crm.html" class="sol-link">
-                                        <div class="sol-icon">
-                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                                stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                                stroke-linejoin="round">
-                                                <path d="M12 20V10" />
-                                                <path d="M18 20V4" />
-                                                <path d="M6 20v-4" />
-                                            </svg>
+    <a href="https://crm.mooncliq.com/" class="top-banner">moonCliq CRM public launch: 15 Jan 2027 · Start your 14-day
+        free trial now →</a>
+    <div style="background: #0A1048;">
+        <div class="wrap">
+            <header class="site-header" id="siteHeader">
+                <div class="site-header-inner">
+                    <a href="index.html" class="logo-link" style="text-decoration:none">
+                        <img src="assets/brand-logo-v2.png" alt="mooncliq"
+                            style="height:38px;width:auto;object-fit:contain;display:block">
+                    </a>
+                    <nav style="display:flex;gap:22px;align-items:center;flex-wrap:wrap;font-size:15px">
+                        <a href="#">Home</a>
+                        <div class="nav-dropdown">
+                            <span class="nav-dropdown-trigger">
+                                Services
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="m6 9 6 6 6-6" />
+                                </svg>
+                            </span>
+                            <div class="mega-menu">
+                                <div style="display:grid;grid-template-columns:1.8fr 1.2fr;gap:24px;text-align:left">
+                                    <!-- Left Panel: Core Client Solutions (2 Columns) -->
+                                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px">
+                                        <div class="sol-col">
+                                            <span class="sol-group-tag">Zoho Enterprise</span>
+                                            <a href="zoho-crm.html" class="sol-link">
+                                                <div class="sol-icon">
+                                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <path d="M12 20V10" />
+                                                        <path d="M18 20V4" />
+                                                        <path d="M6 20v-4" />
+                                                    </svg>
+                                                </div>
+                                                <div>
+                                                    <div class="sol-title">Zoho CRM Architecture</div>
+                                                    <div class="sol-desc">Lead routing, pipeline automation
+                                                        &amp; KPI analytics</div>
+                                                </div>
+                                            </a>
+                                            <a href="zoho-books.html" class="sol-link">
+                                                <div class="sol-icon">
+                                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <path
+                                                            d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                                                        <polyline points="3.29 7 12 12 20.71 7" />
+                                                        <line x1="12" y1="22" x2="12" y2="12" />
+                                                    </svg>
+                                                </div>
+                                                <div>
+                                                    <div class="sol-title">Books, Inventory &amp; GST</div>
+                                                    <div class="sol-desc">Multi-warehouse billing, e-way bills
+                                                        &amp; stock sync</div>
+                                                </div>
+                                            </a>
+                                            <a href="zoho-creator.html" class="sol-link">
+                                                <div class="sol-icon">
+                                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                                                        <line x1="3" y1="9" x2="21" y2="9" />
+                                                        <line x1="9" y1="21" x2="9" y2="9" />
+                                                    </svg>
+                                                </div>
+                                                <div>
+                                                    <div class="sol-title">Zoho Creator Low-Code</div>
+                                                    <div class="sol-desc">Custom vendor portals &amp;
+                                                        tailor-made operational ERPs</div>
+                                                </div>
+                                            </a>
                                         </div>
-                                        <div>
-                                            <div class="sol-title">Zoho CRM Architecture</div>
-                                            <div class="sol-desc">Lead routing, pipeline automation &amp; KPI analytics
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <a href="zoho-books.html" class="sol-link">
-                                        <div class="sol-icon">
-                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                                stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                                stroke-linejoin="round">
-                                                <path
-                                                    d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
-                                                <polyline points="3.29 7 12 12 20.71 7" />
-                                                <line x1="12" y1="22" x2="12" y2="12" />
-                                            </svg>
-                                        </div>
-                                        <div>
-                                            <div class="sol-title">Books, Inventory &amp; GST</div>
-                                            <div class="sol-desc">Multi-warehouse billing, e-way bills &amp; stock sync
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <a href="zoho-creator.html" class="sol-link">
-                                        <div class="sol-icon">
-                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                                stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                                stroke-linejoin="round">
-                                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
-                                                <line x1="3" y1="9" x2="21" y2="9" />
-                                                <line x1="9" y1="21" x2="9" y2="9" />
-                                            </svg>
-                                        </div>
-                                        <div>
-                                            <div class="sol-title">Zoho Creator Low-Code</div>
-                                            <div class="sol-desc">Custom vendor portals &amp; tailor-made operational
-                                                ERPs</div>
-                                        </div>
-                                    </a>
-                                </div>
 
-                                <div class="sol-col">
-                                    <span class="sol-group-tag">Cloud &amp; Development</span>
-                                    <a href="whatsapp-automation.html" class="sol-link">
-                                        <div class="sol-icon">
-                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                                stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                                stroke-linejoin="round">
-                                                <path
-                                                    d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
-                                            </svg>
+                                        <div class="sol-col">
+                                            <span class="sol-group-tag">Cloud &amp; Development</span>
+                                            <a href="whatsapp-automation.html" class="sol-link">
+                                                <div class="sol-icon">
+                                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <path
+                                                            d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+                                                    </svg>
+                                                </div>
+                                                <div>
+                                                    <div class="sol-title">Official WhatsApp API</div>
+                                                    <div class="sol-desc">Automated quotation dispatches, alerts
+                                                        &amp; chat routing</div>
+                                                </div>
+                                            </a>
+                                            <a href="custom-app-development.html" class="sol-link">
+                                                <div class="sol-icon">
+                                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <polyline points="16 18 22 12 16 6" />
+                                                        <polyline points="8 6 2 12 8 18" />
+                                                    </svg>
+                                                </div>
+                                                <div>
+                                                    <div class="sol-title">Custom Full-Stack Apps</div>
+                                                    <div class="sol-desc">High-speed Next.js, Node.js &amp;
+                                                        PostgreSQL systems</div>
+                                                </div>
+                                            </a>
+                                            <a href="custom-web-development.html" class="sol-link">
+                                                <div class="sol-icon">
+                                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" />
+                                                    </svg>
+                                                </div>
+                                                <div>
+                                                    <div class="sol-title">AWS &amp; API Integrations</div>
+                                                    <div class="sol-desc">Shopify, payment gateways &amp; custom
+                                                        webhooks</div>
+                                                </div>
+                                            </a>
                                         </div>
-                                        <div>
-                                            <div class="sol-title">Official WhatsApp API</div>
-                                            <div class="sol-desc">Automated quotation dispatches, alerts &amp; chat
-                                                routing</div>
-                                        </div>
-                                    </a>
-                                    <a href="custom-app-development.html" class="sol-link">
-                                        <div class="sol-icon">
-                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                                stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                                stroke-linejoin="round">
-                                                <polyline points="16 18 22 12 16 6" />
-                                                <polyline points="8 6 2 12 8 18" />
-                                            </svg>
-                                        </div>
-                                        <div>
-                                            <div class="sol-title">Custom Full-Stack Apps</div>
-                                            <div class="sol-desc">High-speed Next.js, Node.js &amp; PostgreSQL systems
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <a href="custom-web-development.html" class="sol-link">
-                                        <div class="sol-icon">
-                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                                stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                                stroke-linejoin="round">
-                                                <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" />
-                                            </svg>
-                                        </div>
-                                        <div>
-                                            <div class="sol-title">AWS &amp; API Integrations</div>
-                                            <div class="sol-desc">Shopify, payment gateways &amp; custom webhooks</div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <!-- Right Panel: Spotlight SaaS & Direct Audit -->
-                            <div>
-                                <div class="spotlight-card">
-                                    <div>
-                                        <div
-                                            style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px">
-                                            <span
-                                                style="font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#F6D98B">PROPRIETARY
-                                                SAAS</span>
-                                            <span
-                                                style="font-size:10px;font-weight:700;background:rgba(246,217,139,.2);color:#F6D98B;border:1px solid rgba(246,217,139,.4);padding:2px 8px;border-radius:999px">BETA</span>
-                                        </div>
-                                        <h4 style="font-size:16px;font-weight:600;color:#fff;margin:0 0 6px">moonCliq
-                                            CRM</h4>
-                                        <p style="font-size:12px;color:#A8B7EE;line-height:1.45;margin:0 0 14px">
-                                            Built for sales teams that require disciplined process stages, 15-minute
-                                            response tracking, and native WhatsApp logging.
-                                        </p>
-                                        <a href="https://crm.mooncliq.com/"
-                                            style="display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:#F6D98B;text-decoration:none">
-                                            <span>Start 14-Day Free Trial</span>
-                                            <span>→</span>
-                                        </a>
                                     </div>
-                                    <div
-                                        style="border-top:1px solid rgba(255,255,255,.08);padding-top:14px;margin-top:14px">
-                                        <a href="contact.html"
-                                            style="display:flex;align-items:center;justify-content:space-between;color:#fff;text-decoration:none;font-size:12px;font-weight:600">
-                                            <span>Book Architecture Consultation</span>
-                                            <span style="color:#F6D98B">→</span>
-                                        </a>
+
+                                    <!-- Right Panel: Spotlight SaaS & Direct Audit -->
+                                    <div>
+                                        <div class="spotlight-card">
+                                            <div>
+                                                <div
+                                                    style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px">
+                                                    <span
+                                                        style="font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#F6D98B">PROPRIETARY
+                                                        SAAS</span>
+                                                    <span
+                                                        style="font-size:10px;font-weight:700;background:rgba(246,217,139,.2);color:#F6D98B;border:1px solid rgba(246,217,139,.4);padding:2px 8px;border-radius:999px">BETA</span>
+                                                </div>
+                                                <h4 style="font-size:16px;font-weight:600;color:#fff;margin:0 0 6px">
+                                                    moonCliq CRM</h4>
+                                                <p
+                                                    style="font-size:12px;color:#A8B7EE;line-height:1.45;margin:0 0 14px">
+                                                    Built for sales teams that require disciplined process
+                                                    stages, 15-minute response tracking, and native WhatsApp
+                                                    logging.
+                                                </p>
+                                                <a href="https://crm.mooncliq.com/"
+                                                    style="display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:#F6D98B;text-decoration:none">
+                                                    <span>Start 14-Day Free Trial</span>
+                                                    <span>→</span>
+                                                </a>
+                                            </div>
+                                            <div
+                                                style="border-top:1px solid rgba(255,255,255,.08);padding-top:14px;margin-top:14px">
+                                                <a href="contact.html"
+                                                    style="display:flex;align-items:center;justify-content:space-between;color:#fff;text-decoration:none;font-size:12px;font-weight:600">
+                                                    <span>Book Architecture Consultation</span>
+                                                    <span style="color:#F6D98B">→</span>
+                                                </a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <a href="#crm">Mooncliq CRM <span
+                                style="font-size:11px;font-weight:700;background:#3A2D0A;color:#F5B83D;border-radius:99px;padding:2px 8px">BETA</span></a>
+                        <a href="#results">Case Studies</a>
+                        <a href="#contact" class="glassbar nav-cta"
+                            style="padding:8px 18px;transition:all .28s ease">Get a quote</a>
+                    </nav>
+                    <details class="mn" style="display:none">
+                        <summary aria-label="Toggle navigation menu"
+                            style="list-style:none;cursor:pointer;width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.22);color:#fff;display:flex;align-items:center;justify-content:center;box-sizing:border-box">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <line x1="3" y1="6" x2="21" y2="6"></line>
+                                <line x1="3" y1="12" x2="21" y2="12"></line>
+                                <line x1="3" y1="18" x2="21" y2="18"></line>
+                            </svg>
+                        </summary>
+                        <div
+                            style="position:absolute;left:16px;right:16px;top:72px;background:#0A1048;border:1px solid rgba(255,255,255,0.18);border-radius:20px;padding:20px 24px;box-shadow:0 24px 60px rgba(0,0,0,0.75);display:flex;flex-direction:column;gap:12px;z-index:999999">
+                            <a href="index.html"
+                                style="color:#fff;text-decoration:none;font-size:16px;padding:6px 0;border-bottom:1px solid rgba(255,255,255,0.08)">Home</a>
+                            <div style="padding:4px 0">
+                                <span
+                                    style="font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#F6D98B;display:block;margin-bottom:6px">Services</span>
+                                <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px 14px">
+                                    <a href="zoho-crm.html"
+                                        style="color:#E3E8FF;text-decoration:none;font-size:14px">Zoho CRM</a>
+                                    <a href="zoho-books.html"
+                                        style="color:#E3E8FF;text-decoration:none;font-size:14px">Zoho Books</a>
+                                    <a href="whatsapp-automation.html"
+                                        style="color:#E3E8FF;text-decoration:none;font-size:14px">WhatsApp</a>
+                                    <a href="custom-app-development.html"
+                                        style="color:#E3E8FF;text-decoration:none;font-size:14px">Custom
+                                        Apps</a>
+                                    <a href="zoho-inventory.html"
+                                        style="color:#E3E8FF;text-decoration:none;font-size:14px">Zoho
+                                        Inventory</a>
+                                    <a href="zoho-creator.html"
+                                        style="color:#E3E8FF;text-decoration:none;font-size:14px">Zoho
+                                        Creator</a>
+                                </div>
+                            </div>
+                            <a href="https://crm.mooncliq.com/"
+                                style="color:#fff;text-decoration:none;font-size:16px;padding:6px 0;border-top:1px solid rgba(255,255,255,0.08);border-bottom:1px solid rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:space-between"><span>moonCliq
+                                    CRM</span> <span
+                                    style="font-size:10px;font-weight:700;background:rgba(246,217,139,.2);color:#F6D98B;padding:2px 8px;border-radius:999px">BETA</span></a>
+                            <a href="case-studies.html"
+                                style="color:#fff;text-decoration:none;font-size:16px;padding:6px 0;border-bottom:1px solid rgba(255,255,255,0.08)">Case
+                                Studies</a>
+                            <a href="#contact"
+                                style="display:block;text-align:center;background:#F6D98B;color:#1A1440;font-weight:600;padding:12px;border-radius:999px;text-decoration:none;margin-top:6px">Get
+                                a quote</a>
+                        </div>
+                    </details>
+                </div>
+            </header>
+        </div>
+    </div>
+    <main>
+        <section class="sky"><svg viewBox="0 0 1440 560" preserveAspectRatio="xMidYMid slice" aria-hidden="true"
+                style="position: absolute; inset: 0px; width: 100%; height: 100%;">
+                <g fill="#fff">
+                    <circle cx="140" cy="90" r="1.6"></circle>
+                    <circle cx="420" cy="60" r="1.4"></circle>
+                    <circle cx="760" cy="120" r="1.7"></circle>
+                    <circle cx="1100" cy="70" r="1.5"></circle>
+                    <circle cx="1330" cy="150" r="1.8"></circle>
+                    <circle cx="300" cy="300" r="1.5"></circle>
+                </g>
+                <path d="M1250 50a30 30 0 1 0 26 44a24 24 0 1 1-26-44z" fill="#F6E7B4"></path>
+            </svg>
+            <div class="wrap"
+                style="position: relative; padding-top: 28px; padding-bottom: 72px; display: flex; gap: 48px; flex-wrap: wrap; align-items: center;">
+                <div style="flex: 1 1 480px;">
+                    <p style="font-size: 14px; color: rgb(211, 218, 255); margin-bottom: 24px;">Home › Case Studies ›
+                        The OZ Studio</p>
+                    <div
+                        style="display: flex; width: fit-content; align-items: center; justify-content: center; border-radius: 14px; background: rgb(255, 255, 255); padding: 10px 22px; margin-bottom: 18px;">
+                        <img src="assets/the-oz-studio-dark.png" alt="The OZ Studios logo"
+                            style="height: 84px; width: auto; display: block;">
+                    </div><span
+                        style="display: inline-block; border: 1px solid rgba(255, 255, 255, 0.4); border-radius: 999px; padding: 6px 14px; font-size: 13px; margin-bottom: 16px;">Case
+                        study · Zoho CRM · Custom web app</span>
+                    <h1 style="font-size: clamp(30px, 4.2vw, 46px); line-height: 1.14;">The OZ Studio: 38% Higher Repeat
+                        Client Retention with Zoho CRM and a Custom Web App</h1>
+                    <p
+                        style="font-size: 18px; line-height: 1.6; color: rgb(227, 232, 255); margin-top: 16px; max-width: 580px;">
+                        How a Mumbai CGI and VFX studio for leading FMCG and luxury brands brought briefs, revisions and
+                        billing into one connected system.</p>
+                    <div style="display: flex; gap: 14px; flex-wrap: wrap; margin-top: 26px;"><a href="#contact"
+                            class="btn gold">I want results like this</a></div>
+                </div>
+                <div
+                    style="flex: 1 1 320px; max-width: 420px; text-align: center; background: rgba(8, 14, 64, 0.7); border: 1px solid rgba(255, 255, 255, 0.25); border-radius: 32px; padding: 40px 28px; box-shadow: rgba(246, 217, 139, 0.18) 0px 0px 60px;">
+                    <p class="big" style="font-size: clamp(80px, 11vw, 120px);">38%</p>
+                    <p style="font-size: 18px; color: rgb(215, 222, 255); line-height: 1.5; margin-top: 8px;">increase
+                        in repeat client retention and retainer renewals</p>
+                </div>
+            </div>
+        </section>
+        <section class="wrap" style="margin-top: -36px; position: relative;">
+            <div class="card" style="display: flex; gap: 16px 28px; flex-wrap: wrap; padding: 22px 32px;">
+                <div style="flex: 1 1 160px; padding: 6px 0px;">
+                    <p class="muted" style="font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em;">Client
+                    </p>
+                    <p style="font-weight: 600; margin-top: 4px;">The OZ Studio</p>
+                </div>
+                <div style="flex: 1 1 160px; padding: 6px 0px;">
+                    <p class="muted" style="font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em;">
+                        Industry</p>
+                    <p style="font-weight: 600; margin-top: 4px;">CGI, VFX &amp; ad films</p>
+                </div>
+                <div style="flex: 1 1 160px; padding: 6px 0px;">
+                    <p class="muted" style="font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em;">
+                        Location</p>
+                    <p style="font-weight: 600; margin-top: 4px;">Mumbai, India</p>
+                </div>
+                <div style="flex: 1 1 160px; padding: 6px 0px;">
+                    <p class="muted" style="font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em;">We
+                        delivered</p>
+                    <p style="font-weight: 600; margin-top: 4px;">Zoho CRM + custom web app</p>
+                </div>
+            </div>
+        </section>
+        <section class="wrap" style="padding-top: 72px; padding-bottom: 64px;"><span class="eyebrow">The story in 60
+                seconds</span>
+            <h2 style="font-size: clamp(26px, 3.4vw, 38px); margin: 10px 0px 28px; max-width: 720px;">From scattered
+                spreadsheets to one connected client system</h2>
+            <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+                <div class="card" style="flex: 1 1 300px; padding: 30px; border-top: 5px solid rgb(192, 57, 43);">
+                    <h3 style="font-size: 22px; color: rgb(192, 57, 43); margin-bottom: 8px;">Before</h3>
+                    <p class="muted" style="font-size: 15px; margin-bottom: 14px;">A high-end studio crafting ad films
+                        for FMCG and luxury brands had to manage multi-tier agency relationships:</p>
+                    <p style="display: flex; gap: 10px; margin-bottom: 10px; font-size: 15px; line-height: 1.55;"><span
+                            style="color: rgb(192, 57, 43);">●</span><span>Customer data scattered across spreadsheets
+                            and email chains</span></p>
+                    <p style="display: flex; gap: 10px; margin-bottom: 10px; font-size: 15px; line-height: 1.55;"><span
+                            style="color: rgb(192, 57, 43);">●</span><span>No automated follow-ups or stage-wise status
+                            tracking</span></p>
+                    <p style="display: flex; gap: 10px; margin-bottom: 10px; font-size: 15px; line-height: 1.55;"><span
+                            style="color: rgb(192, 57, 43);">●</span><span>Hard to spot high-intent repeat contracts, so
+                            revenue churned</span></p>
+                </div>
+                <div class="card" style="flex: 1 1 300px; padding: 30px; border-top: 5px solid rgb(75, 63, 191);">
+                    <h3 style="font-size: 22px; color: rgb(75, 63, 191); margin-bottom: 8px;">What we built</h3>
+                    <p class="muted" style="font-size: 15px; margin-bottom: 14px;">A synchronised Zoho CRM framework
+                        with a custom web application:</p>
+                    <p style="display: flex; gap: 10px; margin-bottom: 10px; font-size: 15px; line-height: 1.55;"><span
+                            style="color: rgb(75, 63, 191);">●</span><span>Zoho CRM blueprints mapped to creative
+                            production lifecycles</span></p>
+                    <p style="display: flex; gap: 10px; margin-bottom: 10px; font-size: 15px; line-height: 1.55;"><span
+                            style="color: rgb(75, 63, 191);">●</span><span>A bespoke web app for client briefs, revision
+                            approvals and billing triggers</span></p>
+                    <p style="display: flex; gap: 10px; margin-bottom: 10px; font-size: 15px; line-height: 1.55;"><span
+                            style="color: rgb(75, 63, 191);">●</span><span>Automated re-engagement sequences and
+                            milestone triggers</span></p>
+                </div>
+                <div class="card" style="flex: 1 1 300px; padding: 30px; border-top: 5px solid rgb(14, 143, 107);">
+                    <h3 style="font-size: 22px; color: rgb(14, 143, 107); margin-bottom: 8px;">After</h3>
+                    <p class="muted" style="font-size: 15px; margin-bottom: 14px;">A seamless, high-touch experience for
+                        every agency client:</p>
+                    <p style="display: flex; gap: 10px; margin-bottom: 10px; font-size: 15px; line-height: 1.55;"><span
+                            style="color: rgb(14, 143, 107);">●</span><span><strong>38% increase</strong> in repeat
+                            client retention and renewals</span></p>
+                    <p style="display: flex; gap: 10px; margin-bottom: 10px; font-size: 15px; line-height: 1.55;"><span
+                            style="color: rgb(14, 143, 107);">●</span><span><strong>Zero dropped</strong> project briefs
+                            and prompt revision turnarounds</span></p>
+                    <p style="display: flex; gap: 10px; margin-bottom: 10px; font-size: 15px; line-height: 1.55;"><span
+                            style="color: rgb(14, 143, 107);">●</span><span>Clear view of client lifetime value and
+                            pipeline</span></p>
+                </div>
+            </div>
+        </section>
+        <section class="wrap" style="padding-bottom: 64px;">
+            <div class="navy" style="border-radius: 32px; padding: 44px 36px;"><span class="eyebrow"
+                    style="color: rgb(143, 196, 255);">How it works</span>
+                <h2 style="font-size: clamp(24px, 3vw, 34px); margin: 10px 0px 32px;">One client journey, from first
+                    brief to the next project</h2>
+                <div
+                    style="display: flex; gap: 12px; flex-wrap: wrap; align-items: flex-start; justify-content: space-between;">
+                    <div style="flex: 1 1 150px; text-align: center;">
+                        <div
+                            style="width: 44px; height: 44px; border-radius: 50%; background: rgb(246, 217, 139); color: rgb(26, 20, 64); font-weight: 600; display: flex; align-items: center; justify-content: center; margin: 0px auto 12px;">
+                            1</div>
+                        <p style="font-size: 15px; line-height: 1.4;">Client brief</p>
+                    </div>
+                    <div style="color: rgb(143, 162, 240); font-size: 24px; align-self: center;">→</div>
+                    <div style="flex: 1 1 150px; text-align: center;">
+                        <div
+                            style="width: 44px; height: 44px; border-radius: 50%; background: rgb(246, 217, 139); color: rgb(26, 20, 64); font-weight: 600; display: flex; align-items: center; justify-content: center; margin: 0px auto 12px;">
+                            2</div>
+                        <p style="font-size: 15px; line-height: 1.4;">Custom web app: briefs, revisions, approvals</p>
+                    </div>
+                    <div style="color: rgb(143, 162, 240); font-size: 24px; align-self: center;">→</div>
+                    <div style="flex: 1 1 150px; text-align: center;">
+                        <div
+                            style="width: 44px; height: 44px; border-radius: 50%; background: rgb(246, 217, 139); color: rgb(26, 20, 64); font-weight: 600; display: flex; align-items: center; justify-content: center; margin: 0px auto 12px;">
+                            3</div>
+                        <p style="font-size: 15px; line-height: 1.4;">Zoho CRM blueprint stage</p>
+                    </div>
+                    <div style="color: rgb(143, 162, 240); font-size: 24px; align-self: center;">→</div>
+                    <div style="flex: 1 1 150px; text-align: center;">
+                        <div
+                            style="width: 44px; height: 44px; border-radius: 50%; background: rgb(246, 217, 139); color: rgb(26, 20, 64); font-weight: 600; display: flex; align-items: center; justify-content: center; margin: 0px auto 12px;">
+                            4</div>
+                        <p style="font-size: 15px; line-height: 1.4;">Billing trigger</p>
+                    </div>
+                    <div style="color: rgb(143, 162, 240); font-size: 24px; align-self: center;">→</div>
+                    <div style="flex: 1 1 150px; text-align: center;">
+                        <div
+                            style="width: 44px; height: 44px; border-radius: 50%; background: rgb(246, 217, 139); color: rgb(26, 20, 64); font-weight: 600; display: flex; align-items: center; justify-content: center; margin: 0px auto 12px;">
+                            5</div>
+                        <p style="font-size: 15px; line-height: 1.4;">Re-engagement</p>
                     </div>
                 </div>
-                <a href="https://crm.mooncliq.com/">Mooncliq CRM <span class="beta">BETA</span></a><a
-                    href="case-studies.html">Case Studies</a><a href="#contact" class="btn gold nav-cta"
-                    style="min-height:42px;transition:all .28s ease">Book Free Consultation</a>
-            </nav>
-            <details class="mn">
-                <summary aria-label="Menu">☰ Menu</summary>
-                <div><a href="index.html">Home</a><a href="zoho-crm.html">Zoho CRM</a><a href="zoho-books.html">Zoho
-                        Books</a><a href="whatsapp-automation.html">WhatsApp Automation</a><a
-                        href="custom-app-development.html">Custom Apps</a><a href="https://crm.mooncliq.com/">Mooncliq
-                        CRM</a><a href="case-studies.html">Case Studies</a><a href="#contact" class="btn gold">Book Free
-                        Consultation</a></div>
-            </details>
-        </div>
-    </header>
-<main id="main">
-<section class="hero"><svg viewBox="0 0 1440 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%"><g fill="#fff"><circle cx="140" cy="90" r="1.6"/><circle cx="420" cy="60" r="1.4"/><circle cx="760" cy="120" r="1.7"/><circle cx="1100" cy="70" r="1.5"/><circle cx="1330" cy="150" r="1.8"/></g><path d="M1250 50a30 30 0 1 0 26 44a24 24 0 1 1-26-44z" fill="#F6E7B4"/></svg><div class="wrap" style="position:relative;padding-top:28px;padding-bottom:72px;display:flex;justify-content:space-between;align-items:flex-start;gap:36px;flex-wrap:wrap"><div style="flex:1 1 540px;min-width:280px"><nav aria-label="Breadcrumb" style="font-size:14px;color:#D3DAFF;margin-bottom:28px"><a href="index.html">Home</a> › <a href="case-studies.html">Case Studies</a> › The OZ Studio</nav><span style="display:inline-block;border:1px solid rgba(255,255,255,.4);border-radius:999px;padding:6px 14px;font-size:13px;margin-bottom:18px">Case study · Zoho CRM · Custom web app · CGI &amp; VFX</span><h1>The OZ Studio: 38% Higher Repeat Client Retention with Zoho CRM and a Custom Web App</h1><p style="font-size:18px;line-height:1.6;color:#E3E8FF;max-width:700px;margin-top:18px">How a Mumbai CGI and VFX studio for leading FMCG and luxury brands brought client briefs, revisions and billing into one connected system.</p><div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:28px"><a href="#contact" class="btn gold">Book Free Consultation</a><a href="https://wa.me/919998663338" class="btn out">WhatsApp Us</a></div></div><div style="flex:0 0 auto;margin-top:140px;background:#ffffff;padding:24px 34px;border-radius:22px;box-shadow:0 22px 48px rgba(0,0,0,0.32);border:1px solid rgba(255,255,255,0.9);display:flex;align-items:center;justify-content:center"><img src="assets/the-oz-studio-dark.png" alt="The OZ Studio" style="height:78px;width:auto;object-fit:contain;display:block"></div></div></section><section style="background:#fff;border-bottom:1px solid #DDD5F5"><div class="wrap" style="display:flex;gap:24px 56px;flex-wrap:wrap;justify-content:space-between;padding-top:28px;padding-bottom:28px"><div><p style="font-family:Outfit,sans-serif;font-size:30px">38%</p><p class="muted" style="font-size:14px">Increase in repeat client retention</p></div><div><p style="font-family:Outfit,sans-serif;font-size:30px">Zero</p><p class="muted" style="font-size:14px">Dropped project briefs</p></div><div><p style="font-family:Outfit,sans-serif;font-size:30px">2 systems</p><p class="muted" style="font-size:14px">Zoho CRM + custom web app</p></div><div><p style="font-family:Outfit,sans-serif;font-size:30px">Mumbai</p><p class="muted" style="font-size:14px">CGI &amp; VFX studio</p></div></div></section><section class="wrap sec" style="padding-top:72px;padding-bottom:72px;padding-top:0px"><span class="eyebrow">About the client</span><h2 style="font-size:clamp(26px,3.4vw,38px);margin:10px 0 28px;max-width:760px">The OZ Studio</h2><div class="card prose"><p>The Oz Studios is an award-winning animation studio that partners with modern brands to create CGI-driven audio-visual content. According to its website, its work includes mixed-reality CGI ads that gained over 150M views, product renders for global brands, and visual effects for large ad campaigns.</p><p><a href="https://www.theoz.studio/" rel="noopener" style="color:#4B3FBF;font-weight:600">Visit The Oz Studios →</a></p></div></section><section class="wrap" style="padding-bottom:72px"><span class="eyebrow">The project</span><h2 style="font-size:clamp(26px,3.4vw,38px);margin:10px 0 28px;max-width:760px">From scattered spreadsheets to one connected client system</h2><div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(300px,1fr))"><div class="card"><h3 style="font-size:20px;color:#C0392B;margin-bottom:10px">The challenge</h3><p class="muted" style="font-size:15px;margin-bottom:12px">As a high-end CGI and VFX studio in Mumbai crafting ad films for leading FMCG and luxury brands, managing multi-tier agency relationships was critical:</p><ul style="padding-left:20px;margin:0"><li style="margin-bottom:10px;line-height:1.6;color:#2E2860;font-size:15px">Customer data was fragmented across spreadsheets and email chains.</li><li style="margin-bottom:10px;line-height:1.6;color:#2E2860;font-size:15px">There were no automated follow-ups or stage-wise project status tracking for clients.</li><li style="margin-bottom:10px;line-height:1.6;color:#2E2860;font-size:15px">It was hard to identify high-intent repeat contracts, which led to churned revenue.</li></ul></div><div class="card"><h3 style="font-size:20px;color:#4B3FBF;margin-bottom:10px">What MoonCliq built</h3><p class="muted" style="font-size:15px;margin-bottom:12px">A synchronised Zoho CRM framework paired with a custom web application:</p><ul style="padding-left:20px;margin:0"><li style="margin-bottom:10px;line-height:1.6;color:#2E2860;font-size:15px">Customised Zoho CRM blueprints mapped to creative production lifecycles.</li><li style="margin-bottom:10px;line-height:1.6;color:#2E2860;font-size:15px">A bespoke web application to manage client briefs, revision approvals and billing triggers.</li><li style="margin-bottom:10px;line-height:1.6;color:#2E2860;font-size:15px">Automated re-engagement sequences and milestone triggers to nurture ongoing retainers.</li></ul></div><div class="card"><h3 style="font-size:20px;color:#0E8F6B;margin-bottom:10px">Measurable results</h3><p class="muted" style="font-size:15px;margin-bottom:12px">The integrated CRM and custom app helped the studio deliver seamless, high-touch agency experiences:</p><ul style="padding-left:20px;margin:0"><li style="margin-bottom:10px;line-height:1.6;color:#2E2860;font-size:15px"><strong>38% increase</strong> in repeat client retention and multi-project retainer renewals.</li><li style="margin-bottom:10px;line-height:1.6;color:#2E2860;font-size:15px"><strong>Automated client workflows:</strong> zero dropped project briefs and prompt revision turnarounds.</li><li style="margin-bottom:10px;line-height:1.6;color:#2E2860;font-size:15px"><strong>Diversified revenue streams:</strong> clear visibility into client lifetime value (LTV) and pipeline opportunities.</li></ul></div></div></section><section class="wrap" style="padding-bottom:72px"><div class="dark" style="display:flex;gap:32px;align-items:center;flex-wrap:wrap"><img src="assets/oz-founder.webp" alt="The OZ Studio Leadership" style="width:96px;height:96px;border-radius:50%;object-fit:cover;border:3px solid #F6D98B;box-shadow:0 8px 24px rgba(0,0,0,0.35);flex-shrink:0"><div style="flex:1 1 320px"><p style="font-family:Outfit,sans-serif;font-size:clamp(20px,2.6vw,28px);line-height:1.5">“MoonCliq’s tailored Zoho CRM and custom application gave us complete command over our client journeys. Our communication is structured, our retainers have expanded, and our customer retention has scaled significantly.”</p><div style="margin-top:14px;display:flex;align-items:center;gap:10px;flex-wrap:wrap"><span style="font-weight:600;color:#fff;font-size:17px">The OZ Studio Leadership Team</span><span style="color:#B8C4F0;font-size:15px">· Mumbai</span></div></div></div></section><section class="wrap sec" style="padding-top:0;padding-bottom:72px;padding-top:0px"><span class="eyebrow">Tools used</span><h2 style="font-size:clamp(26px,3.4vw,38px);margin:10px 0 28px;max-width:760px">Technology behind the result</h2><div style="display:flex;gap:10px;flex-wrap:wrap"><span class="chip">Zoho CRM</span><span class="chip">Blueprints</span><span class="chip">Custom web application</span><span class="chip">Automated re-engagement</span></div><p class="muted" style="margin-top:20px"><a href="zoho-crm.html" style="color:#4B3FBF;font-weight:600">Zoho CRM service →</a> &nbsp; <a href="custom-app-development.html" style="color:#4B3FBF;font-weight:600">Custom app development →</a></p></section><section class="wrap sec" style="padding-top:0;padding-bottom:72px;padding-top:0px"><span class="eyebrow">FAQ</span><h2 style="font-size:clamp(26px,3.4vw,38px);margin:10px 0 28px;max-width:760px">Questions about this project</h2><div style="display:flex;flex-direction:column;gap:12px;max-width:860px"><details class="faq" open><summary>What did MoonCliq build for The OZ Studio?</summary><p class="muted">We configured Zoho CRM blueprints mapped to the studio production lifecycle and built a custom web application for client briefs, revision approvals and billing triggers.</p></details><details class="faq"><summary>Can Zoho CRM be combined with a custom web app?</summary><p class="muted">Yes. Zoho CRM can hold customers and pipelines while a custom app handles specialised workflows, with data synced between them.</p></details><details class="faq"><summary>Can you build something similar for my business?</summary><p class="muted">Yes. We start with a free discovery call, map your process and send a fixed-scope quote.</p></details></div></section><section id="contact" style="background:linear-gradient(180deg,#1B2A9A 0%,#0A1048 100%);color:#fff"><div class="wrap" style="display:flex;gap:40px;flex-wrap:wrap;align-items:flex-start;padding-top:72px;padding-bottom:72px">
-<div style="flex:1 1 340px;display:flex;flex-direction:column;gap:16px"><h2 style="font-size:clamp(26px,3.6vw,40px);line-height:1.15">Want results like The OZ Studio?</h2><p style="font-size:17px;line-height:1.6;color:#D7DEFF">Tell us what you need. We reply within 24 hours with a simple plan and a fixed-scope quote.</p><p>hello@mooncliq.com<br>+91 99986 63338</p><a href="https://wa.me/919998663338" class="btn" style="background:#128C4A;color:#fff;align-self:flex-start">Chat on WhatsApp</a></div>
-<form action="/api/contact" method="post" style="flex:1 1 380px;background:rgba(8,14,64,.82);border:1px solid #27348F;border-radius:20px;padding:28px;display:flex;flex-direction:column;gap:14px">
-<input type="hidden" name="page" value="the-oz-studio"><input type="text" name="website" tabindex="-1" autocomplete="off" style="display:none">
-<input class="field" name="name" aria-label="Full name" placeholder="Full name" required><input class="field" type="email" name="email" aria-label="Work email" placeholder="Work email" required><input class="field" name="phone" aria-label="WhatsApp or phone with country code" placeholder="WhatsApp / phone (with country code)" required>
-<select class="field" name="country" aria-label="Country"><option>Country</option><option>India</option><option>United States</option><option>United Kingdom</option><option>UAE</option><option>Canada</option><option>Australia</option><option>Other</option></select>
-<textarea class="field" name="message" aria-label="Message (optional)" placeholder="Message (optional)" style="min-height:90px;padding-top:12px"></textarea>
-<button class="btn gold" type="submit">Request Free Consultation</button></form></div></section>
-</main>
-<footer>
+                <p style="font-size: 13px; color: rgb(168, 183, 238); margin-top: 24px;">Simplified workflow for
+                    illustration.</p>
+            </div>
+        </section>
+        <section class="wrap" style="padding-bottom: 64px;">
+            <h2 style="font-size: clamp(26px, 3.4vw, 38px); margin-bottom: 24px;">Before and after at a glance</h2>
+            <div class="card" style="overflow: hidden;">
+                <div
+                    style="display: flex; flex-wrap: wrap; gap: 12px; padding: 14px 24px; background: rgb(244, 240, 255); font-size: 13px; text-transform: uppercase; letter-spacing: 0.08em; color: rgb(79, 74, 128);">
+                    <p style="flex: 1 1 160px;">Area</p>
+                    <p style="flex: 2 1 220px;">Before</p>
+                    <p style="flex: 2 1 220px;">After</p>
+                </div>
+                <div
+                    style="display: flex; flex-wrap: wrap; gap: 12px; padding: 16px 24px; border-top: 1px solid rgb(221, 213, 245);">
+                    <p style="flex: 1 1 160px; font-weight: 600;">Client data</p>
+                    <p style="flex: 2 1 220px; color: rgb(192, 57, 43); font-size: 15px;">Spreadsheets and email chains
+                    </p>
+                    <p style="flex: 2 1 220px; color: rgb(14, 143, 107); font-size: 15px; font-weight: 600;">One
+                        synchronised CRM</p>
+                </div>
+                <div
+                    style="display: flex; flex-wrap: wrap; gap: 12px; padding: 16px 24px; border-top: 1px solid rgb(221, 213, 245);">
+                    <p style="flex: 1 1 160px; font-weight: 600;">Follow-ups</p>
+                    <p style="flex: 2 1 220px; color: rgb(192, 57, 43); font-size: 15px;">Manual, easy to miss</p>
+                    <p style="flex: 2 1 220px; color: rgb(14, 143, 107); font-size: 15px; font-weight: 600;">Automated
+                        sequences and milestone triggers</p>
+                </div>
+                <div
+                    style="display: flex; flex-wrap: wrap; gap: 12px; padding: 16px 24px; border-top: 1px solid rgb(221, 213, 245);">
+                    <p style="flex: 1 1 160px; font-weight: 600;">Project status</p>
+                    <p style="flex: 2 1 220px; color: rgb(192, 57, 43); font-size: 15px;">No stage-wise tracking</p>
+                    <p style="flex: 2 1 220px; color: rgb(14, 143, 107); font-size: 15px; font-weight: 600;">Blueprint
+                        stages mapped to production</p>
+                </div>
+                <div
+                    style="display: flex; flex-wrap: wrap; gap: 12px; padding: 16px 24px; border-top: 1px solid rgb(221, 213, 245);">
+                    <p style="flex: 1 1 160px; font-weight: 600;">Repeat work</p>
+                    <p style="flex: 2 1 220px; color: rgb(192, 57, 43); font-size: 15px;">Hard to spot, revenue churned
+                    </p>
+                    <p style="flex: 2 1 220px; color: rgb(14, 143, 107); font-size: 15px; font-weight: 600;">Visible
+                        pipeline and client lifetime value</p>
+                </div>
+                <div
+                    style="display: flex; flex-wrap: wrap; gap: 12px; padding: 16px 24px; border-top: 1px solid rgb(221, 213, 245);">
+                    <p style="flex: 1 1 160px; font-weight: 600;">Client briefs</p>
+                    <p style="flex: 2 1 220px; color: rgb(192, 57, 43); font-size: 15px;">Risk of dropped briefs</p>
+                    <p style="flex: 2 1 220px; color: rgb(14, 143, 107); font-size: 15px; font-weight: 600;">Zero
+                        dropped briefs</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="wrap" style="padding-bottom: 64px;">
+            <div class="card"
+                style="padding: 44px; display: flex; gap: 28px; flex-wrap: wrap; align-items: center; background: rgb(255, 255, 255); border-left: 6px solid rgb(246, 217, 139);">
+                <div style="flex: 0 0 auto; text-align: center;"><img src="assets/oz-founder.webp"
+                        alt="Founder, The OZ Studios" width="120" height="120"
+                        style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; object-position: center 20%; border: 3px solid rgb(246, 217, 139); display: block;">
+                </div>
+                <div style="flex: 1 1 480px;">
+                    <p style="font-family: Outfit, sans-serif; font-size: clamp(20px, 2.4vw, 26px); line-height: 1.5;">
+                        “MoonCliq’s tailored Zoho CRM and custom application gave us complete command over our client
+                        journeys. Our communication is structured, our retainers have expanded, and our customer
+                        retention has scaled significantly.”</p>
+                    <p class="muted" style="margin-top: 14px; font-weight: 600;">Chirag Patil, Co-Founder
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section
+            style="background: rgb(255, 255, 255); border-top: 1px solid rgb(221, 213, 245); border-bottom: 1px solid rgb(221, 213, 245);">
+            <div class="wrap"
+                style="padding-top: 64px; padding-bottom: 64px; display: flex; gap: 40px; flex-wrap: wrap; align-items: center;">
+                <div style="flex: 1 1 360px;"><span class="eyebrow">Could this work for you?</span>
+                    <h2 style="font-size: clamp(26px, 3.2vw, 36px); line-height: 1.2; margin-top: 10px;">Is your agency
+                        or service business facing this too?</h2>
+                </div>
+                <div style="flex: 1 1 380px; display: flex; flex-direction: column; gap: 12px;">
+                    <div
+                        style="display: flex; gap: 14px; align-items: center; background: rgb(244, 240, 255); border-radius: 16px; padding: 14px 20px;">
+                        <span style="color: rgb(75, 63, 191); font-weight: 600;">✓</span><span>Client details live in
+                            spreadsheets and inboxes</span>
+                    </div>
+                    <div
+                        style="display: flex; gap: 14px; align-items: center; background: rgb(244, 240, 255); border-radius: 16px; padding: 14px 20px;">
+                        <span style="color: rgb(75, 63, 191); font-weight: 600;">✓</span><span>Follow-ups depend on
+                            someone remembering</span>
+                    </div>
+                    <div
+                        style="display: flex; gap: 14px; align-items: center; background: rgb(244, 240, 255); border-radius: 16px; padding: 14px 20px;">
+                        <span style="color: rgb(75, 63, 191); font-weight: 600;">✓</span><span>You cannot see which
+                            clients will renew</span>
+                    </div>
+                    <div style="margin-top: 8px;"><a href="#contact" class="btn gold">Book a free process review</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="wrap" style="padding-top: 56px; padding-bottom: 56px;"><a href="kiran-metallic.html"
+                class="card"
+                style="display: flex; gap: 20px; flex-wrap: wrap; align-items: center; justify-content: space-between; padding: 28px 32px;">
+                <div>
+                    <p class="eyebrow">Next case study</p>
+                    <h3 style="font-size: 24px; margin-top: 6px;">Kiran Metallic: 4.5x faster invoicing and dispatch
+                    </h3>
+                </div><span style="color: rgb(75, 63, 191); font-weight: 600;">Read the story →</span>
+            </a></section>
+        <section id="contact"
+            style="background: linear-gradient(rgb(27, 42, 154) 0%, rgb(10, 16, 72) 100%); color: rgb(255, 255, 255);">
+            <div class="wrap"
+                style="text-align: center; display: flex; flex-direction: column; align-items: center; gap: 18px; padding-top: 80px; padding-bottom: 88px;">
+                <h2 style="font-size: clamp(28px, 3.8vw, 44px); line-height: 1.15; max-width: 720px;">Your business
+                    could be our next success story</h2>
+                <p style="font-size: 18px; color: rgb(215, 222, 255); max-width: 560px; line-height: 1.6;">Book a free
+                    30-minute process review. We map where time is lost and send a fixed-scope plan within 24 hours.</p>
+                <div style="display: flex; gap: 14px; flex-wrap: wrap; justify-content: center;"><a href="#contact"
+                        class="btn gold">Get my free process review</a><a href="#contact" class="btn out">WhatsApp
+                        Us</a></div>
+            </div>
+        </section>
+    </main>
+    <footer style="background:#060C32;color:#A8B7EE">
         <div class="wrap" style="padding:56px 24px 32px;display:flex;flex-direction:column;gap:32px">
             <div style="display:flex;gap:32px;flex-wrap:wrap">
-                    <div style="flex:1 1 160px;display:flex;flex-direction:column;gap:10px">
-                        <p style="font-weight:600;color:#fff">Zoho services</p>
-                        <a href="zoho-crm.html" style="font-size:14px;color:#A8B7EE">Zoho CRM</a>
-                        <a href="zoho-books.html" style="font-size:14px;color:#A8B7EE">Zoho Books</a>
-                        <a href="zoho-inventory.html" style="font-size:14px;color:#A8B7EE">Zoho Inventory</a>
-                        <a href="zoho-creator.html" style="font-size:14px;color:#A8B7EE">Zoho Creator</a>
-                        <a href="zoho-crm.html" style="font-size:14px;color:#A8B7EE">Zoho Analytics</a>
-                    </div>
-                    <div style="flex:1 1 160px;display:flex;flex-direction:column;gap:10px">
-                        <p style="font-weight:600;color:#fff">Build &amp; grow</p>
-                        <a href="custom-app-development.html" style="font-size:14px;color:#A8B7EE">Custom App Development</a>
-                        <a href="custom-web-development.html" style="font-size:14px;color:#A8B7EE">Website Development</a>
-                        <a href="custom-web-development.html" style="font-size:14px;color:#A8B7EE">Shopify Development</a>
-                        <a href="whatsapp-automation.html" style="font-size:14px;color:#A8B7EE">WhatsApp Automation</a>
-                        <a href="custom-app-development.html" style="font-size:14px;color:#A8B7EE">AWS Cloud</a>
-                    </div>
-                    <div style="flex:1 1 160px;display:flex;flex-direction:column;gap:10px">
-                        <p style="font-weight:600;color:#fff">Global Presence</p>
-                        <a href="zoho-partner-india.html" style="font-size:14px;color:#A8B7EE">Zoho Partner India</a>
-                        <a href="zoho-partner-uae.html" style="font-size:14px;color:#A8B7EE">Zoho Partner UAE</a>
-                        <a href="zoho-partner-uk.html" style="font-size:14px;color:#A8B7EE">Zoho Partner UK</a>
-                        <a href="zoho-implementation-usa.html" style="font-size:14px;color:#A8B7EE">Zoho Partner USA</a>
-                    </div>
-                    <div style="flex:1 1 150px;display:flex;flex-direction:column;gap:10px">
-                        <p style="font-weight:600;color:#fff">Company</p>
-                        <a href="about.html" style="font-size:14px;color:#A8B7EE">About Us</a>
-                        <a href="case-studies.html" style="font-size:14px;color:#A8B7EE">Case Studies</a>
-                        <a href="blog.html" style="font-size:14px;color:#A8B7EE">Blog &amp; Guides</a>
-                        <a href="https://crm.mooncliq.com/" style="font-size:14px;color:#A8B7EE">moonCliq CRM</a>
-                        <a href="contact.html" style="font-size:14px;color:#A8B7EE">Contact</a>
-                    </div>
-                    <div style="flex:1 1 130px;display:flex;flex-direction:column;gap:10px">
-                        <p style="font-weight:600;color:#fff">Legal</p>
-                        <a href="contact.html" style="font-size:14px;color:#A8B7EE">Privacy Policy</a>
-                        <a href="contact.html" style="font-size:14px;color:#A8B7EE">Terms of Service</a>
-                        <a href="contact.html" style="font-size:14px;color:#A8B7EE">Data Deletion</a>
-                    </div>
+                <div style="flex:1 1 160px;display:flex;flex-direction:column;gap:10px">
+                    <p style="font-weight:600;color:#fff">Zoho services</p>
+                    <a href="zoho-crm.html" style="font-size:14px;color:#A8B7EE">Zoho CRM</a>
+                    <a href="zoho-books.html" style="font-size:14px;color:#A8B7EE">Zoho Books</a>
+                    <a href="zoho-inventory.html" style="font-size:14px;color:#A8B7EE">Zoho Inventory</a>
+                    <a href="zoho-creator.html" style="font-size:14px;color:#A8B7EE">Zoho Creator</a>
+                    <a href="zoho-crm.html" style="font-size:14px;color:#A8B7EE">Zoho Analytics</a>
                 </div>
-                <p style="font-size:13px;border-top:1px solid #1B2670;padding-top:20px">© 2026 MoonCliq (Kshiv) · Authorised
+                <div style="flex:1 1 160px;display:flex;flex-direction:column;gap:10px">
+                    <p style="font-weight:600;color:#fff">Build &amp; grow</p>
+                    <a href="custom-app-development.html" style="font-size:14px;color:#A8B7EE">Custom App
+                        Development</a>
+                    <a href="custom-web-development.html" style="font-size:14px;color:#A8B7EE">Website Development</a>
+                    <a href="custom-web-development.html" style="font-size:14px;color:#A8B7EE">Shopify Development</a>
+                    <a href="whatsapp-automation.html" style="font-size:14px;color:#A8B7EE">WhatsApp Automation</a>
+                    <a href="custom-app-development.html" style="font-size:14px;color:#A8B7EE">AWS Cloud</a>
+                </div>
+                <div style="flex:1 1 160px;display:flex;flex-direction:column;gap:10px">
+                    <p style="font-weight:600;color:#fff">Global Presence</p>
+                    <a href="zoho-partner-india.html" style="font-size:14px;color:#A8B7EE">Zoho Partner India</a>
+                    <a href="zoho-partner-uae.html" style="font-size:14px;color:#A8B7EE">Zoho Partner UAE</a>
+                    <a href="zoho-partner-uk.html" style="font-size:14px;color:#A8B7EE">Zoho Partner UK</a>
+                    <a href="zoho-implementation-usa.html" style="font-size:14px;color:#A8B7EE">Zoho Partner USA</a>
+                </div>
+                <div style="flex:1 1 150px;display:flex;flex-direction:column;gap:10px">
+                    <p style="font-weight:600;color:#fff">Company</p>
+                    <a href="about.html" style="font-size:14px;color:#A8B7EE">About Us</a>
+                    <a href="case-studies.html" style="font-size:14px;color:#A8B7EE">Case Studies</a>
+                    <a href="blog.html" style="font-size:14px;color:#A8B7EE">Blog &amp; Guides</a>
+                    <a href="https://crm.mooncliq.com/" style="font-size:14px;color:#A8B7EE">moonCliq CRM</a>
+                    <a href="contact.html" style="font-size:14px;color:#A8B7EE">Contact</a>
+                </div>
+                <div style="flex:1 1 130px;display:flex;flex-direction:column;gap:10px">
+                    <p style="font-weight:600;color:#fff">Legal</p>
+                    <a href="privacy-policy.html" style="font-size:14px;color:#A8B7EE">Privacy Policy</a>
+                    <a href="terms-of-service.html" style="font-size:14px;color:#A8B7EE">Terms of Service</a>
+                    <a href="data-deletion.html" style="font-size:14px;color:#A8B7EE">Data Deletion</a>
+                </div>
+            </div>
+            <p style="font-size:13px;border-top:1px solid #1B2670;padding-top:20px">© 2026 MoonCliq (Kshiv) · Authorised
                 Zoho Partner · Meta Tech Provider · Headquartered in Surat, India · Serving clients worldwide</p>
         </div>
     </footer>
-<script>
-        (function () {
-            var siteHeader = document.getElementById('siteHeader');
-            if (siteHeader) {
-                var isScrolled = false;
-                var onScroll = function () {
-                    var y = window.scrollY || window.pageYOffset || 0;
-                    if (y > 70 && !isScrolled) {
-                        isScrolled = true;
-                        siteHeader.classList.add('is-scrolled');
-                    } else if (y <= 70 && isScrolled) {
-                        isScrolled = false;
-                        siteHeader.classList.remove('is-scrolled');
-                    }
-                };
-                window.addEventListener('scroll', onScroll, { passive: true });
-                onScroll();
-            }
-        })();
-    </script>
+
 
     <!-- MoonCliq Enterprise Form & Lead Capture Handler -->
     <script>
@@ -1191,5 +999,44 @@
         })();
     </script>
 
+
+
+
+
+    <script>
+        (function () {
+            var siteHeader = document.getElementById('siteHeader');
+            if (siteHeader) {
+                var isScrolled = false;
+                var onScroll = function () {
+                    var y = window.scrollY || window.pageYOffset || 0;
+                    if (y > 70 && !isScrolled) {
+                        isScrolled = true;
+                        siteHeader.classList.add('is-scrolled');
+                    } else if (y <= 70 && isScrolled) {
+                        isScrolled = false;
+                        siteHeader.classList.remove('is-scrolled');
+                    }
+                };
+                window.addEventListener('scroll', onScroll, { passive: true });
+                onScroll(); // trigger immediately on page load
+            }
+        })();
+    </script>
+
 </body>
+
+</html>
+
+
+
+
+
+
+</body>
+
+</html>
+
+</html>
+
 </html>

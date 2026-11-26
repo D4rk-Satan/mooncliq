@@ -18,7 +18,9 @@
 <link rel="canonical" href="https://mooncliq.com/custom-web-development">
 <meta property="og:type" content="website"><meta property="og:title" content="Website Development: Fast, SEO-Ready Sites | MoonCliq"><meta property="og:description" content="Fast, SEO-ready business websites and web portals built with Next.js. Clear structure, lead-focused design and Zoho CRM integration for India, UK, US, UAE."><meta property="og:url" content="https://mooncliq.com/custom-web-development"><meta property="og:image" content="https://mooncliq.com/assets/og-home.png">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="assets/logo.png">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;600&display=swap" rel="stylesheet">
@@ -35,11 +37,11 @@ a{color:inherit;text-decoration:none}h1,h2,h3,p{margin:0}h1,h2,h3{font-family:Ou
 
 header.top .in{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:68px}
 .logo{display:flex;align-items:center;gap:10px;font-family:Outfit,sans-serif;font-weight:600;font-size:24px}
-.logo img{border-radius:50%;box-shadow:0 0 18px rgba(160,170,255,.55)}
+.logo img{height:38px;width:auto;object-fit:contain;display:block;transition:all .25s ease}
 .nav{display:flex;gap:22px;align-items:center;font-size:15px}.beta{font-size:11px;font-weight:700;background:#3A2D0A;color:#F5B83D;border-radius:99px;padding:2px 8px}
 .mn{display:none}.mn summary{list-style:none;cursor:pointer;min-height:44px;min-width:44px;display:flex;align-items:center;justify-content:center;font-weight:600}
 .mn div{position:absolute;left:0;right:0;top:68px;background:#0B1040;padding:16px 24px;display:flex;flex-direction:column;gap:14px}
-@media(max-width:900px){.nav{display:none}.mn{display:block}.dark{padding:32px 20px}.sec{padding:52px 0}.btn{width:100%}}
+@media(max-width:900px){.nav{display:none}.mn{display:block}.dark{padding:32px 20px}.sec{padding:52px 0}.btn{max-width:100%;box-sizing:border-box}}
 .hero{background:linear-gradient(180deg,#4A2C94 0%,#25318F 50%,#0B1550 100%);color:#fff;position:relative;overflow:hidden}
 .hero h1{font-size:clamp(30px,4.6vw,50px);line-height:1.12;max-width:860px}
 details.faq{background:#fff;border:1px solid #DDD5F5;border-radius:16px;padding:18px 22px}details.faq summary{cursor:pointer;font-weight:600}details.faq p{margin-top:10px}
@@ -85,18 +87,18 @@ footer{background:#060C32;color:#A8B7EE}footer a{font-size:14px}
             to { transform: translateY(0); opacity: 1; }
         }
         .site-header.is-scrolled .site-header-inner {
-            background: rgba(10, 16, 56, 0.88);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.16);
+            background: rgba(46, 68, 172, 0.78);
+            backdrop-filter: blur(28px);
+            -webkit-backdrop-filter: blur(28px);
+            border: 1px solid rgba(255, 255, 255, 0.38);
             border-radius: 999px;
-            box-shadow: 0 16px 40px -10px rgba(0, 0, 0, 0.65), 0 0 0 1px rgba(143, 162, 240, 0.25);
+            box-shadow: 0 16px 40px -10px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(255, 255, 255, 0.25);
             padding: 10px 24px;
             min-height: 52px;
         }
         .site-header.is-scrolled .logo img {
-            width: 36px !important;
             height: 36px !important;
+            width: auto !important;
         }
         .site-header.is-scrolled .nav {
             font-size: 14px !important;
@@ -110,11 +112,11 @@ footer{background:#060C32;color:#A8B7EE}footer a{font-size:14px}
 
 header.top .in{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:68px}
 .logo{display:flex;align-items:center;gap:10px;font-family:Outfit,sans-serif;font-weight:600;font-size:24px}
-.logo img{border-radius:50%;box-shadow:0 0 18px rgba(160,170,255,.55)}
+.logo img{height:38px;width:auto;object-fit:contain;display:block;transition:all .25s ease}
 .nav{display:flex;gap:22px;align-items:center;font-size:15px}.beta{font-size:11px;font-weight:700;background:#3A2D0A;color:#F5B83D;border-radius:99px;padding:2px 8px}
 .mn{display:none}.mn summary{list-style:none;cursor:pointer;min-height:44px;min-width:44px;display:flex;align-items:center;justify-content:center;font-weight:600}
 .mn div{position:absolute;left:0;right:0;top:68px;background:#0B1040;padding:16px 24px;display:flex;flex-direction:column;gap:14px}
-@media(max-width:900px){.nav{display:none}.mn{display:block}.dark{padding:32px 20px}.sec{padding:52px 0}.btn{width:100%}}
+@media(max-width:900px){.nav{display:none}.mn{display:block}.dark{padding:32px 20px}.sec{padding:52px 0}.btn{max-width:100%;box-sizing:border-box}}
 .hero{background:linear-gradient(180deg,#4A2C94 0%,#25318F 50%,#0B1550 100%);color:#fff;position:relative;overflow:hidden}
 .hero h1{font-size:clamp(30px,4.6vw,50px);line-height:1.12;max-width:860px}
 details.faq{background:#fff;border:1px solid #DDD5F5;border-radius:16px;padding:18px 22px}details.faq summary{cursor:pointer;font-weight:600}details.faq p{margin-top:10px}
@@ -186,18 +188,18 @@ footer{background:#060C32;color:#A8B7EE}footer a{font-size:14px}
             to { transform: translateY(0); opacity: 1; }
         }
         .site-header.is-scrolled .site-header-inner {
-            background: rgba(10, 16, 56, 0.92) !important;
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.16) !important;
+            background: rgba(46, 68, 172, 0.78) !important;
+            backdrop-filter: blur(28px);
+            -webkit-backdrop-filter: blur(28px);
+            border: 1px solid rgba(255, 255, 255, 0.38) !important;
             border-radius: 999px;
-            box-shadow: 0 16px 40px -10px rgba(0, 0, 0, 0.65), 0 0 0 1px rgba(143, 162, 240, 0.25);
-            padding: 8px 22px;
+            box-shadow: 0 16px 40px -10px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(255, 255, 255, 0.25);
+            padding: 10px 24px;
             min-height: 52px;
         }
         .site-header.is-scrolled .logo img {
-            width: 36px !important;
             height: 36px !important;
+            width: auto !important;
         }
         .site-header.is-scrolled .nav {
             font-size: 14px !important;
@@ -357,6 +359,7 @@ footer{background:#060C32;color:#A8B7EE}footer a{font-size:14px}
         
 
 @keyframes formFadeIn{from{opacity:0;transform:scale(0.96)}to{opacity:1;transform:scale(1)}}
+
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "name": "Website Development", "description": "Fast, SEO-ready business websites and web portals built with Next.js. Clear structure, lead-focused design and Zoho CRM integration for India, UK, US, UAE.", "url": "https://mooncliq.com/custom-web-development", "provider": {"@type": "ProfessionalService", "name": "MoonCliq", "url": "https://mooncliq.com/", "telephone": "+91-99986-63338", "email": "hello@mooncliq.com"}, "areaServed": ["India", "United Kingdom", "United States", "United Arab Emirates"]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Do you build in Next.js or WordPress?", "acceptedAnswer": {"@type": "Answer", "text": "We recommend Next.js for speed and flexibility. WordPress or Shopify can suit specific needs, and we advise case by case."}}, {"@type": "Question", "name": "Is SEO included?", "acceptedAnswer": {"@type": "Answer", "text": "Technical SEO and page structure are included. Ongoing content and link building are separate services."}}, {"@type": "Question", "name": "Will the website connect to Zoho CRM?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Form enquiries can create leads in Zoho CRM automatically."}}, {"@type": "Question", "name": "Can you redesign without losing rankings?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. We keep important URLs, set redirects and preserve titles and metadata."}}, {"@type": "Question", "name": "How long does it take?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on the number of pages. We share a timeline in your fixed-scope quote."}}]}</script>
@@ -365,7 +368,7 @@ footer{background:#060C32;color:#A8B7EE}footer a{font-size:14px}
 <body>
 <a href="#main" style="position:absolute;left:-999px">Skip to content</a>
 <a href="https://crm.mooncliq.com/" style="display:block;background:#F6D98B;color:#1A1440;text-align:center;padding:10px 16px;font-size:14px;font-weight:600">moonCliq CRM public launch: 15 Jan 2027 · Start your 14-day free trial now →</a>
-<header class="site-header" id="siteHeader"><div class="wrap site-header-inner"><a href="index.html" class="logo"><img src="assets/logo.png" alt="moonCliq logo" width="44" height="44" style="transition:all .28s ease">moon<span style="color:#F6D98B">Cliq</span></a>
+<header class="site-header" id="siteHeader"><div class="wrap site-header-inner"><a href="index.html" class="logo" style="text-decoration:none"><img src="assets/brand-logo-v2.png" alt="mooncliq" style="height:38px;width:auto;object-fit:contain;display:block"></a>
 <nav class="nav" aria-label="Main" style="transition:all .28s ease"><a href="index.html">Home</a><div class="nav-dropdown">
                                 <span class="nav-dropdown-trigger">
                                     Services
@@ -467,7 +470,9 @@ footer{background:#060C32;color:#A8B7EE}footer a{font-size:14px}
                                 </div>
                             </div>
                             <a href="https://crm.mooncliq.com/">Mooncliq CRM <span class="beta">BETA</span></a><a href="case-studies.html">Case Studies</a><a href="#contact" class="btn gold nav-cta" style="min-height:42px;transition:all .28s ease">Book Free Consultation</a></nav>
-<details class="mn"><summary aria-label="Menu">☰ Menu</summary><div><a href="index.html">Home</a><a href="zoho-crm.html">Zoho CRM</a><a href="zoho-books.html">Zoho Books</a><a href="whatsapp-automation.html">WhatsApp Automation</a><a href="custom-app-development.html">Custom Apps</a><a href="https://crm.mooncliq.com/">Mooncliq CRM</a><a href="case-studies.html">Case Studies</a><a href="#contact" class="btn gold">Book Free Consultation</a></div></details></div></header>
+<details class="mn"><summary aria-label="Toggle navigation menu" style="list-style:none;cursor:pointer;width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.22);color:#fff;display:flex;align-items:center;justify-content:center;box-sizing:border-box">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+</summary><div><a href="index.html">Home</a><a href="zoho-crm.html">Zoho CRM</a><a href="zoho-books.html">Zoho Books</a><a href="whatsapp-automation.html">WhatsApp Automation</a><a href="custom-app-development.html">Custom Apps</a><a href="https://crm.mooncliq.com/">Mooncliq CRM</a><a href="case-studies.html">Case Studies</a><a href="#contact" class="btn gold">Book Free Consultation</a></div></details></div></header>
 <main id="main">
 <section class="hero"><svg viewBox="0 0 1440 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%"><g fill="#fff"><circle cx="140" cy="90" r="1.6"/><circle cx="420" cy="60" r="1.4"/><circle cx="760" cy="120" r="1.7"/><circle cx="1100" cy="70" r="1.5"/><circle cx="1330" cy="150" r="1.8"/></g><path d="M1250 50a30 30 0 1 0 26 44a24 24 0 1 1-26-44z" fill="#F6E7B4"/></svg>
 <div class="wrap" style="position:relative;padding-top:28px;padding-bottom:72px">
@@ -529,9 +534,9 @@ footer{background:#060C32;color:#A8B7EE}footer a{font-size:14px}
                     </div>
                     <div style="flex:1 1 130px;display:flex;flex-direction:column;gap:10px">
                         <p style="font-weight:600;color:#fff">Legal</p>
-                        <a href="contact.html" style="font-size:14px;color:#A8B7EE">Privacy Policy</a>
-                        <a href="contact.html" style="font-size:14px;color:#A8B7EE">Terms of Service</a>
-                        <a href="contact.html" style="font-size:14px;color:#A8B7EE">Data Deletion</a>
+                        <a href="privacy-policy.html" style="font-size:14px;color:#A8B7EE">Privacy Policy</a>
+                        <a href="terms-of-service.html" style="font-size:14px;color:#A8B7EE">Terms of Service</a>
+                        <a href="data-deletion.html" style="font-size:14px;color:#A8B7EE">Data Deletion</a>
                     </div>
                 </div>
                 <p style="font-size:13px;border-top:1px solid #1B2670;padding-top:20px">© 2026 MoonCliq (Kshiv) · Authorised Zoho Partner · Meta Tech Provider · Headquartered in Surat, India · Serving clients worldwide</p></div></footer>
